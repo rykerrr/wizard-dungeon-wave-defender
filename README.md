@@ -1,4 +1,5 @@
 # wizard-dungeon-wave-defender
+Original idea: https://www.reddit.com/r/gameideas/comments/maqxg4/wave_survivalsimple_rpg_idea/
 
 Repo for first project being done via TDD, and focus on writing actually readable code and much better tests
 - Assemblies
