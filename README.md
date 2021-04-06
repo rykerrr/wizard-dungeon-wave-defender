@@ -7,3 +7,4 @@ Repo for first project being done via TDD, and focus on writing actually readabl
 - Usage of certain useful free assets for code that i find myself re-writing constantly from time to time (State machines) or that are just very nice (Custom event system via scriptable events)
 - Following SOLID with a high focus on interface segregation
 - Usage of Scriptable Objects for more than just being a very low level data container
+- Usage of multiple OOP patterns (Data builders for testing, Null object, Humble pattern, Component based system over inheritance, Factory, Strategy and throwing out the Singleton)
