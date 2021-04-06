@@ -20,31 +20,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/An.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/An.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/MovementInputProcessorBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/MovementInputProcessorBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Castle.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Castle.Core.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Moq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Moq.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Runtime.CompilerServices.Unsafe.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Threading.Tasks.Extensions.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Custom Event System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data Builders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/Editor Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/Editor Tests.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +76,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Input/PlayerActionsAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/ff/50f979b9/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,11 +118,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/An.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/An.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Input/PlayerActions.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +179,10 @@
       <updated>1617125309101</updated>
       <workItem from="1617125311899" duration="3000" />
       <workItem from="1617435338609" duration="1065000" />
-      <workItem from="1617449870646" duration="6117000" />
+      <workItem from="1617449870646" duration="7395000" />
+      <workItem from="1617630064493" duration="1983000" />
+      <workItem from="1617655409052" duration="197000" />
+      <workItem from="1617714631511" duration="12528000" />
     </task>
     <servers />
   </component>
@@ -166,18 +207,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="631" y="150" key="RiderGenerateDialog" timestamp="1617453755021">
+    <state x="631" y="150" key="RiderGenerateDialog" timestamp="1617740303122">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-913" y="262" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1617435840396" />
-    <state x="631" y="150" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617453755021" />
-    <state x="-1024" y="244" key="run.anything.popup" timestamp="1617436281321">
-      <screen x="-1360" y="155" width="1360" height="768" />
-    </state>
-    <state x="-1024" y="244" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1617436281321" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1617453909523">
+    <state x="631" y="150" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617740303122" />
+    <state x="638" y="273" width="644" height="534" key="find.popup" timestamp="1617739951829">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617453909523" />
+    <state x="638" y="273" width="644" height="534" key="find.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617739951829" />
+    <state x="474" y="125" key="run.anything.popup" timestamp="1617738403560">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1024" y="244" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1617436281321" />
+    <state x="474" y="125" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617738403560" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1617740030603">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617740030603" />
   </component>
 </project>
