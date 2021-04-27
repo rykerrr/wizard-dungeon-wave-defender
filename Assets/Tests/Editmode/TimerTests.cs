@@ -4,12 +4,17 @@ using WizardGame.Timers;
 using WizardGame.Utility.Infrastructure;
 using Moq;
 
-namespace WizardGame.Testing
+namespace WizardGame.Testing.Timers
 {
-    public class TimerTests : MonoBehaviour
+    public class TimerTests
     {
         public class BaseTimer_Mocked_Tests
         {
+            // Both could be technically stubs
+            // Mocks are used for when you want to test the behavior on the mocks themselves
+            // Stubs are used to satisfy conditions
+            // Stubs and mocks are handled as fakes in Moq but named Mock for readability purposes
+            // o well
             [Test]
             public void Enabling_Timer_Makes_Tick_Return_True()
             {

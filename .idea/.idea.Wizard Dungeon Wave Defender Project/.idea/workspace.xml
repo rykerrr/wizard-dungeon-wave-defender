@@ -20,52 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Castle.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Castle.Core.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Moq.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/Moq.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Runtime.CompilerServices.Unsafe.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Threading.Tasks.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Moq/System.Threading.Tasks.Extensions.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System Testing Data/TestActions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Production Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Production Scripts.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/Editor Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/Editor Tests.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/MovementInputProcessorBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/MovementInputProcessorBuilder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,64 +54,86 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Input/PlayerActionsAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/NullMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/05/1477f7c5/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingDIY.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Input/PlayerActionsAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/ff/50f979b9/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/JumpBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/c4/ff667b00/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/CharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/ff/50f979b9/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/JumpMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/GravityMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/69/bb01e5a8/Single.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/BaseGameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/IGameEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/BaseGameEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/VoidData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/UnityVoidEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/VoidEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Game Events/BoolEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/VoidGameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Game Events/BoolGameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Game Events/FloatEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Game Events/FloatGameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Game Events/IntGameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/BoolEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/FloatListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/FloatEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/IntListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/IntEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Unity Event Responses/UnityBoolEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Unity Event Responses/UnityFloatEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Unity Event Responses/UnityIntEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Custom Event System/Listeners/BaseGameEventListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/BaseDataBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/MovementInputProcessorBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/An.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/A.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/An.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviors/MovementInputProcessorBehavior.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MovementInputProcessor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Input/PlayerActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
-        <option value="$PROJECT_DIR$/Assets/Input System Testing Data/Scripts/TestingOnInputActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ITimerDataBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/ITimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/BaseTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/DownTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/NullTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timers/Stopwatch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/InputStuff2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/InputStuff.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/MovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/IMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/MovementModifierBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/JumpBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/GravityBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/NullMovementBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/NullMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/JumpMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/GravityMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/CharacterMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingDIY.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/Gravity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/GravityBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/CharacterMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/LocomotionBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/NullMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/IMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/SlidingMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/LocomotionMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/ForceReceiverMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/GravityMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/LocomotionMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/NullMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/ForceReceiverMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/CharacterMovementMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/JumpingMovementBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/JumpingMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/SlidingMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/Production/GravityMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs" />
       </list>
     </option>
   </component>
@@ -182,7 +182,19 @@
       <workItem from="1617449870646" duration="7395000" />
       <workItem from="1617630064493" duration="1983000" />
       <workItem from="1617655409052" duration="197000" />
-      <workItem from="1617714631511" duration="12528000" />
+      <workItem from="1617714631511" duration="13276000" />
+      <workItem from="1618139090050" duration="3573000" />
+      <workItem from="1618216226963" duration="7322000" />
+      <workItem from="1619117136558" duration="4556000" />
+      <workItem from="1619165130643" duration="5805000" />
+      <workItem from="1619180234465" duration="4280000" />
+      <workItem from="1619194325347" duration="3092000" />
+      <workItem from="1619331490413" duration="9788000" />
+      <workItem from="1619365422721" duration="130000" />
+      <workItem from="1619450954041" duration="5418000" />
+      <workItem from="1619460575941" duration="3214000" />
+      <workItem from="1619471252795" duration="3386000" />
+      <workItem from="1619504658414" duration="8130000" />
     </task>
     <servers />
   </component>
@@ -207,23 +219,24 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="631" y="150" key="RiderGenerateDialog" timestamp="1617740303122">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="-913" y="262" key="RiderGenerateDialog" timestamp="1619475699750">
+      <screen x="-1360" y="155" width="1360" height="768" />
     </state>
-    <state x="-913" y="262" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1617435840396" />
+    <state x="-913" y="262" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1619475699750" />
     <state x="631" y="150" key="RiderGenerateDialog/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617740303122" />
     <state x="638" y="273" width="644" height="534" key="find.popup" timestamp="1617739951829">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="638" y="273" width="644" height="534" key="find.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617739951829" />
-    <state x="474" y="125" key="run.anything.popup" timestamp="1617738403560">
+    <state x="474" y="125" key="run.anything.popup" timestamp="1619122836644">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1024" y="244" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1617436281321" />
-    <state x="474" y="125" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617738403560" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1617740030603">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="474" y="125" key="run.anything.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1619122836644" />
+    <state x="-919" y="322" width="672" height="483" key="search.everywhere.popup" timestamp="1619512907712">
+      <screen x="-1360" y="155" width="1360" height="768" />
     </state>
+    <state x="-919" y="322" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/-1360.155.1360.768@-1360.155.1360.768" timestamp="1619512907712" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1360.155.1360.768@0.0.1920.1080" timestamp="1617740030603" />
   </component>
 </project>
