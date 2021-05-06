@@ -120,6 +120,24 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ItemSystem" t="Include">
+            <e p="HotbarItem.cs" t="Include" />
+            <e p="InventoryItem.cs" t="Include" />
+            <e p="Item Containers" t="Include">
+              <e p="IItemContainer.cs" t="Include" />
+              <e p="Inventory.cs" t="Include" />
+              <e p="ItemContainer.cs" t="Include" />
+            </e>
+            <e p="ItemComparer.cs" t="Include" />
+            <e p="ItemSlot.cs" t="Include" />
+            <e p="Rarity.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="HotbarSlotUI.cs" t="Include" />
+              <e p="InventorySlotUI.cs" t="Include" />
+              <e p="ItemDragHandler.cs" t="Include" />
+              <e p="ItemSlotUI.cs" t="Include" />
+            </e>
+          </e>
           <e p="Movement" t="Include">
             <e p="CharacterMovementMotor.cs" t="Include" />
             <e p="ForceReceiverMovement.cs" t="Include" />
@@ -176,10 +194,10 @@
               <e p="An.cs" t="Include" />
               <e p="Data Builders" t="Include">
                 <e p="DownTimerDataBuilder.cs" t="Include" />
-                <e p="ITimerDataBuilder.cs" t="Include" />
                 <e p="NullTimerDataBuilder.cs" t="Include" />
                 <e p="StopwatchDataBuilder.cs" t="Include" />
                 <e p="TestDataBuilder.cs" t="Include" />
+                <e p="TimerDataBuilder.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -187,6 +205,7 @@
         <e p="Tests" t="Include">
           <e p="Editmode" t="Include">
             <e p="Editor Tests.asmdef" t="Include" />
+            <e p="ItemContainerTests.cs" t="Include" />
             <e p="MovementTests.cs" t="Include" />
             <e p="TimerTests.cs" t="Include" />
           </e>

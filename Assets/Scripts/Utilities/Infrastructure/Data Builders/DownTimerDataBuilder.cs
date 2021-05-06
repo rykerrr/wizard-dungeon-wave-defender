@@ -3,7 +3,7 @@ using WizardGame.Timers;
 
 namespace WizardGame.Utility.Infrastructure.DataBuilders
 {
-    public class DownTimerDataBuilder : ITimerDataBuilder<DownTimer>
+    public class DownTimerDataBuilder : TimerDataBuilder<DownTimer>
     {
         public override DownTimer Build()
         {

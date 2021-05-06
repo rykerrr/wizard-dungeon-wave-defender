@@ -8,6 +8,7 @@ namespace WizardGame.Testing.Timers
 {
     public class TimerTests
     {
+        // Arrange Act Assert
         public class BaseTimer_Mocked_Tests
         {
             // Both could be technically stubs
@@ -209,7 +210,7 @@ namespace WizardGame.Testing.Timers
 
                     stopwatch.TryTick(0);
                     
-                    Assert.AreEqual(0, prevTime);
+                    Assert.AreEqual(prevTime, stopwatch.Time);
                 }
             }
         }

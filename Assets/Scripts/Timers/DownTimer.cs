@@ -4,8 +4,6 @@ namespace WizardGame.Timers
 {
     public class DownTimer : BaseTimer
     {
-        public float Time { get; private set; }
-
         public DownTimer(float time)
         {
             SetTimer(time);

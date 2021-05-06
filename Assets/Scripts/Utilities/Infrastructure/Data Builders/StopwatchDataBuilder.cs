@@ -3,10 +3,8 @@ using WizardGame.Timers;
 
 namespace WizardGame.Utility.Infrastructure.DataBuilders
 {
-    public class StopwatchDataBuilder : ITimerDataBuilder<Stopwatch>
+    public class StopwatchDataBuilder : TimerDataBuilder<Stopwatch>
     {
-        private float time;
-        
         public override Stopwatch Build()
         {
             return new Stopwatch(time);

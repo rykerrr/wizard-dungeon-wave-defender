@@ -2,18 +2,18 @@
 
 namespace WizardGame.Utility.Infrastructure.DataBuilders
 {
-    public abstract class ITimerDataBuilder<T> : TestDataBuilder<T> where T: ITimer
+    public abstract class TimerDataBuilder<T> : TestDataBuilder<T> where T: ITimer
     {
         protected float time;
         
         public abstract override T Build();
 
-        protected ITimerDataBuilder(float time)
+        protected TimerDataBuilder(float time)
         {
             this.time = time;
         }
 
-        public ITimerDataBuilder<T> WithTime(float time) 
+        public TimerDataBuilder<T> WithTime(float time) 
         {
             this.time = time;
             

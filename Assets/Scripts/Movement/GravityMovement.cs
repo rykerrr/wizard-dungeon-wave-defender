@@ -14,9 +14,8 @@ namespace  WizardGame.Movement
         public void Tick(float deltaTime, float gravMagnitude, float groundedPullMagnitude, bool isGrounded)
         {
             yVelocity -= gravMagnitude;
-            bool isFalling = yVelocity < 0f;
-        
-            if (isGrounded && isFalling)
+
+            if (isGrounded)
             {
                 yVelocity = -groundedPullMagnitude;
             }

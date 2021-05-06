@@ -65,7 +65,7 @@ namespace WizardGame.Movement
         
             return currentFrameMovement;
 
-            lastGroundNormal = GroundNormal;
+            // lastGroundNormal = GroundNormal;
         }
     }
 }

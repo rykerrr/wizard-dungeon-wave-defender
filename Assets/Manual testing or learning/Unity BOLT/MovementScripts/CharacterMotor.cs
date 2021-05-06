@@ -54,6 +54,6 @@ public class CharacterMotor : MonoBehaviour
         
         return currentFrameMovement;
 
-        lastGroundNormal = GroundNormal;
+        // lastGroundNormal = GroundNormal;
     }
 }
