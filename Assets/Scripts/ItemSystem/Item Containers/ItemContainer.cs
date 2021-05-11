@@ -10,7 +10,12 @@ namespace WizardGame.ItemSystem.Item_Containers
     public class ItemContainer : IItemContainer
     {
         private ItemSlot[] itemSlots = default;
-
+        
+        public Action OnItemsUpdated = delegate { };
+        // may be able to convert to custom event system though might not need to as it already works with it
+        // OnItemsUpdated gets invoked, inventory SO's subscribed custom event's raise method is invoked and the listeners
+        // deal with it, basically ends up being something like chaining for events?
+        
         public ItemContainer(int size) => itemSlots = new ItemSlot[size];
 
         public bool HasItem(InventoryItem item) => itemSlots.Contains(new ItemSlot(item, 0), new ItemComparer());
@@ -24,47 +29,55 @@ namespace WizardGame.ItemSystem.Item_Containers
 
             for (var i = itemSlots.Length - 1; i >= 0; i--)
             {
-                if (itemSlots[i].invItem == null)
+                if (ReferenceEquals(itemSlots[i].invItem, null))
                 {
                     firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
                     continue;
                 }
 
-                if (itemSlots[i].invItem == itemSlot.invItem)
+                if (itemSlots[i].Quantity >= maxStack)
                 {
-                    if (itemSlots[i].Quantity > maxStack) continue;
-
-                    var slotQuantityLeft = maxStack - itemSlots[i].Quantity - 1;
-
-                    if (slotQuantityLeft < itemSlot.Quantity)
-                    {
-                        // we add 3 (itemSlot.Quantity), and 2 space is left (slotQuantityLeft), 3 - 2 = 1 item left to add
-                        itemSlots[i].Quantity = maxStack;
-
-                        itemSlot.Quantity -= slotQuantityLeft;
-
-                        // AddItem(itemSlot);
-
-                        continue;
-                    }
-
-                    // slotQuantityLeft is higher or equal to itemSlot quantity, meaning,
-                    // we have enough space to fit the entire thing in or we have too much space
-                    itemSlots[i].Quantity += itemSlot.Quantity;
-
-                    itemSlot.Quantity = 0;
-
-                    return itemSlot;
+                    firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
+                    continue;
                 }
+
+                if (!ReferenceEquals(itemSlot.invItem, itemSlots[i].invItem))
+                {
+                    firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
+                    continue;
+                }
+
+                var spaceLeftInSlot = maxStack - itemSlots[i].Quantity - 1;
+
+                if (spaceLeftInSlot < itemSlot.Quantity)
+                {
+                    // we add 3 (itemSlot.Quantity), and 2 space is left (slotQuantityLeft), 3 - 2 = 1 item left to add
+                    itemSlots[i].Quantity = maxStack;
+
+                    itemSlot.Quantity -= spaceLeftInSlot;
+
+                    // AddItem(itemSlot);
+
+                    continue;
+                }
+
+                // slotQuantityLeft is higher or equal to itemSlot quantity, meaning,
+                // we have enough space to fit the entire thing in or we have too much space
+                itemSlots[i].Quantity += itemSlot.Quantity;
+
+                itemSlot.Quantity = 0;
+
+                return itemSlot;
             }
 
-            for (var i = firstEmptySlotIndex; i < itemSlots.Length; i++)
+            for (var i = 0; i < itemSlots.Length; i++)
             {
-                if (itemSlots[i].invItem != null) continue;
+                if (!ReferenceEquals(itemSlots[i].invItem, null)) continue;
+                if (itemSlot.Quantity <= 0) break;
 
-                int newSlotQuant = 0;
+                var newSlotQuant = 0;
 
-                if (itemSlot.Quantity > maxStack)
+                if (itemSlot.Quantity >= maxStack)
                 {
                     newSlotQuant = itemSlot.invItem.MaxStack;
                     itemSlot.Quantity -= itemSlot.invItem.MaxStack;
@@ -103,7 +116,7 @@ namespace WizardGame.ItemSystem.Item_Containers
                     break;
                 }
             }
-            
+
             return itemSlot;
         }
 
@@ -137,6 +150,31 @@ namespace WizardGame.ItemSystem.Item_Containers
             // if the items are the same, check whether you can stack items from slotOne onto slotTwo
             // if you can't, swap them
             // if the items are not the same, swap them
+
+            var sameSlot = slotIndexOne == slotIndexTwo;
+            if (sameSlot) return;
+
+            var slotOne = itemSlots[slotIndexOne];
+            var slotTwo = itemSlots[slotIndexTwo];
+
+            if (ReferenceEquals(slotOne.invItem, slotTwo.invItem))
+            {
+                var itemMaxStack = slotOne.invItem.MaxStack;
+                var slotTwoIsNotFull = slotTwo.Quantity < itemMaxStack;
+
+                if (slotTwoIsNotFull)
+                {
+                    var spaceLeftInSlotTwo = itemMaxStack - slotTwo.Quantity;
+                    
+                    itemSlots[slotIndexTwo].Quantity += spaceLeftInSlotTwo;
+                    itemSlots[slotIndexOne].Quantity -= spaceLeftInSlotTwo;
+
+                    return;
+                }
+            }
+            
+            itemSlots[slotIndexTwo] = slotOne;
+            itemSlots[slotIndexOne] = slotTwo;
         }
     }
 }

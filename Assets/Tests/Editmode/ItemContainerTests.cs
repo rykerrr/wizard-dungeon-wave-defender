@@ -4,6 +4,7 @@ using UnityEngine;
 using Moq;
 using WizardGame.ItemSystem;
 using WizardGame.ItemSystem.Item_Containers;
+using Object = UnityEngine.Object;
 
 #pragma warning disable 0649
 namespace WizardGame.Testing.Item_Containers
@@ -16,7 +17,6 @@ namespace WizardGame.Testing.Item_Containers
     {
         public class GetSlotByIndex_Method
         {
-            ScriptableObject 
             [Test]
             [TestCase(-4), TestCase(-200), TestCase(-20)]
             public void Calling_With_Negative_Index_Throws_IndexOutOfBounds_Exception(int index)
@@ -55,8 +55,7 @@ namespace WizardGame.Testing.Item_Containers
             public void Returns_False_If_Item_Isnt_In_Container()
             {
                 ItemContainer itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
+                var invItemMock = InvItemMock();
 
                 bool hasItem = itemContainer.HasItem(invItemMock.Object);
 
@@ -69,8 +68,7 @@ namespace WizardGame.Testing.Item_Containers
             public void Returns_True_After_Item_Is_Added()
             {
                 ItemContainer itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
+                var invItemMock = InvItemMock();
                 var itemSlot = new ItemSlot(invItemMock.Object, 3);
 
                 itemContainer.AddItem(itemSlot);
@@ -88,30 +86,29 @@ namespace WizardGame.Testing.Item_Containers
             public void Item_Gets_Added_With_Positive_X_Quant_Slot(int xQuant)
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 5);
+                var invItemMock = InvItemMock(5);
                 var itemSlot = new ItemSlot(invItemMock.Object, xQuant);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 0);
 
                 ItemSlot slot = itemContainer.AddItem(itemSlot);
 
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+                Debug.Log((expectedSlot == slot) + " | " + expectedSlot.Equals(slot) + " | " +
+                          Object.Equals(expectedSlot, slot) + " | " + ReferenceEquals(expectedSlot, slot));
+
+                Assert.AreEqual(expectedSlot, slot);
             }
 
             [Test]
             public void Item_Gets_Added_To_1_Slot_Container_With_Over_MaxQuant_Slot()
             {
                 var itemContainer = new ItemContainer(1);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 5);
+                var invItemMock = InvItemMock(5);
                 var slot = new ItemSlot(invItemMock.Object, 20);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 15);
 
                 slot = itemContainer.AddItem(slot);
 
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+                Assert.AreEqual(expectedSlot, slot);
             }
         }
 
@@ -121,46 +118,41 @@ namespace WizardGame.Testing.Item_Containers
             public void Calling_With_Less_Than_MaxStack_Doesnt_Remove_Entire_Stack()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 5);
+                var invItemMock = InvItemMock(5);
                 var slot = new ItemSlot(invItemMock.Object, 5);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 3);
 
                 itemContainer.AddItem(slot);
                 slot = itemContainer.SubtractItem(new ItemSlot(invItemMock.Object, 8));
 
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+                Assert.AreEqual(expectedSlot, slot);
             }
 
             [Test]
             public void Calling_With_MaxStack_Removes_MaxStack()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 5);
+                var invItemMock = InvItemMock(5);
                 var slot = new ItemSlot(invItemMock.Object, 5);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 0);
 
                 itemContainer.AddItem(slot);
                 itemContainer.SubtractItem(slot);
                 slot = itemContainer.GetSlotByIndex(0);
-                
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+
+                Assert.AreEqual(expectedSlot, slot);
             }
 
             [Test]
             public void Returns_Same_Slot_If_Slot_Isnt_In_Container()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
+                var invItemMock = InvItemMock();
                 var expectedSlot = new ItemSlot(invItemMock.Object, 5);
 
                 var slot = itemContainer.SubtractItem(expectedSlot);
-                
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+
+                Assert.AreEqual(expectedSlot, slot);
             }
         }
 
@@ -171,32 +163,28 @@ namespace WizardGame.Testing.Item_Containers
             public void Calling_With_Index_4_Clears_Slot_At_Index_4()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 4);
+                var invItemMock = InvItemMock(4);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 0);
 
                 itemContainer.AddItem(new ItemSlot(invItemMock.Object, 5));
                 itemContainer.RemoveAt(0);
                 var slot = itemContainer.GetSlotByIndex(0);
 
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+                Assert.AreEqual(expectedSlot, slot);
             }
 
             [Test]
             public void Calling_With_Index_10_Clears_Slot_At_Index_10()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 1);
+                var invItemMock = InvItemMock(1);
                 var expectedSlot = new ItemSlot(invItemMock.Object, 0);
 
                 itemContainer.AddItem(new ItemSlot(invItemMock.Object, 12));
                 itemContainer.RemoveAt(10);
                 var slot = itemContainer.GetSlotByIndex(10);
 
-                Assert.True(expectedSlot.Quantity == slot.Quantity && expectedSlot.invItem == slot.invItem);
+                Assert.AreEqual(expectedSlot, slot);
             }
 
             [Test]
@@ -215,9 +203,7 @@ namespace WizardGame.Testing.Item_Containers
             public void Adding_Positive_X_Quantity_Returns_X(int xQuant)
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
-                invItemMock.SetupGet(x => x.MaxStack).Returns(() => 5);
+                var invItemMock = InvItemMock(5);
 
                 itemContainer.AddItem(new ItemSlot(invItemMock.Object, xQuant));
                 int totalQuant = itemContainer.GetTotalQuantity(invItemMock.Object);
@@ -236,8 +222,7 @@ namespace WizardGame.Testing.Item_Containers
             public void Returns_0_If_Item_Isnt_In_Container()
             {
                 var itemContainer = new ItemContainer(20);
-                var invItemMock = new Mock<InventoryItem>();
-                invItemMock.Setup(x => x.GetInfoDisplayText()).Returns("Mock stringo");
+                var invItemMock = InvItemMock(4);
 
                 int totalQuant = itemContainer.GetTotalQuantity(invItemMock.Object);
 
@@ -247,7 +232,102 @@ namespace WizardGame.Testing.Item_Containers
 
         public class Swap_Method
         {
-            
+            [Test]
+            [TestCase(2), TestCase(9), TestCase(10)]
+            public void Call_With_Same_Positive_InBounds_Index_Returns_With_No_Change_In_Container(int index)
+            {
+                var itemContainer = new ItemContainer(20);
+                var invItemMock = InvItemMock(4);
+                var slotOne = new ItemSlot(invItemMock.Object, 4);
+                var slotTwo = new ItemSlot(invItemMock.Object, 2);
+
+                itemContainer.AddItem(slotOne);
+                itemContainer.AddItem(slotTwo);
+                itemContainer.Swap(index, index);
+
+                var itemOneEquivalent = itemContainer.GetSlotByIndex(0) == slotOne;
+                var itemTwoEquivalent = itemContainer.GetSlotByIndex(1) == slotTwo;
+
+                Assert.True(itemOneEquivalent && itemTwoEquivalent);
+            }
+
+            [Test]
+            public void Swapping_Quantity_4_With_2_Sets_Slots_Second_To_5_First_To_1_With_MaxStack_5()
+            {
+                var itemContainer = new ItemContainer(20);
+                var invItemMock = InvItemMock(5);
+                var slotOne = new ItemSlot(invItemMock.Object, 4);
+                var slotTwo = new ItemSlot(invItemMock.Object, 2);
+                var expectedSlotOne = new ItemSlot(invItemMock.Object, 2);
+                var expectedSlotTwo = new ItemSlot(invItemMock.Object, 5);
+
+                itemContainer.AddItem(slotOne);
+                itemContainer.AddItem(slotTwo);
+                itemContainer.Swap(0, 1);
+
+                var indexOneItem = itemContainer.GetSlotByIndex(0);
+                var indexTwoItem = itemContainer.GetSlotByIndex(1);
+                var itemOneEquivalent = indexOneItem == expectedSlotOne;
+                var itemTwoEquivalent = indexTwoItem == expectedSlotTwo;
+
+                Assert.True(itemOneEquivalent && itemTwoEquivalent);
+            }
+
+            [Test]
+            public void Swapping_Quantity_5_With_3_Sets_Slots_Second_To_5_First_To_3_With_MaxStack_5()
+            {
+                var itemContainer = new ItemContainer(20);
+                var invItemMock = InvItemMock(5);
+                var slotOne = new ItemSlot(invItemMock.Object, 5);
+                var slotTwo = new ItemSlot(invItemMock.Object, 3);
+                var expectedSlotOne = new ItemSlot(invItemMock.Object, 3);
+                var expectedSlotTwo = new ItemSlot(invItemMock.Object, 5);
+
+                itemContainer.AddItem(slotOne);
+                itemContainer.AddItem(slotTwo);
+                itemContainer.Swap(0, 1);
+
+                var indexOneSlot = itemContainer.GetSlotByIndex(0);
+                var indexTwoSlot = itemContainer.GetSlotByIndex(1);
+                var itemOneEquivalent = indexOneSlot == expectedSlotOne;
+                var itemTwoEquivalent = indexTwoSlot == expectedSlotTwo;
+
+                Assert.True(itemOneEquivalent && itemTwoEquivalent);
+            }
+
+            [Test]
+            public void Swapping_Separate_Items_Swaps_Their_Positions()
+            {
+                var itemContainer = new ItemContainer(20);
+                var invItemMockOne = InvItemMock(5, "Stringo mock");
+                var invItemMockTwo = InvItemMock(5, "Mujahadeenoo");
+                var slotOne = new ItemSlot(invItemMockOne.Object, 1);
+                var slotTwo = new ItemSlot(invItemMockTwo.Object, 2);
+
+                itemContainer.AddItem(slotOne);
+                itemContainer.AddItem(slotTwo);
+                itemContainer.Swap(0, 1);
+
+                var indexOneSlot = itemContainer.GetSlotByIndex(0);
+                var indexTwoSlot = itemContainer.GetSlotByIndex(1);
+                var itemOneEquivalent = indexOneSlot == slotTwo;
+                var itemTwoEquivalent = indexTwoSlot == slotOne;
+
+                Debug.Log(string.Join(" | ", slotOne.ToString(), slotTwo.ToString(),
+                    indexOneSlot.ToString(), indexTwoSlot.ToString()));
+
+                Assert.True(itemOneEquivalent && itemTwoEquivalent);
+            }
+        }
+
+        private static Mock<InventoryItem> InvItemMock(int maxStack = 1, string displayString = "Mock stringo")
+        {
+            var invItemMock = new Mock<InventoryItem>();
+
+            invItemMock.Setup(x => x.GetInfoDisplayText()).Returns(displayString);
+            invItemMock.SetupGet(x => x.MaxStack).Returns(() => maxStack);
+
+            return invItemMock;
         }
     }
 }

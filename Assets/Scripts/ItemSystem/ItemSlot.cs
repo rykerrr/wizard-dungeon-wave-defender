@@ -25,9 +25,24 @@ namespace WizardGame.ItemSystem
 
         public ItemSlot ToEmptyQuantity() => new ItemSlot(invItem, 0);
 
+        public override string ToString()
+        {
+            return $"Item: {invItem} ; Quantity: {Quantity}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            return !ReferenceEquals(obj, null) && this == (ItemSlot)obj; //this == (ItemSlot) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public static bool operator ==(ItemSlot a, ItemSlot b)
         {
-            return a.Equals(b);
+            return a.invItem == b.invItem && a.Quantity == b.Quantity;
         }
 
         public static bool operator !=(ItemSlot a, ItemSlot b)
