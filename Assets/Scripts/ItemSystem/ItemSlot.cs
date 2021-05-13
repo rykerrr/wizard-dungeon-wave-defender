@@ -16,7 +16,8 @@ namespace WizardGame.ItemSystem
             get => quantity;
             set => quantity = Mathf.Max(value, 0);
         }
-
+        public static ItemSlot Empty => new ItemSlot(null, 0);
+        
         public ItemSlot(InventoryItem invItem, int quantity)
         {
             this.quantity = Mathf.Max(quantity, 0);

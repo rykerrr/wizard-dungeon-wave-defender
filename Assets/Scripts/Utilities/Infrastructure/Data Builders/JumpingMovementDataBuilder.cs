@@ -29,14 +29,18 @@ namespace WizardGame.Utility.Infrastructure.DataBuilders
             this.input = input;
         }
         
-        public void WithForce(float jumpForce)
+        public JumpingMovementDataBuilder WithForce(float jumpForce)
         {
             this.jumpForce = jumpForce;
+
+            return this;
         }
 
-        public void WithInput(int input)
+        public JumpingMovementDataBuilder WithInput(int input)
         {
             this.input = input;
+
+            return this;
         }
     }
 }

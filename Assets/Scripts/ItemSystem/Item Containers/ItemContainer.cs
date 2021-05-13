@@ -47,9 +47,9 @@ namespace WizardGame.ItemSystem.Item_Containers
                     continue;
                 }
 
-                var spaceLeftInSlot = maxStack - itemSlots[i].Quantity - 1;
+                var spaceLeftInSlot = maxStack - itemSlots[i].Quantity;
 
-                if (spaceLeftInSlot < itemSlot.Quantity)
+                if (spaceLeftInSlot <= itemSlot.Quantity)
                 {
                     // we add 3 (itemSlot.Quantity), and 2 space is left (slotQuantityLeft), 3 - 2 = 1 item left to add
                     itemSlots[i].Quantity = maxStack;
