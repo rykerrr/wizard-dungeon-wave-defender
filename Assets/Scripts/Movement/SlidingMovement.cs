@@ -7,17 +7,27 @@ namespace WizardGame.Movement
     [Serializable]
     public class SlidingMovement : IMovementModifier
     {
-        public Vector3 Value { get; private set; }
-        
-        private RaycastHit lastHit;
-        private float groundRayMaxDistance;
+        [SerializeField] private float slideSpeed;
+        [SerializeField] private float groundRayMaxDistance;
 
-        public SlidingMovement(float groundRayMaxDistance)
+        public float SlideSpeed
         {
-            Init(groundRayMaxDistance);
+            get => slideSpeed;
+            set => slideSpeed = value;
         }
-        
-        public void Tick(float deltaTime, float slideSpeed, Vector3 rayOrigin)
+
+        public float GroundRayMaxDistance
+        {
+            get => groundRayMaxDistance;
+            set => groundRayMaxDistance = value;
+        }
+        // ground ray to character motor
+
+        public Vector3 Value { get; private set; }
+
+        private RaycastHit lastHit;
+
+        public void Tick(float deltaTime, Vector3 rayOrigin)
         {
             if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundRayMaxDistance))
             {
@@ -41,7 +51,7 @@ namespace WizardGame.Movement
                 Vector3 hitNormal = lastHit.normal;
                 float slopeAngle = Vector3.Angle(Vector3.up, hitNormal);
                 bool isAboveSlopeLimit = slopeAngle > slopeLimit;
-                
+
                 if (isAboveSlopeLimit)
                 {
                     return true;
@@ -49,11 +59,6 @@ namespace WizardGame.Movement
             }
 
             return false;
-        }
-
-        public void Init(float groundRayMaxDistance)
-        {
-            this.groundRayMaxDistance = groundRayMaxDistance;
         }
     }
 }

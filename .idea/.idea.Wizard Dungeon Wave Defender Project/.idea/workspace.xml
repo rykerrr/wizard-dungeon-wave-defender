@@ -20,24 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Game Events/VoidGameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Game Events/VoidGameEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/FactorizedPlrSphereStateMachine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/FactorizedPlrSphereStateMachine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +99,25 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBulder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBulder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBulder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBulder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -99,7 +131,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -155,7 +187,9 @@
       <workItem from="1620281970495" duration="21793000" />
       <workItem from="1620366393477" duration="13086000" />
       <workItem from="1620597289544" duration="3402000" />
-      <workItem from="1620717532961" duration="47000" />
+      <workItem from="1620717532961" duration="797000" />
+      <workItem from="1620744452074" duration="1804000" />
+      <workItem from="1620922953718" duration="3649000" />
     </task>
     <servers />
   </component>

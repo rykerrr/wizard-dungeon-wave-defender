@@ -9,8 +9,6 @@ namespace WizardGame.Movement
     {
         [SerializeField] private CharacterMovementMotor movementMotor;
         [SerializeField] private JumpingMovement jumpingMovement;
-
-        [SerializeField] private float jumpForce;
         
         public JumpingMovement JumpingMovement => jumpingMovement;
 
@@ -21,13 +19,14 @@ namespace WizardGame.Movement
             if (movementMotor == null)
             {
                 movementMotor = GetComponent<CharacterMovementMotor>();
-                chConntroller = GetComponent<CharacterController>();
             }
+            
+            chConntroller = GetComponent<CharacterController>();
         }
 
         private void OnEnable() => movementMotor.AddModifier(jumpingMovement);
         private void OnDisable() => movementMotor.RemoveModifier(jumpingMovement);
-        private void FixedUpdate() => jumpingMovement.Tick(Time.fixedDeltaTime, jumpForce, chConntroller.isGrounded);
+        private void FixedUpdate() => jumpingMovement.Tick(Time.fixedDeltaTime, chConntroller.isGrounded);
 
         public void SetPreviousMovementInput(InputAction.CallbackContext ctx)
             => jumpingMovement.SetPreviousInput(Convert.ToInt32(ctx.ReadValueAsButton()));

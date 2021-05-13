@@ -8,8 +8,6 @@ namespace WizardGame.Movement
     {
         [SerializeField] private CharacterMovementMotor movementMotor;
         [SerializeField] private SlidingMovement slidingMovement;
-
-        [SerializeField] private float slideSpeed;
         
         public SlidingMovement SlidingMovement => slidingMovement;
 
@@ -20,15 +18,14 @@ namespace WizardGame.Movement
             if (movementMotor == null)
             {
                 movementMotor = GetComponent<CharacterMovementMotor>();
-                chController = GetComponent<CharacterController>();
             }
-            
-            slidingMovement.Init(chController.height * 0.75f + chController.radius);
+
+            chController = movementMotor.GetComponent<CharacterController>();
         }
 
         private void OnEnable() => movementMotor.AddModifier(slidingMovement);
         private void OnDisable() => movementMotor.RemoveModifier(slidingMovement);
-        private void FixedUpdate() => slidingMovement.Tick(Time.fixedDeltaTime, slideSpeed, transform.position + chController.center);
+        private void FixedUpdate() => slidingMovement.Tick(Time.fixedDeltaTime, transform.position + chController.center);
 
         public bool ShouldSlide() => slidingMovement.ShouldSlide(transform.position + chController.center, chController.slopeLimit);
     }

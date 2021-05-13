@@ -7,11 +7,19 @@ namespace WizardGame.Movement
     [Serializable]
     public class LocomotionMovement : IMovementModifier
     {
+        [SerializeField] private  float mvSpeed;
+
+        public float MvSpeed
+        {
+            get => mvSpeed;
+            set => mvSpeed = value;
+        }
+        
         public Vector3 Value { get; private set; }
         
         private Vector3 previousInput = Vector3.zero;
 
-        public void Tick(float deltaTime, float mvSpeed)
+        public void Tick(float deltaTime)
         {
             deltaTime = Mathf.Max(deltaTime, 0);
             

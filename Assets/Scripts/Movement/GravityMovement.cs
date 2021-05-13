@@ -1,17 +1,33 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace  WizardGame.Movement
+namespace WizardGame.Movement
 {
     [Serializable]
     public class GravityMovement : IMovementModifier
     {
+        [SerializeField] private float gravMagnitude;
+        [SerializeField] private float groundedPullMagnitude;
+
+        public float GravMagnitude
+        {
+            get => gravMagnitude;
+            set => gravMagnitude = value;
+        }
+
+        public float GroundedPullMagnitude
+        {
+            get => groundedPullMagnitude;
+            set => groundedPullMagnitude = value;
+        }
+
         public Vector3 Value { get; private set; }
-        
+
         private float yVelocity = 0f;
-        
-        public void Tick(float deltaTime, float gravMagnitude, float groundedPullMagnitude, bool isGrounded)
+
+        public void Tick(float deltaTime, bool isGrounded)
         {
             yVelocity -= gravMagnitude;
 

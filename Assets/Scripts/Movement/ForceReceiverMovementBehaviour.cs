@@ -7,8 +7,6 @@ namespace WizardGame.Movement
     {
         [SerializeField] private CharacterMovementMotor movementMotor;
         [SerializeField] private ForceReceiverMovement forceReceiver;
-
-        [SerializeField] private float drag = 3f;
         
         public ForceReceiverMovement ForceReceiver => forceReceiver;
 
@@ -19,13 +17,14 @@ namespace WizardGame.Movement
             if (movementMotor == null)
             {
                 movementMotor = GetComponent<CharacterMovementMotor>();
-                chController = GetComponent<CharacterController>();
             }
+            
+            chController = GetComponent<CharacterController>();
         }
 
         private void OnEnable() => movementMotor.AddModifier(forceReceiver);
         private void OnDisable() => movementMotor.RemoveModifier(forceReceiver);
-        private void FixedUpdate() => forceReceiver.Tick(Time.fixedDeltaTime, drag);
+        private void FixedUpdate() => forceReceiver.Tick(Time.fixedDeltaTime);
 
         public void AddForce(Vector3 force) => forceReceiver.AddForce(force);
     }

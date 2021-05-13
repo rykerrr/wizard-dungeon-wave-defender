@@ -7,9 +7,17 @@ namespace WizardGame.Movement
     [Serializable]
     public class ForceReceiverMovement : IMovementModifier
     {
+        [SerializeField] private float drag;
+
+        public float Drag
+        {
+            get => drag;
+            set => drag = value;
+        }
+        
         public Vector3 Value { get; private set; }
 
-        public void Tick(float deltaTime, float drag)
+        public void Tick(float deltaTime)
         {
             bool isForceTooLow = Value.magnitude < 0.2f;
 

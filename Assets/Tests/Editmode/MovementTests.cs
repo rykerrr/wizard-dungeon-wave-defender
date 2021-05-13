@@ -3,6 +3,7 @@ using NUnit.Framework;
 using WizardGame.Movement;
 using WizardGame.Utility.Infrastructure;
 using Moq;
+using WizardGame.Utility.Infrastructure.DataBuilders;
 
 namespace WizardGame.Testing.Movement
 {
@@ -16,10 +17,9 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _0_DeltaForceAndInput_DoesntSet_GroundedCharacter_Value()
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement)new JumpingMovementDataBuilder();
                     
-                    jumping.SetPreviousInput(0);
-                    jumping.Tick(0, 0, true);
+                    jumping.Tick(1, true);
                     
                     Assert.AreEqual(Vector3.zero, jumping.Value);
                 }
@@ -28,10 +28,9 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_DeltaAndInput_Positive_Force_Sets_GroundedCharacter_Value_To_x0yXz0(float force)
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement)new JumpingMovementDataBuilder(force, 1);
                     
-                    jumping.SetPreviousInput(1);
-                    jumping.Tick(1, force, true);
+                    jumping.Tick(1, true);
                     
                     Assert.AreEqual(new Vector3(0, force, 0), jumping.Value);
                 }
@@ -41,11 +40,10 @@ namespace WizardGame.Testing.Movement
                 public void _Negative_Delta_1_Input_Positive_Force_DoesntSet_GroundedCharacter_Value(float delta,
                     float force)
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement)new JumpingMovementDataBuilder(force, 1);
                     var prevValue = jumping.Value;
                     
-                    jumping.SetPreviousInput(1);
-                    jumping.Tick(delta, force, true);
+                    jumping.Tick(delta, true);
                     
                     Assert.AreEqual(prevValue, jumping.Value);
                 }
@@ -54,11 +52,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_Delta_Positive_Force_0_Input_DoesntSet_GroundedCharacter_Value(float force)
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement) new JumpingMovementDataBuilder(force, 0);
                     var prevVal = jumping.Value;
                     
-                    jumping.SetPreviousInput(0);
-                    jumping.Tick(1, force, true);
+                    jumping.Tick(1, true);
                     
                     Assert.AreEqual(prevVal, jumping.Value);
                 }
@@ -67,11 +64,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _0_Delta_Positive_Force_1_Input_DoesntSet_GroundedCharacter_Value(float force)
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement) new JumpingMovementDataBuilder(force, 1);
                     var prevVal = jumping.Value;
                     
-                    jumping.SetPreviousInput(1);
-                    jumping.Tick(0, force, true);
+                    jumping.Tick(0, true);
                     
                     Assert.AreEqual(prevVal, jumping.Value);
                 }
@@ -79,11 +75,10 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_0_Force_1_Input_DoesntSet_GroundedCharacter_Value()
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement) new JumpingMovementDataBuilder(0, 1);
                     var prevVal = jumping.Value;
                     
-                    jumping.SetPreviousInput(1);
-                    jumping.Tick(1, 0, true);
+                    jumping.Tick(1, true);
                     
                     Assert.AreEqual(prevVal, jumping.Value);
                 }
@@ -92,11 +87,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_DeltaAndInput_Positive_Force_DoesntSet_NotGroundedCharacter_Value(float force)
                 {
-                    var jumping = new JumpingMovement();
+                    var jumping = (JumpingMovement) new JumpingMovementDataBuilder(force, 1);
                     var prevVal = jumping.Value;
                     
-                    jumping.SetPreviousInput(1);
-                    jumping.Tick(1, force, false);
+                    jumping.Tick(1, false);
                     
                     Assert.AreEqual(prevVal, jumping.Value);
                 }
@@ -111,11 +105,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-4), TestCase(-3f), TestCase(-224)]
                 public void Negative_Delta_1_MvSpeedAndInput_DoesntSet_Value(float delta)
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.one, 1);
                     var prevVal = locomotion.Value;
                     
-                    locomotion.SetPreviousMovementInput(Vector2.one);
-                    locomotion.Tick(delta, 1);
+                    locomotion.Tick(delta);
                     
                     Assert.AreEqual(prevVal, locomotion.Value);
                 }
@@ -123,24 +116,22 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _0_DeltaMvSpeedAndInput_DoesntSet_Value()
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.zero, 0);
                     var prevVal = locomotion.Value;
                     
-                    locomotion.SetPreviousMovementInput(Vector2.zero);
-                    locomotion.Tick(0, 0);
+                    locomotion.Tick(0);
                     
                     Assert.AreEqual(prevVal, locomotion.Value);
                 }
-
+                
                 [Test]
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _1_Delta_X_MvSpeed_1_Input_Sets_To_xXy0zX(float mvSpeed)
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.one, mvSpeed);
                     var expectedValue = new Vector3(mvSpeed, 0f, mvSpeed);
                     
-                    locomotion.SetPreviousMovementInput(Vector2.one);
-                    locomotion.Tick(1, mvSpeed);
+                    locomotion.Tick(1);
                     
                     Assert.AreEqual(expectedValue, locomotion.Value);
                 }
@@ -149,11 +140,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _1_Delta_X_MvSpeed_0_Input_DoesntSet_Value(float mvSpeed)
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.zero, mvSpeed);
                     var prevVal = locomotion.Value;
                     
-                    locomotion.SetPreviousMovementInput(Vector2.zero);
-                    locomotion.Tick(1, mvSpeed);
+                    locomotion.Tick(1);
                     
                     Assert.AreEqual(prevVal, locomotion.Value);
                 }
@@ -162,11 +152,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _0_Delta_X_MvSpeed_1_Input_DoesntSet_Value(float mvSpeed)
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.one, 0);
                     var prevVal = locomotion.Value;
                     
-                    locomotion.SetPreviousMovementInput(Vector2.one);
-                    locomotion.Tick(0, mvSpeed);
+                    locomotion.Tick(0);
                     
                     Assert.AreEqual(prevVal, locomotion.Value);
                 }
@@ -174,11 +163,10 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_0_MvSpeed_1_Input_DoesntSet_Value()
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.one, 0);
                     var prevVal = locomotion.Value;
                     
-                    locomotion.SetPreviousMovementInput(Vector2.one);
-                    locomotion.Tick(1, 0);
+                    locomotion.Tick(1);
                     
                     Assert.AreEqual(prevVal, locomotion.Value);
                 }
@@ -189,11 +177,10 @@ namespace WizardGame.Testing.Movement
                 , TestCase(3f, 0f), TestCase(0f, 4f)]
                 public void _1_Delta_X_MvSpeed_Y_Input_Sets_Value_To_xXYy0zXY(float mvSpeed, float inputUnitMagnitude)
                 {
-                    var locomotion = new LocomotionMovement();
+                    var locomotion = (LocomotionMovement) new LocomotionMovementDataBuilder(Vector2.one * inputUnitMagnitude, mvSpeed);
                     var expectedVal = new Vector3(mvSpeed * inputUnitMagnitude, 0f, mvSpeed * inputUnitMagnitude);
                     
-                    locomotion.SetPreviousMovementInput(Vector2.one * inputUnitMagnitude);
-                    locomotion.Tick(1, mvSpeed);
+                    locomotion.Tick(1);
                     
                     Assert.AreEqual(expectedVal, locomotion.Value);
                 }
@@ -215,10 +202,10 @@ namespace WizardGame.Testing.Movement
                 ,TestCase(-4, -6), TestCase(244, 3)]
                 public void _1_Delta_Value_Set_To_GroundedPull_When_Grounded(float gravMagnitude, float groundedPullMagnitude)
                 {
-                    var gravity = new GravityMovement();
+                    var gravity = (GravityMovement) new GravityMovementDataBuilder(gravMagnitude, groundedPullMagnitude);
                     var expectedValue = new Vector3(0, -groundedPullMagnitude, 0);
                     
-                    gravity.Tick(1, gravMagnitude, groundedPullMagnitude, true);
+                    gravity.Tick(1, true);
                     
                     Assert.AreEqual(expectedValue, gravity.Value);
                 }
@@ -226,27 +213,27 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_2_Ticks_Of_5_Lower_Value_By_10_When_NotGrounded()
                 {
-                    var gravity = new GravityMovement();
+                    var gravity =  (GravityMovement) new GravityMovementDataBuilder(5, 10);
                     var expectedValue = new Vector3(0, -10, 0);
 
-                    gravity.Tick(1, 5, 10, false);
-                    gravity.Tick(1, 5, 10, false);
+                    gravity.Tick(1, false);
+                    gravity.Tick(1, false);
                     
                     Assert.AreEqual(expectedValue, gravity.Value);
                 }
-
+                
                 [Test]
                 [TestCase(2), TestCase(4)]
                 public void _1_Delta_Value_Set_To_GroundedPull_After_X_Ticks(float tickAmn)
                 {
-                    var gravity = new GravityMovement();
+                    var gravity = (GravityMovement) new GravityMovementDataBuilder(4, 5);;
                     var expectedValue = new Vector3(0, -5, 0);
                     
                     for (int i = 0; i < tickAmn; i++)
                     {
-                        gravity.Tick(1, 4, 5, false);
+                        gravity.Tick(1, false);
                     }
-                    gravity.Tick(1, 4, 5, true);
+                    gravity.Tick(1, true);
                     
                     Assert.AreEqual(expectedValue, gravity.Value);
                 }
@@ -255,9 +242,9 @@ namespace WizardGame.Testing.Movement
                 [TestCase(true), TestCase(false)]
                 public void Value_Set_To_0_If_Delta_0_Regardless_Of_GroundedState(bool isGrounded)
                 {
-                    var gravity = new GravityMovement();
+                    var gravity = (GravityMovement) new GravityMovementDataBuilder(3, 10);;
                     
-                    gravity.Tick(0, 3, 10, isGrounded);
+                    gravity.Tick(0, isGrounded);
                     
                     Assert.AreEqual(Vector3.zero, gravity.Value);
                 }
@@ -272,7 +259,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4), TestCase(244), TestCase(-43), TestCase(0)]
                 public void Value_Changed_To_X_When_X_Force_Added(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder();
                     var expectedValue = Vector3.one * forceUnitMagnitude;
                     
                     forceReceiver.AddForce(expectedValue);
@@ -287,10 +274,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(0.1f), TestCase(0.05f), TestCase(0.2f)]
                 public void _1_DeltaAndDrag_Sets_Value_To_0_If_AddedForce_BelowOrEqual_To_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder(1);
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
-                    forceReceiver.Tick(1, 1);
+                    forceReceiver.Tick(1);
                     
                     Assert.AreEqual(Vector3.zero, forceReceiver.Value);
                 }
@@ -299,10 +286,10 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-5f), TestCase(42f), TestCase(-400f), TestCase(320f)]
                 public void _1_DeltaAndDrag_Set_Value_To_0_For_Force_Higher_Than_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder(1);
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
-                    forceReceiver.Tick(1, 1);
+                    forceReceiver.Tick(1);
                     
                     Assert.AreEqual(Vector3.zero, forceReceiver.Value);
                 }
@@ -311,11 +298,11 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-5f), TestCase(42f), TestCase(-400f), TestCase(320f)]
                 public void _0_DeltaAndDrag_Doesnt_Set_Value_For_Force_Higher_Than_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder(0);
                     var expectedValue = Vector3.one * forceUnitMagnitude;
                     
                     forceReceiver.AddForce(expectedValue);
-                    forceReceiver.Tick(0, 0);
+                    forceReceiver.Tick(0);
                     
                     Assert.AreEqual(expectedValue, forceReceiver.Value);
                 }
@@ -324,11 +311,11 @@ namespace WizardGame.Testing.Movement
                 [TestCase(300), TestCase(20), TestCase(5), TestCase(40), TestCase(-30)]
                 public void _1_Delta_Half1_Drag_Sets_Value_To_Half(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder(0.5f);
                     var expectedValue = Vector3.one * forceUnitMagnitude / 2;
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
-                    forceReceiver.Tick(1, 0.5f);
+                    forceReceiver.Tick(1);
                     
                     Assert.AreEqual(expectedValue, forceReceiver.Value);
                 }
@@ -337,11 +324,11 @@ namespace WizardGame.Testing.Movement
                 [TestCase(300), TestCase(20), TestCase(5), TestCase(40), TestCase(-30)]
                 public void Half1_Delta_1_Drag_Sets_Value_To_Half(float forceUnitMagnitude)
                 {
-                    var forceReceiver = new ForceReceiverMovement();
+                    var forceReceiver = (ForceReceiverMovement) new ForceReceiverDataBuilder(1);
                     var expectedValue = Vector3.one * forceUnitMagnitude / 2;
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
-                    forceReceiver.Tick(0.5f, 1);
+                    forceReceiver.Tick(0.5f);
                     
                     Assert.AreEqual(expectedValue, forceReceiver.Value);
                 }
