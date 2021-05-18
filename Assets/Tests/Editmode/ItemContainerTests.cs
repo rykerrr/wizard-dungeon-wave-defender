@@ -1,10 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
-using UnityEngine;
 using Moq;
-using WizardGame.ItemSystem;
-using WizardGame.ItemSystem.Item_Containers;
-using Object = UnityEngine.Object;
+using WizardGame.Item_System;
+using WizardGame.Item_System.Item_Containers;
+using WizardGame.Item_System.Items;
 
 #pragma warning disable 0649
 namespace WizardGame.Testing.Item_Containers

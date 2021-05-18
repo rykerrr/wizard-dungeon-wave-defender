@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WizardGame.ItemSystem
+namespace WizardGame.Item_System
 {
     public class ItemComparer : IEqualityComparer<ItemSlot>
     {

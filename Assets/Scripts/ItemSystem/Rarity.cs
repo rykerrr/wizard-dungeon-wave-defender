@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace WizardGame.ItemSystem
+namespace WizardGame.Item_System
 {
     [CreateAssetMenu(fileName = "New Rarity", menuName = "Rarity/New Rarity")]
     public class Rarity : ScriptableObject

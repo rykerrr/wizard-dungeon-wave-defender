@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace WizardGame.ItemSystem
+namespace WizardGame.Item_System.Items
 {
     public abstract class InventoryItem : HotbarItem
     {

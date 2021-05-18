@@ -1,4 +1,6 @@
-﻿namespace WizardGame.ItemSystem.Item_Containers
+﻿using WizardGame.Item_System.Items;
+
+namespace WizardGame.Item_System.Item_Containers
 {
     public interface IItemContainer
     {

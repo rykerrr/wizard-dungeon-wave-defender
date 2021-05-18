@@ -20,14 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/ConsumableItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/ConsumableItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/MaterialItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/MaterialItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarDragHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarDragHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/HotbarTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/HotbarTests.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Gameplay Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Gameplay Data/Game event instances.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/HotbarItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/HotbarItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/InventoryItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/InventoryItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/InventoryItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemComparer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Rarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Rarity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/InventorySlotUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/InventorySlotUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Production Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Production Scripts.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Unity Event Responses/UnityVoidEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Unity Event Responses/UnityVoidEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +70,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -47,6 +89,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/f7/f9177b61/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Input/PlayerActionsAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemTooltipPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/05/1477f7c5/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -61,6 +104,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementModifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/69/bb01e5a8/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/24/afdf3f82/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/a8/40ddc58c/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/da/6739f929/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,12 +136,39 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" />
-      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/A.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" />
       <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/HotbarTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/HotbarSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/InventorySlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/HotbarItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/BaseGameEventListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Unity Event Responses/UnityVoidEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/IntEventListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/FloatEventListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/BoolEventListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/InventoryItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ConsumableItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/MaterialItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/ConsumableItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/InventoryItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/MaterialItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemTooltipPopup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -169,7 +240,13 @@
       <workItem from="1620597289544" duration="3402000" />
       <workItem from="1620717532961" duration="797000" />
       <workItem from="1620744452074" duration="1804000" />
-      <workItem from="1620922953718" duration="7258000" />
+      <workItem from="1620922953718" duration="7360000" />
+      <workItem from="1620934184291" duration="1068000" />
+      <workItem from="1621006497132" duration="2272000" />
+      <workItem from="1621176396554" duration="588000" />
+      <workItem from="1621177014403" duration="9018000" />
+      <workItem from="1621236509302" duration="15891000" />
+      <workItem from="1621320570650" duration="866000" />
     </task>
     <servers />
   </component>

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Ludiq;
 using UnityEngine;
+using WizardGame.Item_System.Items;
 
-namespace WizardGame.ItemSystem.Item_Containers
+namespace WizardGame.Item_System.Item_Containers
 {
     [Serializable]
     public class ItemContainer : IItemContainer
     {
-        private ItemSlot[] itemSlots = default;
+        [SerializeField] private ItemSlot[] itemSlots = default;
         
         public Action OnItemsUpdated = delegate { };
         // may be able to convert to custom event system though might not need to as it already works with it
@@ -67,6 +66,8 @@ namespace WizardGame.ItemSystem.Item_Containers
 
                 itemSlot.Quantity = 0;
 
+                OnItemsUpdated.Invoke();
+                
                 return itemSlot;
             }
 
@@ -91,6 +92,8 @@ namespace WizardGame.ItemSystem.Item_Containers
                 itemSlots[i] = new ItemSlot(itemSlot.invItem, newSlotQuant);
             }
 
+            OnItemsUpdated.Invoke();
+            
             return itemSlot;
         }
 
@@ -117,6 +120,8 @@ namespace WizardGame.ItemSystem.Item_Containers
                 }
             }
 
+            OnItemsUpdated.Invoke();
+            
             return itemSlot;
         }
 
@@ -127,6 +132,7 @@ namespace WizardGame.ItemSystem.Item_Containers
             if (slot.invItem == null) return;
 
             itemSlots[slotIndex] = new ItemSlot(slot.invItem, 0);
+            OnItemsUpdated.Invoke();
         }
 
         public int GetTotalQuantity(InventoryItem item)
@@ -169,12 +175,16 @@ namespace WizardGame.ItemSystem.Item_Containers
                     itemSlots[slotIndexTwo].Quantity += spaceLeftInSlotTwo;
                     itemSlots[slotIndexOne].Quantity -= spaceLeftInSlotTwo;
 
+                    OnItemsUpdated.Invoke();
+                    
                     return;
                 }
             }
             
             itemSlots[slotIndexTwo] = slotOne;
             itemSlots[slotIndexOne] = slotTwo;
+            
+            OnItemsUpdated.Invoke();
         }
     }
 }

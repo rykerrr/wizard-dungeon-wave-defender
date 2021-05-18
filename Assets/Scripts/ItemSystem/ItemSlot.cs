@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
+using WizardGame.Item_System.Items;
 
-namespace WizardGame.ItemSystem
+namespace WizardGame.Item_System
 {
     [Serializable]
     public struct ItemSlot

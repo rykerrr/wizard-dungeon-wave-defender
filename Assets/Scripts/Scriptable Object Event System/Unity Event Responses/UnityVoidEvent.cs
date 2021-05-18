@@ -2,6 +2,7 @@
 
 namespace WizardGame.CustomEventSystem
 {
+    [System.Serializable]
     public class UnityVoidEvent : UnityEvent<VoidData>
     {
         
