@@ -5,7 +5,7 @@ using WizardGame.Item_System.Items;
 
 namespace WizardGame.Item_System.UI
 {
-    public class ItemContainerSlotUI : ItemSlotUI, IDropHandler
+    public class ItemContainerSlotUI : ItemSlotUI
     {
         [SerializeField] private Inventory inventory;
         
@@ -15,7 +15,7 @@ namespace WizardGame.Item_System.UI
         public override void OnDrop(PointerEventData eventData)
         {
             var dragHandler = eventData.pointerDrag.GetComponent<ItemDragHandler>();
-
+            
             // should technically be impossible, but maybe we'll have more draggable things that aren't items
             if (dragHandler == null) return;
 
