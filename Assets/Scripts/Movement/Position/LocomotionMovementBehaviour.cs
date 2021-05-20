@@ -3,16 +3,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     public class LocomotionMovementBehaviour : MonoBehaviour
     {
-        [SerializeField] private CharacterMovementMotor movementMotor;
-        [SerializeField] private LocomotionMovement locomotion;
+        [SerializeField] private CharacterMovementMotor movementMotor = default;
+        [SerializeField] private LocomotionMovement locomotion = default;
         
         public LocomotionMovement Locomotion => locomotion;
 
-        private CharacterController chController;
+        private CharacterController chController = default;
 
         private void Awake()
         {

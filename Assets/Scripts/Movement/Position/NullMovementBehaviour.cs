@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     public class NullMovementBehaviour : MonoBehaviour
     {
-        [SerializeField] private CharacterMovementMotor movementMotor;
-        [SerializeField] private NullMovement nullMovement;
+        [SerializeField] private CharacterMovementMotor movementMotor = default;
+        [SerializeField] private NullMovement nullMovement = default;
 
         public NullMovement NullMovement => nullMovement;
 

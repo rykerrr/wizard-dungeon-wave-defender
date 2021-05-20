@@ -20,7 +20,7 @@ namespace WizardGame.Item_System.UI
             get => referencedSlotSlotItem;
             set { referencedSlotSlotItem = value; UpdateSlotUi(); }
         }
-
+        
         public override void OnDrop(PointerEventData eventData)
         {
             var dragHandler = eventData.pointerDrag.GetComponent<ItemDragHandler>();
@@ -50,19 +50,20 @@ namespace WizardGame.Item_System.UI
 
         public bool AddItem(HotbarItem itemToAdd)
         {
-            if (ReferencedSlotItem != null) return false;
+            if (!ReferenceEquals(ReferencedSlotItem, null)) return false;
             
             ReferencedSlotItem = itemToAdd;
 
             return true;
         }
 
-        public void UseItem(int index)
+        public void UseItem()
         {
-            if (index != SlotIndex) return;
-            // use item logic
+            if (ReferenceEquals(referencedSlotSlotItem, null)) return;
             
-            // Refactor this, do we actually need the index? Why not make it event based?
+            Debug.Log(referencedSlotSlotItem.GetInfoDisplayText());
+            
+            
         }
         
         private void UpdateItemQuantityUI()

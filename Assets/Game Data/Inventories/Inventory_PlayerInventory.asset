@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: Inventory_PlayerInventory
   m_EditorClassIdentifier: 
   onInventoryItemsUpdated: {fileID: 11400000, guid: 0c248363774646042bed35f4be45f823, type: 2}
-  itemToAdd: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
   itemContainer:
     itemSlots:
-    - quantity: 0
-      invItem: {fileID: 0}
-    - quantity: 1
+    - quantity: 4
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
-    - quantity: 15
+    - quantity: 13
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 0
       invItem: {fileID: 0}
@@ -56,3 +53,6 @@ MonoBehaviour:
       invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
+    - quantity: 0
+      invItem: {fileID: 0}
+  itemToAdd: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}

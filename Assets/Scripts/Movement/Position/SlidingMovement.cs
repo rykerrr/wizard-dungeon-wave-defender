@@ -2,13 +2,13 @@
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     [Serializable]
     public class SlidingMovement : IMovementModifier
     {
-        [SerializeField] private float slideSpeed;
-        [SerializeField] private float groundRayMaxDistance;
+        [SerializeField] private float slideSpeed = default;
+        [SerializeField] private float groundRayMaxDistance = default;
 
         public float SlideSpeed
         {

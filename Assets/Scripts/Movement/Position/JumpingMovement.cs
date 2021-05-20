@@ -2,12 +2,12 @@
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     [Serializable]
     public class JumpingMovement : IMovementModifier
     {
-        [SerializeField] private float jumpForce;
+        [SerializeField] private float jumpForce = default;
 
         public float JumpForce
         {

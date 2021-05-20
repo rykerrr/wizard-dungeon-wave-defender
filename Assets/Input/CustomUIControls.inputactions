@@ -1,0 +1,50 @@
+{
+    "name": "CustomUIControls",
+    "maps": [
+        {
+            "name": "Inventory",
+            "id": "d23c66fd-79eb-4525-b1b1-790c2771f6ef",
+            "actions": [
+                {
+                    "name": "Scroll Through Hotbar Slots",
+                    "type": "Value",
+                    "id": "bc3dc4e3-a1c8-4cee-9424-d0274209ca32",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3ff3f186-615c-4dc5-806c-98d52afea815",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "K+M",
+                    "action": "Scroll Through Hotbar Slots",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "K+M",
+            "bindingGroup": "K+M",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

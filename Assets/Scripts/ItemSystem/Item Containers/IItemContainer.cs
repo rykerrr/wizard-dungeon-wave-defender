@@ -1,4 +1,6 @@
-﻿using WizardGame.Item_System.Items;
+﻿using ItemSystem.World_Interaction;
+using UnityEngine;
+using WizardGame.Item_System.Items;
 
 namespace WizardGame.Item_System.Item_Containers
 {
@@ -9,9 +11,10 @@ namespace WizardGame.Item_System.Item_Containers
         // to modify anything within the derived classes
         ItemSlot GetSlotByIndex(int index);
         ItemSlot AddItem(ItemSlot itemSlot);
-        ItemSlot SubtractItem(ItemSlot itemSlot);
-        void RemoveAt(int slotIndex);
+        ItemSlot Remove(ItemSlot itemSlot);
+        void RemoveAt(int slotIndex, int quantity);
         int GetTotalQuantity(InventoryItem item);
         void Swap(int slotIndexOne, int slotIndexTwo);
+        PhysicalItem DropItem(int slotIndex, Vector3 location);
     }
 }

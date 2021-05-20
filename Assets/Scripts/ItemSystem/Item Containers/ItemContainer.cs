@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
+using ItemSystem.World_Interaction;
 using UnityEngine;
 using WizardGame.Item_System.Items;
+using WizardGame.Utility.Infrastructure.Factories;
 
 namespace WizardGame.Item_System.Item_Containers
 {
@@ -23,26 +25,16 @@ namespace WizardGame.Item_System.Item_Containers
         // if we used ID's, we could pass in an ID here instead
         public ItemSlot AddItem(ItemSlot itemSlot)
         {
-            var firstEmptySlotIndex = itemSlots.Length;
             var maxStack = itemSlot.invItem.MaxStack;
 
-            for (var i = itemSlots.Length - 1; i >= 0; i--)
+            for (var i = 0; i < itemSlots.Length; i++)
             {
-                if (ReferenceEquals(itemSlots[i].invItem, null))
-                {
-                    firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
-                    continue;
-                }
+                bool invItemIsNull = ReferenceEquals(itemSlots[i].invItem, null);
+                bool slotIsFull = itemSlots[i].Quantity >= maxStack;
+                bool differentItems = !ReferenceEquals(itemSlot.invItem, itemSlots[i].invItem);
 
-                if (itemSlots[i].Quantity >= maxStack)
+                if (invItemIsNull || slotIsFull || differentItems)
                 {
-                    firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
-                    continue;
-                }
-
-                if (!ReferenceEquals(itemSlot.invItem, itemSlots[i].invItem))
-                {
-                    firstEmptySlotIndex = Mathf.Min(firstEmptySlotIndex, i);
                     continue;
                 }
 
@@ -66,7 +58,7 @@ namespace WizardGame.Item_System.Item_Containers
 
                 itemSlot.Quantity = 0;
 
-                OnItemsUpdated.Invoke();
+                OnItemsUpdated?.Invoke();
                 
                 return itemSlot;
             }
@@ -92,12 +84,12 @@ namespace WizardGame.Item_System.Item_Containers
                 itemSlots[i] = new ItemSlot(itemSlot.invItem, newSlotQuant);
             }
 
-            OnItemsUpdated.Invoke();
+            OnItemsUpdated?.Invoke();
             
             return itemSlot;
         }
 
-        public ItemSlot SubtractItem(ItemSlot itemSlot)
+        public ItemSlot Remove(ItemSlot itemSlot)
         {
             // tries to find existing slot, if it does checks if it can remove quantity and does so if possible
             // otherwise removes the item and continues searching
@@ -106,33 +98,36 @@ namespace WizardGame.Item_System.Item_Containers
             {
                 if (itemSlots[i].invItem != itemSlot.invItem) continue;
 
-                if (itemSlot.Quantity > itemSlots[i].Quantity)
+                if (itemSlot.Quantity >= itemSlots[i].Quantity)
                 {
                     itemSlot.Quantity -= itemSlots[i].Quantity;
-                    itemSlots[i].Quantity = 0;
+                    itemSlots[i] = new ItemSlot(null, 0);
                 }
                 else
                 {
                     itemSlots[i].Quantity -= itemSlot.Quantity;
                     itemSlot.Quantity = 0;
-
+                    
                     break;
                 }
             }
 
-            OnItemsUpdated.Invoke();
+            OnItemsUpdated?.Invoke();
             
             return itemSlot;
         }
 
-        public void RemoveAt(int slotIndex)
+        public void RemoveAt(int slotIndex, int quantity = 1)
         {
             ItemSlot slot = itemSlots[slotIndex];
 
             if (slot.invItem == null) return;
 
-            itemSlots[slotIndex] = new ItemSlot(slot.invItem, 0);
-            OnItemsUpdated.Invoke();
+            int quantityAfterRemoval = Mathf.Clamp(slot.Quantity - quantity, 0, slot.invItem.MaxStack);
+            if (quantityAfterRemoval == 0) slot.invItem = null;
+            
+            itemSlots[slotIndex] = new ItemSlot(slot.invItem, quantityAfterRemoval);
+            OnItemsUpdated?.Invoke();
         }
 
         public int GetTotalQuantity(InventoryItem item)
@@ -175,7 +170,7 @@ namespace WizardGame.Item_System.Item_Containers
                     itemSlots[slotIndexTwo].Quantity += spaceLeftInSlotTwo;
                     itemSlots[slotIndexOne].Quantity -= spaceLeftInSlotTwo;
 
-                    OnItemsUpdated.Invoke();
+                    OnItemsUpdated?.Invoke();
                     
                     return;
                 }
@@ -184,7 +179,18 @@ namespace WizardGame.Item_System.Item_Containers
             itemSlots[slotIndexTwo] = slotOne;
             itemSlots[slotIndexOne] = slotTwo;
             
-            OnItemsUpdated.Invoke();
+            OnItemsUpdated?.Invoke();
+        }
+
+        public PhysicalItem DropItem(int slotIndex, Vector3 location)
+        {
+            InventoryItem item = GetSlotByIndex(slotIndex).invItem;
+            if (!HasItem(item)) return null;
+            
+            RemoveAt(slotIndex, 1);
+            OnItemsUpdated?.Invoke();
+            
+            return PhysicalItemFactory.CreateInstance(location, Quaternion.identity, item);
         }
     }
 }

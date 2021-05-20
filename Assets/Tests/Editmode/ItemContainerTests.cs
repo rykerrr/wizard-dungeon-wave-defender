@@ -202,7 +202,7 @@ namespace WizardGame.Testing.Item_Containers
             }
         }
 
-        public class SubtractItem_Method
+        public class Remove_Method
         {
             [Test]
             public void Calling_With_Less_Than_MaxStack_Doesnt_Remove_Entire_Stack()
@@ -213,7 +213,7 @@ namespace WizardGame.Testing.Item_Containers
                 var expectedSlot = new ItemSlot(invItemStub.Object, 3);
 
                 itemContainer.AddItem(slot);
-                slot = itemContainer.SubtractItem(new ItemSlot(invItemStub.Object, 8));
+                slot = itemContainer.Remove(new ItemSlot(invItemStub.Object, 8));
 
                 Assert.AreEqual(expectedSlot, slot);
             }
@@ -224,13 +224,12 @@ namespace WizardGame.Testing.Item_Containers
                 var itemContainer = new ItemContainer(20);
                 var invItemStub = InventoryItemFake(5);
                 var slot = new ItemSlot(invItemStub.Object, 5);
-                var expectedSlot = new ItemSlot(invItemStub.Object, 0);
 
                 itemContainer.AddItem(slot);
-                itemContainer.SubtractItem(slot);
+                itemContainer.Remove(slot);
                 slot = itemContainer.GetSlotByIndex(0);
 
-                Assert.AreEqual(expectedSlot, slot);
+                Assert.AreEqual(ItemSlot.Empty, slot);
             }
 
             [Test]
@@ -240,7 +239,7 @@ namespace WizardGame.Testing.Item_Containers
                 var invItemStub = InventoryItemFake();
                 var expectedSlot = new ItemSlot(invItemStub.Object, 5);
 
-                var slot = itemContainer.SubtractItem(expectedSlot);
+                var slot = itemContainer.Remove(expectedSlot);
 
                 Assert.AreEqual(expectedSlot, slot);
             }
@@ -254,7 +253,7 @@ namespace WizardGame.Testing.Item_Containers
             {
                 var itemContainer = new ItemContainer(20);
                 var invItemStub = InventoryItemFake(4);
-                var expectedSlot = new ItemSlot(invItemStub.Object, 0);
+                var expectedSlot = new ItemSlot(invItemStub.Object, 3);
 
                 itemContainer.AddItem(new ItemSlot(invItemStub.Object, 5));
                 itemContainer.RemoveAt(0);

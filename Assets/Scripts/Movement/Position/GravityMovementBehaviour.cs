@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     public class GravityMovementBehaviour : MonoBehaviour
     {

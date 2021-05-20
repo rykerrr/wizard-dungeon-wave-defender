@@ -8,25 +8,25 @@ namespace WizardGame.Item_System.Item_Containers
     public class Inventory : ScriptableObject
     {
         [SerializeField] private VoidGameEvent onInventoryItemsUpdated = default;
-        [SerializeField] private InventoryItem itemToAdd = default;
-
         [SerializeField] private ItemContainer itemContainer = default;
-        
+
         public ItemContainer ItemContainer => itemContainer;
 
         public void OnEnable()
         {
             if (itemContainer == null) return;
-            
+
             ItemContainer.OnItemsUpdated += onInventoryItemsUpdated.Raise;
         }
 
         public void OnDisable()
         {
             if (itemContainer == null) return;
-            
+
             ItemContainer.OnItemsUpdated -= onInventoryItemsUpdated.Raise;
         }
+
+        [SerializeField] private InventoryItem itemToAdd = default;
 
         [ContextMenu("Test add")]
         public void AddItem()

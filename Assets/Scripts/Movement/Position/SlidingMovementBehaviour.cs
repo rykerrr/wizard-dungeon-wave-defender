@@ -2,12 +2,12 @@
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     public class SlidingMovementBehaviour : MonoBehaviour
     {
-        [SerializeField] private CharacterMovementMotor movementMotor;
-        [SerializeField] private SlidingMovement slidingMovement;
+        [SerializeField] private CharacterMovementMotor movementMotor = default;
+        [SerializeField] private SlidingMovement slidingMovement = default;
         
         public SlidingMovement SlidingMovement => slidingMovement;
 

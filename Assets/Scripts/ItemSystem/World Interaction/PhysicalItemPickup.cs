@@ -16,8 +16,6 @@ namespace ItemSystem.World_Interaction
 
         public PhysicalItemPickup(IItemContainer itemContainer)
         {
-            Debug.Log(itemContainer + " e ");
-            
             this.itemContainer = itemContainer;
         }
 

@@ -13,6 +13,7 @@ namespace WizardGame.Item_System.UI
         // rename the below field
         [SerializeField] protected Transform parentForDraggingAroundInv = default;
         [SerializeField] protected ItemTooltipPopup tooltipPopup = default;
+        
         public ItemSlotUI ItemSlotUI => itemSlotUI;
 
         private CanvasGroup canvGroup = default;

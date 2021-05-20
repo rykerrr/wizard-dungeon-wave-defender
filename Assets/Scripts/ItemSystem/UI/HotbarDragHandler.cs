@@ -16,9 +16,6 @@ namespace WizardGame.Item_System.UI
 
             if (eventData.hovered.Count != 0) return;
             
-            Debug.Log(gameObject + " | " + itemSlotUI + " | " + (ItemSlotUI as HotbarSlotUI));
-            eventData.hovered.ForEach(x => Debug.Log(x));
-            Debug.Log((ItemSlotUI as HotbarSlotUI).ReferencedSlotItem);
             (ItemSlotUI as HotbarSlotUI).ReferencedSlotItem = null;
         }
     }

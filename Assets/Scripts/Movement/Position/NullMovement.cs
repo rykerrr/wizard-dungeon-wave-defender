@@ -2,7 +2,7 @@
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     [Serializable]
     public class NullMovement : IMovementModifier

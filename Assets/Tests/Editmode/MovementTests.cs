@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using NUnit.Framework;
-using WizardGame.Movement;
+using WizardGame.Movement.Position;
 using WizardGame.Utility.Infrastructure;
 using Moq;
 using WizardGame.Utility.Infrastructure.DataBuilders;

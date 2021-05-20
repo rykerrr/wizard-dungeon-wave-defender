@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using WizardGame.Movement;
+using WizardGame.Movement.Position;
 
 namespace WizardGame.Utility.Infrastructure.DataBuilders
 {

@@ -9,8 +9,10 @@ namespace WizardGame.Item_System.UI
     {
         [SerializeField] private Inventory inventory;
         
-        public ItemSlot ItemSlot => inventory.ItemContainer.GetSlotByIndex(SlotIndex);
         public override HotbarItem ReferencedSlotItem => ItemSlot.invItem;
+        public Inventory Inventory => inventory;
+        
+        private ItemSlot ItemSlot => inventory.ItemContainer.GetSlotByIndex(SlotIndexOnUI);
 
         public override void OnDrop(PointerEventData eventData)
         {
@@ -23,7 +25,7 @@ namespace WizardGame.Item_System.UI
             {
                 case ItemContainerSlotUI itemSlotUI:
                 {
-                    inventory.ItemContainer.Swap(itemSlotUI.SlotIndex, SlotIndex);
+                    inventory.ItemContainer.Swap(itemSlotUI.SlotIndexOnUI, SlotIndexOnUI);
                     
                     break;
                 }
@@ -37,7 +39,7 @@ namespace WizardGame.Item_System.UI
         
         public override void UpdateSlotUi()
         {
-            if (ItemSlot.invItem == null)
+            if (ItemSlot.invItem == null || ItemSlot.Quantity == 0)
             {
                 EnableSlotUI(false);
             }

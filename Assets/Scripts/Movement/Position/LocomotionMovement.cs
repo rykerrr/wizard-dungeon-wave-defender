@@ -2,12 +2,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     [Serializable]
     public class LocomotionMovement : IMovementModifier
     {
-        [SerializeField] private  float mvSpeed;
+        [SerializeField] private  float mvSpeed = default;
 
         public float MvSpeed
         {

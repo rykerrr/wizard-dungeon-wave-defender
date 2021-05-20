@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 #pragma warning disable 0649
-namespace WizardGame.Movement
+namespace WizardGame.Movement.Position
 {
     [RequireComponent(typeof(CharacterController))]
     public class CharacterMovementMotor : MonoBehaviour
     {
-        [SerializeField] private CharacterController characterController;
+        [SerializeField] private CharacterController characterController = default;
     
         private readonly List<IMovementModifier> modifiers = new List<IMovementModifier>();
 
