@@ -10,8 +10,10 @@ namespace WizardGame.Movement.Position
 
         public Vector3 Value { get; private set; }
 
-        public void Tick(bool didHit, float distanceToGround, float maxDistanceToGround)
+        public void Tick(float deltaTime, bool didHit, float distanceToGround, float maxDistanceToGround)
         {
+            deltaTime = Mathf.Max(deltaTime, 0);
+            
             if (didHit)
             {
                 float distanceToKeep = maxDistanceToGround - offset;
@@ -26,18 +28,18 @@ namespace WizardGame.Movement.Position
 
                 if (distanceToGround > distanceToKeep)
                 {
-                    Value = Vector3.down * Time.deltaTime;
+                    Value = Vector3.down * deltaTime;
                 }
                 else if (distanceToGround < distanceToKeep)
                 {
-                    Value = Vector3.up * Time.deltaTime;
+                    Value = Vector3.up * deltaTime;
                 }
             }
             else
             {
                 // what if it's falling out of the world? and keeps falling down? that'd be an edge case
 
-                Value = Vector3.down * Time.deltaTime;
+                Value = Vector3.down * deltaTime;
             }
         }
     }

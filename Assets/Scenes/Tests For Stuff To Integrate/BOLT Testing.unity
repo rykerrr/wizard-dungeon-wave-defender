@@ -526,6 +526,7 @@ MonoBehaviour:
   movementMotor: {fileID: 0}
   forceReceiver:
     drag: 0
+    snapForceUnder: 0.3
 --- !u!1001 &212570391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,9 +906,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa0d8bc6511b494b9bab4dc95970d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceReceiver: {fileID: 659508412}
-  charController: {fileID: 659508416}
-  jumpForceMultiplier: 1.5
+  chController: {fileID: 659508416}
+  motor: {fileID: 659508414}
+  jumpMovement:
+    jumpForce: 100
+    drag: 3
+  maxInputMultiplier: 0.5
+  inputMultiplier: 0
 --- !u!114 &659508412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementMotor: {fileID: 659508414}
   forceReceiver:
-    drag: 10
+    drag: 3
+    snapForceUnder: 0.3
 --- !u!114 &659508413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,8 +943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementMotor: {fileID: 659508414}
   gravityMovement:
-    gravMagnitude: 20
-    groundedPullMagnitude: 10
+    gravMagnitude: 5
+    groundedPullMagnitude: 20
 --- !u!114 &659508414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,8 +1003,9 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 659508411}
-        m_TargetAssemblyTypeName: WizardGame.Movement.JumpingMovementBehavior, Assembly-CSharp
-        m_MethodName: SetPreviousMovementInput
+        m_TargetAssemblyTypeName: WizardGame.Movement.Position.JumpingMovementBehavior,
+          ProductionScripts
+        m_MethodName: HandleMovementInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

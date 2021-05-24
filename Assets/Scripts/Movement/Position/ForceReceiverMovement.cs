@@ -7,7 +7,8 @@ namespace WizardGame.Movement.Position
     [Serializable]
     public class ForceReceiverMovement : IMovementModifier
     {
-        [SerializeField] private float drag;
+        [SerializeField] private float drag = default;
+        [SerializeField] private float snapForceUnder = default;
 
         public float Drag
         {
@@ -19,7 +20,9 @@ namespace WizardGame.Movement.Position
 
         public void Tick(float deltaTime)
         {
-            bool isForceTooLow = Value.magnitude < 0.2f;
+            deltaTime = Mathf.Max(deltaTime, 0);
+            
+            bool isForceTooLow = Value.magnitude < snapForceUnder;
 
             if (isForceTooLow)
             {

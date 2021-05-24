@@ -29,6 +29,8 @@ namespace WizardGame.Movement.Position
 
         public void Tick(float deltaTime, Vector3 rayOrigin)
         {
+            deltaTime = Mathf.Max(deltaTime, 0);
+            
             if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundRayMaxDistance))
             {
                 lastHit = hit;

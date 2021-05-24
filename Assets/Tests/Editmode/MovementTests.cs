@@ -17,7 +17,7 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _0_DeltaForceAndInput_DoesntSet_GroundedCharacter_Value()
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement();
+                    JumpingMovement jumping = A.JumpingMovement();
                     
                     jumping.Tick(1, true);
                     
@@ -28,7 +28,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_DeltaAndInput_Positive_Force_Sets_GroundedCharacter_Value_To_x0yXz0(float force)
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithForce(force).WithInput(1);
+                    JumpingMovement jumping = A.JumpingMovement().WithForce(force).WithInput(1);
                     
                     jumping.Tick(1, true);
                     
@@ -40,7 +40,7 @@ namespace WizardGame.Testing.Movement
                 public void _Negative_Delta_1_Input_Positive_Force_DoesntSet_GroundedCharacter_Value(float delta,
                     float force)
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithForce(force).WithInput(1);
+                    JumpingMovement jumping = A.JumpingMovement().WithForce(force).WithInput(1);
                     var prevValue = jumping.Value;
                     
                     jumping.Tick(delta, true);
@@ -52,7 +52,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_Delta_Positive_Force_0_Input_DoesntSet_GroundedCharacter_Value(float force)
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithForce(force);
+                    JumpingMovement jumping = A.JumpingMovement().WithForce(force);
                     var prevVal = jumping.Value;
                     
                     jumping.Tick(1, true);
@@ -64,7 +64,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _0_Delta_Positive_Force_1_Input_DoesntSet_GroundedCharacter_Value(float force)
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithForce(force).WithInput(1);
+                    JumpingMovement jumping = A.JumpingMovement().WithForce(force).WithInput(1);
                     var prevVal = jumping.Value;
                     
                     jumping.Tick(0, true);
@@ -75,7 +75,7 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_0_Force_1_Input_DoesntSet_GroundedCharacter_Value()
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithInput(1);
+                    JumpingMovement jumping = A.JumpingMovement().WithInput(1);
                     var prevVal = jumping.Value;
                     
                     jumping.Tick(1, true);
@@ -87,7 +87,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(1), TestCase(2), TestCase(3.5f), TestCase(5f)]
                 public void _1_DeltaAndInput_Positive_Force_DoesntSet_NotGroundedCharacter_Value(float force)
                 {
-                    var jumping = (JumpingMovement) A.JumpingMovement().WithForce(force).WithInput(1);
+                    JumpingMovement jumping = A.JumpingMovement().WithForce(force).WithInput(1);
                     var prevVal = jumping.Value;
                     
                     jumping.Tick(1, false);
@@ -105,7 +105,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-4), TestCase(-3f), TestCase(-224)]
                 public void Negative_Delta_1_MvSpeedAndInput_DoesntSet_Value(float delta)
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement().WithInput(Vector2.one).WithSpeed(1);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithInput(Vector2.one).WithSpeed(1);
                     var prevVal = locomotion.Value;
                     
                     locomotion.Tick(delta);
@@ -116,7 +116,7 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _0_DeltaMvSpeedAndInput_DoesntSet_Value()
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement();
+                    LocomotionMovement locomotion = A.LocomotionMovement();
                     var prevVal = locomotion.Value;
                     
                     locomotion.Tick(0);
@@ -128,7 +128,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _1_Delta_X_MvSpeed_1_Input_Sets_To_xXy0zX(float mvSpeed)
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement().WithInput(Vector2.one).WithSpeed(mvSpeed);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithInput(Vector2.one).WithSpeed(mvSpeed);
                     var expectedValue = new Vector3(mvSpeed, 0f, mvSpeed);
                     
                     locomotion.Tick(1);
@@ -140,8 +140,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _1_Delta_X_MvSpeed_0_Input_DoesntSet_Value(float mvSpeed)
                 {
-                    var locomotion =
-                        (LocomotionMovement) A.LocomotionMovement().WithSpeed(mvSpeed);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithSpeed(mvSpeed);
                     var prevVal = locomotion.Value;
                     
                     locomotion.Tick(1);
@@ -153,7 +152,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4f), TestCase(2f), TestCase(-4f), TestCase(-224f)]
                 public void _0_Delta_X_MvSpeed_1_Input_DoesntSet_Value(float mvSpeed)
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement().WithInput(Vector2.one);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithInput(Vector2.one);
                     var prevVal = locomotion.Value;
                     
                     locomotion.Tick(0);
@@ -164,7 +163,7 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_0_MvSpeed_1_Input_DoesntSet_Value()
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement().WithInput(Vector2.one);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithInput(Vector2.one);
                     var prevVal = locomotion.Value;
                     
                     locomotion.Tick(1);
@@ -178,7 +177,7 @@ namespace WizardGame.Testing.Movement
                 , TestCase(3f, 0f), TestCase(0f, 4f)]
                 public void _1_Delta_X_MvSpeed_Y_Input_Sets_Value_To_xXYy0zXY(float mvSpeed, float inputUnitMagnitude)
                 {
-                    var locomotion = (LocomotionMovement) A.LocomotionMovement().WithInput(Vector2.one * inputUnitMagnitude).WithSpeed(mvSpeed);
+                    LocomotionMovement locomotion = A.LocomotionMovement().WithInput(Vector2.one * inputUnitMagnitude).WithSpeed(mvSpeed);
                     var expectedVal = new Vector3(mvSpeed * inputUnitMagnitude, 0f, mvSpeed * inputUnitMagnitude);
                     
                     locomotion.Tick(1);
@@ -203,7 +202,7 @@ namespace WizardGame.Testing.Movement
                 ,TestCase(-4, -6), TestCase(244, 3)]
                 public void _1_Delta_Value_Set_To_GroundedPull_When_Grounded(float gravMagnitude, float groundedPullMagnitude)
                 {
-                    var gravity = (GravityMovement) A.GravityMovement().WithGrav(gravMagnitude)
+                    GravityMovement gravity = A.GravityMovement().WithGrav(gravMagnitude)
                         .WithGroundPullMag(groundedPullMagnitude);
                     var expectedValue = new Vector3(0, -groundedPullMagnitude, 0);
                     
@@ -215,7 +214,7 @@ namespace WizardGame.Testing.Movement
                 [Test]
                 public void _1_Delta_2_Ticks_Of_5_Lower_Value_By_10_When_NotGrounded()
                 {
-                    var gravity = (GravityMovement) A.GravityMovement().WithGrav(5).WithGroundPullMag(10);
+                    GravityMovement gravity = A.GravityMovement().WithGrav(5).WithGroundPullMag(10);
                     var expectedValue = new Vector3(0, -10, 0);
 
                     gravity.Tick(1, false);
@@ -228,7 +227,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(2), TestCase(4)]
                 public void _1_Delta_Value_Set_To_GroundedPull_After_X_Ticks(float tickAmn)
                 {
-                    var gravity = (GravityMovement) A.GravityMovement().WithGrav(4).WithGroundPullMag(5);
+                    GravityMovement gravity =  A.GravityMovement().WithGrav(4).WithGroundPullMag(5);
                     var expectedValue = new Vector3(0, -5, 0);
                     
                     for (int i = 0; i < tickAmn; i++)
@@ -244,7 +243,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(true), TestCase(false)]
                 public void Value_Set_To_0_If_Delta_0_Regardless_Of_GroundedState(bool isGrounded)
                 {
-                    var gravity = (GravityMovement) A.GravityMovement().WithGrav(3).WithGroundPullMag(10);
+                    GravityMovement gravity = A.GravityMovement().WithGrav(3).WithGroundPullMag(10);
                     
                     gravity.Tick(0, isGrounded);
                     
@@ -261,7 +260,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(4), TestCase(244), TestCase(-43), TestCase(0)]
                 public void Value_Changed_To_X_When_X_Force_Added(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver();
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver();
                     var expectedValue = Vector3.one * forceUnitMagnitude;
                     
                     forceReceiver.AddForce(expectedValue);
@@ -276,7 +275,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(0.1f), TestCase(0.05f), TestCase(0.2f)]
                 public void _1_DeltaAndDrag_Sets_Value_To_0_If_AddedForce_BelowOrEqual_To_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver().WithDrag(1);
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver().WithDrag(1);
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
                     forceReceiver.Tick(1);
@@ -288,7 +287,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-5f), TestCase(42f), TestCase(-400f), TestCase(320f)]
                 public void _1_DeltaAndDrag_Set_Value_To_0_For_Force_Higher_Than_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver().WithDrag(1);
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver().WithDrag(1);
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
                     forceReceiver.Tick(1);
@@ -300,7 +299,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(-5f), TestCase(42f), TestCase(-400f), TestCase(320f)]
                 public void _0_DeltaAndDrag_Doesnt_Set_Value_For_Force_Higher_Than_Minimum(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver();
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver();
                     var expectedValue = Vector3.one * forceUnitMagnitude;
                     
                     forceReceiver.AddForce(expectedValue);
@@ -313,7 +312,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(300), TestCase(20), TestCase(5), TestCase(40), TestCase(-30)]
                 public void _1_Delta_Half1_Drag_Sets_Value_To_Half(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver().WithDrag(0.5f);
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver().WithDrag(0.5f);
                     var expectedValue = Vector3.one * forceUnitMagnitude / 2;
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);
@@ -326,7 +325,7 @@ namespace WizardGame.Testing.Movement
                 [TestCase(300), TestCase(20), TestCase(5), TestCase(40), TestCase(-30)]
                 public void Half1_Delta_1_Drag_Sets_Value_To_Half(float forceUnitMagnitude)
                 {
-                    var forceReceiver = (ForceReceiverMovement) A.ForceReceiver().WithDrag(1);
+                    ForceReceiverMovement forceReceiver = A.ForceReceiver().WithDrag(1);
                     var expectedValue = Vector3.one * forceUnitMagnitude / 2;
                     
                     forceReceiver.AddForce(Vector3.one * forceUnitMagnitude);

@@ -29,6 +29,8 @@ namespace WizardGame.Movement.Position
 
         public void Tick(float deltaTime, bool isGrounded)
         {
+            deltaTime = Mathf.Max(deltaTime, 0);
+            
             yVelocity -= gravMagnitude;
 
             if (isGrounded)

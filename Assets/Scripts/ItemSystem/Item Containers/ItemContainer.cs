@@ -11,16 +11,16 @@ namespace WizardGame.Item_System.Item_Containers
     public class ItemContainer : IItemContainer
     {
         [SerializeField] private ItemSlot[] itemSlots = default;
-        
         public Action OnItemsUpdated = delegate { };
         // may be able to convert to custom event system though might not need to as it already works with it
         // OnItemsUpdated gets invoked, inventory SO's subscribed custom event's raise method is invoked and the listeners
         // deal with it, basically ends up being something like chaining for events?
-        
+
         public ItemContainer(int size) => itemSlots = new ItemSlot[size];
 
         public bool HasItem(InventoryItem item) => itemSlots.Contains(new ItemSlot(item, 0), new ItemComparer());
-        public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
+        
+        public ItemSlot this[int index] => itemSlots[index];
 
         // if we used ID's, we could pass in an ID here instead
         public ItemSlot AddItem(ItemSlot itemSlot)
@@ -124,7 +124,7 @@ namespace WizardGame.Item_System.Item_Containers
             if (slot.invItem == null) return;
 
             int quantityAfterRemoval = Mathf.Clamp(slot.Quantity - quantity, 0, slot.invItem.MaxStack);
-            if (quantityAfterRemoval == 0) slot.invItem = null;
+            if (quantityAfterRemoval == 0) slot = ItemSlot.Empty;
             
             itemSlots[slotIndex] = new ItemSlot(slot.invItem, quantityAfterRemoval);
             OnItemsUpdated?.Invoke();
@@ -184,7 +184,7 @@ namespace WizardGame.Item_System.Item_Containers
 
         public PhysicalItem DropItem(int slotIndex, Vector3 location)
         {
-            InventoryItem item = GetSlotByIndex(slotIndex).invItem;
+            InventoryItem item = this[slotIndex].invItem;
             if (!HasItem(item)) return null;
             
             RemoveAt(slotIndex, 1);

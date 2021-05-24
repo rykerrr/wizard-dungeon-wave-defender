@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using Moq;
+using UnityEngine;
 using WizardGame.Item_System;
 using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
@@ -20,19 +21,23 @@ namespace WizardGame.Testing.Item_Containers
             [TestCase(-4), TestCase(-200), TestCase(-20)]
             public void Calling_With_Negative_Index_Throws_IndexOutOfBounds_Exception(int index)
             {
-                ItemContainer itemContainer = new ItemContainer(10);
+                var itemContainer = new ItemContainer(10);
 
-                Assert.Throws<IndexOutOfRangeException>(() => itemContainer.GetSlotByIndex(index));
+                Assert.Throws<IndexOutOfRangeException>(() =>
+                {
+                    var a = itemContainer[index];
+                    a.invItem = null;
+                });
             }
 
             [Test]
             [TestCase(2), TestCase(4), TestCase(19), TestCase(0)]
             public void Calling_With_Index_Between_0_And_Size_20_Returns_ItemSlot(int index)
             {
-                ItemContainer itemContainer = new ItemContainer(20);
-                ItemSlot expectedEmptySlot = new ItemSlot();
+                var itemContainer = new ItemContainer(20);
+                var expectedEmptySlot = new ItemSlot();
 
-                ItemSlot emptySlot = itemContainer.GetSlotByIndex(index);
+                var emptySlot = itemContainer[index];
 
                 Assert.AreEqual(expectedEmptySlot, emptySlot);
             }
@@ -43,7 +48,7 @@ namespace WizardGame.Testing.Item_Containers
             [Test]
             public void Calling_With_Null_Item_Returns_False()
             {
-                ItemContainer itemContainer = new ItemContainer(20);
+                var itemContainer = new ItemContainer(20);
 
                 bool hasItem = itemContainer.HasItem(null);
 
@@ -53,7 +58,7 @@ namespace WizardGame.Testing.Item_Containers
             [Test]
             public void Returns_False_If_Item_Isnt_In_Container()
             {
-                ItemContainer itemContainer = new ItemContainer(20);
+                var itemContainer = new ItemContainer(20);
                 var invItemStub = InventoryItemFake();
 
                 bool hasItem = itemContainer.HasItem(invItemStub.Object);
@@ -118,7 +123,7 @@ namespace WizardGame.Testing.Item_Containers
                 
                 itemContainer.AddItem(itemSlot);
                 
-                Assert.AreEqual(expectedSlot, itemContainer.GetSlotByIndex(0));
+                Assert.AreEqual(expectedSlot, itemContainer[0]);
             }
 
             [Test]
@@ -132,7 +137,7 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(itemSlot);
                 itemContainer.AddItem(expectedSlot);
                 
-                Assert.AreEqual(expectedSlot, itemContainer.GetSlotByIndex(1));
+                Assert.AreEqual(expectedSlot, itemContainer[1]);
             }
 
             [Test]
@@ -144,7 +149,7 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(itemSlot);
                 
-                Assert.AreEqual(itemSlot, itemContainer.GetSlotByIndex(0));
+                Assert.AreEqual(itemSlot, itemContainer[0]);
             }
 
             [Test]
@@ -157,7 +162,7 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(itemSlot);
                 
-                Assert.AreEqual(itemSlot, itemContainer.GetSlotByIndex(0));
+                Assert.AreEqual(itemSlot, itemContainer[0]);
             }
 
             [Test]
@@ -185,7 +190,7 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(itemSlot1);
                 itemContainer.AddItem(itemSlot2);
                 
-                Assert.AreEqual(itemSlot2, itemContainer.GetSlotByIndex(1));
+                Assert.AreEqual(itemSlot2, itemContainer[1]);
             }
 
             [Test]
@@ -198,7 +203,7 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(itemSlot);
                 
-                Assert.AreEqual(ItemSlot.Empty, itemContainer.GetSlotByIndex(0));
+                Assert.AreEqual(ItemSlot.Empty, itemContainer[0]);
             }
         }
 
@@ -227,7 +232,7 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(slot);
                 itemContainer.Remove(slot);
-                slot = itemContainer.GetSlotByIndex(0);
+                slot = itemContainer[0];
 
                 Assert.AreEqual(ItemSlot.Empty, slot);
             }
@@ -257,7 +262,7 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(new ItemSlot(invItemStub.Object, 5));
                 itemContainer.RemoveAt(0);
-                var slot = itemContainer.GetSlotByIndex(0);
+                var slot = itemContainer[0];
 
                 Assert.AreEqual(expectedSlot, slot);
             }
@@ -267,13 +272,12 @@ namespace WizardGame.Testing.Item_Containers
             {
                 var itemContainer = new ItemContainer(20);
                 var invItemStub = InventoryItemFake(1);
-                var expectedSlot = new ItemSlot(invItemStub.Object, 0);
 
                 itemContainer.AddItem(new ItemSlot(invItemStub.Object, 12));
-                itemContainer.RemoveAt(10);
-                var slot = itemContainer.GetSlotByIndex(10);
+                itemContainer.RemoveAt(10, 12);
+                var slot = itemContainer[10];
 
-                Assert.AreEqual(expectedSlot, slot);
+                Assert.AreEqual(ItemSlot.Empty, slot);
             }
 
             [Test]
@@ -296,13 +300,6 @@ namespace WizardGame.Testing.Item_Containers
 
                 itemContainer.AddItem(new ItemSlot(invItemStub.Object, xQuant));
                 int totalQuant = itemContainer.GetTotalQuantity(invItemStub.Object);
-
-                // string bee = "";
-                // for (int i = 0; i < 20; i++)
-                // {
-                //     bee += " | " + itemContainer.GetSlotByIndex(i).Quantity;
-                // }
-                // Debug.Log(bee);
 
                 Assert.AreEqual(xQuant, totalQuant);
             }
@@ -334,8 +331,8 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(slotTwo);
                 itemContainer.Swap(index, index);
 
-                var itemOneEquivalent = itemContainer.GetSlotByIndex(0) == slotOne;
-                var itemTwoEquivalent = itemContainer.GetSlotByIndex(1) == slotTwo;
+                var itemOneEquivalent = itemContainer[0] == slotOne;
+                var itemTwoEquivalent = itemContainer[1] == slotTwo;
 
                 Assert.True(itemOneEquivalent && itemTwoEquivalent);
             }
@@ -354,8 +351,8 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(slotTwo);
                 itemContainer.Swap(0, 1);
 
-                var indexOneItem = itemContainer.GetSlotByIndex(0);
-                var indexTwoItem = itemContainer.GetSlotByIndex(1);
+                var indexOneItem = itemContainer[0];
+                var indexTwoItem = itemContainer[1];
                 var itemOneEquivalent = indexOneItem == expectedSlotOne;
                 var itemTwoEquivalent = indexTwoItem == expectedSlotTwo;
 
@@ -376,8 +373,8 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(slotTwo);
                 itemContainer.Swap(0, 1);
 
-                var indexOneSlot = itemContainer.GetSlotByIndex(0);
-                var indexTwoSlot = itemContainer.GetSlotByIndex(1);
+                var indexOneSlot = itemContainer[0];
+                var indexTwoSlot = itemContainer[1];
                 var itemOneEquivalent = indexOneSlot == expectedSlotOne;
                 var itemTwoEquivalent = indexTwoSlot == expectedSlotTwo;
 
@@ -397,8 +394,8 @@ namespace WizardGame.Testing.Item_Containers
                 itemContainer.AddItem(slotTwo);
                 itemContainer.Swap(0, 1);
 
-                var indexOneSlot = itemContainer.GetSlotByIndex(0);
-                var indexTwoSlot = itemContainer.GetSlotByIndex(1);
+                var indexOneSlot = itemContainer[0];
+                var indexTwoSlot = itemContainer[1];
                 var itemOneEquivalent = indexOneSlot == slotTwo;
                 var itemTwoEquivalent = indexTwoSlot == slotOne;
 

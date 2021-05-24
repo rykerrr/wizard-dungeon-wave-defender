@@ -8,6 +8,7 @@ namespace WizardGame.Movement.Position
     public class JumpingMovement : IMovementModifier
     {
         [SerializeField] private float jumpForce = default;
+        [SerializeField] private float drag = default;
 
         public float JumpForce
         {
@@ -17,24 +18,24 @@ namespace WizardGame.Movement.Position
         
         public Vector3 Value { get; private set; }
 
-        private float prevInput = 0f;
+        private float prevInput = default;
 
         public void Tick(float deltaTime, bool isGrounded)
         {
             deltaTime = Mathf.Max(deltaTime, 0);
             
-            Vector3 movement = Vector3.zero;
-            
             if (isGrounded)
             {
-                movement = new Vector3(0f, prevInput * jumpForce * deltaTime);
+                Debug.Log(prevInput);
+                Value = new Vector3(0f, prevInput * jumpForce * deltaTime);
             }
 
-            Value = movement;
+            Value = Vector3.Lerp(Value, Vector3.zero, drag * deltaTime);
+            
+            prevInput = 0;
         }
 
-        // Todo: jumping behaviour be based on how long the button is held to an extent
-        public void SetPreviousInput(int input)
+        public void SetPreviousInput(float input)
         {
             prevInput = input;
         }

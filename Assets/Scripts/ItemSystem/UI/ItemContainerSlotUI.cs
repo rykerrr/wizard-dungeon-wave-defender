@@ -12,7 +12,7 @@ namespace WizardGame.Item_System.UI
         public override HotbarItem ReferencedSlotItem => ItemSlot.invItem;
         public Inventory Inventory => inventory;
         
-        private ItemSlot ItemSlot => inventory.ItemContainer.GetSlotByIndex(SlotIndexOnUI);
+        private ItemSlot ItemSlot => inventory.ItemContainer[SlotIndexOnUI];
 
         public override void OnDrop(PointerEventData eventData)
         {

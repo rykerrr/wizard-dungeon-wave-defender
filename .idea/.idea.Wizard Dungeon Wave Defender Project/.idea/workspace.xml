@@ -20,77 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ItemGravityBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectAroundAxis.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectAroundAxis.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectTowardsTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectTowardsTarget.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Data/Inventories/Inventory_PlayerInventory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Data/Inventories/Inventory_PlayerInventory.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Data/Items/Health Potion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Data/Items/Health Potion.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ludiq/Bolt.Flow/Generated/UnitOptions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/FactorizedPlrSphereStateMachine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/FactorizedPlrSphereStateMachine.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/BOLT Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarDragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItemPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/CharacterMovementMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/CharacterMovementMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/CharacterMovementMotor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/CharacterMovementMotor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/ForceReceiverMovementBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovementBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/GravityMovementBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovementBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/IMovementModifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/IMovementModifier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/IMovementModifier.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/JumpingMovementBehavior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/LocomotionMovementBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovementBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/NullMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/NullMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/NullMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/NullMovementBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovementBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/SlidingMovementBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovementBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/ForceReceiverDataBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ItemGravityBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ItemGravityBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,18 +68,22 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/CharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/0e/3174896a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/DownTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/StopwatchDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Game Events/HotbarItemGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/TestDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/HotbarItemEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/5D49C0DB-2965-4913-B50F-CDA59A204032/1d/53dd0323/020004AB.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/f7/f9177b61/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Input/PlayerActionsAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSystem/ItemTooltipPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/LocomotionBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/NullTimerDataBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/3c/d75757cb/IReadOnlyList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/05/1477f7c5/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/SlidingMovementBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/c4/ff667b00/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
@@ -151,8 +112,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Factories/PhysicalItemFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PlayerInteractionBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItemPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Items/FloatOverGroundMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Items/ItemGravityBehavior.cs" />
@@ -160,15 +119,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemDragHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemSlotUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerDragHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovementBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/IMovementModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovement.cs" />
@@ -176,7 +128,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/GravityMovementDataBuilder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/JumpingMovementDataBuilder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Infrastructure/Data Builders/LocomotionMovementDataBuilder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateTowardsTargetBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateTowardsTargetBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateTowardsTarget.cs" />
@@ -185,16 +136,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectAroundAxis.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/World Interaction/PhysicalItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/RotateObjectTowardsTarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Manual testing or learning/Unity BOLT/MovementScripts/TestReceiveForce.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/CharacterMovementMotor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ItemGravityBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/LocomotionMovementBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/NullMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovementBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Hotbar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/HotbarSlotUI.cs" />
@@ -202,6 +148,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Unity Event Responses/UnityHotbarItemEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Object Event System/Listeners/HotbarItemEventListener.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Items/HotbarItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ForceReceiverMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/IItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/UI/ItemContainerSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemSystem/Item Containers/ItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/ItemGravityBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/FloatOverGroundMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/GravityMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/SlidingMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Position/JumpingMovementBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movement/Rotation/PhysicalItemRotationBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -286,6 +247,7 @@
       <workItem from="1621455507127" duration="5415000" />
       <workItem from="1621463434835" duration="640000" />
       <workItem from="1621495535085" duration="7430000" />
+      <workItem from="1621838123987" duration="12184000" />
     </task>
     <servers />
   </component>

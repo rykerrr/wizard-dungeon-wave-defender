@@ -17,14 +17,10 @@ namespace WizardGame.Movement.Rotation
         {
             if (ReferenceEquals(actualTarget, null))
             {
-                Debug.Log("rotating around axis");
-                
                 rotatePhysItemAroundAxis.Tick(Vector3.one, 1f);
             }
             else
             {
-                Debug.Log("rotating towards obj " + actualTarget);
-                
                 rotatePhysItemTowardsTarg.Tick(Vector3.one);
                 rotateBillboardTowardsTarg.Tick(new Vector3(0, 1, 0));
             }

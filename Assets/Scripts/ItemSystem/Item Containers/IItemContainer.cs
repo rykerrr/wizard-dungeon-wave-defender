@@ -9,7 +9,7 @@ namespace WizardGame.Item_System.Item_Containers
         bool HasItem(InventoryItem item);
         // interesting thought, GetSlotByIndex could be readonly as it's never supposed to
         // to modify anything within the derived classes
-        ItemSlot GetSlotByIndex(int index);
+        ItemSlot this[int index] { get; }
         ItemSlot AddItem(ItemSlot itemSlot);
         ItemSlot Remove(ItemSlot itemSlot);
         void RemoveAt(int slotIndex, int quantity);

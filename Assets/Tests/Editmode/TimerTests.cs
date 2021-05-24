@@ -19,8 +19,8 @@ namespace WizardGame.Testing.Timers
             [Test]
             public void Enabling_Timer_Makes_Tick_Return_True()
             {
-                var baseTimerMock = new Mock<BaseTimer>();
-                var baseTimer = baseTimerMock.Object;
+                var baseTimerStub = new Mock<BaseTimer>();
+                var baseTimer = baseTimerStub.Object;
                 
                 baseTimer.EnableTimer();
                 var didTickProcess = baseTimer.TryTick(3);
@@ -31,8 +31,8 @@ namespace WizardGame.Testing.Timers
             [Test]
             public void Disabling_Timer_Makes_Tick_Return_False()
             {
-                var baseTimerMock = new Mock<BaseTimer>();
-                var baseTimer = baseTimerMock.Object;
+                var baseTimerStub = new Mock<BaseTimer>();
+                var baseTimer = baseTimerStub.Object;
                 
                 baseTimer.DisableTimer();
                 var didTickProcess = baseTimer.TryTick(3);

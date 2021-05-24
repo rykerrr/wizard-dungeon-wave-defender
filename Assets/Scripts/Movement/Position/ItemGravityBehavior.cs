@@ -22,7 +22,7 @@ namespace WizardGame.Movement.Position
             bool didHit = Physics.Raycast(transform.position, Vector3.down,
                 out RaycastHit hitInfo, maxDistanceToGround, whatIsGround);
 
-            floatMovement.Tick(didHit, hitInfo.distance, maxDistanceToGround);
+            floatMovement.Tick(Time.deltaTime, didHit, hitInfo.distance, maxDistanceToGround);
             transform.position += floatMovement.Value;
         }
     }
