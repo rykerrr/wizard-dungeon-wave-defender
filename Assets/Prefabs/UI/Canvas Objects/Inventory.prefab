@@ -109,6 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7455533320292035353}
+  - component: {fileID: 467138873}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -131,6 +132,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467138873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455533320292035358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021329b993ee91a41823bf61481bfa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8b75fa489fcdfac4d8d2e4d4bd83a615, type: 2}
+  eventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 353164f307e241741ad78bf5f7ca44f4, type: 2}
+        m_TargetAssemblyTypeName: WizardGame.Item_System.Item_Containers.Inventory,
+          ProductionScripts
+        m_MethodName: RemoveItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7455533320409799664
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -410,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -520,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -630,7 +660,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -740,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -850,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -960,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1070,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1180,7 +1210,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1290,7 +1320,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1400,7 +1430,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1510,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1620,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1730,7 +1760,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1840,7 +1870,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -1950,7 +1980,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -2060,7 +2090,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -2170,7 +2200,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -2280,7 +2310,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x
@@ -2390,7 +2420,7 @@ PrefabInstance:
       objectReference: {fileID: 7455533320409799667}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
-      value: Image_InventorySlot
+      value: GameObject_InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Pivot.x

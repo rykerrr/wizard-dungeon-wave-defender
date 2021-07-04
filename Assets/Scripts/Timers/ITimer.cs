@@ -8,5 +8,6 @@
         bool TryTick(float deltaTime);
         void EnableTimer();
         void DisableTimer();
+        void Reset();
     }
 }

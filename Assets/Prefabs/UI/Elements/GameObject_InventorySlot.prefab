@@ -334,6 +334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSlotUI: {fileID: 1652825268}
   parentForDraggingAroundInv: {fileID: 0}
+  tooltipPopup: {fileID: 0}
+  itemThrowEvent: {fileID: 11400000, guid: 938af53b04cb0034d8bcf132c9c74fed, type: 2}
 --- !u!1 &6222028753209603890
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotItemIconImage: {fileID: 6222028752834920179}
   itemQuantText: {fileID: 6222028752741077150}
+  owner: {fileID: 0}
   inventory: {fileID: 11400000, guid: 353164f307e241741ad78bf5f7ca44f4, type: 2}
 --- !u!114 &5725991661472410603
 MonoBehaviour:

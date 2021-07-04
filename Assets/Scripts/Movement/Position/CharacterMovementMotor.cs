@@ -32,6 +32,11 @@ namespace WizardGame.Movement.Position
         {
             Vector3 currentFrameMovement = CalculateCurrentFrameMovement();
 
+            Vector3 lookVector = new Vector3(currentFrameMovement.x, 0f, currentFrameMovement.z).normalized;
+            
+            if(lookVector.sqrMagnitude != 0)
+                transform.forward = lookVector;
+
             characterController.Move(currentFrameMovement);
         }
 

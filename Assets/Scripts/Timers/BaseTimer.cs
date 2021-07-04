@@ -8,6 +8,7 @@
         
         public void EnableTimer() => IsTimerEnabled = true;
         public void DisableTimer() => IsTimerEnabled = false;
+        public abstract void Reset();
 
         public abstract bool TryTick(float time);
     }

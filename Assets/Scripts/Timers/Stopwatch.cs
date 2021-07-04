@@ -16,5 +16,10 @@ namespace WizardGame.Timers
             Time = Mathf.Max(Time + deltaTime, 0);
             return true;
         }
+
+        public override void Reset()
+        {
+            Time = 0;
+        }
     }
 }

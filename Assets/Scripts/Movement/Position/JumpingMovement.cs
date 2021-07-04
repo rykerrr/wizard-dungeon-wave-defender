@@ -26,7 +26,6 @@ namespace WizardGame.Movement.Position
             
             if (isGrounded)
             {
-                Debug.Log(prevInput);
                 Value = new Vector3(0f, prevInput * jumpForce * deltaTime);
             }
 

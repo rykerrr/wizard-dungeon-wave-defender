@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using ItemSystem.World_Interaction;
+using WizardGame.ItemSystem.World_Interaction;
 using UnityEngine;
 
 namespace WizardGame.Movement.Rotation
