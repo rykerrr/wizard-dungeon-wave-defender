@@ -1,0 +1,19 @@
+{
+    "name": "Production",
+    "rootNamespace": "",
+    "references": [
+        "GUID:311828bb0b7e1934aac6c0aa1c4d4930",
+        "GUID:13e7ee24a6fdac445be3ae0148f4f328",
+        "GUID:3bd6b94759048de40825d8de6ee93009",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using NUnit.Framework;
-using WizardGame.Timers;
-using WizardGame.Utility.Infrastructure;
+﻿using NUnit.Framework;
+using WizardGame.Utility.Timers;
+using WizardGame.Infrastructure;
 using Moq;
 
 namespace WizardGame.Testing.Timers

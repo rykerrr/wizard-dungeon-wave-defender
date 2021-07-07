@@ -1,0 +1,17 @@
+{
+    "name": "Productio.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3bd6b94759048de40825d8de6ee93009",
+        "GUID:311828bb0b7e1934aac6c0aa1c4d4930"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

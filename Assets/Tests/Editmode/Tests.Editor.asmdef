@@ -1,0 +1,28 @@
+{
+    "name": "Tests.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bdd1790dbba29ac44b28bf71bf49ee33",
+        "GUID:3bd6b94759048de40825d8de6ee93009",
+        "GUID:311828bb0b7e1934aac6c0aa1c4d4930",
+        "GUID:13e7ee24a6fdac445be3ae0148f4f328",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Moq.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
