@@ -48,7 +48,7 @@ namespace WizardGame.Health_System
         private void InitAutoHealTimer()
         {
             healTimer = new DownTimer(1f / vigorStat.ActualValue);
-            healTimer.OnTimerEnd += () => healTimer.SetTimer(1f / vigorStat.ActualValue);
+            healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
             healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
             healTimer.OnTimerEnd += () => healTimer.Reset();
         }

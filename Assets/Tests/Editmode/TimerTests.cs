@@ -50,7 +50,7 @@ namespace WizardGame.Testing.Timers
                 {
                     DownTimer timer = A.DownTimer();
 
-                    timer.SetTimer(time);
+                    timer.SetNewDefaultTime(time);
 
                     Assert.AreEqual(time, timer.Time);
                 }
@@ -61,7 +61,7 @@ namespace WizardGame.Testing.Timers
                 {
                     DownTimer timer = A.DownTimer();
 
-                    timer.SetTimer(time);
+                    timer.SetNewDefaultTime(time);
 
                     Assert.AreEqual(0, timer.Time);
                 }
@@ -71,7 +71,7 @@ namespace WizardGame.Testing.Timers
                 {
                     DownTimer timer = A.DownTimer();
 
-                    timer.SetTimer(0);
+                    timer.SetNewDefaultTime(0);
 
                     Assert.AreEqual(0, timer.Time);
                 }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaa7628334948c98e1b31ef6adf6376, type: 3}
+  m_Name: Directed Energy Explosion
+  m_EditorClassIdentifier: 
+  name: Directed Energy Explosion
+  icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  itemUseEvent: {fileID: 11400000, guid: c8c8ca9c4d82414438a4e3f5f9e44fa0, type: 2}
+  rarity: {fileID: 11400000, guid: 842230e3a8acbb3439ac8d6a739f41eb, type: 2}
+  sellPrice: 1
+  maxStack: 1
+  spellCastPrefab: {fileID: 673262828101663815, guid: 0aea469524d7b144180504e3011a706c, type: 3}
+  spellCirclePrefab: {fileID: 538691843744117348, guid: 7270a90a40c5fa740a615501af4cfb2a, type: 3}
+  spellCastData:
+    castingTime: 3
+    castCooldownDelay: 4

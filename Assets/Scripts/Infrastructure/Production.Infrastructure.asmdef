@@ -1,5 +1,5 @@
 {
-    "name": "Productio.Infrastructure",
+    "name": "Production.Infrastructure",
     "rootNamespace": "",
     "references": [
         "GUID:3bd6b94759048de40825d8de6ee93009",

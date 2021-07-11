@@ -34,12 +34,16 @@ namespace WizardGame.Item_System.Item_Containers
             itemContainer.Remove(new ItemSlot(invItem, 1));
         }
         
+        #region debug
+        [Header("Debug")]
         [SerializeField] private InventoryItem itemToAdd = default;
-
+        [SerializeField] private int quantity;
+        
         [ContextMenu("Test add")]
         public void AddItem()
         {
-            ItemContainer.AddItem(new ItemSlot(itemToAdd, 4));
+            ItemContainer.AddItem(new ItemSlot(itemToAdd, quantity));
         }
+        #endregion
     }
 }

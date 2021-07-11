@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Item_System.UI;
 using WizardGame.Item_System.Items;
@@ -10,7 +11,17 @@ namespace WizardGame.Item_System
         [SerializeField] private HotbarSlotUI[] hotbarSlots = new HotbarSlotUI[10];
 
         private int slotIndex = 0;
-        
+
+        private void Update()
+        {
+            var equip = CheckForInput();
+            
+            if (equip != -1)
+            {
+                hotbarSlots?[equip].UseReferencedItem();
+            }
+        }
+
         public void Add(HotbarItem itemToAdd)
         {
             foreach (var slot in hotbarSlots)
@@ -21,7 +32,7 @@ namespace WizardGame.Item_System
 
         private int CheckForInput()
         {
-            int retVal = slotIndex;
+            int prevSlotIndex = slotIndex;
             
             var curKb = Keyboard.current;
 
@@ -61,8 +72,12 @@ namespace WizardGame.Item_System
             {
                 slotIndex = 9;
             }
+            else
+            {
+                slotIndex = -1;
+            }
             
-            return retVal;
+            return prevSlotIndex == slotIndex ? -1 : slotIndex;
         }
         
         public void ScrollThroughSlots(InputAction.CallbackContext ctx)

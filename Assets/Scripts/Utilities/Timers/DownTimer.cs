@@ -11,10 +11,10 @@ namespace WizardGame.Utility.Timers
 
         public DownTimer(float time)
         {
-            SetTimer(time);
+            SetNewDefaultTime(time);
         }
 
-        public void SetTimer(float time)
+        public void SetNewDefaultTime(float time)
         {
             defaultTime = Mathf.Max(time, 0);
 
