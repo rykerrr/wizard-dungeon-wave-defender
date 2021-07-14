@@ -58,7 +58,7 @@ namespace WizardGame.Stats_System
         private DependantStat CreateDependantStat(EntityStat entityStat, List<EntityStat> listForGrowthRates)
         {
             var depStatBase = (DependantStatType)entityStat.StatType;
-            DependantStat depStat = new DependantStat(depStatBase, entityStat.GrowthRate);
+            var depStat = new DependantStat(depStatBase, entityStat.GrowthRate);
 
             foreach (var statTypeDep in depStatBase.StatsDependingOn)
             {
@@ -69,6 +69,8 @@ namespace WizardGame.Stats_System
                 else
                 {
                     // could probably be done in a much better way
+                    // good enough since this should run only once anyway, would be problematic
+                    // for multiple enemies being spawned
                     // i need the growth rates here of the stats the DependantStat is depending on
                     float depStatGrowthRate = listForGrowthRates.Find(x => x.StatType == depStatBase).GrowthRate;
                     StatBase statDependency = new Stat(depStatBase, depStatGrowthRate);
@@ -97,9 +99,9 @@ namespace WizardGame.Stats_System
             return Stats[statType];
         }
         
-        public void AddModifierTo(StatType statType, StatModifier modifierToAdd)
+        public void AddModifierTo(StatType statType, StatModifier statModifer)
         {
-            stats?[statType].AddModifier(modifierToAdd);
+            stats?[statType].AddModifier(statModifer);
         }
 
         public void AddTimedModifier(StatType statType, StatModifier statModifier, float time)
@@ -145,7 +147,7 @@ namespace WizardGame.Stats_System
 
             foreach (var stat in stats)
             {
-                occurrences += stat.Value.Modifiers.Count(x => ReferenceEquals(x, modifier));
+                occurrences += stat.Value.StatModifiers.Count(x => ReferenceEquals(x, modifier));
             }
 
             return occurrences;

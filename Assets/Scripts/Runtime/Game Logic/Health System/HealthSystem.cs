@@ -11,6 +11,7 @@ namespace WizardGame.Health_System
     {
         [SerializeField] private int curHealth = default;
         
+        // GameObject as falling rocks don't need to directly be living beings
         public event Action<GameObject> onDeathEvent = delegate { };
         
         private DownTimer healTimer = default;

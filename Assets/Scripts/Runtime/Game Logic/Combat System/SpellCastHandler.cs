@@ -7,6 +7,7 @@ namespace WizardGame.Combat_System
 {
     public class SpellCastHandler : MonoBehaviour
     {
+        [SerializeField] private SpellBookItem prewarmSpellBook = default;
         [SerializeField] private SpellCastBase equippedSpellCastBase = default;
         [SerializeField] private MonoBehaviour[] movementScripts;
 
@@ -20,7 +21,8 @@ namespace WizardGame.Combat_System
 
         private void Awake()
         {
-            if (ReferenceEquals(equippedSpellCastBase, null)) return;
+            if (ReferenceEquals(prewarmSpellBook, null)) return;
+            Equip(prewarmSpellBook);
         }
 
         public void TryCastSpell()

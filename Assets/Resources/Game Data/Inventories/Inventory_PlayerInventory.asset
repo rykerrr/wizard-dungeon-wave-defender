@@ -29,6 +29,10 @@ MonoBehaviour:
       invItem: {fileID: 11400000, guid: e21ee2182c2d0c247a1ed707a148c1b8, type: 2}
     - quantity: 1
       invItem: {fileID: 11400000, guid: a0a8ba44baf373b498125039360573d3, type: 2}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: 72d3539ab0d05314f8d4776b8c31526b, type: 2}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: b9b7824ad48832841be9c53ec853e9be, type: 2}
     - quantity: 0
       invItem: {fileID: 0}
     - quantity: 0
@@ -51,9 +55,5 @@ MonoBehaviour:
       invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 0
-      invItem: {fileID: 0}
-    - quantity: 0
-      invItem: {fileID: 0}
-  itemToAdd: {fileID: 11400000, guid: a0a8ba44baf373b498125039360573d3, type: 2}
+  itemToAdd: {fileID: 11400000, guid: b9b7824ad48832841be9c53ec853e9be, type: 2}
   quantity: 1

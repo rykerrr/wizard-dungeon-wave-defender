@@ -47,9 +47,7 @@ MonoBehaviour:
   statsSysBehaviour: {fileID: 0}
   castCircle: {fileID: 0}
   movementScripts: []
-  castingTime: 2
-  castCooldownDelay: 4
-  spellPrefab: {fileID: 7403320579617459174, guid: 84ba5e6897bb58349b1c0900932c4b10, type: 3}
+  spellPrefab: {fileID: 7403320579617459175, guid: 84ba5e6897bb58349b1c0900932c4b10, type: 3}
 --- !u!114 &5892746305599960710
 MonoBehaviour:
   m_ObjectHideFlags: 0

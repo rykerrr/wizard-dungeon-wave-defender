@@ -22,4 +22,4 @@ MonoBehaviour:
   spellCirclePrefab: {fileID: 538691843744117348, guid: 7270a90a40c5fa740a615501af4cfb2a, type: 3}
   spellCastData:
     castingTime: 3
-    castCooldownDelay: 4
+    castCooldownDelay: 1

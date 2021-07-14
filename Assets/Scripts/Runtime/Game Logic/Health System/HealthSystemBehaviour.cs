@@ -13,7 +13,7 @@ namespace WizardGame.Health_System
 
         private void Awake()
         {
-            HealthSystem.onDeathEvent += (g) => gameObject.SetActive(false);
+            HealthSystem.onDeathEvent += g => gameObject.SetActive(false);
         }
 
         private void Update()

@@ -18,18 +18,18 @@ namespace WizardGame.Stats_System
         #region Debug
 
         [SerializeField] private StatType key;
-        [SerializeField] private StatModifier modifierToAddOrRemove;
+        [SerializeField] private StatModifier statModifierToAddOrRemove;
         
         [ContextMenu("Add given modifier based on key")]
         public void AddModifierToStat()
         {
-            StatsSystem.AddModifierTo(key, modifierToAddOrRemove);
+            StatsSystem.AddModifierTo(key, statModifierToAddOrRemove);
         }
 
         [ContextMenu("Remove given modifier based on key")]
         public void RemoveModifierFromStat()
         {
-            StatsSystem.RemoveModifierFrom(key, modifierToAddOrRemove);
+            StatsSystem.RemoveModifierFrom(key, statModifierToAddOrRemove);
         }
 
         [ContextMenu("Debug text dump")]
@@ -41,7 +41,7 @@ namespace WizardGame.Stats_System
         [ContextMenu("Check occurence amount of given modifier")]
         public void ModifierOccurrences()
         {
-            Debug.Log(statsSystem.CheckModifierOccurrences(modifierToAddOrRemove));
+            Debug.Log(statsSystem.CheckModifierOccurrences(statModifierToAddOrRemove));
         }
         #endregion
     }

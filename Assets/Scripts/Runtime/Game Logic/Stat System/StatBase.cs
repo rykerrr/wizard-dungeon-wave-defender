@@ -8,14 +8,14 @@ namespace WizardGame.Stats_System
     {
            protected Action statWasModified = delegate { };
 
-        protected List<StatModifier> modifiers = new List<StatModifier>();
+        protected List<StatModifier> statModifiers = new List<StatModifier>();
         
         protected int baseValue = default;
         protected float growthRate = default;
         protected int actualValue = default;
         protected bool isDirty = true;
         
-        public IReadOnlyList<StatModifier> Modifiers => modifiers.AsReadOnly();
+        public IReadOnlyList<StatModifier> StatModifiers => statModifiers.AsReadOnly();
         
         public Action StatWasModified
         {
@@ -68,11 +68,11 @@ namespace WizardGame.Stats_System
             actualValue = valueToApplyTo;
             float additiveModSum = 0;
 
-            modifiers.Sort(StatModifier.CompareModifierOrder);
+            statModifiers.Sort(StatModifier.CompareModifierOrder);
 
-            for (int i = 0; i < Modifiers.Count; i++)
+            for (int i = 0; i < StatModifiers.Count; i++)
             {
-                var mod = Modifiers[i];
+                var mod = StatModifiers[i];
 
                 switch (mod.Type)
                 {
@@ -85,7 +85,7 @@ namespace WizardGame.Stats_System
                     {
                         additiveModSum += mod.Value;
 
-                        if (i == Modifiers.Count - 1 || Modifiers[i + 1].Type != ModifierType.PercentAdditive)
+                        if (i == StatModifiers.Count - 1 || StatModifiers[i + 1].Type != ModifierType.PercentAdditive)
                         {
                             actualValue = (int) Mathf.Round(actualValue * (1 + additiveModSum));
                         }
@@ -119,7 +119,7 @@ namespace WizardGame.Stats_System
             isDirty = true;
             StatWasModified.Invoke();
 
-            modifiers.Add(mod);
+            statModifiers.Add(mod);
         }
 
         public bool RemoveModifier(StatModifier mod)
@@ -127,10 +127,10 @@ namespace WizardGame.Stats_System
             isDirty = true;
             StatWasModified.Invoke();
 
-            return modifiers.Remove(mod);
+            return statModifiers.Remove(mod);
         }
 
         public int RemoveModifiersFromSource(object source)
-            => modifiers.RemoveAll(x => x.Source == source);
+            => statModifiers.RemoveAll(x => x.Source == source);
     }
 }
