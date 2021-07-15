@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -12,6 +14,8 @@ namespace WizardGame.Combat_System
         private Transform castCircleTransf = default;
         private StatBase intStat = default;
 
+        private Camera mainCam = default;
+        
         public override void Init(GameObject owner, CastPlaceholder castCircle
             , SpellCastData data, params MonoBehaviour[] movementScripts)
         {
@@ -21,7 +25,12 @@ namespace WizardGame.Combat_System
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
         }
-        
+
+        private void Awake()
+        {
+            mainCam = Camera.main;
+        }
+
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
@@ -40,12 +49,12 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            var spawnPos = ownerTransf.position;
+            var spawnPos = GetMouseHitPos();
 
             var spellClone = Instantiate(spellPrefab, spawnPos, Quaternion.identity);
             
-            spellClone.InitSpell(2f, intStat.ActualValue / 2f,
-                spawnPos, gameObject);
+            spellClone.InitSpell(2f, intStat.ActualValue / 2f
+                , SpellCastData.CastAmn, spawnPos, gameObject);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
@@ -54,6 +63,14 @@ namespace WizardGame.Combat_System
             ReactivateMovementScripts();
 
             isCasting = false;
+        }
+        
+        private Vector3 GetMouseHitPos()
+        {
+            var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            var didHit = Physics.Raycast(mouseRay, out RaycastHit hitInfo, 500f);
+            
+            return didHit ? hitInfo.point : Vector3.zero;
         }
     }
 }

@@ -42,7 +42,8 @@ namespace WizardGame.Combat_System
         {
             var spellClone = Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
 
-            spellClone.InitSpell(intStat.ActualValue / 5f, Owner, ownerTransf.position);
+            spellClone.InitSpell(intStat.ActualValue / 5f, SpellCastData.CastAmn
+                , Owner, ownerTransf.position);
 
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

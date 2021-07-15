@@ -61,8 +61,8 @@ public class SpellCastEnergyPillar : SpellCastBase
         var statKey = StatTypeDB.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
         
-        spellClone.InitSpell(intStat.ActualValue / 4f, 
-            statKey, statModifierToApply, Owner);
+        spellClone.InitSpell(intStat.ActualValue / 4f 
+            , SpellCastData.CastAmn, statKey, statModifierToApply, Owner);
             
         castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);

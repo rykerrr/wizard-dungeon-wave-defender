@@ -20,6 +20,7 @@ namespace WizardGame.Spell_Book_Creation_System
         [SerializeField] private TextMeshProUGUI dmgMultLabelText = default;
         [SerializeField] private TextMeshProUGUI castSpeedMultLabelText = default;
         [SerializeField] private TextMeshProUGUI castCdMultLabelText = default;
+        [SerializeField] private TextMeshProUGUI castAmnLabelText = default;
         [SerializeField] private TMP_Dropdown spellFoundationDropdown = default;
 
         [Header("Properties")] [SerializeField]
@@ -34,6 +35,13 @@ namespace WizardGame.Spell_Book_Creation_System
 
         private void Awake()
         {
+            if (spellDropdownChoices.Length <= 0)
+            {
+                Debug.LogWarning("Spell choices weren't loaded, perhaps you forgot to press the ContextMenu" +
+                                 "button for it?", this);
+                ReloadDropdownData();
+            }
+            
             UpdateGravityLabelDisplay();
 
             SetSpellFoundation(0);
@@ -41,28 +49,44 @@ namespace WizardGame.Spell_Book_Creation_System
 
         public void SetSpeedMult(string speedMult)
         {
+            if (string.IsNullOrEmpty(speedMult)) return;
+            
             spellCastData.SpeedMultiplier = Convert.ToSingle(speedMult);
             speedMultLabelText.text = speedMult;
         }
 
         public void SetStrengthMultiplier(string strMult)
         {
+            if (string.IsNullOrEmpty(strMult)) return;
+            
             spellCastData.SpellStrength = Convert.ToSingle(strMult);
             dmgMultLabelText.text = strMult;
         }
 
         public void SetCastSpeedMult(string castSpeedMult)
         {
+            if (string.IsNullOrEmpty(castSpeedMult)) return;
+            
             spellCastData.CastingSpeed = Convert.ToSingle(castSpeedMult);
             castSpeedMultLabelText.text = castSpeedMult;
         }
 
         public void SetCastCdMult(string castCdMult)
         {
+            if (string.IsNullOrEmpty(castCdMult)) return;
+            
             spellCastData.CastCooldownMultiplier = Convert.ToSingle(castCdMult);
             castCdMultLabelText.text = castCdMult;
         }
 
+        public void SetCastAmount(string castAmn)
+        {
+            if (string.IsNullOrEmpty(castAmn)) return;
+            
+            spellCastData.CastAmn = Convert.ToInt32(castAmn);
+            castAmnLabelText.text = castAmn;
+        }
+        
         public void SetSpellFoundation(int index)
         {
             if (index > spellDropdownChoices.Length)

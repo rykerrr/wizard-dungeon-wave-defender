@@ -10,6 +10,7 @@ namespace WizardGame.Combat_System
         [Header("Properties")]
         [SerializeField] private float castingSpeed = 1;
         [SerializeField] private float castCooldownMultiplier = 1;
+        [SerializeField] private int castAmn = 1;
         [SerializeField] private float speedMultiplier = 1;
         [SerializeField] private float spellStrength = 1;
         
@@ -33,17 +34,6 @@ namespace WizardGame.Combat_System
                 return gravMagnitude;
             }
         }
-
-        public SpellCastData(float castingSpeed, float castCooldownMultiplier, float speedMultiplier,
-            float spellStrength) : this()
-        {
-            this.speedMultiplier = speedMultiplier;
-            this.spellStrength = spellStrength;
-            this.castingSpeed = castingSpeed;
-            this.castCooldownMultiplier = castCooldownMultiplier;
-        }
-
-        public SpellCastData() => sb = new StringBuilder();
 
         public float CastingSpeed
         {
@@ -82,6 +72,26 @@ namespace WizardGame.Combat_System
                 gravIsDirty = true;
             }
         }
+
+        public int CastAmn
+        {
+            get => castAmn;
+            set
+            {
+                castAmn = value;
+            }
+        }
+
+        public SpellCastData(float castingSpeed, float castCooldownMultiplier, float speedMultiplier,
+            float spellStrength) : this()
+        {
+            this.speedMultiplier = speedMultiplier;
+            this.spellStrength = spellStrength;
+            this.castingSpeed = castingSpeed;
+            this.castCooldownMultiplier = castCooldownMultiplier;
+        }
+        
+        public SpellCastData() => sb = new StringBuilder();
         
         public float CalculateGrav()
         {

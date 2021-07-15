@@ -17,7 +17,7 @@ namespace WizardGame.Combat_System
         [Header("Properties")]
         [SerializeField] private Vector3 fieldSizeHalfExtents = default;
         [SerializeField] private Vector3 fieldCenter = default;
-        [SerializeField] private int amnOfTicksToDo = default;
+        [SerializeField] private int amnOfTicks = default;
         [SerializeField] private int avgHealPerTick = default;
         [SerializeField] private int particleAmnMult = 10;
         [SerializeField] private float delayBetweenHealWaves = default;
@@ -29,9 +29,10 @@ namespace WizardGame.Combat_System
         
         public int CurrentTickCount { get; private set; } = 0;
         
-        public void InitSpell(float healPerTickMult, GameObject caster, Vector3? fieldCenter = null, Vector3? fieldSizeHalfExtents = null)
+        public void InitSpell(float healPerTickMult, int amnOfTicks, GameObject caster, Vector3? fieldCenter = null, Vector3? fieldSizeHalfExtents = null)
         {
             this.caster = caster;
+            this.amnOfTicks = amnOfTicks;
             
             if(fieldCenter.HasValue) this.fieldCenter = fieldCenter.Value;
             if(fieldSizeHalfExtents.HasValue) this.fieldSizeHalfExtents = fieldSizeHalfExtents.Value;
@@ -56,7 +57,7 @@ namespace WizardGame.Combat_System
             {
                 CurrentTickCount++;
 
-                if (CurrentTickCount > amnOfTicksToDo)
+                if (CurrentTickCount > amnOfTicks)
                 {
                     healWaveTimer.OnTimerEnd = null;
                     Destroy(gameObject, 2f);

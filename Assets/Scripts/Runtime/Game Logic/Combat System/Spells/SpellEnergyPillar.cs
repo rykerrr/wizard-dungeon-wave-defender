@@ -37,11 +37,12 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
         swHitColliders = new Collider[maxShockwaveTargets];
     }
 
-    public void InitSpell(float shockwaveDmgMult, StatType statKey, StatModifier statModifier, GameObject caster)
+    public void InitSpell(float shockwaveDmgMult, int amnOfShockwavesToCast, StatType statKey, StatModifier statModifier, GameObject caster)
     {
         this.caster = caster;
         this.statKey = statKey;
         this.statModifier = statModifier;
+        this.amnOfShockwavesToCast = amnOfShockwavesToCast;
 
         // this would work due to the collider having to be attached on the same object as this monobehaviour
         // the ontrigger calls would not work otherwise, but we want it to handle the buffing

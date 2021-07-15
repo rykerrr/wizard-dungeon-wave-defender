@@ -40,12 +40,24 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
+            StartCoroutine(MultiCast());
+        }
+
+        private IEnumerator MultiCast()
+        {
+            var waitForDelay = new WaitForSeconds(0.5f);
             var spawnPos = ownerTransf.position + ownerTransf.forward * 2; 
+
             
-            var spellClone = Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
-            spellClone.InitSpell(1f * SpellCastData.SpeedMultiplier, 1f * SpellCastData.SpellStrength,
-                intStat.ActualValue * SpellCastData.SpellStrength / 2, 1 + 1/intStat.ActualValue,
-                Owner);
+            for (int i = 0; i < SpellCastData.CastAmn; i++)
+            {
+                var spellClone = Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
+                spellClone.InitSpell(1f * SpellCastData.SpeedMultiplier, 1f * SpellCastData.SpellStrength,
+                    intStat.ActualValue * SpellCastData.SpellStrength / 2, 1 + 1/intStat.ActualValue,
+                    Owner);
+                
+                yield return waitForDelay;
+            }
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

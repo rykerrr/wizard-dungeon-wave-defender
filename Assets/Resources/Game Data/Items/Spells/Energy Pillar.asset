@@ -21,5 +21,9 @@ MonoBehaviour:
   spellCastPrefab: {fileID: 5660622948874648787, guid: b847c96c0882d594da45c96312d2cc0f, type: 3}
   spellCirclePrefab: {fileID: 2913379474538178448, guid: e2b99f7d20d9d4e4985b7a654db2738d, type: 3}
   spellCastData:
-    castingTime: 3
-    castCooldownDelay: 1
+    castingSpeed: 1
+    castCooldownMultiplier: 1
+    castAmn: 5
+    speedMultiplier: 1
+    spellStrength: 1
+    gravMagnitudeMultiplier: 1
