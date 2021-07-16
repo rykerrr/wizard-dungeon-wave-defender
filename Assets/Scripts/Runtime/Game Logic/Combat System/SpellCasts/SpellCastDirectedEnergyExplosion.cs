@@ -9,18 +9,35 @@ namespace WizardGame.Combat_System
     public class SpellCastDirectedEnergyExplosion : SpellCastBase
     {
         [SerializeField] private SpellDirectedEnergyExplosion spellPrefab;
+
+        private DirectedEnergyExplosionData data;
         
         private Transform ownerTransf = default;
         private Transform castCircleTransf = default;
         private StatBase intStat = default;
 
         private Camera mainCam = default;
+
+        public override BaseSpellCastData Data
+        {
+            get => data;
+            set
+            {
+                value ??= new DirectedEnergyExplosionData();
+
+                if (value is DirectedEnergyExplosionData newData)
+                {
+                    data = newData;
+                }
+                else Debug.LogWarning("Passed data isn't null and can't be cast to DirectedEnergyExplosionData");
+            }
+        }
         
         public override void Init(GameObject owner, CastPlaceholder castCircle
-            , SpellCastData data, params MonoBehaviour[] movementScripts)
+            , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, castCircle, data, movementScripts);
-            
+
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
@@ -49,12 +66,13 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            var spawnPos = GetMouseHitPos();
+            Vector3 spawnPos = transform.position;
+            if(data.Location == DirectedEnergyExplosionData.ExplosionLocationType.Mouse) spawnPos = GetMouseHitPos();
 
             var spellClone = Instantiate(spellPrefab, spawnPos, Quaternion.identity);
             
-            spellClone.InitSpell(2f, intStat.ActualValue / 2f
-                , SpellCastData.CastAmn, spawnPos, gameObject);
+            spellClone.InitSpell(data.ExplosionSize, data.ExplosionDamage, data.ExplosionAmount
+            , spawnPos, Owner);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

@@ -13,6 +13,8 @@ public class SpellCastEnergyPillar : SpellCastBase
 
     [SerializeField] private SpellEnergyPillar spellPrefab;
 
+    private EnergyPillarData data;
+    
     private Camera mainCam = default;
     private Transform ownerTransf = default;
     private Transform castCircleTransf = default;
@@ -21,16 +23,31 @@ public class SpellCastEnergyPillar : SpellCastBase
     private Vector3 pillarSpawnPos = Vector3.zero;
     private Vector3 pillarSpawnNormal = Vector3.zero;
 
+    public override BaseSpellCastData Data
+    {
+        get => data;
+        set
+        {
+            value ??= new EnergyPillarData();
+
+            if (value is EnergyPillarData newData)
+            {
+                data = newData;
+            }
+            else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBoltData");
+        }
+    }
+    
     private void Awake()
     {
         mainCam = Camera.main;
     }
 
     public override void Init(GameObject owner, CastPlaceholder castCircle
-        , SpellCastData data, params MonoBehaviour[] movementScripts)
+        , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
     {
         base.Init(owner, castCircle, data, movementScripts);
-            
+
         ownerTransf = Owner.transform;
         castCircleTransf = castCircle.transform;
         intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
@@ -61,8 +78,7 @@ public class SpellCastEnergyPillar : SpellCastBase
         var statKey = StatTypeDB.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
         
-        spellClone.InitSpell(intStat.ActualValue / 4f 
-            , SpellCastData.CastAmn, statKey, statModifierToApply, Owner);
+        spellClone.InitSpell(data.ShockwaveDamage, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply, Owner);
             
         castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);

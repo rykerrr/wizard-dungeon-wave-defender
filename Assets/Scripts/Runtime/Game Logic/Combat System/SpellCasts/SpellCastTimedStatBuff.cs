@@ -9,15 +9,32 @@ namespace WizardGame.Combat_System
         [SerializeField] private StatModifier statModifier = default;
         [SerializeField] private string keyName = default;
         [SerializeField] private float statModifierDuration = default;
+
+        private TimedStatBuffData data;
         
         private Transform ownerTransf = default;
         private Transform castCircleTransf = default;
         
+        public override BaseSpellCastData Data
+        {
+            get => data;
+            set
+            {
+                value ??= new TimedStatBuffData();
+
+                if (value is TimedStatBuffData newData)
+                {
+                    data = newData;
+                }
+                else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBoltData");
+            }
+        }
+        
         public override void Init(GameObject owner, CastPlaceholder castCircle 
-            , SpellCastData data, params MonoBehaviour[] movementScripts)
+            , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, castCircle, data, movementScripts);
-            
+
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
         }
@@ -42,10 +59,10 @@ namespace WizardGame.Combat_System
         {
             var key = StatTypeDB.GetType(keyName);
 
-            var modifierToAdd = new StatModifier(statModifier.Type, statModifier.Value * SpellCastData.SpellStrength
+            var modifierToAdd = new StatModifier(statModifier.Type, statModifier.Value * data.BuffStrength
                 , Owner);
             
-            statsSys.AddTimedModifier(key, modifierToAdd, statModifierDuration);
+            statsSys.AddTimedModifier(key, modifierToAdd, data.Duration);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

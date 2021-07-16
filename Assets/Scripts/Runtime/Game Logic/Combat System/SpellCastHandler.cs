@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using WizardGame.Item_System.Items;
 
 namespace WizardGame.Combat_System
@@ -25,8 +25,9 @@ namespace WizardGame.Combat_System
             Equip(prewarmSpellBook);
         }
 
-        public void TryCastSpell()
+        public void TryCastSpell(InputAction.CallbackContext ctx)
         {
+            if (ctx.phase != InputActionPhase.Started) return;
             if (ReferenceEquals(equippedSpellCastBase, null)) return;
             
             equippedSpellCastBase.CastSpell();
@@ -51,7 +52,7 @@ namespace WizardGame.Combat_System
             }
             else
             {
-                var dataIsEqual = ReferenceEquals(equippedSpellCastBase.SpellCastData, spellItem.SpellCastData);
+                var dataIsEqual = ReferenceEquals(equippedSpellCastBase.Data, spellItem.SpellCastData);
                 if (dataIsEqual) return;
 
                 UnEquip();
@@ -94,7 +95,7 @@ namespace WizardGame.Combat_System
             
             spellCircleClone.gameObject.SetActive(false);
             spellCasterClone.Init(gameObject, spellCircleClone, baseItem.SpellCastData, movementScripts);
-
+            
             existingSpellCasts.Add(baseItem, spellCasterClone);
             return spellCasterClone;
         }

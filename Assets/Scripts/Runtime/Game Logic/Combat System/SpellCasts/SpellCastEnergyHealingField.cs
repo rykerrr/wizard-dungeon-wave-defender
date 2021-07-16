@@ -8,15 +8,32 @@ namespace WizardGame.Combat_System
     {
         [SerializeField] private SpellEnergyHealingField spellPrefab;
 
+        private EnergyHealingFieldData data;
+        
         private Transform ownerTransf = default;
         private Transform castCircleTransf = default;
         private StatBase intStat = default;
 
+        public override BaseSpellCastData Data
+        {
+            get => data;
+            set
+            {
+                value ??= new EnergyHealingFieldData();
+
+                if (value is EnergyHealingFieldData newData)
+                {
+                    data = newData;
+                }
+                else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyHealingFieldData");
+            }
+        }
+        
         public override void Init(GameObject owner, CastPlaceholder castCircle
-            , SpellCastData data, params MonoBehaviour[] movementScripts)
+            , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, castCircle, data, movementScripts);
-
+            
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
@@ -42,8 +59,7 @@ namespace WizardGame.Combat_System
         {
             var spellClone = Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
 
-            spellClone.InitSpell(intStat.ActualValue / 5f, SpellCastData.CastAmn
-                , Owner, ownerTransf.position);
+            spellClone.InitSpell(data.TickHeal, data.TickAmount, Owner);
 
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

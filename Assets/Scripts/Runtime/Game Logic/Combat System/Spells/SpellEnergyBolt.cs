@@ -27,13 +27,15 @@ namespace WizardGame.Combat_System
         private int actualImpactDmg = default;
         private float actualRadius = default;
 
-        public void InitSpell(float explosionRadMult, float onHitDmgMult, float explosionDmgMult
-            , Vector3 hitPos, GameObject objHit, GameObject caster)
+        public void InitSpell(float explosionRadius, float impactRadius, float explosionDmgMult
+            , float impactDmgMult, Vector3 hitPos, GameObject objHit, GameObject caster)
         {
-            actualImpactDmg = (int)Math.Round(avgImpactDmg * onHitDmgMult);
+            actualImpactDmg = (int)Math.Round(avgImpactDmg * impactDmgMult);
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
-            actualRadius = avgExplosionRadius * explosionRadMult;
+            actualRadius = avgExplosionRadius * explosionRadius;
 
+            transform.localScale = new Vector3(impactRadius, impactRadius, transform.localPosition.z);
+            
             this.objHit = objHit;
             this.caster = caster;
             this.hitPos = hitPos;
@@ -62,7 +64,7 @@ namespace WizardGame.Combat_System
         private GameObject GenerateAndProcessExplosion(Vector3 pos)
         {
             var explClone = Instantiate(explosionEffect, pos, Quaternion.identity);
-            explClone.transform.localScale = Vector3.one * avgExplosionRadius;
+            explClone.transform.localScale = Vector3.one * actualExplosionDmg;
 
             var healthSystemBehaviours = GetHealthSystemsInRadius();
             healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(actualExplosionDmg, caster));

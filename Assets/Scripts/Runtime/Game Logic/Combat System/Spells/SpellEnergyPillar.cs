@@ -15,7 +15,6 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
     [SerializeField] private int amnOfShockwavesToCast = default;
     [SerializeField] private int maxShockwaveTargets = default;
     [SerializeField] private int avgShockwaveDmg = default;
-    [SerializeField] private float delayBetweenWaves = default;
 
     private DownTimer swTimer = default;
     private GameObject caster = default;
@@ -25,7 +24,8 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
     private StatModifier statModifier = default;
     
     private int actualSwDamage = default;
-
+    private float swDelay = default;
+    
     private Vector3 swCenter = default;
     private Vector3 swExtents = default;
 
@@ -37,12 +37,13 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
         swHitColliders = new Collider[maxShockwaveTargets];
     }
 
-    public void InitSpell(float shockwaveDmgMult, int amnOfShockwavesToCast, StatType statKey, StatModifier statModifier, GameObject caster)
+    public void InitSpell(float shockwaveDmgMult, float swDelay, int amnOfShockwavesToCast, StatType statKey, StatModifier statModifier, GameObject caster)
     {
         this.caster = caster;
         this.statKey = statKey;
         this.statModifier = statModifier;
         this.amnOfShockwavesToCast = amnOfShockwavesToCast;
+        this.swDelay = swDelay; 
 
         // this would work due to the collider having to be attached on the same object as this monobehaviour
         // the ontrigger calls would not work otherwise, but we want it to handle the buffing
@@ -59,7 +60,7 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
 
     private void InitTimer()
     {
-        swTimer = new DownTimer(delayBetweenWaves);
+        swTimer = new DownTimer(swDelay);
         swTimer.OnTimerEnd += ProcessOnHit;
         swTimer.OnTimerEnd += swTimer.Reset;
 

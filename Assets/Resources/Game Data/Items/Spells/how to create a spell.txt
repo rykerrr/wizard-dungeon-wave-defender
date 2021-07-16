@@ -1,0 +1,9 @@
+I'd say these fit more as abilities now, with spells just being abilities but with additional data...Saving them is going to be interesting to say the least...
+
+create a class deriving from SpellCastBase, this defines the behaviour to cast the spell
+to do this, you need a circle (you can grab any of the prefab ones) with an animator controller with 4 animations (Spell Idle, Spell Begin, Spell Loop, Spell End) that transition correspondingly from left to right, the animator has 2 parameters (BeginSpellCast causes transitioning from idle to Begin, Begin transitions to Loop once the animation finishes (exit time 1), loop transitions to end on EndSpellCast)
+create a class that derives from BaseSpellCastData, this holds data specific to the spell (impact damage, explosion damage, heal per tick, time between casts (although this may be moved to the SpellCastBase), amount of spells to cast), it's also required to implement ManaCost in the way it wants to
+create a class that derives from monobehaviour and implements one of the spell interfaces (not required per se but may be used eventually, just thought it was perfect to fit in), IBuffingSpell, IDamagingSpell, IHealingSpell
+once the above are done an empty game object with the class deriving from SpellCastBase and turn it into a prefab, then an object with the spell script (e.g a sphere for a ball attack)
+create an instance of a SpellBookItem, fill in the data for said spell
+create a SpellCreation script in such a way that it can be used to create spells from given base, a creation window for it, a button to enable it

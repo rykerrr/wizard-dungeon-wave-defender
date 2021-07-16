@@ -10,6 +10,8 @@ namespace WizardGame.Combat_System
     {
         [SerializeField] protected SpellEnergyBolt spellPrefab = default;
 
+        private EnergyBoltData data = default;
+        
         private Transform castCircleTransf = default;
         private Transform ownerTransf = default;
 
@@ -18,16 +20,31 @@ namespace WizardGame.Combat_System
         private Camera mainCam = default;
         private StatBase intStat = default;
 
+        public override BaseSpellCastData Data
+        {
+            get => data;
+            set
+            {
+                value ??= new EnergyBoltData();
+
+                if (value is EnergyBoltData newData)
+                {
+                    data = newData;
+                }
+                else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBoltData");
+            }
+        }
+        
         protected void Awake()
         {
             mainCam = Camera.main;
         }
 
         public override void Init(GameObject owner, CastPlaceholder castCircle 
-            , SpellCastData data, params MonoBehaviour[] movementScripts)
+            , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, castCircle, data, movementScripts);
-            
+
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
@@ -64,8 +81,8 @@ namespace WizardGame.Combat_System
                 (mouseHitPos - spellTransf.position).magnitude);
             spellTransf.localScale = newScale;
             
-            spellClone.InitSpell(1f * SpellCastData.SpellStrength, 1f * SpellCastData.SpellStrength / 2f
-                , intStat.ActualValue, mouseHitPos, objHit, Owner);
+            spellClone.InitSpell(data.ExplosionSize, data.ImpactSize, data.ExplosionDamage, data.ImpactDamage,
+                mouseHitPos, objHit, Owner);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

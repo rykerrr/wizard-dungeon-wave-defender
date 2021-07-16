@@ -76,7 +76,7 @@ namespace WizardGame.Combat_System
         private GameObject GenerateAndProcessExplosion(Vector3 pos)
         {
             var explClone = Instantiate(explosionEffect, pos, Quaternion.identity);
-            explClone.transform.localScale = Vector3.one * avgExplosionRadius;
+            explClone.transform.localScale = Vector3.one * actualRadius;
 
             var healthSystemBehaviours = GetHealthSystemsInRadiusIgnoreCaster();
             healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(actualExplosionDmg, caster));

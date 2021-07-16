@@ -8,13 +8,15 @@ namespace WizardGame.Item_System.Items
     {
         [SerializeField] private SpellCastBase spellCastPrefab = default;
         [SerializeField] private CastPlaceholder spellCirclePrefab = default;
-        [SerializeField] private SpellCastData spellCastData = default;
+
+        private BaseSpellCastData spellCastData = default;
         
         public SpellCastBase SpellCastPrefab => spellCastPrefab;
-        public SpellCastData SpellCastData => spellCastData;
         public CastPlaceholder SpellCirclePrefab => spellCirclePrefab;
 
-        public void Init(SpellCastBase spellCastPrefab, CastPlaceholder spellCirclePrefab, SpellCastData spellCastData)
+        public BaseSpellCastData SpellCastData => spellCastData;
+
+        public void Init(SpellCastBase spellCastPrefab, CastPlaceholder spellCirclePrefab, BaseSpellCastData spellCastData)
         {
             this.spellCastPrefab = spellCastPrefab;
             this.spellCirclePrefab = spellCirclePrefab;

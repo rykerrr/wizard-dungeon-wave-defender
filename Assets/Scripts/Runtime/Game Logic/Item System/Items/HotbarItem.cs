@@ -49,10 +49,6 @@ namespace WizardGame.Item_System.Items
             // a null ref exception
             //  (sb ??= new StringBuilder()).Clear();
 
-            Debug.Log(sb);
-            Debug.Log(itemUseEvent);
-            Debug.Log(Icon);
-            
             sb.Append("Hotbar Item | Name: ").Append(Name).Append(", Icon: ").Append(Icon.ToString())
                 .Append(", Use Event: ").Append(itemUseEvent.ToString()).AppendLine();
             

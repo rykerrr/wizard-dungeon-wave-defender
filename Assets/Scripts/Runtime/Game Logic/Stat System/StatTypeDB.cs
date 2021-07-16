@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace WizardGame.Stats_System
@@ -7,7 +8,7 @@ namespace WizardGame.Stats_System
     {
         private static Dictionary<string, StatType> types = new Dictionary<string, StatType>();
         private static string locationInResources = "Game Data/Stat Types";
-        
+
         static StatTypeDB()
         {
             var typesToLoad = Resources.LoadAll<StatType>(locationInResources);
