@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using WizardGame.Item_System.Items;
 using UnityEngine;
 
-namespace WizardGame.ItemSystem.World_Interaction
+namespace WizardGame.Item_System.World_Interaction
 {
     public class PhysicalItem : MonoBehaviour
     {

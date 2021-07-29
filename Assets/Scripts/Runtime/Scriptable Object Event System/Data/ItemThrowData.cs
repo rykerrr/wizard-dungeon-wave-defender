@@ -1,5 +1,5 @@
 using UnityEngine;
-using WizardGame.ItemSystem.World_Interaction;
+using WizardGame.Item_System.World_Interaction;
 
 namespace WizardGame.CustomEventSystem
 {

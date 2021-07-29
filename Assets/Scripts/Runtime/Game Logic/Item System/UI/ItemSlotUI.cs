@@ -12,14 +12,16 @@ namespace WizardGame.Item_System.UI
     {
         [SerializeField] protected Image slotItemIconImage = default;
         [SerializeField] protected TextMeshProUGUI itemQuantText = default;
+        [SerializeField] protected CooldownDisplay cdDisplay = default;
 
         [SerializeField] private Transform owner; // field is temporary until i figure out what file it
         // fits in best
         [SerializeField] protected Inventory inventory;
 
         public Inventory Inventory => inventory;
+        public CooldownDisplay CdDisplay => cdDisplay;
         public int SlotIndexOnUI { get; private set; }
-        public virtual HotbarItem ReferencedSlotItem { get; set; }
+        public virtual HotbarItem ReferencedSlotItem { get; protected set; }
 
         public Transform Owner => owner;
         
@@ -27,13 +29,13 @@ namespace WizardGame.Item_System.UI
         {
             SlotIndexOnUI = transform.GetSiblingIndex();
             UpdateSlotUi();
+            
+            CdDisplay.UpdateData(ReferencedSlotItem);
         }
 
         protected virtual void EnableSlotUI(bool enable)
         {
             slotItemIconImage.enabled = enable;
-            
-            // cooldown things here
         }
 
         public void UseReferencedItem()

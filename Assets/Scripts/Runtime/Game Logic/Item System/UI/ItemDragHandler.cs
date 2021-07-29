@@ -11,18 +11,24 @@ namespace WizardGame.Item_System.UI
     {
         [SerializeField] protected ItemSlotUI itemSlotUI;
         // rename the below field
-        [SerializeField] protected Transform parentForDraggingAroundInv = default;
+        [SerializeField] protected Transform parentForDrag = default;
         [SerializeField] protected ItemTooltipPopup tooltipPopup = default;
         
         private CanvasGroup canvGroup = default;
-        private Transform prevParent = default;
+        private Transform actualParent = default;
         private bool isHovering = false;
 
         public bool IsHovering => isHovering;
         public ItemSlotUI ItemSlotUI => itemSlotUI;
 
+        private RectTransform thisTransform = default;
+        private RectTransform itemSlotTransform = default;
+        
         private void Awake()
         {
+            thisTransform = (RectTransform)transform;
+            itemSlotTransform = (RectTransform) ItemSlotUI.transform;
+            
             if (canvGroup == null)
             {
                 canvGroup = GetComponent<CanvasGroup>();
@@ -33,18 +39,17 @@ namespace WizardGame.Item_System.UI
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
 
-            transform.position = Mouse.current.position.ReadValue();
+            thisTransform.position = Mouse.current.position.ReadValue();
         }
 
         public virtual void OnPointerUp(PointerEventData eventData)
         {
-            if (eventData.button != PointerEventData.InputButton.Left) return;
+            Debug.Log(thisTransform.parent + " | " + actualParent, this);
+            thisTransform.SetParent(actualParent);
+            thisTransform.SetSiblingIndex(1);
 
-            Transform thisTransform = transform;
-
-            thisTransform.SetParent(prevParent);
-            thisTransform.localPosition = Vector3.zero;
-
+            thisTransform.anchoredPosition = Vector2.zero;
+            
             canvGroup.blocksRaycasts = true;
         }
 
@@ -54,9 +59,10 @@ namespace WizardGame.Item_System.UI
 
             // raise event for dragging thing
 
-            prevParent = transform.parent;
+            actualParent = thisTransform.parent;
 
-            transform.SetParent(parentForDraggingAroundInv);
+            thisTransform.SetParent(parentForDrag);
+            thisTransform.SetAsLastSibling();
 
             canvGroup.blocksRaycasts = false;
         }

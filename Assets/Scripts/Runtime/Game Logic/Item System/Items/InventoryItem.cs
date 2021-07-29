@@ -8,7 +8,7 @@ namespace WizardGame.Item_System.Items
         [SerializeField] private Rarity rarity = default;
         [SerializeField] private int sellPrice = 1;
         [SerializeField] private int maxStack = 5;
-
+        
         public Rarity Rarity => rarity;
         public int SellPrice => sellPrice;
         public virtual int MaxStack => maxStack;
@@ -24,6 +24,8 @@ namespace WizardGame.Item_System.Items
 
         public void Init(Rarity rarity, int sellPrice, int maxStack)
         {
+            Debug.Log("inventory innit blimey mate");
+            
             this.rarity = rarity;
             this.sellPrice = sellPrice;
             this.maxStack = maxStack;

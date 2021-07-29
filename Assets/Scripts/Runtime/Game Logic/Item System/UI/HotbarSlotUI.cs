@@ -11,13 +11,20 @@ namespace WizardGame.Item_System.UI
     public class HotbarSlotUI : ItemSlotUI
     {
         private HotbarItem referencedSlotSlotItem;
-        
+
         public override HotbarItem ReferencedSlotItem
         {
             get => referencedSlotSlotItem;
-            set { referencedSlotSlotItem = value; UpdateSlotUi(); }
+            protected set
+            {
+                referencedSlotSlotItem = value;
+                
+                UpdateSlotUi();
+                
+                cdDisplay.UpdateData(referencedSlotSlotItem);
+            }
         }
-        
+
         public override void OnDrop(PointerEventData eventData)
         {
             var dragHandler = eventData.pointerDrag.GetComponent<ItemDragHandler>();
@@ -36,10 +43,16 @@ namespace WizardGame.Item_System.UI
 
                     break;
                 }
-                case ItemContainerSlotUI itemContainerSlotUi:
+                case EquipmentSlotUI equipmentSlotUI:
+                {
+                    ReferencedSlotItem = equipmentSlotUI.ReferencedSlotItem;
+
+                    break;
+                }
+                case InventorySlotUI itemContainerSlotUi:
                 {
                     ReferencedSlotItem = itemContainerSlotUi.ReferencedSlotItem;
-                    
+
                     break;
                 }
             }
@@ -47,9 +60,13 @@ namespace WizardGame.Item_System.UI
 
         public bool AddItem(HotbarItem itemToAdd)
         {
+            Debug.Log("Is this getting called?");
+
             if (!ReferenceEquals(ReferencedSlotItem, null)) return false;
-            
+
             ReferencedSlotItem = itemToAdd;
+
+            cdDisplay.UpdateData(ReferencedSlotItem);
 
             return true;
         }
@@ -68,7 +85,7 @@ namespace WizardGame.Item_System.UI
                 {
                     if (inventory.ItemContainer.HasItem(invItem))
                     {
-                        int quantCount = inventory.ItemContainer.GetTotalQuantity(invItem);
+                        var quantCount = inventory.ItemContainer.GetTotalQuantity(invItem);
                         itemQuantText.text = quantCount > 1 ? quantCount.ToString() : "";
                     }
                     else
@@ -86,7 +103,7 @@ namespace WizardGame.Item_System.UI
                 }
             }
         }
-        
+
         public override void UpdateSlotUi()
         {
             if (ReferencedSlotItem == null)
@@ -98,9 +115,15 @@ namespace WizardGame.Item_System.UI
             slotItemIconImage.sprite = ReferencedSlotItem.Icon;
             EnableSlotUI(true);
             UpdateItemQuantityUI();
-            
-            // update cooldown UI
         }
+
+        public void ClearItem()
+        {
+            ReferencedSlotItem = null;
+            
+            UpdateSlotUi();
+        }
+        
 
         protected override void EnableSlotUI(bool enable)
         {

@@ -16,9 +16,9 @@ namespace WizardGame.Utility.Timers
         }
 
         private void TickAllTimers()
-        {            float time = Time.deltaTime;
+        {           
+            float time = Time.deltaTime;
 
-            
             for (int i = timers.Count - 1; i >= 0; i--)
             {
                 timers[i].TryTick(time);

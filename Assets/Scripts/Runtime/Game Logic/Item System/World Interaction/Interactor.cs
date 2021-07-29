@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace WizardGame.ItemSystem.World_Interaction
+namespace WizardGame.Item_System.World_Interaction
 {
     [Serializable]
     // Probably better to be renamed once i find a better name for it, it just supplies colliders of layer Interactable

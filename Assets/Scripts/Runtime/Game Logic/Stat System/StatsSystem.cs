@@ -11,8 +11,7 @@ namespace WizardGame.Stats_System
     [Serializable]
     public class StatsSystem
     {
-      [SerializeField]
-        private SerializableDictionary<StatType, StatBase> stats = new SerializableDictionary<StatType, StatBase>();
+       [SerializeField] private SerializableDictionary<StatType, StatBase> stats = new SerializableDictionary<StatType, StatBase>();
         private SerializableDictionary<StatType, StatBase> Stats => stats;
         
         private StringBuilder sb = new StringBuilder();
@@ -46,8 +45,6 @@ namespace WizardGame.Stats_System
 
             for (int i = firstDepIndex; i < defEntityStatList.Count; i++)
             {
-                // Debug.Log(defEntityStatList[i] + " | " + defEntityStatList[firstDepIndex]);
-                
                 var entityStat = defEntityStatList[i];
                 var depStat = CreateDependantStat(entityStat, defEntityStatList);
 
@@ -68,10 +65,10 @@ namespace WizardGame.Stats_System
                 }
                 else
                 {
-                    // could probably be done in a much better way
-                    // good enough since this should run only once anyway, would be problematic
+                    // could probably be done in a much nicer way
+                    // good enough since this should run only once anyway, though it could be problematic
                     // for multiple enemies being spawned
-                    // i need the growth rates here of the stats the DependantStat is depending on
+                    // I need the growth rates here of the stats the DependantStat is depending on
                     float depStatGrowthRate = listForGrowthRates.Find(x => x.StatType == depStatBase).GrowthRate;
                     StatBase statDependency = new Stat(depStatBase, depStatGrowthRate);
 

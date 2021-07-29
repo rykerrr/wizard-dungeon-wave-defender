@@ -1,16 +1,24 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
+using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.CustomEventSystem;
 
 namespace WizardGame.Item_System.Items
 {
-    public abstract class HotbarItem : ScriptableObject
+    public abstract class HotbarItem : ScriptableObject, IHasCooldown
     {
         [SerializeField] private new string name = "New Item";
         [SerializeField] private Sprite icon = default;
 
+        [Header("Cooldown data")] 
+        [SerializeField] private float cooldownDuration;
+        // TODO: Create a serializable GUID
+        [SerializeField] private Guid id = Guid.NewGuid();
+        
+        [Header("Properties")]
         [SerializeField] protected HotbarItemGameEvent itemUseEvent;
 
         protected StringBuilder sb = new StringBuilder();
@@ -19,13 +27,23 @@ namespace WizardGame.Item_System.Items
         public abstract string ColouredName { get; }
         public Sprite Icon => icon;
         public virtual HotbarItemGameEvent ItemUseEvent { get => itemUseEvent; set => itemUseEvent = value; }
-        
+
+        public Guid Id => id;
+        public float CooldownDuration => cooldownDuration;
+
         public void Init(string name, Sprite icon)
         {
             this.name = name;
             this.icon = icon;
         }
-        
+
+        public void Awake()
+        {
+            Debug.Log("Awake is not being called...?");
+            
+            Init(name, icon);
+        }
+
         public abstract string GetInfoDisplayText();
 
         public HotbarItem() => sb = new StringBuilder();
@@ -53,6 +71,12 @@ namespace WizardGame.Item_System.Items
                 .Append(", Use Event: ").Append(itemUseEvent.ToString()).AppendLine();
             
             return sb.ToString();
+        }
+
+        [ContextMenu("Log GUID")]
+        public void LogId()
+        {
+            Debug.Log(id);
         }
     }
 }

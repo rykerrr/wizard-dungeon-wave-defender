@@ -9,7 +9,7 @@ namespace WizardGame.Spell_Creation
         [SerializeField] private SpellCreationHandler thisHandler;
         [SerializeField] private SpellCreationMenuBase thisMenu = default;
         [SerializeField] private Transform creationPanelsContainer = default;
-        
+
         public void OnClick_SelectMenu()
         {
             CloseAllCreationPanels();
@@ -20,10 +20,10 @@ namespace WizardGame.Spell_Creation
         {
             thisHandler.SpellFoundation = thisMenu.SpellFoundation;
             thisHandler.Data = thisMenu.Data;
-            
+
             thisMenu.gameObject.SetActive(true);
         }
-        
+
         private void CloseAllCreationPanels()
         {
             foreach (Transform child in creationPanelsContainer)

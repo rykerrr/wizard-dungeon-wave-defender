@@ -14,16 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Energy Healing Field
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  cooldownDuration: 3
   itemUseEvent: {fileID: 11400000, guid: c8c8ca9c4d82414438a4e3f5f9e44fa0, type: 2}
   rarity: {fileID: 11400000, guid: d323f9ba024b7464ebfbc6a6e7179a8d, type: 2}
   sellPrice: 1
   maxStack: 1
   spellCastPrefab: {fileID: 8881536620950510829, guid: f1ddd13b100f04c4da59837a33e2f54f, type: 3}
   spellCirclePrefab: {fileID: 8732177482223480596, guid: c36304d938203234a8f6e06523e3f2c7, type: 3}
-  spellCastData:
-    castingSpeed: 1
-    castCooldownMultiplier: 1
-    castAmn: 5
-    speedMultiplier: 1
-    spellStrength: 1
-    gravMagnitudeMultiplier: 1

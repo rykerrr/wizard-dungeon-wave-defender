@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2620037837493723500}
   - component: {fileID: 2620037837493723496}
   - component: {fileID: 2620037837493723497}
+  - component: {fileID: 2620037837498513906}
   m_Layer: 0
   m_Name: Image_Background
   m_TagString: Untagged
@@ -33,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 2620037837832408088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1055, y: 110}
+  m_SizeDelta: {x: -387.799, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2620037837493723496
 CanvasRenderer:
@@ -76,6 +77,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2620037837498513906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620037837493723501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 10
 --- !u!1 &2620037837832408089
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +168,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -186,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2620037838228787490}
   - component: {fileID: 2620037837498513913}
+  - component: {fileID: 2620037837498513903}
   m_Layer: 0
   m_Name: Hotbar
   m_TagString: Untagged
@@ -220,6 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4750e50dd90f419dbd7b57e7f5945534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swapItemCooldownId: 0
+  cooldownDuration: 0
   hotbarSlots:
   - {fileID: 2605224116947621382}
   - {fileID: 7871953314241114598}
@@ -231,6 +249,52 @@ MonoBehaviour:
   - {fileID: 2788191613716288619}
   - {fileID: 5565420516930863804}
   - {fileID: 1654355291628834125}
+--- !u!114 &2620037837498513903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620037838228787491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: d1277dbee9e497c4d8176cbee46fa2b2, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2620037837498513913}
+        m_TargetAssemblyTypeName: WizardGame.Item_System.Hotbar, ProductionScripts
+        m_MethodName: ScrollThroughSlots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bc3dc4e3-a1c8-4cee-9424-d0274209ca32
+    m_ActionName: Inventory/Scroll Through Hotbar Slots[/Mouse/scroll/y]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Inventory
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2620037838642459395
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +458,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -402,8 +478,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_HotbarSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+--- !u!224 &500110003971088507 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+  m_PrefabInstance: {fileID: 392803532508212334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1654355291628834125 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407084492970565923, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -415,11 +516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996949001d40689dc9b045df5c2352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &500110003971088507 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
-  m_PrefabInstance: {fileID: 392803532508212334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1975039216727673390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511,6 +607,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -519,8 +627,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_HotbarSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+--- !u!224 &1795674464025806395 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+  m_PrefabInstance: {fileID: 1975039216727673390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &643531306251873037 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407084492970565923, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -532,11 +665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996949001d40689dc9b045df5c2352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &1795674464025806395 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
-  m_PrefabInstance: {fileID: 1975039216727673390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3022858696228653703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -628,6 +756,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -636,8 +776,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_HotbarSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+--- !u!224 &3058052082601002642 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+  m_PrefabInstance: {fileID: 3022858696228653703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4212464426433932196 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407084492970565923, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -649,11 +814,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996949001d40689dc9b045df5c2352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &3058052082601002642 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
-  m_PrefabInstance: {fileID: 3022858696228653703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3511549571067477105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,6 +905,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -752,6 +924,26 @@ PrefabInstance:
     - target: {fileID: 2686152636249351574, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_Name
       value: GameObject_HotbarSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -862,6 +1054,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -869,6 +1073,26 @@ PrefabInstance:
     - target: {fileID: 2686152636249351574, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_Name
       value: GameObject_HotbarSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -979,6 +1203,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -986,6 +1222,26 @@ PrefabInstance:
     - target: {fileID: 2686152636249351574, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_Name
       value: GameObject_HotbarSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1096,6 +1352,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -1103,6 +1371,26 @@ PrefabInstance:
     - target: {fileID: 2686152636249351574, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_Name
       value: GameObject_HotbarSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1213,6 +1501,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -1221,8 +1521,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_HotbarSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+--- !u!224 &5512840568151579615 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+  m_PrefabInstance: {fileID: 5693307030982547402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6666531897571178217 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407084492970565923, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1234,11 +1559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996949001d40689dc9b045df5c2352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &5512840568151579615 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
-  m_PrefabInstance: {fileID: 5693307030982547402}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6825961274164994975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1330,6 +1650,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -1337,6 +1669,26 @@ PrefabInstance:
     - target: {fileID: 2686152636249351574, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_Name
       value: GameObject_HotbarSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1447,6 +1799,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1440400795046981411, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400795702913796, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 2620037838642459394}
     - target: {fileID: 1440400796083640834, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
@@ -1455,8 +1819,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_HotbarSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0006713867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986832594996565493, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086363373302566171, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_FlexibleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+--- !u!224 &9023814995159227600 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+  m_PrefabInstance: {fileID: 9131114425035804869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7871953314241114598 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407084492970565923, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1468,8 +1857,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996949001d40689dc9b045df5c2352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &9023814995159227600 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 253111825828891669, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
-  m_PrefabInstance: {fileID: 9131114425035804869}
-  m_PrefabAsset: {fileID: 0}

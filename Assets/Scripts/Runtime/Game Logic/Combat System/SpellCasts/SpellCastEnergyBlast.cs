@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -29,10 +31,10 @@ namespace WizardGame.Combat_System
             }
         }
         
-        public override void Init(GameObject owner, CastPlaceholder castCircle 
-            , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+        public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, castCircle, data, movementScripts);
+            base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -63,9 +65,8 @@ namespace WizardGame.Combat_System
         private IEnumerator MultiCast()
         {
             var waitForDelay = new WaitForSeconds(0.5f);
-            var spawnPos = ownerTransf.position + ownerTransf.forward * 2; 
+            var spawnPos = ownerTransf.position + ownerTransf.forward * 2;
 
-            
             for (int i = 0; i < data.BlastAmount; i++)
             {
                 var spellClone = Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);

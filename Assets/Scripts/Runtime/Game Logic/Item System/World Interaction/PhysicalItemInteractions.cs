@@ -4,7 +4,7 @@ using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
 using WizardGame.CustomEventSystem;
 
-namespace WizardGame.ItemSystem.World_Interaction
+namespace WizardGame.Item_System.World_Interaction
 {
     public class PhysicalItemInteractions
     {

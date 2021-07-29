@@ -1,15 +1,23 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Item_System.Items;
+using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
 {
     public class SpellCastHandler : MonoBehaviour
     {
+        [Header("Spell cast dependencies")] 
+        [SerializeField] private StatsSystemBehaviour statsSystemBehaviour = default;
+        [SerializeField] private CooldownSystem cooldownSys;
+        [SerializeField] private MonoBehaviour[] movementScripts;
+
+        [Header("Debug")]
         [SerializeField] private SpellBookItem prewarmSpellBook = default;
         [SerializeField] private SpellCastBase equippedSpellCastBase = default;
-        [SerializeField] private MonoBehaviour[] movementScripts;
 
         private Dictionary<SpellBookItem, SpellCastBase> existingSpellCasts =
             new Dictionary<SpellBookItem, SpellCastBase>();
@@ -21,6 +29,9 @@ namespace WizardGame.Combat_System
 
         private void Awake()
         {
+            statsSystemBehaviour ??= GetComponent<StatsSystemBehaviour>();
+            cooldownSys ??= GetComponent<CooldownSystem>();
+            
             if (ReferenceEquals(prewarmSpellBook, null)) return;
             Equip(prewarmSpellBook);
         }
@@ -94,7 +105,8 @@ namespace WizardGame.Combat_System
             var spellCircleClone = Instantiate(baseItem.SpellCirclePrefab, Vector3.zero, Quaternion.identity);
             
             spellCircleClone.gameObject.SetActive(false);
-            spellCasterClone.Init(gameObject, spellCircleClone, baseItem.SpellCastData, movementScripts);
+            spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
+                , baseItem.Id, spellCircleClone, baseItem.SpellCastData, movementScripts);
             
             existingSpellCasts.Add(baseItem, spellCasterClone);
             return spellCasterClone;

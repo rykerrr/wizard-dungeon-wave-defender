@@ -92,6 +92,8 @@ namespace WizardGame.Combat_System
 
             for (var i = explosionHits - 1; i >= 0; i--)
             {
+                if (colliderHits[i].gameObject == caster) continue;
+                
                 HealthSystemBehaviour behav = default;
 
                 if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))

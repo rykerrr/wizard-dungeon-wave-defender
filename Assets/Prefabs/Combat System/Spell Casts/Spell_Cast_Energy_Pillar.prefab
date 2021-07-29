@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e47ea33861cefa4eaafa78298f7d0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSysBehaviour: {fileID: 0}
-  castCircle: {fileID: 0}
-  movementScripts: []
+  castCooldown: 10
+  castingSpeed: 0
   spellPrefab: {fileID: 7292290935327945338, guid: 0fddbe8dea4f910418274810ccd19e26, type: 3}
 --- !u!114 &5660622948874648788
 MonoBehaviour:

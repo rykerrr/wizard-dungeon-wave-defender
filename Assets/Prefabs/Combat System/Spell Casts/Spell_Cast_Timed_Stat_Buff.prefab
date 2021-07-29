@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecd72f48852468419f18959dfa0864a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSysBehaviour: {fileID: 0}
-  castCircle: {fileID: 0}
-  movementScripts: []
-  modifier:
-    type: 300
-    value: 50
+  castingSpeed: 1
+  cooldownId: 6
+  castCooldown: 3
+  statModifier:
+    type: 0
+    value: 0
   keyName: Resolve
   statModifierDuration: 8
 --- !u!114 &5391195919196372972

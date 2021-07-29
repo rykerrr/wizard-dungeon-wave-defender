@@ -102,11 +102,8 @@ public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
 
         for (var i = shockwaveHits - 1; i >= 0; i--)
         {
-            if (swHitColliders[i].gameObject == caster)
-            {
-                continue;
-            }
-                
+            if (swHitColliders[i].gameObject == caster) continue;
+
             HealthSystemBehaviour behav = default;
 
             if (!ReferenceEquals(behav = swHitColliders[i].GetComponent<HealthSystemBehaviour>(), null))

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System;
+using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Stats_System;
 
 public class SpellCastEnergyPillar : SpellCastBase
@@ -37,20 +38,20 @@ public class SpellCastEnergyPillar : SpellCastBase
             else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBoltData");
         }
     }
-    
-    private void Awake()
-    {
-        mainCam = Camera.main;
-    }
 
-    public override void Init(GameObject owner, CastPlaceholder castCircle
-        , BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+    public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
+        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
     {
-        base.Init(owner, castCircle, data, movementScripts);
+        base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
 
         ownerTransf = Owner.transform;
         castCircleTransf = castCircle.transform;
         intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
+    }
+    
+    protected override void Awake()
+    {
+        mainCam = Camera.main;
     }
     
     protected override IEnumerator StartSpellCast()

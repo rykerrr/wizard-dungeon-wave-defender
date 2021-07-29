@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +37,9 @@ namespace WizardGame.Spell_Creation
             newItem.Init(spell.Rarity, spell.SellPrice, spell.MaxStack);
             newItem.Init(spell.name, spell.Icon);
             newItem.ItemUseEvent = spell.ItemUseEvent;
-
+            
+            var spellId = Guid.NewGuid();
+            
             if (newItem == null) return null;
 
             targetInventory.ItemContainer.AddItem(new ItemSlot(newItem, 1));

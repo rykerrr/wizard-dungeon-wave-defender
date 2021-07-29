@@ -8,7 +8,7 @@ using WizardGame.Item_System.Items;
 using WizardGame.Movement.Position;
 using WizardGame.Movement.Rotation;
 
-namespace WizardGame.ItemSystem.World_Interaction
+namespace WizardGame.Item_System.World_Interaction
 {
     [Serializable]
     public class PhysicalItemDisplay

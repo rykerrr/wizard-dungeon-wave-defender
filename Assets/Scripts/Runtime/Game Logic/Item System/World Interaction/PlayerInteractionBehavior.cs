@@ -5,7 +5,7 @@ using WizardGame.CustomEventSystem;
 using WizardGame.Item_System.Item_Containers;
 using WizardGame.Utility.Infrastructure.Factories;
 
-namespace WizardGame.ItemSystem.World_Interaction
+namespace WizardGame.Item_System.World_Interaction
 {
     public class PlayerInteractionBehavior : MonoBehaviour
     {

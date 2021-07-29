@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edd255cb6dfee24db93884681975a0d, type: 3}
+  m_Name: Ruby Amulet
+  m_EditorClassIdentifier: 
+  name: Ruby Amulet
+  icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  cooldownDuration: 0
+  itemUseEvent: {fileID: 11400000, guid: 8e98e1e202c3f194a92516e1914092e3, type: 2}
+  rarity: {fileID: 11400000, guid: 33c4905d9cc485145bfc697fe0277645, type: 2}
+  sellPrice: 1
+  maxStack: 1
+  statType: {fileID: 11400000, guid: 5c292ff30ea755542b74da22214d0b94, type: 2}
+  modifier:
+    type: 100
+    value: 31
+  onUnEquipItem: {fileID: 11400000, guid: 35395685db65167498c6fdd38615191f, type: 2}
+  equipmentType: 4
