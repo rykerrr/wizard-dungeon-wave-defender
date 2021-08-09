@@ -22,6 +22,7 @@ namespace WizardGame.Item_System.Equipment_system
             var equippable = (IEquippable) item;
             if (ReferenceEquals(equippable, null)) return;
             
+            Debug.Log("Processing equip");
             statsSystem.AddModifierTo(equippable.StatType, equippable.StatModifier);
         }
 
@@ -30,6 +31,7 @@ namespace WizardGame.Item_System.Equipment_system
             var equippable = (IEquippable) item;
             if (ReferenceEquals(equippable, null)) return;
             
+            Debug.Log("Processing unequip");
             statsSystem.RemoveModifierFrom(equippable.StatType, equippable.StatModifier);
         }
     }

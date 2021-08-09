@@ -10,7 +10,7 @@ namespace WizardGame.Combat_System
     {
         [SerializeField] private StatModifier statModifier = default;
         [SerializeField] private string keyName = default;
-        [SerializeField] private float statModifierDuration = default;
+        [SerializeField] private float statModifierDurationMult = 1.2f;
 
         private TimedStatBuffData data;
         
@@ -62,9 +62,9 @@ namespace WizardGame.Combat_System
             var key = StatTypeDB.GetType(keyName);
 
             var modifierToAdd = new StatModifier(statModifier.Type, statModifier.Value * data.BuffStrength
-                , Owner);
+                , Owner.name);
             
-            statsSys.AddTimedModifier(key, modifierToAdd, data.Duration);
+            statsSys.AddTimedModifier(key, modifierToAdd, data.Duration * statModifierDurationMult);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

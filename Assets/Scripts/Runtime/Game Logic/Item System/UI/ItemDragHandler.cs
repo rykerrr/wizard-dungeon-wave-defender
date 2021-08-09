@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using WizardGame.Item_System.Tooltip;
 
 namespace WizardGame.Item_System.UI
 {
@@ -12,7 +10,6 @@ namespace WizardGame.Item_System.UI
         [SerializeField] protected ItemSlotUI itemSlotUI;
         // rename the below field
         [SerializeField] protected Transform parentForDrag = default;
-        [SerializeField] protected ItemTooltipPopup tooltipPopup = default;
         
         private CanvasGroup canvGroup = default;
         private Transform actualParent = default;
@@ -44,7 +41,6 @@ namespace WizardGame.Item_System.UI
 
         public virtual void OnPointerUp(PointerEventData eventData)
         {
-            Debug.Log(thisTransform.parent + " | " + actualParent, this);
             thisTransform.SetParent(actualParent);
             thisTransform.SetSiblingIndex(1);
 
@@ -70,15 +66,11 @@ namespace WizardGame.Item_System.UI
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
             isHovering = true;
-            
-            tooltipPopup.ShowTooltip(ItemSlotUI);
         }
 
         public virtual void OnPointerExit(PointerEventData eventData)
         {
             isHovering = false;
-
-            tooltipPopup.HideTooltip();
         }
         
         private void OnDisable()

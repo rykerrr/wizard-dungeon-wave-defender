@@ -32,7 +32,7 @@ namespace WizardGame.Item_System.UI
                 ReferenceEquals((InventoryItem)ItemSlotUI.ReferencedSlotItem, null)) return;
             
             Inventory inventory = itemSlotUI.Inventory;
-            Transform owner = itemSlotUI.Owner;
+            var owner = itemSlotUI.Owner;
             
             Vector3 itemDropLocation = owner.position + owner.forward * 3;
             Vector3 force = owner.forward * 4f + new Vector3(0f, 5f, 0f);

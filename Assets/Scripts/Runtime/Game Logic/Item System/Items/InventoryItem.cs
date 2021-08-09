@@ -32,7 +32,7 @@ namespace WizardGame.Item_System.Items
         }
         
         public InventoryItem() : base() { }
-        
+
         public abstract override string GetInfoDisplayText();
 
         public override string ToString()

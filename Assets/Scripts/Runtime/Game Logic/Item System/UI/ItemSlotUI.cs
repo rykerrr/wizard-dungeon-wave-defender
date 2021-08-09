@@ -5,15 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
+using WizardGame.Tooltips;
 
 namespace WizardGame.Item_System.UI
 {
-    public abstract class ItemSlotUI : MonoBehaviour, IDropHandler
+    public abstract class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] protected Image slotItemIconImage = default;
         [SerializeField] protected TextMeshProUGUI itemQuantText = default;
         [SerializeField] protected CooldownDisplay cdDisplay = default;
-
+        [SerializeField] private ItemTooltipPopup tooltipPopup = default;
+        
         [SerializeField] private Transform owner; // field is temporary until i figure out what file it
         // fits in best
         [SerializeField] protected Inventory inventory;
@@ -55,5 +57,18 @@ namespace WizardGame.Item_System.UI
         public abstract void OnDrop(PointerEventData eventData);
 
         private void OnEnable() => UpdateSlotUi();
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (!ReferencedSlotItem) return;
+            
+            tooltipPopup.ShowTooltip(this);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (!ReferencedSlotItem) return;
+            
+            tooltipPopup.HideTooltip();
+        }
     }
 }

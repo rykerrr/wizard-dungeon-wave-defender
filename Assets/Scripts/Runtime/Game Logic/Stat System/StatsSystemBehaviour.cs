@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Text;
+using UnityEngine;
 using WizardGame.Utility.Timers;
 
 namespace WizardGame.Stats_System
@@ -43,6 +44,22 @@ namespace WizardGame.Stats_System
         {
             Debug.Log(statsSystem.CheckModifierOccurrences(statModifierToAddOrRemove));
         }
+
+        [ContextMenu("Get modifiers for given key")]
+        public void GetModifiersForKey()
+        {
+            StringBuilder sb = new StringBuilder();
+            
+            var stat = statsSystem.GetStat(key);
+
+            foreach (var mod in stat.StatModifiers)
+            {
+                sb.Append(mod).AppendLine();
+            }
+            
+            Debug.Log(sb.ToString());
+        }
+        
         #endregion
     }
 }

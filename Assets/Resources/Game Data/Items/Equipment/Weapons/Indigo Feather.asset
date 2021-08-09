@@ -20,7 +20,7 @@ MonoBehaviour:
   sellPrice: 1
   maxStack: 1
   statType: {fileID: 11400000, guid: 5c292ff30ea755542b74da22214d0b94, type: 2}
-  modifier:
+  modifierData:
     type: 300
-    value: 30
+    value: 60
   onUnEquipItem: {fileID: 11400000, guid: 35395685db65167498c6fdd38615191f, type: 2}

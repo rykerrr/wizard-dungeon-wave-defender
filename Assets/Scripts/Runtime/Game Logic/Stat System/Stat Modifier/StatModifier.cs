@@ -8,8 +8,7 @@ namespace WizardGame.Stats_System
     {
         [SerializeField] private ModifierType type;
         [SerializeField] private float value;
-        
-        private object source = default;
+        [SerializeField] private object source = default;
         
         public ModifierType Type => type;
         public float Value => value;
@@ -32,7 +31,8 @@ namespace WizardGame.Stats_System
 
         public override string ToString()
         {
-            return $"Type: {Type}, Value: {Value}";
+            // string src = Source != null ? Source.ToString() : "N/A";    
+            return $"Source: { Source } Type: { Type }, Value: { Value }";
         }
     }
 }

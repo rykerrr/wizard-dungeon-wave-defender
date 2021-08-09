@@ -37,10 +37,8 @@ namespace WizardGame.Item_System.Items
             this.icon = icon;
         }
 
-        public void Awake()
+        protected virtual void Awake()
         {
-            Debug.Log("Awake is not being called...?");
-            
             Init(name, icon);
         }
 

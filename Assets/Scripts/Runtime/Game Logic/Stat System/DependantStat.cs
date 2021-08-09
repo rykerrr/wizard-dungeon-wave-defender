@@ -46,7 +46,7 @@ namespace WizardGame.Stats_System
 
                 StatsDependingOn.Add(statDep);
                 
-                statToAdd.StatWasModified += DependenciesWereModified;
+                statToAdd.statWasModified += DependenciesWereModified;
             }
         }
 
@@ -58,7 +58,7 @@ namespace WizardGame.Stats_System
 
             isDirty = true;
             
-            statToRemove.StatWasModified -= DependenciesWereModified;
+            statToRemove.statWasModified -= DependenciesWereModified;
             
             return StatsDependingOn.Remove(statDep);
         }

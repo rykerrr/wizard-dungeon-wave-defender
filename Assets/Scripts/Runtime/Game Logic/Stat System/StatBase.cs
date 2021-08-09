@@ -6,7 +6,9 @@ namespace WizardGame.Stats_System
 {
     public abstract class StatBase
     {
-           protected Action statWasModified = delegate { };
+        private string name;        
+        
+        public Action statWasModified = delegate { };
 
         protected List<StatModifier> statModifiers = new List<StatModifier>();
         
@@ -14,15 +16,10 @@ namespace WizardGame.Stats_System
         protected float growthRate = default;
         protected int actualValue = default;
         protected bool isDirty = true;
-        
+
+        public string Name => name;
         public IReadOnlyList<StatModifier> StatModifiers => statModifiers.AsReadOnly();
-        
-        public Action StatWasModified
-        {
-            get => statWasModified;
-            set => statWasModified = value;
-        }
-        
+
         public int BaseValue
         {
             get => baseValue;
@@ -30,7 +27,7 @@ namespace WizardGame.Stats_System
             {
                 baseValue = value;
 
-                StatWasModified.Invoke();
+                statWasModified.Invoke();
                 isDirty = true;
             }
         }
@@ -44,6 +41,7 @@ namespace WizardGame.Stats_System
                 if (isDirty)
                 {
                     actualValue = CalculateValue();
+
                     isDirty = false;
                 }
 
@@ -57,6 +55,7 @@ namespace WizardGame.Stats_System
 
         public StatBase(StatType defType, float growthRate)
         {
+            name = defType.Name;
             baseValue = defType.Value;
             OriginalValue = defType.Value;
             
@@ -66,6 +65,7 @@ namespace WizardGame.Stats_System
         protected int ApplyModifiers(int valueToApplyTo)
         {
             actualValue = valueToApplyTo;
+            
             float additiveModSum = 0;
 
             statModifiers.Sort(StatModifier.CompareModifierOrder);
@@ -78,7 +78,7 @@ namespace WizardGame.Stats_System
                 {
                     case ModifierType.Flat:
                     {
-                        actualValue += (int) Math.Round(mod.Value);
+                        actualValue += (int) Math.Floor(mod.Value);
                         break;
                     }
                     case ModifierType.PercentAdditive:
@@ -87,20 +87,20 @@ namespace WizardGame.Stats_System
 
                         if (i == StatModifiers.Count - 1 || StatModifiers[i + 1].Type != ModifierType.PercentAdditive)
                         {
-                            actualValue = (int) Mathf.Round(actualValue * (1 + additiveModSum));
+                            actualValue = (int) Mathf.Floor(actualValue * (1 + additiveModSum));
                         }
 
                         break;
                     }
                     case ModifierType.PercentFinalMultiplicative:
                     {
-                        actualValue = (int) Math.Round(actualValue * (1 + mod.Value));
+                        actualValue = (int) Math.Floor(actualValue * (1 + mod.Value));
 
                         break;
                     }
                 }
             }
-
+            
             return actualValue;
         }
 
@@ -116,18 +116,27 @@ namespace WizardGame.Stats_System
         
         public void AddModifier(StatModifier mod)
         {
-            isDirty = true;
-            StatWasModified.Invoke();
-
+            // Debug.Log("Modifier being added...?\nModifier: " + mod);
+            
             statModifiers.Add(mod);
+            isDirty = true;
+
+            statWasModified.Invoke();
         }
 
         public bool RemoveModifier(StatModifier mod)
         {
-            isDirty = true;
-            StatWasModified.Invoke();
+            // Debug.Log("Modifier being removed...?\nModifier: " + mod);
 
-            return statModifiers.Remove(mod);
+            var wasRemoved = statModifiers.Remove(mod);
+            
+            if(wasRemoved)
+            {
+                isDirty = true;
+                statWasModified.Invoke();
+            }
+
+            return wasRemoved;
         }
 
         public int RemoveModifiersFromSource(object source)

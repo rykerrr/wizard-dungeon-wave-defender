@@ -17,6 +17,8 @@ namespace WizardGame.Stats_System
         private StringBuilder sb = new StringBuilder();
         private TimerTickerSingleton timeTicker = default;
 
+        public Action<StatType> onStatUpdated = delegate { };
+        
         public StatsSystem(EntityStats entityToLoad, TimerTickerSingleton timeTicker)
         {
             this.timeTicker = timeTicker;
@@ -96,9 +98,11 @@ namespace WizardGame.Stats_System
             return Stats[statType];
         }
         
-        public void AddModifierTo(StatType statType, StatModifier statModifer)
+        public void AddModifierTo(StatType statType, StatModifier statModifier)
         {
-            stats?[statType].AddModifier(statModifer);
+            Debug.Log("Trying to add: " + statModifier + " to: " + statType);
+            
+            stats?[statType].AddModifier(statModifier);
         }
 
         public void AddTimedModifier(StatType statType, StatModifier statModifier, float time)
@@ -112,9 +116,11 @@ namespace WizardGame.Stats_System
             newTimer.OnTimerEnd += () => timeTicker.RemoveTimer(newTimer);
         } 
         
-        public bool RemoveModifierFrom(StatType statType, StatModifier modifierToRemove)
+        public bool RemoveModifierFrom(StatType statType, StatModifier statModifier)
         {
-            return stats.ContainsKey(statType) && stats[statType].RemoveModifier(modifierToRemove);
+            Debug.Log("Trying to remove: " + statModifier + " to: " + statType);
+            
+            return stats.ContainsKey(statType) && stats[statType].RemoveModifier(statModifier);
         }
 
         public int RemoveModifierFromSource(StatType statType, object source)

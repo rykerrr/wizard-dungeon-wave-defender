@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using WizardGame.CustomEventSystem;
 using WizardGame.Item_System.Equipment_system;
@@ -10,14 +11,27 @@ namespace WizardGame.Item_System
     public class WeaponItem : InventoryItem, IEquippable
     {
         [SerializeField] private StatType statType = default;
-        [SerializeField] private StatModifier modifier = default;
+        [SerializeField] private StatModifier modifierData = default;
         
         [SerializeField] private HotbarItemGameEvent onUnEquipItem;
 
         public EquipmentType EquipmentType => EquipmentType.Weapon;
+
+        [NonSerialized] private StatModifier statModifier = default;
         
         public StatType StatType => statType;
-        public StatModifier StatModifier => modifier;
+        public StatModifier StatModifier
+        {
+            get
+            {
+                if (statModifier == null)
+                {
+                    statModifier = new StatModifier(modifierData.Type, modifierData.Value, Name);
+                }
+                
+                return statModifier;
+            }
+        }
         
         public void Equip()
         {
@@ -32,7 +46,7 @@ namespace WizardGame.Item_System
         public override string GetInfoDisplayText()
         {
             sb.Clear();
-
+            
             sb.Append("Type: ").Append(EquipmentType).Append(" Stat to modify: ").Append(statType).AppendLine();
             sb.Append("Stat Modifier: ").Append(StatModifier).AppendLine();
 
