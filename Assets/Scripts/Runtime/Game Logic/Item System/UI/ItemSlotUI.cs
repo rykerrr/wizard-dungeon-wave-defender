@@ -57,18 +57,22 @@ namespace WizardGame.Item_System.UI
         public abstract void OnDrop(PointerEventData eventData);
 
         private void OnEnable() => UpdateSlotUi();
+
+        private void TryShowTooltip() => tooltipPopup.ShowTooltip(this);
+        private void TryHideTooltip() => tooltipPopup.HideTooltip();
+        
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if (!ReferencedSlotItem) return;
-            
-            tooltipPopup.ShowTooltip(this);
+            if (!ReferencedSlotItem || eventData.dragging) return;
+
+            TryShowTooltip();
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             if (!ReferencedSlotItem) return;
-            
-            tooltipPopup.HideTooltip();
+
+            TryHideTooltip();
         }
     }
 }

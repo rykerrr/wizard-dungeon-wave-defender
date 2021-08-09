@@ -63,7 +63,7 @@ namespace WizardGame.Item_System.UI
             data?.AddListenAction(UpdateDisplay);
         }
 
-        private void ClearCooldownData()
+        public void ClearCooldownData()
         {
             data?.RemoveListenAction(UpdateDisplay);
 

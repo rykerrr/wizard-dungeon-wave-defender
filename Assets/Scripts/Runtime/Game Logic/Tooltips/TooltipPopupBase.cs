@@ -37,7 +37,8 @@ namespace WizardGame.Tooltips
         {
             Vector2 mPos = Mouse.current.position.ReadValue();
             
-            KeepWindowInBounds(mPos);
+            var pos = KeepVectorInBounds(mPos);
+            popupObjTransform.position = pos;
         }
         
         private void StayOnHoveredObject()
@@ -45,12 +46,14 @@ namespace WizardGame.Tooltips
             if (ReferenceEquals(prevObj, null)) return;
             
             Rect prevObjRect = prevObj.rect;
-            Vector2 newPos = (Vector2)prevObj.position + new Vector2(-prevObjRect.width, prevObjRect.height) / 4;
 
-            KeepWindowInBounds(newPos);
+            var newPos = prevObj.position +
+                         new Vector3(-prevObjRect.width, prevObjRect.height, 0f) * popupCanvas.scaleFactor / 2f;
+            
+            popupObjTransform.position = KeepVectorInBounds(newPos);
         }
 
-        private void KeepWindowInBounds(Vector2 newPos)
+        private Vector2 KeepVectorInBounds(Vector2 newPos)
         {
             Rect canvRect = popupCanvas.pixelRect;
             Rect backgrObjRect = backgroundObjTransform.rect;
@@ -80,7 +83,7 @@ namespace WizardGame.Tooltips
                 newPos -= new Vector2(0, distToBotEdge);
             }
 
-            popupObjTransform.position = newPos;
+            return newPos;
         }
 
         protected void ShowTooltip()

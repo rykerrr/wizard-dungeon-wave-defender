@@ -6,7 +6,7 @@ using WizardGame.Tooltips;
 
 namespace WizardGame.Stats_System.UI
 {
-    public class StatDisplayUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class StatDisplayUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
     {
         [Header("Properties")]
         [SerializeField] private StatType thisStatKey = default;
@@ -51,14 +51,24 @@ namespace WizardGame.Stats_System.UI
             // if the stat updates while we show the tooltip
         }
 
+        private void TryShowTooltip() => statTooltipPopup.ShowTooltip(this);
+        private void HideTooltip() => statTooltipPopup.HideTooltip();
+        
         public void OnPointerEnter(PointerEventData eventData)
         {
-            statTooltipPopup.ShowTooltip(this);
+            if (eventData.dragging) return;
+            
+            TryShowTooltip();
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            statTooltipPopup.HideTooltip();
+            HideTooltip();
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            HideTooltip();
         }
     }
 }

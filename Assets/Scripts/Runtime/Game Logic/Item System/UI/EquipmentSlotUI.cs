@@ -40,11 +40,11 @@ namespace WizardGame.Item_System.UI
             if (dragHandler == null || dragHandler.ItemSlotUI == null) return;
 
             var newItem = dragHandler.ItemSlotUI.ReferencedSlotItem;
-            if (!(newItem is IEquippable equippable)) return;
+            if (!(newItem is EquippableItem equippable)) return;
 
             if (type == equippable.EquipmentType)
             {
-                if (referencedItem is IEquippable prevItem) prevItem.UnEquip();
+                if (referencedItem is EquippableItem prevItem) prevItem.UnEquip();
                 
                 referencedItem = dragHandler.ItemSlotUI.ReferencedSlotItem;
                 
@@ -56,7 +56,7 @@ namespace WizardGame.Item_System.UI
 
         public void ClearItem()
         {
-            ((IEquippable)ReferencedSlotItem).UnEquip();
+            ((EquippableItem) ReferencedSlotItem).UnEquip();
 
             ReferencedSlotItem = null;
             

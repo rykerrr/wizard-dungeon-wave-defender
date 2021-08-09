@@ -19,7 +19,7 @@ namespace WizardGame.Item_System.Equipment_system
 
         public void ProcessEquip(HotbarItem item)
         {
-            var equippable = (IEquippable) item;
+            var equippable = (EquippableItem) item;
             if (ReferenceEquals(equippable, null)) return;
             
             Debug.Log("Processing equip");
@@ -28,7 +28,7 @@ namespace WizardGame.Item_System.Equipment_system
 
         public void ProcessUnEquip(HotbarItem item)
         {
-            var equippable = (IEquippable) item;
+            var equippable = (EquippableItem) item;
             if (ReferenceEquals(equippable, null)) return;
             
             Debug.Log("Processing unequip");

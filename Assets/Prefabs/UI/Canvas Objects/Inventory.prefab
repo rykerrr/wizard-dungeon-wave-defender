@@ -1,5 +1,469 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &22558829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 22558830}
+  - component: {fileID: 22558832}
+  - component: {fileID: 22558831}
+  m_Layer: 0
+  m_Name: Image_Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &22558830
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22558829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1680875132}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &22558832
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22558829}
+  m_CullTransparentMesh: 1
+--- !u!114 &22558831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22558829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &252175853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252175854}
+  - component: {fileID: 252175856}
+  - component: {fileID: 252175855}
+  m_Layer: 0
+  m_Name: Image_Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &252175854
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252175853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878185873}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &252175856
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252175853}
+  m_CullTransparentMesh: 1
+--- !u!114 &252175855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252175853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1680875131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680875132}
+  - component: {fileID: 1680875135}
+  - component: {fileID: 1680875134}
+  - component: {fileID: 1680875133}
+  m_Layer: 0
+  m_Name: Button_CloseInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1680875132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680875131}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_Children:
+  - {fileID: 22558830}
+  m_Father: {fileID: 4752238173008710264}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 419.02283, y: 62.5}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &1680875135
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680875131}
+  m_CullTransparentMesh: 1
+--- !u!114 &1680875134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680875131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1680875133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680875131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1680875134}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7455533320456850976}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1878185872}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1680875131}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1878185872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878185873}
+  - component: {fileID: 1878185876}
+  - component: {fileID: 1878185875}
+  - component: {fileID: 1878185874}
+  m_Layer: 0
+  m_Name: Button_OpenInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1878185873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878185872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 252175854}
+  m_Father: {fileID: 7455533319517918186}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 82.50003}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!222 &1878185876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878185872}
+  m_CullTransparentMesh: 1
+--- !u!114 &1878185875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878185872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.6320754, b: 0.24861957, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1878185874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878185872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1878185875}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7455533320456850976}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1680875131}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1878185872}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7455533319517918187
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +494,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 7455533320456850979}
+  - {fileID: 4752238173008710264}
+  - {fileID: 1878185873}
   m_Father: {fileID: 7455533320292035353}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,17 +731,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7455533320456850976}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7455533320409799667}
-  m_Father: {fileID: 7455533319517918186}
+  m_Father: {fileID: 4752238173008710264}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 911.3771, y: -100}
   m_SizeDelta: {x: 530, y: 425}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &7455533320456850989
@@ -317,6 +782,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7764950888110115969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4752238173008710264}
+  - component: {fileID: 8973371298139608136}
+  m_Layer: 0
+  m_Name: Inventory_Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4752238173008710264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764950888110115969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7455533320456850979}
+  - {fileID: 1680875132}
+  m_Father: {fileID: 7455533319517918186}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8973371298139608136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764950888110115969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe460fda393e6946bfa3ebb513a5f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3543899847545468917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,6 +847,10 @@ PrefabInstance:
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -420,6 +939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &7455533321344319686 stripped
@@ -439,9 +962,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -530,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848987264678 stripped
@@ -549,9 +1084,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -640,6 +1183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848980501362 stripped
@@ -659,9 +1206,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -750,6 +1305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899849038438237 stripped
@@ -769,9 +1328,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -860,6 +1427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899849141783181 stripped
@@ -879,9 +1450,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -970,6 +1549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848830965251 stripped
@@ -989,9 +1572,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1080,6 +1671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848456473781 stripped
@@ -1099,9 +1694,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1190,6 +1793,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848654935814 stripped
@@ -1209,9 +1816,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1300,6 +1915,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848019333733 stripped
@@ -1319,9 +1938,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1410,6 +2037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848017050837 stripped
@@ -1429,9 +2060,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1520,6 +2159,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899848104446038 stripped
@@ -1539,9 +2182,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1630,6 +2281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847690738129 stripped
@@ -1649,9 +2304,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1740,6 +2403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847727607045 stripped
@@ -1759,9 +2426,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1850,6 +2525,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847796279675 stripped
@@ -1869,9 +2548,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -1960,6 +2647,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847789375182 stripped
@@ -1979,9 +2670,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -2070,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847822557401 stripped
@@ -2089,9 +2792,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -2180,6 +2891,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847821467195 stripped
@@ -2199,9 +2914,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -2290,6 +3013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847354135053 stripped
@@ -2309,9 +3036,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -2400,6 +3135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
 --- !u!224 &3543899847467639731 stripped
@@ -2419,9 +3158,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: parentForDrag
+      value: 
+      objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 1227543924, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: parentForDraggingAroundInv
       value: 
       objectReference: {fileID: 7455533320409799667}
+    - target: {fileID: 3630643552187037706, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 6222028753209603890, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_Name
       value: GameObject_InventorySlot
@@ -2509,6 +3256,10 @@ PrefabInstance:
     - target: {fileID: 6222028753209603891, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814951440523424563, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fd3eced8b53d44693cb1781d23a700, type: 3}

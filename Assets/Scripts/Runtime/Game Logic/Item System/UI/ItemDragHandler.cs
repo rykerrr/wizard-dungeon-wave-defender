@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace WizardGame.Item_System.UI
 {
-    public class ItemDragHandler : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler,
+    public class ItemDragHandler : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler,
         IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] protected ItemSlotUI itemSlotUI;
@@ -38,21 +38,25 @@ namespace WizardGame.Item_System.UI
 
             thisTransform.position = Mouse.current.position.ReadValue();
         }
-
+        
         public virtual void OnPointerUp(PointerEventData eventData)
         {
             thisTransform.SetParent(actualParent);
             thisTransform.SetSiblingIndex(1);
-
+            
             thisTransform.anchoredPosition = Vector2.zero;
+            
+            ItemSlotUI.CdDisplay.UpdateData(itemSlotUI.ReferencedSlotItem);
             
             canvGroup.blocksRaycasts = true;
         }
 
+        // TODO: Check out "Horrors of OnPointerDown versus OnBeginDrag in Unity3D"
+        // https://newbedev.com/horrors-of-onpointerdown-versus-onbegindrag-in-unity3d
         public virtual void OnPointerDown(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
-
+            
             // raise event for dragging thing
 
             actualParent = thisTransform.parent;
@@ -61,6 +65,11 @@ namespace WizardGame.Item_System.UI
             thisTransform.SetAsLastSibling();
 
             canvGroup.blocksRaycasts = false;
+        }
+
+        public virtual void OnBeginDrag(PointerEventData eventData)
+        {
+            ItemSlotUI.CdDisplay.ClearCooldownData();
         }
 
         public virtual void OnPointerEnter(PointerEventData eventData)
