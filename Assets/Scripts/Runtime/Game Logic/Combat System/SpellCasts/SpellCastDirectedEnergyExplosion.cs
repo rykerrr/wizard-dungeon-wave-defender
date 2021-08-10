@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -35,9 +36,11 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            ,params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
+            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+                , element, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -71,9 +74,13 @@ namespace WizardGame.Combat_System
             if(data.Location == DirectedEnergyExplosionData.ExplosionLocationType.Mouse) spawnPos = GetMouseHitPos();
 
             var spellClone = Instantiate(spellPrefab, spawnPos, Quaternion.identity);
+
+            var elData = element.ElementSpellData;
+            var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
+            var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
             
-            spellClone.InitSpell(data.ExplosionSize, data.ExplosionDamage, data.ExplosionAmount
-            , spawnPos, Owner);
+            spellClone.InitSpell(explSize, explDmg
+                , data.ExplosionAmount, spawnPos, Owner);
             
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);

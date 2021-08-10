@@ -1,6 +1,7 @@
-﻿using System;
-using System.Text;
-using UnityEngine;
+﻿
+// Whole purpose of this data and all its inheritors is to be a container for
+// data relating to a SPECIFIC spell
+// Element data should be part of the spell book 
 
 namespace WizardGame.Combat_System
 {

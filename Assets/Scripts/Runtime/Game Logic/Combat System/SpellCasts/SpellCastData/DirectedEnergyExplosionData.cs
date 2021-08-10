@@ -10,7 +10,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private float explosionSize = 1;
         [SerializeField] private ExplosionLocationType location = ExplosionLocationType.Self;
 
-        private int explosionDamage = 1;
+        private int baseExplosionDamage = 1;
         private bool damageIsDirty = true;
         
         public enum ExplosionLocationType
@@ -53,17 +53,17 @@ namespace WizardGame.Combat_System
             }
         }
 
-        public int ExplosionDamage
+        public int BaseExplosionDamage
         {
             get
             {
                 if (damageIsDirty)
                 {
-                    explosionDamage = CalculateExplosionDamage();
+                    baseExplosionDamage = CalculateExplosionDamage();
                     damageIsDirty = false;
                 }
 
-                return explosionDamage;
+                return baseExplosionDamage;
             }
         }
 

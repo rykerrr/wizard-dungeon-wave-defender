@@ -37,6 +37,13 @@ namespace WizardGame.Item_System.Items
             this.icon = icon;
         }
 
+        public void InitCooldown(float cooldownDuration, bool initGuid = false)
+        {
+            this.cooldownDuration = cooldownDuration;
+            
+            if(initGuid) id = Guid.NewGuid();
+        }
+
         protected virtual void Awake()
         {
             Init(name, icon);

@@ -13,14 +13,22 @@ namespace WizardGame.Level_System
         private LevelSystem levelSystem = default;
 
         public LevelSystem LevelSystem => levelSystem ??= new LevelSystem(
-            0, statsSystem.StatsSystem, GetRequiredStatsFromStatTypes());
+            0);
 
         private void Awake()
         {
             // LevelSystem.Init(0, statsSystem.StatsSystem, GetRequiredStatsFromStatTypes());
-            
+
             var healthSysBehaviour = GetComponent<HealthSystemBehaviour>();
 
+            LevelSystem.onLevelUpEvent += () =>
+            {
+                foreach (var stat in GetRequiredStatsFromStatTypes())
+                {
+                    stat.GrowByGrowthRate();
+                }
+            };
+            
             healthSysBehaviour.HealthSystem.onDeathEvent += source =>
             {
                 // This code runs on the object that gets killed

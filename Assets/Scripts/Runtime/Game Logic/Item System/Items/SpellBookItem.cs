@@ -2,31 +2,32 @@
 using UnityEngine;
 using WizardGame.Combat_System;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.Item_System.Items
 {
     [CreateAssetMenu(fileName = "New Spell Book Item", menuName = "Items/Spell Book Item")]
     public class SpellBookItem : InventoryItem
     {
-        [Header("Cooldown properties")]
-
         [Header("Spell properties")]
         [SerializeField] private SpellCastBase spellCastPrefab = default;
         [SerializeField] private CastPlaceholder spellCirclePrefab = default;
+        [SerializeField] private Element spellElement = default;
 
         private BaseSpellCastData spellCastData = default;
         
         public SpellCastBase SpellCastPrefab => spellCastPrefab;
         public CastPlaceholder SpellCirclePrefab => spellCirclePrefab;
         public BaseSpellCastData SpellCastData => spellCastData;
+        public Element SpellElement => spellElement;
 
-        public void Init(SpellCastBase spellCastPrefab, CastPlaceholder spellCirclePrefab, BaseSpellCastData spellCastData)
+        public void Init(SpellCastBase spellCastPrefab, CastPlaceholder spellCirclePrefab
+            , BaseSpellCastData spellCastData, Element spellElement)
         {
-            Debug.Log("spell book innit blimey mate");
-            
             this.spellCastPrefab = spellCastPrefab;
             this.spellCirclePrefab = spellCirclePrefab;
             this.spellCastData = spellCastData;
+            this.spellElement = spellElement;
         }
         
         public SpellBookItem() : base() { }

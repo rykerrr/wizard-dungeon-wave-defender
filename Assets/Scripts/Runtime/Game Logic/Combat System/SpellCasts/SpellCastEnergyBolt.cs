@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -12,7 +13,7 @@ namespace WizardGame.Combat_System
     {
         [SerializeField] protected SpellEnergyBolt spellPrefab = default;
 
-        private EnergyBoltData data = default;
+        private EnergyBoltData spellData = default;
         
         private Transform castCircleTransf = default;
         private Transform ownerTransf = default;
@@ -24,23 +25,25 @@ namespace WizardGame.Combat_System
 
         public override BaseSpellCastData Data
         {
-            get => data;
+            get => spellData;
             set
             {
                 value ??= new EnergyBoltData();
 
                 if (value is EnergyBoltData newData)
                 {
-                    data = newData;
+                    spellData = newData;
                 }
                 else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBoltData");
             }
         }
 
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            ,params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
+            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+                , element, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -82,8 +85,14 @@ namespace WizardGame.Combat_System
             var newScale = new Vector3(spellLocalScale.x, spellLocalScale.y,
                 (mouseHitPos - spellTransf.position).magnitude);
             spellTransf.localScale = newScale;
+
+            var elData = element.ElementSpellData;
+            var explSize = spellData.ExplosionSize * elData.ExplosionRadiusMult;
+            var explDmg = spellData.BaseExplosionDamage * elData.ExplosionStrengthMult;
+            var impactDmg = spellData.BaseImpactDamage * elData.ImpactStrengthMult;
             
-            spellClone.InitSpell(data.ExplosionSize, data.ImpactSize, data.ExplosionDamage, data.ImpactDamage,
+            spellClone.InitSpell(explSize, spellData.ImpactSize
+                , explDmg, impactDmg,
                 mouseHitPos, objHit, Owner);
             
             castCircleAnimator.SetBool(BeginCastHash, false);

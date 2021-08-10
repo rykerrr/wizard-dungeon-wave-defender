@@ -11,7 +11,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private float spellSize = 1; // including the shockwave size 
         [SerializeField] private float delayBetweenWaves = 1;
 
-        private int shockwaveDamage = default;
+        private int baseShockwaveDamage = default;
         private bool swDamageIsDirty = true;
 
         public int ShockwaveAmount
@@ -47,17 +47,17 @@ namespace WizardGame.Combat_System
             }
         }
 
-        public int ShockwaveDamage
+        public int BaseShockwaveDamage
         {
             get
             {
                 if (swDamageIsDirty)
                 {
-                    shockwaveDamage = CalculateSwDamage();
+                    baseShockwaveDamage = CalculateSwDamage();
                     swDamageIsDirty = false;
                 }
 
-                return shockwaveDamage;
+                return baseShockwaveDamage;
             }
         }
         

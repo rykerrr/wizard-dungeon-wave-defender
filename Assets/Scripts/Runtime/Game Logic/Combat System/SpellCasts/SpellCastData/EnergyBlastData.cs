@@ -7,11 +7,11 @@ namespace WizardGame.Combat_System
     public class EnergyBlastData : BaseSpellCastData
     {
         [SerializeField] private int blastAmount = 1;
-        [SerializeField] private float impactSize = 1; 
+        [SerializeField] private float spellSize = 1; 
         [SerializeField] private float explosionSize = 1;
 
-        private int impactDamage = 1;
-        private int explosionDamage = 1;
+        private int baseImpactDamage = 1;
+        private int baseExplosionDamage = 1;
         private bool damageIsDirty = true;
         
         public int BlastAmount
@@ -27,10 +27,10 @@ namespace WizardGame.Combat_System
 
         public float ImpactSize
         {
-            get => impactSize;
+            get => spellSize;
             set
             {
-                impactSize = value;
+                spellSize = value;
                 manaCostIsDirty = true;
                 damageIsDirty = true;
             }
@@ -47,7 +47,7 @@ namespace WizardGame.Combat_System
             }
         }
 
-        public int ImpactDamage
+        public int BaseImpactDamage
         {
             get
             {
@@ -57,11 +57,11 @@ namespace WizardGame.Combat_System
                     damageIsDirty = false;
                 }
 
-                return impactDamage;
+                return baseImpactDamage;
             }
         }
 
-        public int ExplosionDamage
+        public int BaseExplosionDamage
         {
             get
             {
@@ -71,14 +71,14 @@ namespace WizardGame.Combat_System
                     damageIsDirty = false;
                 }
 
-                return explosionDamage;
+                return baseExplosionDamage;
             }
         }
 
         private void UpdateDamageValues()
         {
-            impactDamage = (int) Math.Round(10f / impactSize + 5f / BlastAmount);
-            explosionDamage = (int) Math.Round(5f / explosionSize + 7f / BlastAmount);
+            baseImpactDamage = (int) Math.Round(10f / spellSize + 5f / BlastAmount);
+            baseExplosionDamage = (int) Math.Round(5f / explosionSize + 7f / BlastAmount);
         }
         
         protected override int CalculateManaCost()
@@ -88,7 +88,7 @@ namespace WizardGame.Combat_System
             // explosion size equal to 3 mana
             // there could be a class that dictates over this
 
-            var manaValue = (int)Math.Round(BlastAmount * 1f + impactSize * 5f + explosionSize * 3f);
+            var manaValue = (int)Math.Round(BlastAmount * 1f + spellSize * 5f + explosionSize * 3f);
 
             return manaValue;
         }

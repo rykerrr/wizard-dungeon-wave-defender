@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -30,8 +31,12 @@ namespace WizardGame.Combat_System
         protected Animator castCircleAnimator = default;
         protected WaitForSeconds castingTimeWait = default;
 
+        protected Element element = default;
+        
         public Guid Id => id;
         public float CooldownDuration => castCooldown;
+        public Element Element => element;
+        
         public GameObject Owner { get; private set; } = default; 
         public abstract BaseSpellCastData Data { get; set; }
         
@@ -48,7 +53,8 @@ namespace WizardGame.Combat_System
         // change owner param type to StatsSystemBehaviour since we REQUIRE it?
         // just init castCircle or also instantiate it here? think init fits more
         public virtual void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            , params MonoBehaviour[] movementScripts)
         {
             Owner = owner;
 
@@ -57,6 +63,7 @@ namespace WizardGame.Combat_System
             this.cooldownSys = cooldownSys;
             this.statsSys = statsSys;
             this.castCircle = castCircle;
+            this.element = element;
             
             castCircleAnimator = castCircle.GetComponent<Animator>();
 

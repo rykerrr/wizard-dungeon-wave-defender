@@ -69,7 +69,7 @@ namespace WizardGame.Spell_Creation
         public override void UpdateLabels()
         {
             manaCostLabel.text = $"Mana Cost: {data.ManaCost}";
-            explosionDamageLabel.text = $"Explosion Damage: {data.ExplosionDamage}";
+            explosionDamageLabel.text = $"Explosion Damage: {data.BaseExplosionDamage}";
         }
     }
 }

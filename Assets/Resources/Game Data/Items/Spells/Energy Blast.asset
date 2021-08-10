@@ -21,3 +21,4 @@ MonoBehaviour:
   maxStack: 1
   spellCastPrefab: {fileID: 2295528489352276941, guid: 67efe36ff7fa4bc48ba3bd35e28d1cd3, type: 3}
   spellCirclePrefab: {fileID: 4374917234104346008, guid: e591a409a641f244f8b54e799120de87, type: 3}
+  spellElement: {fileID: 11400000, guid: aa909072d2d812b40848bfaf6f0c348d, type: 2}

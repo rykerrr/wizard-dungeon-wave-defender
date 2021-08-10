@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
-using WizardGame.Stats_System;
 
 namespace WizardGame.Level_System
 {
     [Serializable]
     public class LevelSystem
     {
-        public event Action onLevelUp = delegate { };
-
-        private List<StatBase> statsToGrow = new List<StatBase>();
-
+        public event Action onLevelUpEvent = delegate { };
+        
         private int curLevel = 0;
         private int requiredExp = 0;
         private int curExp = 0;
@@ -22,18 +18,16 @@ namespace WizardGame.Level_System
         public int RequiredExp => requiredExp;
         private bool LevelUpAvailable => curExp >= requiredExp;
 
-        public LevelSystem(int curLevel, StatsSystem statsSystem, List<StatBase> statsToGrow)
+        public LevelSystem(int curLevel)
         {
-            Init(curLevel, statsSystem, statsToGrow);
+            Init(curLevel);
         }
 
-        public void Init(int curLevel, StatsSystem statsSystem, List<StatBase> statsToGrow)
+        public void Init(int curLevel)
         {
-            this.statsToGrow = statsToGrow;
-
             curExp = CalculateTotalExpRequiredForLevel(curLevel);
-            TryLevelUp();
 
+            TryLevelUp();
             requiredExp = CalculateRequiredExp();
         }
 
@@ -53,12 +47,7 @@ namespace WizardGame.Level_System
 
                 requiredExp = CalculateRequiredExp();
 
-                foreach (var stat in statsToGrow)
-                {
-                    stat.GrowByGrowthRate();
-                }
-
-                onLevelUp?.Invoke();
+                onLevelUpEvent?.Invoke();
             }
         }
 

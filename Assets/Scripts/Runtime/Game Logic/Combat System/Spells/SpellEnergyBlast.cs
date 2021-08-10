@@ -12,7 +12,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private GameObject explosionEffect = default;
 
         [Header("Properties")]
-        [SerializeField] private float travelSpeed = default;
+        [SerializeField] private float baseTravelSpd = default;
         [SerializeField] private float avgExplosionRadius = default;
 
         [SerializeField] private int maxExplosionTargets = default;
@@ -34,7 +34,7 @@ namespace WizardGame.Combat_System
         }
 
         public void InitSpell(float explosionRadius
-            , float impactRadius, float explosionDmgMult, float impactDmgMult, GameObject caster)
+            , float impactRadius, float explosionDmgMult, float impactDmgMult, float travelSpdMult, GameObject caster)
         {
             actualImpactDmg = (int)Math.Round(avgImpactDmg * impactDmgMult);
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
@@ -44,7 +44,9 @@ namespace WizardGame.Combat_System
 
             transform.localScale = Vector3.one * impactRadius;
 
-            rb.velocity = caster.transform.forward * travelSpeed * Time.fixedDeltaTime;
+            var travelSpd = baseTravelSpd * travelSpdMult;
+            
+            rb.velocity = caster.transform.forward * travelSpd * Time.fixedDeltaTime;
         }
 
         private void FixedUpdate()

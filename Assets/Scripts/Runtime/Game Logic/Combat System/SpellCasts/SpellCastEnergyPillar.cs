@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 public class SpellCastEnergyPillar : SpellCastBase
@@ -40,9 +41,11 @@ public class SpellCastEnergyPillar : SpellCastBase
     }
 
     public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+        ,params MonoBehaviour[] movementScripts)
     {
-        base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
+        base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            , element, movementScripts);
 
         ownerTransf = Owner.transform;
         castCircleTransf = castCircle.transform;
@@ -78,8 +81,10 @@ public class SpellCastEnergyPillar : SpellCastBase
 
         var statKey = StatTypeDB.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
+
+        var shockwaveDmg = data.BaseShockwaveDamage * Element.ElementSpellData.ExplosionStrengthMult;
         
-        spellClone.InitSpell(data.ShockwaveDamage, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply, Owner);
+        spellClone.InitSpell(shockwaveDmg, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply, Owner);
             
         castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);

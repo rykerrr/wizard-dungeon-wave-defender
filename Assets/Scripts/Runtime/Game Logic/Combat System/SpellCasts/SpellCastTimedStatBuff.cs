@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -33,9 +34,11 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            ,params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
+            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+                , element, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -61,7 +64,9 @@ namespace WizardGame.Combat_System
         {
             var key = StatTypeDB.GetType(keyName);
 
-            var modifierToAdd = new StatModifier(statModifier.Type, statModifier.Value * data.BuffStrength
+            var buffVal = statModifier.Value * data.BuffStrength * element.ElementSpellData.BuffStrengthMult;
+            
+            var modifierToAdd = new StatModifier(statModifier.Type, buffVal
                 , Owner.name);
             
             statsSys.AddTimedModifier(key, modifierToAdd, data.Duration * statModifierDurationMult);

@@ -13,6 +13,9 @@ namespace WizardGame.Combat_System
         [Header("Spell cast dependencies")] 
         [SerializeField] private StatsSystemBehaviour statsSystemBehaviour = default;
         [SerializeField] private CooldownSystem cooldownSys;
+        
+        // Not movement modifier as it disables BOLT's state machine that's used for switching between MovementModifier
+        // behaviours for state change
         [SerializeField] private MonoBehaviour[] movementScripts;
 
         [Header("Debug")]
@@ -36,6 +39,7 @@ namespace WizardGame.Combat_System
             Equip(prewarmSpellBook);
         }
 
+        // Used by input system
         public void TryCastSpell(InputAction.CallbackContext ctx)
         {
             if (ctx.phase != InputActionPhase.Started) return;
@@ -106,7 +110,8 @@ namespace WizardGame.Combat_System
             
             spellCircleClone.gameObject.SetActive(false);
             spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
-                , baseItem.Id, spellCircleClone, baseItem.SpellCastData, movementScripts);
+                , baseItem.Id, spellCircleClone, baseItem.SpellCastData
+                , baseItem.SpellElement, movementScripts);
             
             existingSpellCasts.Add(baseItem, spellCasterClone);
             return spellCasterClone;

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 1457051258190390155, guid: b8dc9416ef1a4e64a81d8c65f56f586b, type: 3}
-  travelSpeed: 350
+  baseTravelSpd: 80
   avgExplosionRadius: 25
   maxExplosionTargets: 10
   avgImpactDmg: 5

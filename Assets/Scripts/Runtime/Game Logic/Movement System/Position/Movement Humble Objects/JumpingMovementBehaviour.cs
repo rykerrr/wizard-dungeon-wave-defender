@@ -5,11 +5,8 @@ using UnityEngine.InputSystem;
 #pragma warning disable 0649
 namespace WizardGame.Movement.Position
 {
-    public class JumpingMovementBehaviour : MonoBehaviour
+    public class JumpingMovementBehaviour : MovementModifierBehaviour
     {
-        [SerializeField] private CharacterController chController = default;
-        [SerializeField] private CharacterMovementMotor motor = default;
-
         [SerializeField] private JumpingMovement jumpMovement = default;
 
         [SerializeField] private float maxInputMultiplier = 1f;
@@ -17,20 +14,19 @@ namespace WizardGame.Movement.Position
 
         private bool recordInputMultiplier = false;
         
-        private void Awake()
+        protected override  void Awake()
         {
-            if (chController == null)
-            {
-                motor = GetComponent<CharacterMovementMotor>();
-                chController = GetComponent<CharacterController>();
-            }
+            base.Awake();
         }
 
         private void Update()
         {
-            jumpMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
-
             RecordInputMultiplierOnJumpHold();
+        }
+
+        protected override void FixedUpdate()
+        {
+            jumpMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
         }
 
         private void RecordInputMultiplierOnJumpHold()
@@ -45,6 +41,7 @@ namespace WizardGame.Movement.Position
             }
         }
 
+        // set up with unity input system
         public void HandleMovementInput(InputAction.CallbackContext ctx)
         {
             if (!chController.isGrounded) return;
@@ -75,14 +72,8 @@ namespace WizardGame.Movement.Position
             jumpMovement.SetPreviousInput(input);
         }
         
-        private void OnEnable()
-        {
-            motor.AddModifier(jumpMovement);
-        }
-
-        private void OnDisable()
-        {
-            motor.RemoveModifier(jumpMovement);
-        }
+        protected override void OnEnable() => movementMotor.AddModifier(jumpMovement);
+        protected override void OnDisable() => movementMotor.RemoveModifier(jumpMovement);
+        
     }
 }

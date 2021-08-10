@@ -10,7 +10,7 @@ namespace WizardGame.Item_System.UI
     // the interface itself
     public class HotbarSlotUI : ItemSlotUI
     {
-        private HotbarItem referencedSlotSlotItem;
+        [SerializeField] private HotbarItem referencedSlotSlotItem = default;
 
         public override HotbarItem ReferencedSlotItem
         {

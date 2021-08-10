@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using WizardGame.Combat_System.Cooldown_System;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -32,9 +33,11 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            ,params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data, movementScripts);
+            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+                , element, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -67,11 +70,17 @@ namespace WizardGame.Combat_System
             var waitForDelay = new WaitForSeconds(0.5f);
             var spawnPos = ownerTransf.position + ownerTransf.forward * 2;
 
+            var elData = element.ElementSpellData;
+            var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
+            var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
+            var impactDmg = data.BaseImpactDamage * elData.ImpactStrengthMult;
+            
             for (int i = 0; i < data.BlastAmount; i++)
             {
                 var spellClone = Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
-                spellClone.InitSpell(data.ExplosionSize, data.ImpactSize, data.ExplosionDamage, data.ImpactDamage,
-                    Owner);
+                spellClone.InitSpell(explSize, data.ImpactSize
+                    , explDmg, impactDmg,
+                    elData.TravelSpeedMult, Owner);
                 
                 yield return waitForDelay;
             }

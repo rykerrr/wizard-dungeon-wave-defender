@@ -9,21 +9,26 @@ namespace WizardGame.Stats_System
         public abstract string Name { get; protected set; }
         public abstract int Value { get; }
 
-        protected virtual void OnValidate()
+        private void SetNameAsAssetFileName()
         {
             var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
             Name = Path.GetFileNameWithoutExtension(assetPath);
         }
         
+        protected virtual void OnValidate()
+        {
+            SetNameAsAssetFileName();
+        }
+        
         // Note to self: projectChanged runs every time the file is renamed
         private void OnEnable()
         {
-            EditorApplication.projectChanged += OnValidate;
+            EditorApplication.projectChanged += SetNameAsAssetFileName;
         }
 
         private void OnDisable()
         {
-            EditorApplication.projectChanged -= OnValidate;
+            EditorApplication.projectChanged -= SetNameAsAssetFileName;
         }
 
         public abstract override string ToString();

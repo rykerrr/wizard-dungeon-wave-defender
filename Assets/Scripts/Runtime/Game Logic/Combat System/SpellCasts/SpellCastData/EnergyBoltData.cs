@@ -9,8 +9,8 @@ namespace WizardGame.Combat_System
         [SerializeField] private float impactSize = 1;
         [SerializeField] private float explosionSize = 1;
 
-        private int impactDamage = default;
-        private int explosionDamage = default;
+        private int baseImpactDamage = default;
+        private int baseExplosionDamage = default;
         private bool damageIsDirty = true;
         
         public float ImpactSize
@@ -35,7 +35,7 @@ namespace WizardGame.Combat_System
             }
         }
 
-        public int ImpactDamage
+        public int BaseImpactDamage
         {
             get
             {
@@ -45,11 +45,11 @@ namespace WizardGame.Combat_System
                     damageIsDirty = false;
                 }
 
-                return impactDamage;
+                return baseImpactDamage;
             }
         }
 
-        public int ExplosionDamage
+        public int BaseExplosionDamage
         {
             get
             {
@@ -59,15 +59,15 @@ namespace WizardGame.Combat_System
                     damageIsDirty = false;
                 }
 
-                return explosionDamage;
+                return baseExplosionDamage;
             }
         }
 
         private void UpdateDamageValues()
         {
             // / 2 for spell type, only makes sense given it's instantaneous
-            impactDamage = (int) Math.Round(10f / impactSize + 5f) / 2;
-            explosionDamage = (int) Math.Round(5f / explosionSize + 7f) / 2;
+            baseImpactDamage = (int) Math.Round(10f / impactSize + 5f) / 2;
+            baseExplosionDamage = (int) Math.Round(5f / explosionSize + 7f) / 2;
         }
         
         

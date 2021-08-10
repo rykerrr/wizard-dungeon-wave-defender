@@ -1,0 +1,45 @@
+﻿using System.IO;
+using UnityEditor;
+using UnityEngine;
+
+namespace WizardGame.Combat_System.Element_System
+{
+    [CreateAssetMenu(menuName = "Elements/New Element", fileName = "New Element")]
+    public class Element : ScriptableObject
+    {
+        [SerializeField] private new string name = "New Element";
+        [SerializeField] private Sprite elementSprite = default;
+        
+        [SerializeField] private ElementSpellData elementSpellData = default;
+
+        public string Name
+        {
+            get => name;
+            private set => name = value;
+        }
+
+        public ElementSpellData ElementSpellData => elementSpellData;
+        public Sprite ElementSprite => elementSprite;
+        
+        private void SetNameAsAssetFileName()
+        {
+            var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
+            Name = Path.GetFileNameWithoutExtension(assetPath);
+        }
+        
+        private void OnValidate()
+        {
+            SetNameAsAssetFileName();
+        }
+
+        private void OnEnable()
+        {
+            EditorApplication.projectChanged += SetNameAsAssetFileName;
+        }
+
+        private void OnDisable()
+        {
+            EditorApplication.projectChanged -= SetNameAsAssetFileName;
+        }
+    }
+}

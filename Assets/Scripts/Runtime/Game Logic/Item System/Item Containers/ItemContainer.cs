@@ -117,6 +117,19 @@ namespace WizardGame.Item_System.Item_Containers
             return itemSlot;
         }
 
+        public bool IsContainerFull()
+        {
+            for (int i = 0; i < itemSlots.Length; i++)
+            {
+                // If it's at 0, do we know it'll remove it?
+                // Check this as I'm skeptical that I may have forgotten to do that case
+                
+                if (itemSlots[i].invItem == null || itemSlots[i].Quantity == 0) return false;
+            }
+
+            return true;
+        }
+        
         public void RemoveAt(int slotIndex, int quantity = 1)
         {
             ItemSlot slot = itemSlots[slotIndex];
