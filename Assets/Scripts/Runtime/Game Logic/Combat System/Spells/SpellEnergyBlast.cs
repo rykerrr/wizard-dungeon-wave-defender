@@ -6,12 +6,12 @@ using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System
 {
-    public class SpellEnergyBlast : MonoBehaviour, IDamagingSpell
+    public class SpellEnergyBlast : SpellBase, IDamagingSpell
     {
         [Header("References")]
         [SerializeField] private GameObject explosionEffect = default;
 
-        [Header("Properties")]
+        [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float baseTravelSpd = default;
         [SerializeField] private float avgExplosionRadius = default;
 
@@ -20,7 +20,6 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
 
         private Rigidbody rb = default;
-        private GameObject caster = default;
         
         private int actualImpactDmg = default;
         private int actualExplosionDmg = default;
@@ -109,6 +108,8 @@ namespace WizardGame.Combat_System
         
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log("Tremble in fear!");
+
             if(!ReferenceEquals(other, null)) collissionHit = other.gameObject;
 
             ProcessOnHit();
@@ -116,6 +117,8 @@ namespace WizardGame.Combat_System
         
         public void OnCollisionEnter(Collision other)
         {
+            Debug.Log("Tremble in fear!");
+        
             if(!ReferenceEquals(other, null)) collissionHit = other.gameObject;
             
             ProcessOnHit();

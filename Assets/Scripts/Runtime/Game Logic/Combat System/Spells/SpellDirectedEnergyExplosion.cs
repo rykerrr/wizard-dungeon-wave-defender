@@ -6,20 +6,18 @@ using WizardGame.Utility.Timers;
 
 namespace WizardGame.Combat_System
 {
-    public class SpellDirectedEnergyExplosion : MonoBehaviour, IDamagingSpell
+    public class SpellDirectedEnergyExplosion : SpellBase, IDamagingSpell
     {
         [Header("References")]
         [SerializeField] private GameObject explosionEffect = default;
 
-        [Header("Properties")]
+        [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float avgExplosionRadius = default;
         [SerializeField] private float delayBetweenExplosions = 0.3f;
         
         [SerializeField] private int maxExplosionTargets = default;
         [SerializeField] private int avgExplosionDmg = default;
-
-        private GameObject caster = default;
-
+        
         private DownTimer explDelayTimer = default;
         private Vector3 explPos = default;
         private int actualExplosionDmg = default;

@@ -11,8 +11,13 @@ namespace WizardGame.Stats_System
 
         static StatTypeDB()
         {
+            LoadStatTypes();
+        }
+
+        private static void LoadStatTypes()
+        {
             var typesToLoad = Resources.LoadAll<StatType>(locationInResources);
-            
+
             foreach (var type in typesToLoad)
             {
                 types.Add(type.Name, type);

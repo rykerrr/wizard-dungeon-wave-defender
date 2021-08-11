@@ -34,11 +34,11 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             ,params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-                , element, movementScripts);
+                , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;

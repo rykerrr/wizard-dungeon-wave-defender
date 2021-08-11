@@ -9,10 +9,8 @@ namespace WizardGame.Combat_System
 {
     public class SpellCastEnergyBlast : SpellCastBase
     {
-        [SerializeField] protected SpellEnergyBlast spellPrefab = default;
-
         private EnergyBlastData data = default;
-        
+
         private Transform castCircleTransf = default;
         private Transform ownerTransf = default;
         private StatBase intStat = default;
@@ -31,30 +29,30 @@ namespace WizardGame.Combat_System
                 else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyBlastData");
             }
         }
-        
+
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
-            ,params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-                , element, movementScripts);
+                , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
         }
-        
+
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
-            
+
             castCircleTransf.position = ownerTransf.position + ownerTransf.forward * 2f;
             castCircleTransf.forward = ownerTransf.forward;
 
             castCircleAnimator.SetBool(BeginCastHash, true);
-            
+
             yield return castingTimeWait;
 
             castCircleAnimator.SetBool(EndCastHash, true);
@@ -74,17 +72,17 @@ namespace WizardGame.Combat_System
             var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
             var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
             var impactDmg = data.BaseImpactDamage * elData.ImpactStrengthMult;
-            
+
             for (int i = 0; i < data.BlastAmount; i++)
             {
-                var spellClone = Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
+                var spellClone = (SpellEnergyBlast) Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
                 spellClone.InitSpell(explSize, data.ImpactSize
                     , explDmg, impactDmg,
                     elData.TravelSpeedMult, Owner);
-                
+
                 yield return waitForDelay;
             }
-            
+
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
 

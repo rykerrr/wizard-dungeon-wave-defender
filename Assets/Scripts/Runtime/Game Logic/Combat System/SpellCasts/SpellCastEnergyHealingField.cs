@@ -9,10 +9,8 @@ namespace WizardGame.Combat_System
 {
     public class SpellCastEnergyHealingField : SpellCastBase
     {
-        [SerializeField] private SpellEnergyHealingField spellPrefab;
-
         private EnergyHealingFieldData data;
-        
+
         private Transform ownerTransf = default;
         private Transform castCircleTransf = default;
         private StatBase intStat = default;
@@ -31,19 +29,19 @@ namespace WizardGame.Combat_System
                 else Debug.LogWarning("Passed data isn't null and can't be cast to EnergyHealingFieldData");
             }
         }
-        
+
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
-            ,params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-                , element, movementScripts);
-            
+                , spellPrefab, movementScripts);
+
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
         }
-        
+
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
@@ -62,10 +60,11 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            var spellClone = Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
+            var spellClone =
+                (SpellEnergyHealingField) Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
 
             var healPerTick = data.TickHeal * element.ElementSpellData.HealStrengthMult;
-            
+
             spellClone.InitSpell(healPerTick, data.TickAmount, Owner);
 
             castCircleAnimator.SetBool(BeginCastHash, false);

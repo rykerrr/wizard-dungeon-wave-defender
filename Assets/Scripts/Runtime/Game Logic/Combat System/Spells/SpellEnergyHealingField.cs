@@ -8,13 +8,13 @@ using Random = System.Random;
 
 namespace WizardGame.Combat_System
 {
-    public class SpellEnergyHealingField : MonoBehaviour, IHealingSpell
+    public class SpellEnergyHealingField : SpellBase, IHealingSpell
     {
         [Header("References")]
         [SerializeField] private Transform healFieldGraphic = default;
         [SerializeField] private ParticleSystem healFieldEffect = default;
 
-        [Header("Properties")]
+        [Header("Properties, do not change in prefab variants")]
         [SerializeField] private Vector3 fieldSizeHalfExtents = default;
         [SerializeField] private Vector3 fieldCenter = default;
         [SerializeField] private int amnOfTicks = default;
@@ -23,7 +23,6 @@ namespace WizardGame.Combat_System
         [SerializeField] private float delayBetweenHealWaves = default;
 
         private DownTimer healWaveTimer = default;
-        private GameObject caster = default;
 
         private int actualHealPerTick = default;
         

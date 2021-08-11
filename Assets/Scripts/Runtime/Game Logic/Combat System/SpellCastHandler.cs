@@ -54,7 +54,7 @@ namespace WizardGame.Combat_System
             
             var isSpell = !ReferenceEquals(hotbarItem, null) &&
                           !ReferenceEquals(spellItem = hotbarItem as SpellBookItem, null);
-
+            
             if (!isSpell) return;
 
             var equippedSpellExists = !ReferenceEquals(equippedSpellCastBase, null);
@@ -67,7 +67,8 @@ namespace WizardGame.Combat_System
             }
             else
             {
-                var dataIsEqual = ReferenceEquals(equippedSpellCastBase.Data, spellItem.SpellCastData);
+                var dataIsEqual = ReferenceEquals(equippedSpellCastBase.Data, spellItem.SpellCastData)
+                    && ReferenceEquals(equippedSpellCastBase.Element, spellItem.SpellElement);
                 if (dataIsEqual) return;
 
                 UnEquip();
@@ -111,7 +112,7 @@ namespace WizardGame.Combat_System
             spellCircleClone.gameObject.SetActive(false);
             spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
                 , baseItem.Id, spellCircleClone, baseItem.SpellCastData
-                , baseItem.SpellElement, movementScripts);
+                , baseItem.SpellPrefab, movementScripts);
             
             existingSpellCasts.Add(baseItem, spellCasterClone);
             return spellCasterClone;

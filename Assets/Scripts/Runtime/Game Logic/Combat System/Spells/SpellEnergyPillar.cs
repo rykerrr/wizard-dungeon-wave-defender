@@ -6,18 +6,17 @@ using WizardGame.Health_System;
 using WizardGame.Stats_System;
 using WizardGame.Utility.Timers;
 
-public class SpellEnergyPillar : MonoBehaviour, IDamagingSpell, IBuffingSpell
+public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
 {
     [Header("References")]
     [SerializeField] private GameObject shockwaveEffect = default;
 
-    [Header("Properties")]
+    [Header("Properties, do not change in prefab variants")]
     [SerializeField] private int amnOfShockwavesToCast = default;
     [SerializeField] private int maxShockwaveTargets = default;
     [SerializeField] private int avgShockwaveDmg = default;
 
     private DownTimer swTimer = default;
-    private GameObject caster = default;
     
     private StatsSystemBehaviour casterStatsSysBehav = default;
     private StatType statKey = default;

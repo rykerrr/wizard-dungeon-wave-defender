@@ -11,10 +11,8 @@ namespace WizardGame.Combat_System
 {
     public class SpellCastEnergyBolt : SpellCastBase
     {
-        [SerializeField] protected SpellEnergyBolt spellPrefab = default;
-
         private EnergyBoltData spellData = default;
-        
+
         private Transform castCircleTransf = default;
         private Transform ownerTransf = default;
 
@@ -39,28 +37,28 @@ namespace WizardGame.Combat_System
         }
 
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
-            ,params MonoBehaviour[] movementScripts)
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-                , element, movementScripts);
+                , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
             intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
         }
-        
+
         protected override void Awake()
         {
             mainCam = Camera.main;
         }
-        
+
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
-            
+
             castCircleTransf.position = ownerTransf.position + ownerTransf.forward * 2f;
             castCircleTransf.forward = ownerTransf.forward;
 
@@ -68,7 +66,7 @@ namespace WizardGame.Combat_System
             castCircleAnimator.SetBool(BeginCastHash, true);
 
             yield return castingTimeWait;
-            
+
             castCircleAnimator.SetBool(EndCastHash, true);
         }
 
@@ -76,12 +74,12 @@ namespace WizardGame.Combat_System
         {
             var spawnPos = ownerTransf.position + ownerTransf.up * 2f + ownerTransf.forward;
 
-            var spellClone = Instantiate(spellPrefab, spawnPos, Quaternion.identity);
+            var spellClone = (SpellEnergyBolt) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
             var spellTransf = spellClone.transform;
             var spellLocalScale = spellTransf.localScale;
-            
+
             spellTransf.LookAt(mouseHitPos);
-            
+
             var newScale = new Vector3(spellLocalScale.x, spellLocalScale.y,
                 (mouseHitPos - spellTransf.position).magnitude);
             spellTransf.localScale = newScale;
@@ -90,11 +88,11 @@ namespace WizardGame.Combat_System
             var explSize = spellData.ExplosionSize * elData.ExplosionRadiusMult;
             var explDmg = spellData.BaseExplosionDamage * elData.ExplosionStrengthMult;
             var impactDmg = spellData.BaseImpactDamage * elData.ImpactStrengthMult;
-            
+
             spellClone.InitSpell(explSize, spellData.ImpactSize
                 , explDmg, impactDmg,
                 mouseHitPos, objHit, Owner);
-            
+
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
 
@@ -110,9 +108,9 @@ namespace WizardGame.Combat_System
             bool didHit = Physics.Raycast(mouseRay, out RaycastHit hitInfo, 500f);
 
             objHit = null;
-            if(hitInfo.collider)
+            if (hitInfo.collider)
                 objHit = hitInfo.collider.gameObject;
-            
+
             if (didHit) return hitInfo.point;
 
             return mouseRay.direction * 50f;

@@ -13,10 +13,8 @@ public class SpellCastEnergyPillar : SpellCastBase
     // instead of an explosion on the player
     // IF the mouse pos is over an object
 
-    [SerializeField] private SpellEnergyPillar spellPrefab;
-
     private EnergyPillarData data;
-    
+
     private Camera mainCam = default;
     private Transform ownerTransf = default;
     private Transform castCircleTransf = default;
@@ -41,22 +39,22 @@ public class SpellCastEnergyPillar : SpellCastBase
     }
 
     public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
-        ,params MonoBehaviour[] movementScripts)
+        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+        , params MonoBehaviour[] movementScripts)
     {
         base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-            , element, movementScripts);
+            , spellPrefab, movementScripts);
 
         ownerTransf = Owner.transform;
         castCircleTransf = castCircle.transform;
         intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
     }
-    
+
     protected override void Awake()
     {
         mainCam = Camera.main;
     }
-    
+
     protected override IEnumerator StartSpellCast()
     {
         pillarSpawnPos = GetMouseHitPos();
@@ -66,7 +64,7 @@ public class SpellCastEnergyPillar : SpellCastBase
         castCircle.gameObject.SetActive(true);
 
         castCircleTransf.position = ownerTransf.position;
-        
+
         castCircleAnimator.SetBool(BeginCastHash, true);
 
         yield return castingTimeWait;
@@ -76,16 +74,17 @@ public class SpellCastEnergyPillar : SpellCastBase
 
     public override void FinishSpellCast()
     {
-        var spellClone = Instantiate(spellPrefab, pillarSpawnPos, Quaternion.identity);
+        var spellClone = (SpellEnergyPillar) Instantiate(spellPrefab, pillarSpawnPos, Quaternion.identity);
         spellClone.transform.up = pillarSpawnNormal;
 
         var statKey = StatTypeDB.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
 
         var shockwaveDmg = data.BaseShockwaveDamage * Element.ElementSpellData.ExplosionStrengthMult;
-        
-        spellClone.InitSpell(shockwaveDmg, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply, Owner);
-            
+
+        spellClone.InitSpell(shockwaveDmg, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply,
+            Owner);
+
         castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);
 
@@ -94,14 +93,14 @@ public class SpellCastEnergyPillar : SpellCastBase
 
         isCasting = false;
     }
-    
+
     private Vector3 GetMouseHitPos()
     {
         var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
         var didHit = Physics.Raycast(mouseRay, out RaycastHit hitInfo, 500f);
 
         pillarSpawnNormal = hitInfo.normal;
-        
+
         return didHit ? hitInfo.point : Vector3.zero;
     }
 }

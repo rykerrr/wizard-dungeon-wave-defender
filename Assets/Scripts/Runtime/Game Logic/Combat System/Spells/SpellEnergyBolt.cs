@@ -6,12 +6,12 @@ using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System
 {
-    public class SpellEnergyBolt : MonoBehaviour, IDamagingSpell
+    public class SpellEnergyBolt : SpellBase, IDamagingSpell
     {
         [Header("References")]
         [SerializeField] private GameObject explosionEffect = default;
 
-        [Header("Properties")]
+        [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float avgExplosionRadius = default;
 
         [SerializeField] private int maxExplosionTargets = default;
@@ -19,7 +19,6 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
 
         private GameObject objHit = default;
-        private GameObject caster = default;
         
         private Vector3 hitPos = default;
 

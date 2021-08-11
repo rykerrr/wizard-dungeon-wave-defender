@@ -20,6 +20,7 @@ namespace WizardGame.Combat_System
         
         [Header("Spell cast data")]
         [SerializeField] private float castingSpeed = default;
+        [SerializeField] protected SpellBase spellPrefab;
 
         protected static int BeginCastHash = Animator.StringToHash("BeginSpellCast");
         protected static int EndCastHash = Animator.StringToHash("EndSpellCast");
@@ -37,9 +38,9 @@ namespace WizardGame.Combat_System
         public float CooldownDuration => castCooldown;
         public Element Element => element;
         
-        public GameObject Owner { get; private set; } = default; 
+        public GameObject Owner { get; private set; } = default;
         public abstract BaseSpellCastData Data { get; set; }
-        
+
         public bool CanCast => !isCasting && !cooldownSys.IsOnCooldown(Id);
         
         protected bool isCasting = false;
@@ -53,7 +54,7 @@ namespace WizardGame.Combat_System
         // change owner param type to StatsSystemBehaviour since we REQUIRE it?
         // just init castCircle or also instantiate it here? think init fits more
         public virtual void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
             Owner = owner;
@@ -63,7 +64,8 @@ namespace WizardGame.Combat_System
             this.cooldownSys = cooldownSys;
             this.statsSys = statsSys;
             this.castCircle = castCircle;
-            this.element = element;
+            this.spellPrefab = spellPrefab;
+            this.element = spellPrefab.SpellElement;
             
             castCircleAnimator = castCircle.GetComponent<Animator>();
 

@@ -10,8 +10,6 @@ namespace WizardGame.Combat_System
 {
     public class SpellCastDirectedEnergyExplosion : SpellCastBase
     {
-        [SerializeField] private SpellDirectedEnergyExplosion spellPrefab;
-
         private DirectedEnergyExplosionData data;
         
         private Transform ownerTransf = default;
@@ -36,11 +34,11 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, Element element
+            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             ,params MonoBehaviour[] movementScripts)
         {
             base.Init(owner, statsSys, cooldownSys, id, castCircle, data
-                , element, movementScripts);
+                , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
@@ -73,7 +71,7 @@ namespace WizardGame.Combat_System
             Vector3 spawnPos = transform.position;
             if(data.Location == DirectedEnergyExplosionData.ExplosionLocationType.Mouse) spawnPos = GetMouseHitPos();
 
-            var spellClone = Instantiate(spellPrefab, spawnPos, Quaternion.identity);
+            var spellClone = (SpellDirectedEnergyExplosion) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
 
             var elData = element.ElementSpellData;
             var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;

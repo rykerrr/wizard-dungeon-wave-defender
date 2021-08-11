@@ -15,11 +15,24 @@ namespace WizardGame.Spell_Creation
         private SpellBookItem spellFoundation = default;
         private BaseSpellCastData data = default;
         private Element spellElement = default;
+
+        private string customSpellName = default;
+        private string spellName = default;
+        
+        public event Action<string> onDefaultSpellNameChanged = delegate { };
         
         public SpellBookItem SpellFoundation
         {
             get => spellFoundation;
-            set => spellFoundation = value;
+            set
+            {
+                spellFoundation = value;
+                
+                if (string.IsNullOrWhiteSpace(customSpellName))
+                {
+                    UpdateDefaultSpellName();
+                }
+            }
         }
 
         public BaseSpellCastData Data
@@ -31,7 +44,48 @@ namespace WizardGame.Spell_Creation
         public Element SpellElement
         {
             get => spellElement;
-            set => spellElement = value;
+            set
+            {
+                spellElement = value;
+                
+                if (string.IsNullOrWhiteSpace(customSpellName))
+                {
+                    UpdateDefaultSpellName();
+                }
+            }
+        }
+
+        private void UpdateDefaultSpellName()
+        {
+            var nameSpellBook = "";
+            var nameElement = ReferenceEquals(SpellElement, null) ? "" : SpellElement.Name;
+            
+            if (!ReferenceEquals(SpellFoundation, null))
+            {
+                var sfName = SpellFoundation.Name;
+                
+                if (sfName.Contains("Foundation"))
+                {
+                    sfName = sfName.Remove(sfName.IndexOf("Foundation", StringComparison.Ordinal),
+                        "Foundation".Length);
+                }
+
+                nameSpellBook = sfName;
+            }
+            
+            spellName = $"{nameElement} {nameSpellBook}";
+
+            onDefaultSpellNameChanged?.Invoke(spellName);
+        }
+
+        public string SpellName
+        {
+            get => spellName;
+            set 
+            {
+                spellName = value;
+                customSpellName = spellName;
+            }
         }
 
         public void OnClick_TryCreateSpellBook()
@@ -50,21 +104,39 @@ namespace WizardGame.Spell_Creation
 
         public SpellBookItem TryCreateSpellBook()
         {
-            var spell = spellFoundation;
-            var newItem = (SpellBookItem) ScriptableObject.CreateInstance(spell.GetType());
-            
-            newItem.Init(spell.name, spell.Icon);
-            newItem.InitCooldown(spell.CooldownDuration);
-            newItem.Init(spell.Rarity, spell.SellPrice, spell.MaxStack);
-            newItem.Init(spell.SpellCastPrefab, spell.SpellCirclePrefab, data
-                , spellElement);
+            var spellKey = (spellFoundation.SpellPrefab.GetType(), SpellElement);
 
-            newItem.ItemUseEvent = spell.ItemUseEvent;
+            var spellExists = SpellDB.Spells.ContainsKey(spellKey);
+
+            if (!spellExists)
+            {
+                foreach (var spell in SpellDB.Spells)
+                {
+                    Debug.LogWarning(spell.Key.Item1 + "  " + spell.Key.Item2 + " " + spell.Value.name
+                     + " " + spell.Value.SpellElement);
+                }
+
+                Debug.LogError("Spell doesn't exist\n" + spellKey.Item1 + "  " + spellKey.Item2);
+                return null;
+            }
+            
+            var newItem = (SpellBookItem) ScriptableObject.CreateInstance(spellFoundation.GetType());
+            
+            newItem.Init(SpellName, spellFoundation.Icon);
+            newItem.InitCooldown(spellFoundation.CooldownDuration);
+            newItem.Init(spellFoundation.Rarity, spellFoundation.SellPrice, spellFoundation.MaxStack);
+            newItem.Init(spellFoundation.SpellCastPrefab, spellFoundation.SpellCirclePrefab, data
+                , SpellDB.Spells[spellKey]);
+
+            newItem.ItemUseEvent = spellFoundation.ItemUseEvent;
             
             var spellId = Guid.NewGuid();
-            
-            if (newItem == null) return null;
 
+            data = (BaseSpellCastData)Activator.CreateInstance(data.GetType());
+
+            SpellName = "";
+            UpdateDefaultSpellName();
+            
             return newItem;
         }
     }

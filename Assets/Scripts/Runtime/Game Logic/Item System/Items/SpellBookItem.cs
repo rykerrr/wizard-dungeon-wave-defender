@@ -11,30 +11,33 @@ namespace WizardGame.Item_System.Items
     {
         [Header("Spell properties")]
         [SerializeField] private SpellCastBase spellCastPrefab = default;
+        [SerializeField] private SpellBase spellPrefab;
         [SerializeField] private CastPlaceholder spellCirclePrefab = default;
         [SerializeField] private Element spellElement = default;
 
         private BaseSpellCastData spellCastData = default;
         
         public SpellCastBase SpellCastPrefab => spellCastPrefab;
+        public SpellBase SpellPrefab => spellPrefab;
         public CastPlaceholder SpellCirclePrefab => spellCirclePrefab;
         public BaseSpellCastData SpellCastData => spellCastData;
         public Element SpellElement => spellElement;
 
         public void Init(SpellCastBase spellCastPrefab, CastPlaceholder spellCirclePrefab
-            , BaseSpellCastData spellCastData, Element spellElement)
+            , BaseSpellCastData spellCastData, SpellBase spellPrefab)
         {
             this.spellCastPrefab = spellCastPrefab;
             this.spellCirclePrefab = spellCirclePrefab;
             this.spellCastData = spellCastData;
-            this.spellElement = spellElement;
+            this.spellPrefab = spellPrefab;
+            spellElement = spellPrefab.SpellElement;
         }
-        
+
         public SpellBookItem() : base() { }
 
         public override string GetInfoDisplayText()
         {
-            return $"Spell: {Name}";
+            return $"Spell: {Name}\nElement: {SpellElement.Name}";
         }
 
         public override string ToString()
