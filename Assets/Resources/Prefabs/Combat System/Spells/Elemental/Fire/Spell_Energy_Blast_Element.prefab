@@ -4925,6 +4925,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b95e348faa752254884ba112138ff635, type: 2}
+    - target: {fileID: 4860044094775354006, guid: fda720359f223f645a55340b27c1de5f, type: 3}
+      propertyPath: m_Name
+      value: GameObject_Graphics
+      objectReference: {fileID: 0}
     - target: {fileID: 6630486979885709784, guid: fda720359f223f645a55340b27c1de5f, type: 3}
       propertyPath: m_Name
       value: Spell_Energy_Blast_Element

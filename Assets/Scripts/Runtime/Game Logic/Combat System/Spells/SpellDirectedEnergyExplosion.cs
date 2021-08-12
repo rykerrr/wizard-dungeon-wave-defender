@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 using WizardGame.Utility.Timers;
 
@@ -9,8 +10,8 @@ namespace WizardGame.Combat_System
     public class SpellDirectedEnergyExplosion : SpellBase, IDamagingSpell
     {
         [Header("References")]
-        [SerializeField] private GameObject explosionEffect = default;
-
+        [SerializeField] private Explosion onHitEffect = default;
+        
         [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float avgExplosionRadius = default;
         [SerializeField] private float delayBetweenExplosions = 0.3f;
@@ -19,7 +20,10 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
         
         private DownTimer explDelayTimer = default;
+        private Collider[] colliderHits;
+        
         private Vector3 explPos = default;
+        
         private int actualExplosionDmg = default;
         private int explAmn = 1;
         private float actualRadius = default;
@@ -32,6 +36,8 @@ namespace WizardGame.Combat_System
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
             actualRadius = avgExplosionRadius * explosionRadMult;
 
+            colliderHits = new Collider[maxExplosionTargets];
+            
             this.explAmn = explAmn;
             this.explPos = explPos;
             
@@ -44,12 +50,11 @@ namespace WizardGame.Combat_System
         {
             explDelayTimer = new DownTimer(delayBetweenExplosions);
 
-            explDelayTimer.OnTimerEnd += explDelayTimer.Reset;
-            explDelayTimer.OnTimerEnd += ProcessOnHit;
+            explDelayTimer.OnTimerEnd += CreateOnHitEffect;
+            
             explDelayTimer.OnTimerEnd += () =>
             {
                 ExplCount++;
-                ProcessOnHit();
 
                 if (ExplCount > explAmn)
                 {
@@ -57,53 +62,37 @@ namespace WizardGame.Combat_System
                     Destroy(gameObject, 0.1f);
                 }
             };
+            
+            explDelayTimer.OnTimerEnd += explDelayTimer.Reset;
+
+            Debug.Log("E");
+            Debug.Log(explDelayTimer.Time + " | " + explDelayTimer.DefaultTime + " | " + explDelayTimer.OnTimerEnd.Method);
         }
 
         private void Update()
         {
-            explDelayTimer?.TryTick(Time.deltaTime);
+            Debug.Log(explDelayTimer);
+            Debug.Log(explDelayTimer.TryTick(Time.deltaTime));
         }
 
-        public void ProcessOnHit()
+        public void CreateOnHitEffect()
         {
             var explClone = GenerateAndProcessExplosion(explPos);
             
-            Destroy(explClone, 0.2f);
+            Debug.Log("wht");
+            
+            explClone.Init(actualExplosionDmg, actualRadius, SpellElement.ElementColor
+                , Caster, ref colliderHits);
         }
 
-        private GameObject GenerateAndProcessExplosion(Vector3 pos)
+        private Explosion GenerateAndProcessExplosion(Vector3 pos)
         {
-            var explClone = Instantiate(explosionEffect, pos, Quaternion.identity);
-            explClone.transform.localScale = Vector3.one * actualRadius;
+            var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
+            onHitClone.transform.localScale = Vector3.one * actualRadius;
 
-            var healthSystemBehaviours = GetHealthSystemsInRadiusIgnoreCaster();
-            healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(actualExplosionDmg, caster));
+            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement.ElementColor, Caster, ref colliderHits);
 
-            return explClone;
-        }
-
-        private List<HealthSystemBehaviour> GetHealthSystemsInRadiusIgnoreCaster()
-        {
-            var colliderHits = new Collider[maxExplosionTargets];
-            var explosionHits = Physics.OverlapSphereNonAlloc(transform.position, actualRadius, colliderHits);
-            var healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-            for (var i = explosionHits - 1; i >= 0; i--)
-            {
-                if (colliderHits[i].gameObject == caster)
-                {
-                    continue;
-                }
-                
-                HealthSystemBehaviour behav = default;
-
-                if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))
-                {
-                    healthSystemBehaviours.Add(behav);
-                }
-            }
-
-            return healthSystemBehaviours;
+            return onHitClone;
         }
     }
 }

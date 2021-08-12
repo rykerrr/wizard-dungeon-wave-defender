@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Earth
   m_EditorClassIdentifier: 
   name: Earth
+  elementSprite: {fileID: 0}
+  elementColor: {r: 0.21698111, g: 0.047782417, b: 0.009211458, a: 1}
   elementSpellData:
     impactStrengthMult: 1
     explosionStrengthMult: 1

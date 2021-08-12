@@ -9,6 +9,7 @@ namespace WizardGame.Combat_System.Element_System
     {
         [SerializeField] private new string name = "New Element";
         [SerializeField] private Sprite elementSprite = default;
+        [SerializeField] private Color elementColor;
         
         [SerializeField] private ElementSpellData elementSpellData = default;
 
@@ -20,6 +21,7 @@ namespace WizardGame.Combat_System.Element_System
 
         public ElementSpellData ElementSpellData => elementSpellData;
         public Sprite ElementSprite => elementSprite;
+        public Color ElementColor => elementColor;
         
         private void SetNameAsAssetFileName()
         {

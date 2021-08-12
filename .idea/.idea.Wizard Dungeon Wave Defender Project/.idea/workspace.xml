@@ -20,127 +20,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Timed_Stat_Buff.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Casts/Spell_Cast_Timed_Stat_Buff.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Timed_Buff.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Timed_Buff.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell VFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell VFX/Effect_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell VFX/Effect_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell VFX/Effect_Shockwave.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spell VFX/Effect_Shockwave.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Combat System/Spells/Spell_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Game_Tooltips.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Game_Tooltips.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Hotbar_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Hotbar_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Inventory.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/Inventory.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/ItemInfo_Billboard.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/ItemInfo_Billboard.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/SpellBookCreation.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas Objects/SpellBookCreation.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_CooldownDisplay.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_CooldownDisplay.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_EquipmentSlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_EquipmentSlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_HotbarSlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_HotbarSlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_InventorySlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Elements/GameObject_InventorySlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Inventories/Inventory_PlayerInventory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Inventories/Inventory_PlayerInventory.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Directed Energy Explosion.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Directed Energy Explosion.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Blast.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Blast.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Bolt.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Bolt.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Healing Field.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Healing Field.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Pillar.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Energy Pillar.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Timed Stat Buff.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Timed Stat Buff.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Effect_Shockwave.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Effect_Shockwave.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_Spawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_Spawn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Earth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Earth.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Fire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Fire.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Water.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Wind.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Wind.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell VFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell VFX/Effect_Explosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell VFX/Effect_Explosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell VFX/Effect_Shockwave.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell VFX/Effect_Shockwave.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Blast_Element.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Blast_Element.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Blast_Element.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Blast_Element.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Blast_Element.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Blast_Element.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Directed_Energy_Explosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Blast.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Blast.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Bolt.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Bolt.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Healing_Field.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Healing_Field.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Pillar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder/Placeholder_Spell_Energy_Pillar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/DirectedEnergyExplosionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/DirectedEnergyExplosionData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBlast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBlast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyHealingField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyHealingField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyPillar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyPillar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastTimedStatBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastTimedStatBuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/SelectElementDropdown.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/SelectElementDropdown.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/SpellBookItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/SpellBookItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyBlast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyBlast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyBolt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyBolt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyExplosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyExplosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyHealingField.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyHealingField.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyPillar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyPillar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Shockwave.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Shockwave.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SelectElementDropdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SelectElementDropdown.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationMenuBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationMenuBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationTimedBuff.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationTimedBuff.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +133,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.7/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Shockwave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/0e/3174896a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -242,24 +179,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours and Humble Objects/MovementModifierBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/GravityMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/MovementModifierBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/JumpingMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/NullMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/LocomotionMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/SlidingMovementBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Character.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/BaseSpellCastData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/EnergyBlastData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/DirectedEnergyExplosionData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/EnergyBoltData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/EnergyPillarData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/ElementSpellData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/PopulateDropdownWithElementData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/SelectElementDropdown.cs" />
@@ -274,9 +196,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastTimedStatBuff.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyPillar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyHealingField.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBlast.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBookFoundation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationEnergyBlast.cs" />
@@ -284,15 +204,32 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/SpellBookItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellNameSetter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Shockwave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Shockwave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SelectElementDropdown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellNameSetter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/FadeMeshRendererOverLifetime.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/SetFadeTimeAsAnimationClip.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/FadeMeshRendererOverLifetime.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/DirectedExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/ExplosionShockwave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/CircleExpand.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/DirectedEnergyExplosionData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -409,7 +346,11 @@
       <workItem from="1628606162055" duration="13069000" />
       <workItem from="1628670065460" duration="445000" />
       <workItem from="1628670572811" duration="8706000" />
-      <workItem from="1628705699221" duration="7025000" />
+      <workItem from="1628705699221" duration="7731000" />
+      <workItem from="1628753487338" duration="4911000" />
+      <workItem from="1628762173847" duration="4837000" />
+      <workItem from="1628767551588" duration="973000" />
+      <workItem from="1628775173037" duration="5722000" />
     </task>
     <servers />
   </component>

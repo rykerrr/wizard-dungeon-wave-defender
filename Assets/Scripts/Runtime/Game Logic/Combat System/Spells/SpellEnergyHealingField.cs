@@ -49,9 +49,9 @@ namespace WizardGame.Combat_System
         private void InitTimer()
         {
             healWaveTimer = new DownTimer(delayBetweenHealWaves);
+            
             healWaveTimer.OnTimerEnd += ApplyHeal;
-            healWaveTimer.OnTimerEnd += healWaveTimer.Reset;
-
+            
             healWaveTimer.OnTimerEnd += () =>
             {
                 CurrentTickCount++;
@@ -62,6 +62,8 @@ namespace WizardGame.Combat_System
                     Destroy(gameObject, 2f);
                 }
             };
+            
+            healWaveTimer.OnTimerEnd += healWaveTimer.Reset;
         }
 
         private void Update()

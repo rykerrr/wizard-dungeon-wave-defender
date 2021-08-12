@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   name: Fire
+  elementSprite: {fileID: 0}
+  elementColor: {r: 0.6226415, g: 0.014684939, b: 0.014684939, a: 1}
   elementSpellData:
     impactStrengthMult: 1
     explosionStrengthMult: 1

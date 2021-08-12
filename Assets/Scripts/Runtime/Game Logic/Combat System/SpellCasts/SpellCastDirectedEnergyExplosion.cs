@@ -68,8 +68,7 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            Vector3 spawnPos = transform.position;
-            if(data.Location == DirectedEnergyExplosionData.ExplosionLocationType.Mouse) spawnPos = GetMouseHitPos();
+            Vector3 spawnPos = GetSpawnPosition();
 
             var spellClone = (SpellDirectedEnergyExplosion) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
 
@@ -88,7 +87,34 @@ namespace WizardGame.Combat_System
 
             isCasting = false;
         }
-        
+
+        private Vector3 GetSpawnPosition()
+        {
+            Vector3 spawnPos = Vector3.zero;
+            
+            switch (data.Location)
+            {
+                case DirectedEnergyExplosionData.ExplosionLocationType.Self:
+                {
+                    spawnPos = transform.position;
+
+                    break;
+                }
+                case DirectedEnergyExplosionData.ExplosionLocationType.Mouse:
+                {
+                    spawnPos = GetMouseHitPos();
+
+                    break;
+                }
+                case DirectedEnergyExplosionData.ExplosionLocationType.NearestEnemy:
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            return spawnPos;
+        }
+
         private Vector3 GetMouseHitPos()
         {
             var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());

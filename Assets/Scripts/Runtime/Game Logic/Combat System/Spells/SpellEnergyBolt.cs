@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System
@@ -9,7 +10,7 @@ namespace WizardGame.Combat_System
     public class SpellEnergyBolt : SpellBase, IDamagingSpell
     {
         [Header("References")]
-        [SerializeField] private GameObject explosionEffect = default;
+        [SerializeField] private Explosion onHitEffect = default;
 
         [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float avgExplosionRadius = default;
@@ -19,6 +20,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
 
         private GameObject objHit = default;
+        private Collider[] colliderHits;
         
         private Vector3 hitPos = default;
 
@@ -33,16 +35,16 @@ namespace WizardGame.Combat_System
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
             actualRadius = avgExplosionRadius * explosionRadius;
 
-            transform.localScale = new Vector3(impactRadius, impactRadius, transform.localPosition.z);
-            
+            colliderHits = new Collider[maxExplosionTargets];
+
             this.objHit = objHit;
             this.caster = caster;
             this.hitPos = hitPos;
             
-            ProcessOnHit();
+            CreateOnHitEffect();
         }
 
-        public void ProcessOnHit()
+        public void CreateOnHitEffect()
         {
             var explClone = GenerateAndProcessExplosion(hitPos);
             
@@ -56,41 +58,17 @@ namespace WizardGame.Combat_System
                 hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, caster);
             }
             
-            Destroy(explClone, 1.5f);
             Destroy(gameObject, 0.3f);
         }
         
-        private GameObject GenerateAndProcessExplosion(Vector3 pos)
+        private Explosion GenerateAndProcessExplosion(Vector3 pos)
         {
-            var explClone = Instantiate(explosionEffect, pos, Quaternion.identity);
-            explClone.transform.localScale = Vector3.one * actualExplosionDmg;
+            var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
+            onHitClone.transform.localScale = Vector3.one * actualRadius;
 
-            var healthSystemBehaviours = GetHealthSystemsInRadius();
-            healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(actualExplosionDmg, caster));
+            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement.ElementColor, Caster, ref colliderHits);
             
-            return explClone;
+            return onHitClone;
         }
-
-        private List<HealthSystemBehaviour> GetHealthSystemsInRadius()
-        {
-            var colliderHits = new Collider[maxExplosionTargets];
-            var explosionHits = Physics.OverlapSphereNonAlloc(transform.position, actualRadius, colliderHits);
-            var healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-            for (var i = explosionHits - 1; i >= 0; i--)
-            {
-                if (colliderHits[i].gameObject == caster) continue;
-                
-                HealthSystemBehaviour behav = default;
-
-                if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))
-                {
-                    healthSystemBehaviours.Add(behav);
-                }
-            }
-
-            return healthSystemBehaviours;
-        }
-
     }
 }

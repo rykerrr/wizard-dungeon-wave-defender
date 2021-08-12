@@ -21,6 +21,18 @@ namespace WizardGame.Spell_Creation
         
         public event Action<string> onDefaultSpellNameChanged = delegate { };
         
+        public string SpellName
+        {
+            get => spellName;
+            set
+            {
+                if (spellName == value) return;
+                
+                spellName = value;
+                customSpellName = spellName;
+            }
+        }
+        
         public SpellBookItem SpellFoundation
         {
             get => spellFoundation;
@@ -76,16 +88,6 @@ namespace WizardGame.Spell_Creation
             spellName = $"{nameElement} {nameSpellBook}";
 
             onDefaultSpellNameChanged?.Invoke(spellName);
-        }
-
-        public string SpellName
-        {
-            get => spellName;
-            set 
-            {
-                spellName = value;
-                customSpellName = spellName;
-            }
         }
 
         public void OnClick_TryCreateSpellBook()

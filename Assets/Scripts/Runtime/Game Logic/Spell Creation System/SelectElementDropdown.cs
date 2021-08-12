@@ -58,7 +58,7 @@ namespace WizardGame.Spell_Creation
 
         public void Dropdown_SelectElement(int localElId)
         {
-            Debug.Log("Got notified for: " + localElId);
+            // Debug.Log("Got notified for: " + localElId);
 
             spellCreationHandler.SpellElement = elements[localElId];
         }

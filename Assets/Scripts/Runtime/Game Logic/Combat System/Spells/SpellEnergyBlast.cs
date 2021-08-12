@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Combat_System;
+using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System
@@ -9,7 +10,7 @@ namespace WizardGame.Combat_System
     public class SpellEnergyBlast : SpellBase, IDamagingSpell
     {
         [Header("References")]
-        [SerializeField] private GameObject explosionEffect = default;
+        [SerializeField] private Explosion onHitEffect = default;
 
         [Header("Properties, do not change in prefab variants")]
         [SerializeField] private float baseTravelSpd = default;
@@ -20,12 +21,13 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
 
         private Rigidbody rb = default;
+        private Collider[] colliderHits;
         
         private int actualImpactDmg = default;
         private int actualExplosionDmg = default;
         private float explosionRadius = default;
 
-        private GameObject collissionHit = default;
+        private GameObject collisionHit = default;
         
         private void Awake()
         {
@@ -37,6 +39,8 @@ namespace WizardGame.Combat_System
         {
             actualImpactDmg = (int)Math.Round(avgImpactDmg * impactDmgMult);
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
+
+            colliderHits = new Collider[maxExplosionTargets];
             
             this.explosionRadius = avgExplosionRadius * explosionRadius;
             this.caster = caster;
@@ -44,8 +48,7 @@ namespace WizardGame.Combat_System
             transform.localScale = Vector3.one * impactRadius;
 
             var travelSpd = baseTravelSpd * travelSpdMult;
-            
-            rb.velocity = caster.transform.forward * travelSpd * Time.fixedDeltaTime;
+            rb.velocity = caster.transform.forward * (travelSpd * Time.fixedDeltaTime);
         }
 
         private void FixedUpdate()
@@ -55,73 +58,50 @@ namespace WizardGame.Combat_System
             rb.velocity *= 1.05f;
         }
 
-        public void ProcessOnHit()
+        public void CreateOnHitEffect()
         {
             #if UNITY_EDITOR
-                Debug.Log($"Object {gameObject.name} owned by {caster.name} hit {collissionHit}"); 
+                Debug.Log($"Object {gameObject.name} owned by {caster.name} hit {collisionHit}"); 
             #endif
             
             var explClone = GenerateAndProcessExplosion(transform.position);
 
             HealthSystemBehaviour hitImpactTarget;
 
-            if (!ReferenceEquals(hitImpactTarget = collissionHit.GetComponent<HealthSystemBehaviour>(), null))
+            if (!ReferenceEquals(hitImpactTarget = collisionHit.GetComponent<HealthSystemBehaviour>(), null))
             {
                 hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, caster);
             }
-
-            Destroy(explClone, 1.5f);
+            
             Destroy(gameObject);
         }
 
-        private GameObject GenerateAndProcessExplosion(Vector3 pos)
+        private Explosion GenerateAndProcessExplosion(Vector3 pos)
         {
-            var explClone = Instantiate(explosionEffect, pos, Quaternion.identity);
-            explClone.transform.localScale = Vector3.one * explosionRadius;
+            var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
+            onHitClone.transform.localScale = Vector3.one * explosionRadius;
 
-            var healthSystemBehaviours = GetHealthSystemsInRadius();
-            healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(actualExplosionDmg, caster));
+            onHitClone.Init(actualExplosionDmg, explosionRadius, SpellElement.ElementColor, Caster, ref colliderHits);
             
-            return explClone;
+            return onHitClone;
         }
 
-        private List<HealthSystemBehaviour> GetHealthSystemsInRadius()
-        {
-            var colliderHits = new Collider[maxExplosionTargets];
-            var explosionHits = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, colliderHits);
-            var healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-            for (var i = explosionHits - 1; i >= 0; i--)
-            {
-                if (colliderHits[i].gameObject == caster) continue;
-                
-                HealthSystemBehaviour behav = default;
-
-                if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))
-                {
-                    healthSystemBehaviours.Add(behav);
-                }
-            }
-
-            return healthSystemBehaviours;
-        }
-        
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("Tremble in fear!");
 
-            if(!ReferenceEquals(other, null)) collissionHit = other.gameObject;
+            if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
 
-            ProcessOnHit();
+            CreateOnHitEffect();
         }
         
         public void OnCollisionEnter(Collision other)
         {
             Debug.Log("Tremble in fear!");
         
-            if(!ReferenceEquals(other, null)) collissionHit = other.gameObject;
+            if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
             
-            ProcessOnHit();
+            CreateOnHitEffect();
         }
     }
 }

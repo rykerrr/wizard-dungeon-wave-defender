@@ -1,15 +1,14 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Combat_System;
-using WizardGame.Health_System;
+using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Stats_System;
 using WizardGame.Utility.Timers;
 
 public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
 {
     [Header("References")]
-    [SerializeField] private GameObject shockwaveEffect = default;
+    [SerializeField] private PillarShockwave pillarShockwaveEffect = default;
 
     [Header("Properties, do not change in prefab variants")]
     [SerializeField] private int amnOfShockwavesToCast = default;
@@ -17,6 +16,8 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
     [SerializeField] private int avgShockwaveDmg = default;
 
     private DownTimer swTimer = default;
+
+    private Collider[] swHitColliders;
     
     private StatsSystemBehaviour casterStatsSysBehav = default;
     private StatType statKey = default;
@@ -28,13 +29,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
     private Vector3 swCenter = default;
     private Vector3 swExtents = default;
 
-    private Collider[] swHitColliders;
     public int ActualSwCount { get; private set; } = 0;
-
-    private void Awake()
-    {
-        swHitColliders = new Collider[maxShockwaveTargets];
-    }
 
     public void InitSpell(float shockwaveDmgMult, float swDelay, int amnOfShockwavesToCast, StatType statKey, StatModifier statModifier, GameObject caster)
     {
@@ -51,6 +46,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
         swExtents = thisCollider.size;
         
         casterStatsSysBehav = caster.GetComponent<StatsSystemBehaviour>();
+        swHitColliders = new Collider[maxShockwaveTargets];
         
         actualSwDamage = (int)Math.Round(avgShockwaveDmg * shockwaveDmgMult);
         
@@ -60,8 +56,8 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
     private void InitTimer()
     {
         swTimer = new DownTimer(swDelay);
-        swTimer.OnTimerEnd += ProcessOnHit;
-        swTimer.OnTimerEnd += swTimer.Reset;
+        
+        swTimer.OnTimerEnd += CreateOnHitEffect;
 
         swTimer.OnTimerEnd += () =>
         {
@@ -73,6 +69,8 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
                 Destroy(gameObject, 2f);
             }
         };
+        
+        swTimer.OnTimerEnd += swTimer.Reset;
     }
 
     private void Update()
@@ -80,40 +78,15 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
         swTimer?.TryTick(Time.deltaTime);
     }
 
-    public void ProcessOnHit()
+    public void CreateOnHitEffect()
     {
-        var swClone = Instantiate(shockwaveEffect, transform.position, Quaternion.identity);
+        var swClone = Instantiate(pillarShockwaveEffect, transform.position, Quaternion.identity);
+        
         swClone.transform.up = transform.up;
-
-        var healthSysBehavs = GetHealthSystemsInBoxIgnoreCaster();
-        healthSysBehavs.ForEach(x => x.HealthSystem.TakeDamage(actualSwDamage, caster));
+        
+        swClone.Init(actualSwDamage, swExtents, SpellElement.ElementColor, Caster, ref swHitColliders);
     }
 
-    private List<HealthSystemBehaviour> GetHealthSystemsInBoxIgnoreCaster()
-    {
-        Array.Clear(swHitColliders,0, swHitColliders.Length);
-        
-        var shockwaveHits = Physics.OverlapBoxNonAlloc(swCenter, swExtents, swHitColliders, Quaternion.identity,
-            ~0, QueryTriggerInteraction.Ignore); 
-        // hit every layer but ignore triggers
-        
-        var healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-        for (var i = shockwaveHits - 1; i >= 0; i--)
-        {
-            if (swHitColliders[i].gameObject == caster) continue;
-
-            HealthSystemBehaviour behav = default;
-
-            if (!ReferenceEquals(behav = swHitColliders[i].GetComponent<HealthSystemBehaviour>(), null))
-            {
-                healthSystemBehaviours.Add(behav);
-            }
-        }
-
-        return healthSystemBehaviours;
-    }
-    
     public void ApplyBuff(params StatsSystemBehaviour[] targets)
     {
         for (var i = targets.Length - 1; i >= 0; i--)

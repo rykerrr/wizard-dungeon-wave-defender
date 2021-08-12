@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   name: Water
+  elementSprite: {fileID: 0}
+  elementColor: {r: 0.096787095, g: 0.28490597, b: 0.8207547, a: 1}
   elementSpellData:
     impactStrengthMult: 1
     explosionStrengthMult: 1

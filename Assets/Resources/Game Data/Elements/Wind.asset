@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Wind
   elementSprite: {fileID: 0}
+  elementColor: {r: 0.38587746, g: 0.5754717, b: 0.1764418, a: 1}
   elementSpellData:
     impactStrengthMult: 1
     explosionStrengthMult: 1
     explosionRadiusMult: 6
     healStrengthMult: 1
     buffStrengthMult: 1
-    travelSpeedMult: 1.25
+    travelSpeedMult: 1.5

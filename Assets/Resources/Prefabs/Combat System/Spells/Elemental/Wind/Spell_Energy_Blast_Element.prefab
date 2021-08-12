@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9618626a8ae9f99448b48f3abfcc30c2, type: 2}
+    - target: {fileID: 4860044094775354006, guid: fda720359f223f645a55340b27c1de5f, type: 3}
+      propertyPath: m_Name
+      value: GameObject_Graphics
+      objectReference: {fileID: 0}
     - target: {fileID: 4860044094775354007, guid: fda720359f223f645a55340b27c1de5f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068

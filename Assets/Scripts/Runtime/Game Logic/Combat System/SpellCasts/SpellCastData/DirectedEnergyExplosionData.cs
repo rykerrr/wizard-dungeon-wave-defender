@@ -69,7 +69,6 @@ namespace WizardGame.Combat_System
 
         private int CalculateExplosionDamage()
         {
-            Debug.Log(explosionAmount + " | " + explosionSize);
             var retVal = (int)Math.Round(3f / explosionAmount + 10f / explosionSize) / (int)location;
 
             return retVal;

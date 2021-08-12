@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeaa7628334948c98e1b31ef6adf6376, type: 3}
   m_Name: Directed Energy Explosion Foundation
   m_EditorClassIdentifier: 
-  name: Directed Energy Explosion
+  name: Directed Energy Explosion Foundation
   icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  cooldownDuration: 3
+  cooldownDuration: 1
   itemUseEvent: {fileID: 11400000, guid: c8c8ca9c4d82414438a4e3f5f9e44fa0, type: 2}
   rarity: {fileID: 11400000, guid: 842230e3a8acbb3439ac8d6a739f41eb, type: 2}
   sellPrice: 1

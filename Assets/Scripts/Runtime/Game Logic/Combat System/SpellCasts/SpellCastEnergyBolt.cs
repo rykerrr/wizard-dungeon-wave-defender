@@ -81,9 +81,10 @@ namespace WizardGame.Combat_System
             spellTransf.LookAt(mouseHitPos);
 
             var newScale = new Vector3(spellLocalScale.x, spellLocalScale.y,
-                (mouseHitPos - spellTransf.position).magnitude);
+                (spawnPos - mouseHitPos).magnitude);
+            
             spellTransf.localScale = newScale;
-
+            
             var elData = element.ElementSpellData;
             var explSize = spellData.ExplosionSize * elData.ExplosionRadiusMult;
             var explDmg = spellData.BaseExplosionDamage * elData.ExplosionStrengthMult;

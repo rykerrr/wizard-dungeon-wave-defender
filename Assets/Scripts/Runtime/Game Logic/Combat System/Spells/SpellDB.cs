@@ -73,7 +73,7 @@ namespace WizardGame.Combat_System
             {
                 var key = spellKvp.Key;
                 
-                Debug.Log("Spell type: " + key.Item1 + " | Spell Element: " + key.Item2.Name + " | Spell: " + spellKvp.Value);
+                // ebug.Log("Spell type: " + key.Item1 + " | Spell Element: " + key.Item2.Name + " | Spell: " + spellKvp.Value);
             }
         }
         
