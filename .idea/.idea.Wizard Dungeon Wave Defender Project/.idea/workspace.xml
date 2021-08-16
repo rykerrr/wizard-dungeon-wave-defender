@@ -20,11 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/BaseStatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/ElementStatusEffectData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/ElementStatusEffectData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/OnFireStatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/OnFireStatusEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StunnedStatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StunnedStatusEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/WetStatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +87,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/Api/ITestAdaptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/02/cc29505c/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/BaseStatusEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/e7/f6c3acd8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/62/2bef858a/EqualConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/f7/4f11e700/Is.cs" root0="SKIP_HIGHLIGHTING" />
@@ -126,15 +144,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/EnergyBoltData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/EnergyPillarData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/ElementSpellData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/PopulateDropdownWithElementData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/SelectElementDropdown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/ISpell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/RotateAroundSelf.cs" />
@@ -155,7 +164,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Shockwave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/VFX/Explosion.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Shockwave.cs" />
@@ -176,6 +184,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Serializable Data Types/SerializableSystemType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/BaseStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StunnedStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/WetStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/OnFireStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/ElementStatusEffectData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" />
     </changedPaths>
   </component>
@@ -298,6 +316,7 @@
       <workItem from="1628762173847" duration="4837000" />
       <workItem from="1628767551588" duration="973000" />
       <workItem from="1628775173037" duration="6001000" />
+      <workItem from="1629095907887" duration="10915000" />
     </task>
     <servers />
   </component>

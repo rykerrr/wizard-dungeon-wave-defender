@@ -49,14 +49,29 @@ namespace WizardGame.Health_System
         private void InitAutoHealTimer()
         {
             healTimer = new DownTimer(1f / vigorStat.ActualValue);
-            healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
-            healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
-            healTimer.OnTimerEnd += () => healTimer.Reset();
+            Debug.Log(vigorStat.ActualValue);
+            Debug.Log("" + (1f / vigorStat.ActualValue));
+            Debug.Log("" + ((float)(1f / vigorStat.ActualValue)));
+            Debug.Log(healTimer.Time + " | " + healTimer.DefaultTime);
+
+            healTimer.OnTimerEnd += () =>
+            {
+                Debug.Log("Auto Heal Occurring!");
+                Heal(resolveStat.ActualValue, this);
+                
+                healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
+                healTimer.Reset();
+            };
+            
+            // healTimer.OnTimerEnd += () => Debug.Log("Auto Heal Occurring!");
+            // healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
+            // healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
+            // healTimer.OnTimerEnd += () => healTimer.Reset();
         }
 
         public void Tick()
         {
-            healTimer.TryTick(Time.deltaTime);
+            var ticked = healTimer.TryTick(Time.deltaTime);
         }
 
         public void TakeDamage(int dmg, GameObject damageSource = null)
@@ -73,7 +88,10 @@ namespace WizardGame.Health_System
 
         public void Heal(int hp, object source)
         {
-            if (curHealth == 0) return;
+            if (curHealth == 0)
+            {
+                return;
+            }
             
             curHealth = Mathf.Clamp(curHealth + hp, 0, maxHealthStat.ActualValue);
         }

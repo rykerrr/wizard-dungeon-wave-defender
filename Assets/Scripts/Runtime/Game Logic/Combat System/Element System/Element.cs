@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using UnityEditor;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System.Status_Effects;
 
 namespace WizardGame.Combat_System.Element_System
 {
@@ -12,7 +13,8 @@ namespace WizardGame.Combat_System.Element_System
         [SerializeField] private Color elementColor;
         
         [SerializeField] private ElementSpellData elementSpellData = default;
-
+        [SerializeField] private ElementStatusEffectData statusEffectToApply = default;
+        
         public string Name
         {
             get => name;

@@ -2456,6 +2456,7 @@ GameObject:
   - component: {fileID: 659508425}
   - component: {fileID: 659508429}
   - component: {fileID: 659508431}
+  - component: {fileID: 659508432}
   m_Layer: 0
   m_Name: Factorized PlrSphere
   m_TagString: Untagged
@@ -2867,7 +2868,7 @@ MonoBehaviour:
   statTypesToGrow:
   - {fileID: 11400000, guid: cab23c91775ef4248bf7dd8b7c7783c4, type: 2}
   - {fileID: 11400000, guid: 6afe1c1ab7208644e955d4044e497eb4, type: 2}
-  expToGive: 0
+  expToGive: 60
 --- !u!114 &659508428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,6 +2939,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aad5f74e42d8da742acc0970549ac395, type: 2}
   - {fileID: 11400000, guid: 559c9289da32b634fa3d078bdad6fcdb, type: 2}
   - {fileID: 11400000, guid: aa909072d2d812b40848bfaf6f0c348d, type: 2}
+--- !u!114 &659508432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659508408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b036530821f4b47a1023e07f351f6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugStatEffData:
+    statusEffectTypeNamePrefix: OnFire
+    duration: 3
+    damagePerFrame: 1
 --- !u!1 &661201385
 GameObject:
   m_ObjectHideFlags: 0

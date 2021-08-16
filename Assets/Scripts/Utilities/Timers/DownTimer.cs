@@ -13,6 +13,8 @@ namespace WizardGame.Utility.Timers
         public DownTimer(float time)
         {
             SetNewDefaultTime(time);
+            
+            Reset();
         }
 
         public void SetNewDefaultTime(float time)
@@ -28,10 +30,19 @@ namespace WizardGame.Utility.Timers
             var deltaTimeIsNegative = deltaTime < 0;
             
             if (timerFinished || deltaTimeIsNegative || !IsTimerEnabled) return false;
-        
+            
             Time = Mathf.Max(Time - deltaTime, 0);
 
-            if (Time == 0) OnTimerEnd?.Invoke();
+            // If time is equal to 0, this should run, only THEN should we be able to check if it's 0 in the first line of this
+            // method
+            // Unless it starts off at 0
+            // Then what the flustertruck is going on
+
+            if (Time == 0)
+            {
+                Debug.Log("Invoking OnTimerEnd");
+                OnTimerEnd?.Invoke();
+            }
             
             return true;
         }
