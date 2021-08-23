@@ -24,6 +24,8 @@ namespace WizardGame.Combat_System
 
         private Dictionary<SpellBookItem, SpellCastBase> existingSpellCasts =
             new Dictionary<SpellBookItem, SpellCastBase>();
+
+        public event Action onSpellChange = delegate { };
         
         // will have a method to create spellcaster via prefab (which will also instantiate its spell circle)
         // ties input to firing, calls spell casty
@@ -36,20 +38,23 @@ namespace WizardGame.Combat_System
             cooldownSys ??= GetComponent<CooldownSystem>();
             
             if (ReferenceEquals(prewarmSpellBook, null)) return;
-            Equip(prewarmSpellBook);
         }
 
         // Used by input system
         public void TryCastSpell(InputAction.CallbackContext ctx)
         {
-            if (ctx.phase != InputActionPhase.Started) return;
-            if (ReferenceEquals(equippedSpellCastBase, null)) return;
+            var noEquippedSpell = ReferenceEquals(equippedSpellCastBase, null);
+            var notPointerDown = ctx.phase != InputActionPhase.Started;
+
+            if (!enabled || noEquippedSpell || notPointerDown) return;
             
             equippedSpellCastBase.CastSpell();
         }
 
         public void TryEquipSpell(HotbarItem hotbarItem)
         {
+            if (!enabled) return;
+
             SpellBookItem spellItem = default;
             
             var isSpell = !ReferenceEquals(hotbarItem, null) &&
@@ -74,6 +79,8 @@ namespace WizardGame.Combat_System
                 UnEquip();
                 Equip(spellItem);
             }
+            
+            onSpellChange?.Invoke();
         }
         
         // on item drop or item trash
@@ -102,6 +109,8 @@ namespace WizardGame.Combat_System
             
             castToEquip.gameObject.SetActive(true);
             equippedSpellCastBase = castToEquip;
+            
+            onSpellChange?.Invoke();
         }
 
         private SpellCastBase CreateSpellCast(SpellBookItem baseItem)

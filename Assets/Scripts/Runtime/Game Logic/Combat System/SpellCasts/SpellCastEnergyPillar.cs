@@ -47,7 +47,7 @@ public class SpellCastEnergyPillar : SpellCastBase
 
         ownerTransf = Owner.transform;
         castCircleTransf = castCircle.transform;
-        intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
+        intStat = statsSys.GetStat(StatTypeFactory.GetType("Intelligence"));
     }
 
     protected override void Awake()
@@ -77,7 +77,7 @@ public class SpellCastEnergyPillar : SpellCastBase
         var spellClone = (SpellEnergyPillar) Instantiate(spellPrefab, pillarSpawnPos, Quaternion.identity);
         spellClone.transform.up = pillarSpawnNormal;
 
-        var statKey = StatTypeDB.GetType("Vigor");
+        var statKey = StatTypeFactory.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
 
         var shockwaveDmg = data.BaseShockwaveDamage * Element.ElementSpellData.ExplosionStrengthMult;

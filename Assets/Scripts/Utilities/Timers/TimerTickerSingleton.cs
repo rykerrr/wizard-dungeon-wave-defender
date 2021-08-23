@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using UnityEngine;
 using WizardGame.Utility.Patterns;
 
@@ -6,9 +8,7 @@ namespace WizardGame.Utility.Timers
 {
     public class TimerTickerSingleton : InheritableSingleton<TimerTickerSingleton>
     {
-        private readonly List<ITimer> timers = new List<ITimer>();
-
-        public List<ITimer> Timers => timers;
+        private readonly Dictionary<object, ITimer> timers = new Dictionary<object, ITimer>();
 
         private void Update()
         {
@@ -16,24 +16,50 @@ namespace WizardGame.Utility.Timers
         }
 
         private void TickAllTimers()
-        {           
+        {
             float time = Time.deltaTime;
-
-            for (int i = timers.Count - 1; i >= 0; i--)
+            
+            // Purpose of this is the same as a reverse for loop, if a timer is removed, shifting would occur
+            // If we iterate backwards we won't get a CollectionWasModifier error
+            // Placeholder to prevent table head smacking
+            foreach (var kvp in timers.Reverse())
             {
-                timers[i].TryTick(time);
+                kvp.Value.TryTick(time);
             }
         }
 
-        public void AddTimer(ITimer timer)
+        public void AddTimer(ITimer timer, object key)
         {
-            if (timers.Contains(timer)) return;
+            // Tiny problem with how the timers are set
+            // Dictionaries require a non-null key
             
-            timers.Add(timer);
+            if (key == null || timers.ContainsKey(key)) return;
+            
+            timers.Add(key, timer);
         }
 
-        public bool RemoveTimer(ITimer timer)
-            => timers.Remove(timer);
+        public ITimer GetTimer(object key)
+        {
+            if (timers.ContainsKey(key)) return timers[key];
+
+            return null;
+        }
+
+        public bool RemoveTimer(object key)
+        {
+            if (!timers.ContainsKey(key)) return false;
+            
+            return timers.Remove(key);
+        }
+
+        public bool RemoveTimer(ITimer value)
+        {
+            if (value == null) return false;
+            
+            var kvpToRemove = timers.FirstOrDefault(x => x.Value == value);
+
+            return timers.Remove(kvpToRemove.Key);
+        }
 
         [ContextMenu("Text dump timers")]
         public void TextDumpTimers()

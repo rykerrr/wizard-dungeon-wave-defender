@@ -8,17 +8,23 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] private SlidingMovement slidingMovement = default;
         
-        public SlidingMovement SlidingMovement => slidingMovement;
+        private SlidingMovement SlidingMovement => slidingMovement;
 
+        public override float ExternalMult
+        {
+            get => SlidingMovement.ExternalMult;
+            set => SlidingMovement.ExternalMult = value;
+        }
+        
         protected override void Awake()
         {
             base.Awake();
         }
 
-        protected override void OnEnable() => movementMotor.AddModifier(slidingMovement);
-        protected override void OnDisable() => movementMotor.RemoveModifier(slidingMovement);
-        protected override void FixedUpdate() => slidingMovement.Tick(Time.fixedDeltaTime, transform.position + chController.center);
+        protected override void OnEnable() => movementMotor.AddModifier(SlidingMovement);
+        protected override void OnDisable() => movementMotor.RemoveModifier(SlidingMovement);
+        protected override void FixedUpdate() => SlidingMovement.Tick(Time.fixedDeltaTime, transform.position + chController.center);
 
-        public bool ShouldSlide() => slidingMovement.ShouldSlide(transform.position + chController.center, chController.slopeLimit);
+        public bool ShouldSlide() => SlidingMovement.ShouldSlide(transform.position + chController.center, chController.slopeLimit);
     }
 }

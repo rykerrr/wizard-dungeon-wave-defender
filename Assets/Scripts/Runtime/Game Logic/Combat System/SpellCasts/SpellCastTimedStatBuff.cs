@@ -62,7 +62,7 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            var key = StatTypeDB.GetType(keyName);
+            var key = StatTypeFactory.GetType(keyName);
 
             var buffVal = statModifier.Value * data.BuffStrength * element.ElementSpellData.BuffStrengthMult;
             

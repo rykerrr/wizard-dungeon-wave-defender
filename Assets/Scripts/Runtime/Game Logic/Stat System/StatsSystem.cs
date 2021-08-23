@@ -109,7 +109,7 @@ namespace WizardGame.Stats_System
         {
             DownTimer newTimer = new DownTimer(time);
         
-            timeTicker.Timers.Add(newTimer);
+            timeTicker.AddTimer(newTimer, statModifier);
             AddModifierTo(statType, statModifier);
         
             newTimer.OnTimerEnd += () => RemoveModifierFrom(statType, statModifier);

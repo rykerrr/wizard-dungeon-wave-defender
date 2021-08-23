@@ -11,6 +11,14 @@ namespace WizardGame.Movement.Position
         [SerializeField] private float gravMagnitude;
         [SerializeField] private float groundedPullMagnitude;
 
+        private float externalMult = 1f;
+
+        public float ExternalMult
+        {
+            get => externalMult;
+            set => externalMult = value;
+        }
+        
         public float GravMagnitude
         {
             get => gravMagnitude;
@@ -38,7 +46,7 @@ namespace WizardGame.Movement.Position
                 yVelocity = -groundedPullMagnitude;
             }
 
-            Value = new Vector3(0f, yVelocity, 0f) * deltaTime;
+            Value = new Vector3(0f, yVelocity, 0f) * deltaTime * ExternalMult;
         }
     }
 }

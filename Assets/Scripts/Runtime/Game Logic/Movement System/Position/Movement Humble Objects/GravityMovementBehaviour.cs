@@ -7,15 +7,21 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] private GravityMovement gravityMovement;
         
-        public GravityMovement GravityMovement => gravityMovement;
+        private GravityMovement GravityMovement => gravityMovement;
 
+        public override float ExternalMult
+        {
+            get => GravityMovement.ExternalMult;
+            set => GravityMovement.ExternalMult = value;
+        }
+        
         protected override void Awake()
         {
             base.Awake();
         }
 
-        protected override  void OnEnable() => movementMotor.AddModifier(gravityMovement);
-        protected override  void OnDisable() => movementMotor.RemoveModifier(gravityMovement);
-        protected override  void FixedUpdate() => gravityMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
+        protected override  void OnEnable() => movementMotor.AddModifier(GravityMovement);
+        protected override  void OnDisable() => movementMotor.RemoveModifier(GravityMovement);
+        protected override  void FixedUpdate() => GravityMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
     }
 }

@@ -9,15 +9,21 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] private LocomotionMovement locomotion = default;
         
-        public LocomotionMovement Locomotion => locomotion;
+        private LocomotionMovement Locomotion => locomotion;
 
+        public override float ExternalMult
+        {
+            get => Locomotion.ExternalMult;
+            set => Locomotion.ExternalMult = value;
+        }
+        
         protected override void Awake()
         {
             base.Awake();
         }
 
-        protected override void OnEnable() => movementMotor.AddModifier(locomotion);
-        protected override void OnDisable() => movementMotor.RemoveModifier(locomotion);
+        protected override void OnEnable() => movementMotor.AddModifier(Locomotion);
+        protected override void OnDisable() => movementMotor.RemoveModifier(Locomotion);
         protected override void FixedUpdate() => Locomotion.Tick(Time.fixedDeltaTime);
 
         public void SetPreviousMovementInput(InputAction.CallbackContext ctx) =>

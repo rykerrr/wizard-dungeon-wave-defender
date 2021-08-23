@@ -8,7 +8,7 @@ using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.Combat_System
 {
-    public static class SpellDB
+    public static class SpellFactory
     {
         private static string elementsLocationInResources = "Game Data/Elements";
         private static string spellLsocationsInResources = "Prefabs/Combat System/Spells/Elemental";
@@ -20,7 +20,7 @@ namespace WizardGame.Combat_System
         private static Dictionary<(Type, Element), SpellBase> spells = new Dictionary<(Type, Element), SpellBase>();
         public static Dictionary<(Type, Element), SpellBase> Spells => spells;
 
-        static SpellDB()
+        static SpellFactory()
         {
             InitSpells();
         }
@@ -83,11 +83,6 @@ namespace WizardGame.Combat_System
             spells.Clear();
             
             InitSpells();
-        }
-        
-        public static void CallToLoad()
-        {
-            
         }
     }
 }

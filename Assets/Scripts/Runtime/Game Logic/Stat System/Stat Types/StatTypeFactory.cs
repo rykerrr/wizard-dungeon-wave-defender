@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace WizardGame.Stats_System
 {
-    public static class StatTypeDB
+    public static class StatTypeFactory
     {
         private static Dictionary<string, StatType> types = new Dictionary<string, StatType>();
-        private static string locationInResources = "Game Data/Stat Types";
+        
+        // possibly change to use Assembly and reflection
+        private static string locationInResources = "Game Data/Stat System/Stat Types";
 
-        static StatTypeDB()
+        static StatTypeFactory()
         {
             LoadStatTypes();
         }

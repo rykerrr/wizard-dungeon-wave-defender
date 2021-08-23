@@ -42,7 +42,7 @@ namespace WizardGame.Combat_System
 
             ownerTransf = Owner.transform;
             castCircleTransf = castCircle.transform;
-            intStat = statsSys.GetStat(StatTypeDB.GetType("Intelligence"));
+            intStat = statsSys.GetStat(StatTypeFactory.GetType("Intelligence"));
         }
 
         protected override void Awake()

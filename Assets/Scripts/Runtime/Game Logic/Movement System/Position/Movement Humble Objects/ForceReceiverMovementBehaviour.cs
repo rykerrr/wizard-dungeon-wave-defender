@@ -6,18 +6,24 @@ namespace WizardGame.Movement.Position
     public class ForceReceiverMovementBehaviour : MovementModifierBehaviour
     {
         [SerializeField] private ForceReceiverMovement forceReceiver;
-        
-        public ForceReceiverMovement ForceReceiver => forceReceiver;
-        
+
+        private ForceReceiverMovement ForceReceiver => forceReceiver;
+
+        public override float ExternalMult
+        {
+            get => ForceReceiver.ExternalMult;
+            set => ForceReceiver.ExternalMult = value;
+        }
+
         protected override void Awake()
         {
             base.Awake();
         }
 
-        protected override void OnEnable() => movementMotor.AddModifier(forceReceiver);
-        protected override void OnDisable() => movementMotor.RemoveModifier(forceReceiver);
-        protected override void FixedUpdate() => forceReceiver.Tick(Time.fixedDeltaTime);
+        protected override void OnEnable() => movementMotor.AddModifier(ForceReceiver);
+        protected override void OnDisable() => movementMotor.RemoveModifier(ForceReceiver);
+        protected override void FixedUpdate() => ForceReceiver.Tick(Time.fixedDeltaTime);
 
-        public void AddForce(Vector3 force) => forceReceiver.AddForce(force);
+        public void AddForce(Vector3 force) => ForceReceiver.AddForce(force);
     }
 }

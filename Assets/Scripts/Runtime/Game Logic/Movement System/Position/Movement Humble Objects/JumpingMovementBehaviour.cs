@@ -12,8 +12,16 @@ namespace WizardGame.Movement.Position
         [SerializeField] private float maxInputMultiplier = 1f;
         [SerializeField] private float inputMultiplier = 0;
 
-        private bool recordInputMultiplier = false;
+        private JumpingMovement JumpMovement => jumpMovement;
         
+        public override float ExternalMult
+        {
+            get => JumpMovement.ExternalMult;
+            set => JumpMovement.ExternalMult = value;
+        }
+        
+        private bool recordInputMultiplier = false;
+
         protected override  void Awake()
         {
             base.Awake();
@@ -26,7 +34,7 @@ namespace WizardGame.Movement.Position
 
         protected override void FixedUpdate()
         {
-            jumpMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
+            JumpMovement.Tick(Time.fixedDeltaTime, chController.isGrounded);
         }
 
         private void RecordInputMultiplierOnJumpHold()
@@ -69,11 +77,11 @@ namespace WizardGame.Movement.Position
             inputMultiplier = 0;
             recordInputMultiplier = false;
             
-            jumpMovement.SetPreviousInput(input);
+            JumpMovement.SetPreviousInput(input);
         }
         
-        protected override void OnEnable() => movementMotor.AddModifier(jumpMovement);
-        protected override void OnDisable() => movementMotor.RemoveModifier(jumpMovement);
+        protected override void OnEnable() => movementMotor.AddModifier(JumpMovement);
+        protected override void OnDisable() => movementMotor.RemoveModifier(JumpMovement);
         
     }
 }

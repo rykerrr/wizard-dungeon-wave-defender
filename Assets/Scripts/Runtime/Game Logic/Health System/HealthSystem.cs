@@ -37,9 +37,9 @@ namespace WizardGame.Health_System
             
             this.statsSys = statsSys;
             
-            maxHealthStat = this.statsSys.GetStat(StatTypeDB.GetType("Max Health"));
-            vigorStat = this.statsSys.GetStat(StatTypeDB.GetType("Vigor"));
-            resolveStat = this.statsSys.GetStat(StatTypeDB.GetType("Resolve"));
+            maxHealthStat = this.statsSys.GetStat(StatTypeFactory.GetType("Max Health"));
+            vigorStat = this.statsSys.GetStat(StatTypeFactory.GetType("Vigor"));
+            resolveStat = this.statsSys.GetStat(StatTypeFactory.GetType("Resolve"));
             
             curHealth = maxHealthStat.ActualValue;
             
@@ -49,24 +49,10 @@ namespace WizardGame.Health_System
         private void InitAutoHealTimer()
         {
             healTimer = new DownTimer(1f / vigorStat.ActualValue);
-            Debug.Log(vigorStat.ActualValue);
-            Debug.Log("" + (1f / vigorStat.ActualValue));
-            Debug.Log("" + ((float)(1f / vigorStat.ActualValue)));
-            Debug.Log(healTimer.Time + " | " + healTimer.DefaultTime);
-
-            healTimer.OnTimerEnd += () =>
-            {
-                Debug.Log("Auto Heal Occurring!");
-                Heal(resolveStat.ActualValue, this);
-                
-                healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
-                healTimer.Reset();
-            };
             
-            // healTimer.OnTimerEnd += () => Debug.Log("Auto Heal Occurring!");
-            // healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
-            // healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
-            // healTimer.OnTimerEnd += () => healTimer.Reset();
+            healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
+            healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
+            healTimer.OnTimerEnd += () => healTimer.Reset();
         }
 
         public void Tick()

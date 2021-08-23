@@ -2951,10 +2951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b036530821f4b47a1023e07f351f6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugStatEffData:
-    statusEffectTypeNamePrefix: OnFire
-    duration: 3
-    damagePerFrame: 1
+  debugStatEffData: {fileID: 11400000, guid: 74110d4b4c01234428b8d8a3f1e04e0f, type: 2}
 --- !u!1 &661201385
 GameObject:
   m_ObjectHideFlags: 0

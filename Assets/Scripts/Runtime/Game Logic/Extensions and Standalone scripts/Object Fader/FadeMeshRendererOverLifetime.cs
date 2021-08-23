@@ -34,13 +34,13 @@ public class FadeMeshRendererOverLifetime : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("1st: " + Duration + " | " + (duration - lifeTime) + " | " + lifeTime);
+        // Debug.Log("1st: " + Duration + " | " + (duration - lifeTime) + " | " + lifeTime);
         float t = (duration - lifeTime) / duration;
-        Debug.Log("t: " + t);
+        // Debug.Log("t: " + t);
         t = Mathf.Clamp01(t);
-        Debug.Log("clamped t: " + t);
+        // Debug.Log("clamped t: " + t);
         float alpha = Mathf.Lerp(0f, 1f, t);
-        Debug.Log("alpha: " + alpha);
+        // Debug.Log("alpha: " + alpha);
         
         material.color = new Color(customColor.r, customColor.g, customColor.b, alpha);
         

@@ -10,6 +10,14 @@ namespace WizardGame.Movement.Position
         [SerializeField] private float slideSpeed = default;
         [SerializeField] private float groundRayMaxDistance = default;
 
+        private float externalMult = 1f;
+
+        public float ExternalMult
+        {
+            get => externalMult;
+            set => externalMult = value;
+        }
+        
         public float SlideSpeed
         {
             get => slideSpeed;
@@ -41,7 +49,7 @@ namespace WizardGame.Movement.Position
 
             Vector3.OrthoNormalize(ref mvVector, ref hitNormal);
 
-            Value = mvVector * (slideSpeed * deltaTime);
+            Value = mvVector * (slideSpeed * deltaTime * ExternalMult);
         }
 
         public bool ShouldSlide(Vector3 rayOrigin, float slopeLimit)

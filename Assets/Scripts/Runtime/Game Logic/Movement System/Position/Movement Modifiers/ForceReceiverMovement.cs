@@ -10,6 +10,14 @@ namespace WizardGame.Movement.Position
         [SerializeField] private float drag = default;
         [SerializeField] private float snapForceUnder = default;
 
+        private float externalMult = 1f;
+
+        public float ExternalMult
+        {
+            get => externalMult;
+            set => externalMult = value;
+        }
+        
         public float Drag
         {
             get => drag;
@@ -29,7 +37,7 @@ namespace WizardGame.Movement.Position
                 Value = Vector3.zero;
             }
 
-            Value = Vector3.Lerp(Value, Vector3.zero, drag * deltaTime);
+            Value = Vector3.Lerp(Value, Vector3.zero, drag * deltaTime) * ExternalMult;
         }
 
         public void AddForce(Vector3 force) => Value += force;

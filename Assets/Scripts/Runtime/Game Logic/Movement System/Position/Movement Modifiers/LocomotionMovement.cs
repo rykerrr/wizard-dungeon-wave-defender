@@ -9,6 +9,14 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] private  float mvSpeed = default;
 
+        private float externalMult = 1f;
+
+        public float ExternalMult
+        {
+            get => externalMult;
+            set => externalMult = value;
+        }
+        
         public float MvSpeed
         {
             get => mvSpeed;
@@ -23,7 +31,7 @@ namespace WizardGame.Movement.Position
         {
             deltaTime = Mathf.Max(deltaTime, 0);
             
-            Value = previousInput * (mvSpeed * deltaTime);
+            Value = previousInput * (mvSpeed * deltaTime) * ExternalMult;
         }
         
         public void SetPreviousMovementInput(Vector2 curInput)

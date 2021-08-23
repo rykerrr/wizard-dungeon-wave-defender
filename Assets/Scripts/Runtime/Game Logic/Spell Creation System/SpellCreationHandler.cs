@@ -108,11 +108,11 @@ namespace WizardGame.Spell_Creation
         {
             var spellKey = (spellFoundation.SpellPrefab.GetType(), SpellElement);
 
-            var spellExists = SpellDB.Spells.ContainsKey(spellKey);
+            var spellExists = SpellFactory.Spells.ContainsKey(spellKey);
 
             if (!spellExists)
             {
-                foreach (var spell in SpellDB.Spells)
+                foreach (var spell in SpellFactory.Spells)
                 {
                     Debug.LogWarning(spell.Key.Item1 + "  " + spell.Key.Item2 + " " + spell.Value.name
                      + " " + spell.Value.SpellElement);
@@ -128,7 +128,7 @@ namespace WizardGame.Spell_Creation
             newItem.InitCooldown(spellFoundation.CooldownDuration);
             newItem.Init(spellFoundation.Rarity, spellFoundation.SellPrice, spellFoundation.MaxStack);
             newItem.Init(spellFoundation.SpellCastPrefab, spellFoundation.SpellCirclePrefab, data
-                , SpellDB.Spells[spellKey]);
+                , SpellFactory.Spells[spellKey]);
 
             newItem.ItemUseEvent = spellFoundation.ItemUseEvent;
             

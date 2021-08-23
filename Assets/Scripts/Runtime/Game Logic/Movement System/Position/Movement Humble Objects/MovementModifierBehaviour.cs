@@ -7,6 +7,8 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] protected CharacterMovementMotor movementMotor = default;
 
+        public abstract float ExternalMult { get; set; }
+        
         protected CharacterController chController = default;
         
         protected virtual void Awake()

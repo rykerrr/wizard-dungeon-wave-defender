@@ -40,7 +40,6 @@ namespace WizardGame.Utility.Timers
 
             if (Time == 0)
             {
-                Debug.Log("Invoking OnTimerEnd");
                 OnTimerEnd?.Invoke();
             }
             

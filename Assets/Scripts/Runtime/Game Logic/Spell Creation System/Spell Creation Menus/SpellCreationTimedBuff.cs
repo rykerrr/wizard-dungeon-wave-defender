@@ -25,7 +25,7 @@ namespace WizardGame.Spell_Creation
             base.Awake();
             
             // default value until i figure a way to implement this in a better way
-            data.StatType = StatTypeDB.GetType("Intelligence");
+            data.StatType = StatTypeFactory.GetType("Intelligence");
         }
 
         public void InputField_SetDuration(string dur)

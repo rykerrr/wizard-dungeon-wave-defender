@@ -13,7 +13,7 @@ namespace WizardGame.Combat_System.Element_System
         [SerializeField] private Color elementColor;
         
         [SerializeField] private ElementSpellData elementSpellData = default;
-        [SerializeField] private ElementStatusEffectData statusEffectToApply = default;
+        [SerializeField] private StatusEffectData statusEffectToApply = default;
         
         public string Name
         {

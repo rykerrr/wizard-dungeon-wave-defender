@@ -8,6 +8,14 @@ namespace WizardGame.Movement.Position
     {
         [SerializeField] private float offset = 0.5f;
 
+        private float externalMult = 1f;
+
+        public float ExternalMult
+        {
+            get => externalMult;
+            set => externalMult = value;
+        }
+        
         public Vector3 Value { get; private set; }
 
         public void Tick(float deltaTime, bool didHit, float distanceToGround, float maxDistanceToGround)
