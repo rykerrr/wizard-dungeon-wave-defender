@@ -20,131 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Entity Stat Defaults.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Entity Stat Defaults/Mana Beast.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Entity Stat Defaults/Mana Beast.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Entity Stat Defaults/Player.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Entity Stat Defaults/Player.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Inventories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Inventories/Inventory_PlayerInventory.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Inventories/Inventory_PlayerInventory.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Consumables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Consumables/Health Potion.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Consumables/Health Potion.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Emerald Amulet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Emerald Amulet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Iron Helmet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Iron Helmet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Iron Leggings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Iron Leggings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Leather Boots.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Leather Boots.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Ruby Amulet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Ruby Amulet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Steel Helmet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Steel Helmet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Weapons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Weapons/Indigo Feather.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Weapons/Indigo Feather.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Weapons/Ruby Catalyst.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Equipment/Weapons/Ruby Catalyst.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/Special Spells Books.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/how to create a spell.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Items/Spells/how to create a spell.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Common.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Common.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Rare.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Rare.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Uncommon.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Rarities/Uncommon.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Intelligence.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Intelligence.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Mana Capacity.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Mana Capacity.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Max Health.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Max Health.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Resolve.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Resolve.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Vigor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Vigor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Wisdom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat Types/Wisdom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/BaseStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/BaseStatusEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/ElementStatusEffectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/ElementStatusEffectData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/OnFireStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/OnFireStatusEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StatusEffectHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StunnedStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/StunnedStatusEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/WetStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effects/WetStatusEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBlast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBlast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyBolt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyHealingField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyHealingField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyPillar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastEnergyPillar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastTimedStatBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastTimedStatBuff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/LoadElementAndSpellDB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/LoadElementAndSpellDB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/FadeMeshRendererOverLifetime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/FadeMeshRendererOverLifetime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/GravityMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/GravityMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/JumpingMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/JumpingMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/LocomotionMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/LocomotionMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/MovementModifierBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/MovementModifierBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/NullMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/NullMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/SlidingMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/SlidingMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/FloatOverGroundMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/FloatOverGroundMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/ForceReceiverMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/ForceReceiverMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/GravityMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/GravityMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/IMovementModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/IMovementModifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/JumpingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/JumpingMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/LocomotionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/LocomotionMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/NullMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/NullMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/SlidingMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/SlidingMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationTimedBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationTimedBuff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDB.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/TimerTickerSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/TimerTickerSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
@@ -252,9 +137,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/DirectedExplosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/ExplosionShockwave.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/CircleExpand.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastData/DirectedEnergyExplosionData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCasts/SpellCastDirectedEnergyExplosion.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" />
@@ -294,15 +176,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/BaseStatusEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/TimerTickerSingleton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/IMovementStatusEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -427,7 +312,8 @@
       <workItem from="1629095907887" duration="16260000" />
       <workItem from="1629130787638" duration="8257000" />
       <workItem from="1629730362226" duration="322000" />
-      <workItem from="1629730722915" duration="2105000" />
+      <workItem from="1629730722915" duration="3891000" />
+      <workItem from="1629815527985" duration="7487000" />
     </task>
     <servers />
   </component>

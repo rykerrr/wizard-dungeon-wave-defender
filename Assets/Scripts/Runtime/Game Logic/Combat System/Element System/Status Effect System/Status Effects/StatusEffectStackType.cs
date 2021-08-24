@@ -4,6 +4,7 @@
     {
         IgnoreIfExists,
         DurationExtend,
-        FullStack
+        FullStack,
+        DurationExtendAndFullStack
     }
 }

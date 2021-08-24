@@ -1,18 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Ludiq;
 using UnityEngine;
+using WizardGame.Movement.Position;
 using WizardGame.Utility.Timers;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
     public class StatusEffectHandler : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private List<MovementModifierBehaviour> movements = new List<MovementModifierBehaviour>();
+        
         [Header("Current status effect data")]
         // serializing above would do wonders for debugging
 
         private Dictionary<Type, List<StatusEffect>> currentStatusEffects = new Dictionary<Type, List<StatusEffect>>();
+        
         // get stat types, aka keys
         // get status effects for type, aka key
         
@@ -37,8 +43,8 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                     RemoveStatusEffect(statusEffect);
                 }
             };
-            timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
 
+            timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
             TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
         }
 
@@ -62,23 +68,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 {
                     case StatusEffectStackType.IgnoreIfExists:
                     {
-                        return true;
+                        break;
                     }
                     case StatusEffectStackType.DurationExtend:
                     {
-                        var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
-                            .GetTimer(statusEffectToAdd);
-
-                        if (statusEffTimer == null)
-                        {
-                            Debug.LogError("We have a problem chief");
-                            Debug.Break();
-
-                            return false;
-                        }
+                        var statEff = currentStatusEffects[statusType][0];
                         
-                        statusEffTimer.SetNewDefaultTime(statusEffTimer.Time + duration);
-                        
+                        if (!ExtendStatusEffectDuration(duration, statEff)) return false;
+
                         break;
                     }
                     case StatusEffectStackType.FullStack:
@@ -86,6 +83,23 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                         currentStatusEffects[statusType].Add(statusEffectToAdd);
                         AddRemovalTimerForStatus(statusEffectToAdd, duration);
                         
+                        break;
+                    }
+                    case StatusEffectStackType.DurationExtendAndFullStack:
+                    {
+                        var statEffs = currentStatusEffects[statusType];
+
+                        foreach (var statEff in statEffs)
+                        {
+                            if (!ExtendStatusEffectDuration(duration, statEff))
+                            {
+                                // Duration wasn't extended for whatever reason, most likely an error
+                                return false;
+                            }
+                        }
+                        
+                        statEffs.Add(statusEffectToAdd);
+
                         break;
                     }
                 }
@@ -98,9 +112,42 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 AddRemovalTimerForStatus(statusEffectToAdd, duration);
             }
 
+            UpdateExternalMovementValue();
             return true;
         }
 
+        private bool ExtendStatusEffectDuration(float duration, StatusEffect statEff)
+        {
+            var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
+                .GetTimer(statEff);
+
+            if (statusEffTimer == null)
+            {
+                Debug.LogError("We have a problem chief");
+                Debug.Break();
+
+                return false;
+            }
+
+            statusEffTimer.SetNewDefaultTime(statusEffTimer.Time + duration);
+            return true;
+        }
+
+        private void UpdateExternalMovementValue()
+        {
+            float mult = 1;
+            
+            foreach (var statEff in currentStatusEffects)
+            {
+                mult *= statEff.Value[0].MovementMultiplier;
+            }
+            
+            foreach (var mv in movements)
+            {
+                mv.ExternalMult = mult;
+            }
+        }
+        
         // Called ForceRemove as potions and spells would technically FORCE the removal of the status effects
         // So would status effects canceling each other out such as water and fire canceling each other out
         public void ForceRemoveStatusEffect(StatusEffect statusEffect)
@@ -121,8 +168,11 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             {
                 currentStatusEffects[statusType].Remove(statusEffect);
             }
+
+            UpdateExternalMovementValue();
         }
 
+        #region debug
         [Header("Debug data")]
         [SerializeField] private StatusEffectData debugStatEffData = default;
         [SerializeField] private List<StatusEffect> debugPrevAddedStatusEffects = new List<StatusEffect>();
@@ -164,5 +214,6 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 Debug.Log(entry);
             }
         }
+        #endregion
     }
 }

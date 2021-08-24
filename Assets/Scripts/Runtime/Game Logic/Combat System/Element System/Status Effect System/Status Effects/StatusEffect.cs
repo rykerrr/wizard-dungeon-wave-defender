@@ -10,10 +10,12 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         protected GameObject caster;
         protected GameObject target;
         protected StatusEffectStackType stackType;
-        
+
         public GameObject Caster => caster;
         public GameObject Target => target;
         public StatusEffectStackType StackType => stackType;
+        
+        public float MovementMultiplier { get; protected set; }
         
         public virtual void Init(GameObject caster, GameObject target, StatusEffectData data)
         {
@@ -21,6 +23,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             this.target = target;
 
             stackType = data.StackType;
+            MovementMultiplier = data.MovementSpeedMultiplier;
         }
 
         public abstract void Tick();
