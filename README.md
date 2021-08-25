@@ -5,7 +5,9 @@ Repo for first project being done via TDD, and focus on writing actually readabl
 - Assemblies
 - Proper usage of the new Input system
 - Unit tests improvement based mostly on the second edition of The Art Of Unit Testing by Michael Feathers and Robert C. Martin.
+(at least the first part of the project up to the movement system was done with TDD until it was way too slow for one person with a decently sized idea to work normally...)
+
 - Usage of certain useful free assets for code that i find myself re-writing constantly from time to time (State machines) or that are just very nice (Custom event system via scriptable events)
 - Extensive usage of scriptable objects
 - Usage of multiple OOP patterns
-- Focusing on modularity and reusability on certain common systems such as Attribute/Stat systems, Movement systems, Inventories
+- Focusing on modularity and reusability on certain common systems such as Attribute/Stat systems, Movement systems, Inventories, Status effects, Items, Weaponry
