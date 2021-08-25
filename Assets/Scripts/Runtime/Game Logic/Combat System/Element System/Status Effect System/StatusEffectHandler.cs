@@ -38,7 +38,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             foreach (var interaction in interactions)
             {
-                if (interaction.InteractionType != InteractionType.ModifySpellEffectiveness) continue;
+                if (interaction.InteractionType != InteractionType.ModifySpellDamage) continue;
                 
                 if (currentStatusEffects.ContainsKey(interaction.Target)) return interaction;
             }
@@ -183,7 +183,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
                         return StatusEffectAddResult.Finished;
                     }
-                    case InteractionType.ModifySpellEffectiveness:
+                    case InteractionType.ModifySpellDamage:
                     {
                         // remove target, don't add this, get StatusEffectAddResult.SpellBuff returned
                         // somehow
