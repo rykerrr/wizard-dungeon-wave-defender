@@ -18,7 +18,10 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             tickDamage = data.DamagePerFrame;
             
+            Debug.Log(caster + " | " + target);
+            
             targetHealthSys = target.GetComponent<HealthSystemBehaviour>().HealthSystem;
+            Debug.Log(targetHealthSys);
         }
 
         public override void Tick()

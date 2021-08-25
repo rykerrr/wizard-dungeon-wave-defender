@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Ludiq;
 using UnityEngine;
 using WizardGame.Movement.Position;
@@ -17,7 +14,8 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         [Header("Current status effect data")]
         // serializing above would do wonders for debugging
 
-        private Dictionary<Type, List<StatusEffect>> currentStatusEffects = new Dictionary<Type, List<StatusEffect>>();
+        private Dictionary<StatusEffectData, List<StatusEffect>> currentStatusEffects = 
+            new Dictionary<StatusEffectData, List<StatusEffect>>();
         
         // get stat types, aka keys
         // get status effects for type, aka key
@@ -33,73 +31,112 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             }
         }
 
-        private void AddRemovalTimerForStatus(StatusEffect statusEffect, float duration)
+        public StatusEffectInteraction GetBuffingInteraction(StatusEffectData statEffType)
         {
-            var timer = new DownTimer(duration)
-            {
-                OnTimerEnd = () =>
-                {
-                    statusEffect.OnRemove();
-                    RemoveStatusEffect(statusEffect);
-                }
-            };
+            var interactions = statEffType.Interactions;
+            if (interactions.Count == 0) return null;
 
-            timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
-            TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
-        }
-
-        // returns bool as to whether it was added or not
-        public bool AddStatusEffect(StatusEffect statusEffectToAdd, float duration)
-        {
-            if (statusEffectToAdd == null)
+            foreach (var interaction in interactions)
             {
-                Debug.Log("This is null?");
-                return false;
+                if (interaction.InteractionType != InteractionType.ModifySpellEffectiveness) continue;
+                
+                if (currentStatusEffects.ContainsKey(interaction.Target)) return interaction;
             }
 
-            var statusType = statusEffectToAdd.GetType();
-            var statEffExists = currentStatusEffects.ContainsKey(statusType);
+            return null;
+        }
+        
+        public StatusEffectAddResult AddStatusEffect(StatusEffectData statEffType, StatusEffect statEff, float duration
+        , out StatusEffectInteraction buffInteraction)
+        {
+            buffInteraction = null;
+            
+            if (statEff == null || statEffType == null)
+            {
+                Debug.Log("This is null?");
+                return StatusEffectAddResult.Failed;
+            }
+            
+            var res = CheckInteractions(statEffType, out var buff);
+            
+            // Failed in this case means that there were either no interactions or none
+            // with the status effects in here, so we can proceed to add as normal
+            if (res == StatusEffectAddResult.SpellBuff || res == StatusEffectAddResult.Finished)
+            {
+                buffInteraction = buff;
+                
+                return res;
+            }
+
+            var statEffExists = currentStatusEffects.ContainsKey(statEffType);
             
             if (statEffExists)
             {
                 // it exists, check if we can stack it, and how
                 
-                switch (statusEffectToAdd.StackType)
+                switch (statEff.StackType)
                 {
                     case StatusEffectStackType.IgnoreIfExists:
                     {
+                        Debug.Log("Status effect already exists, ignoring");
+                        Debug.Log("-------------------------------");
+                        
                         break;
                     }
                     case StatusEffectStackType.DurationExtend:
                     {
-                        var statEff = currentStatusEffects[statusType][0];
+                        var statEffToExt = currentStatusEffects[statEffType][0];
                         
-                        if (!ExtendStatusEffectDuration(duration, statEff)) return false;
-
+                        Debug.Log("Extending duration, prev duration: "
+                                  + TimerTickerSingleton.Instance.GetTimer(statEffToExt).Time);
+                        
+                        if (!ExtendStatusEffectDuration(duration, statEffToExt))
+                        {
+                            // Duration wasn't extended for whatever reason, most likely an error
+                            return StatusEffectAddResult.Failed;
+                        }
+                        
+                        Debug.Log("New duration: " 
+                                  + TimerTickerSingleton.Instance.GetTimer(statEffToExt).Time);
+                        Debug.Log("-------------------------------");
+                        
                         break;
                     }
                     case StatusEffectStackType.FullStack:
                     {
-                        currentStatusEffects[statusType].Add(statusEffectToAdd);
-                        AddRemovalTimerForStatus(statusEffectToAdd, duration);
+                        Debug.Log("Full stack, prev stack count: " + currentStatusEffects[statEffType].Count);
+                        
+                        currentStatusEffects[statEffType].Add(statEff);
+                        AddRemovalTimerForStatus(statEffType, statEff, duration);
+                        
+                        Debug.Log("New stack count: " + currentStatusEffects[statEffType].Count);
+                        Debug.Log("-------------------------------");
                         
                         break;
                     }
                     case StatusEffectStackType.DurationExtendAndFullStack:
                     {
-                        var statEffs = currentStatusEffects[statusType];
-
-                        foreach (var statEff in statEffs)
+                        var statEffs = currentStatusEffects[statEffType];
+                        
+                        Debug.Log("Extending duration and full stack, prev count:"
+                                  + statEffs.Count + " , Prev dur of first element: " 
+                                  + TimerTickerSingleton.Instance.GetTimer(statEffs[0]).Time);
+                        
+                        foreach (var statEffToExt in statEffs)
                         {
-                            if (!ExtendStatusEffectDuration(duration, statEff))
+                            if (!ExtendStatusEffectDuration(duration, statEffToExt))
                             {
                                 // Duration wasn't extended for whatever reason, most likely an error
-                                return false;
+                                return StatusEffectAddResult.Failed;
                             }
                         }
-                        
-                        statEffs.Add(statusEffectToAdd);
 
+                        statEffs.Add(statEff);
+
+                        Debug.Log("New count: " + statEffs.Count + " , New dur of first element:"
+                        + TimerTickerSingleton.Instance.GetTimer(statEffs[0]).Time);
+                        Debug.Log("-------------------------------");
+                        
                         break;
                     }
                 }
@@ -108,14 +145,90 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             {
                 // it doesn't exist, so we can add it regardless of it's stack type
                 
-                currentStatusEffects.Add(statusType, new List<StatusEffect>() { statusEffectToAdd });
-                AddRemovalTimerForStatus(statusEffectToAdd, duration);
+                Debug.Log("Added new status effect: " + statEffType.Name);
+                Debug.Log("-------------------------------");
+                
+                currentStatusEffects.Add(statEffType, new List<StatusEffect>() { statEff });
+                AddRemovalTimerForStatus(statEffType, statEff, duration);
             }
 
             UpdateExternalMovementValue();
-            return true;
+            return StatusEffectAddResult.Finished;
         }
 
+        // Runs to check for special interactions, if there are none proceed to add effects normally
+        private StatusEffectAddResult CheckInteractions(StatusEffectData data, 
+            out StatusEffectInteraction buffInteraction)
+        {
+            buffInteraction = null;
+            
+            if (data.Interactions.Count <= 0) return StatusEffectAddResult.Failed;
+            
+            foreach (var interaction in data.Interactions)
+            {
+                if (!currentStatusEffects.ContainsKey(interaction.Target)) continue;
+
+                switch (interaction.InteractionType)
+                {
+                    case InteractionType.RemoveAndCombine:
+                    {
+                        Debug.Log("Combining, interaction:" + interaction.Name + ", Base: " + data.Name
+                                  + " Target: " + interaction.Target.Name + " Result: " + interaction.Result);
+                        
+                        // remove target, don't add this, add result
+                        RemoveAllOfType(interaction.Target);
+                        AddStatusEffect(interaction.Result,
+                            StatusEffectFactory.CreateStatusEffect(interaction.Result)
+                            , interaction.Result.Duration, out var buff);
+
+                        return StatusEffectAddResult.Finished;
+                    }
+                    case InteractionType.ModifySpellEffectiveness:
+                    {
+                        // remove target, don't add this, get StatusEffectAddResult.SpellBuff returned
+                        // somehow
+                        
+                        Debug.Log("Buffing spell, interaction:" + interaction.Name + " , Base: " + data.Name
+                                  + " , Target: " + interaction.Target.Name 
+                                  + " , Effectiveness: " + interaction.Effectiveness);
+                        
+                        RemoveAllOfType(interaction.Target);
+                        buffInteraction = interaction;
+
+                        return StatusEffectAddResult.SpellBuff;
+                    }
+                    case InteractionType.RemoveBoth:
+                    {
+                        // remove target, don't add this
+
+                        Debug.Log("Removing both, interaction:" + interaction.Name + " , Base: " + data.Name
+                                  + " , Target: " + interaction.Target.Name + " , Result: " + interaction.Result);
+                        
+                        RemoveAllOfType(interaction.Target);
+
+                        return StatusEffectAddResult.Finished;
+                    }
+                }
+            }
+
+            return StatusEffectAddResult.Failed;
+        }
+        
+        private void AddRemovalTimerForStatus(StatusEffectData statusEffectType, StatusEffect statusEffect, float duration)
+        {
+            var timer = new DownTimer(duration)
+            {
+                OnTimerEnd = () =>
+                {
+                    statusEffect.OnRemove();
+                    RemoveStatusEffect(statusEffectType, statusEffect);
+                }
+            };
+
+            timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
+            TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
+        }
+        
         private bool ExtendStatusEffectDuration(float duration, StatusEffect statEff)
         {
             var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
@@ -129,12 +242,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 return false;
             }
 
-            statusEffTimer.SetNewDefaultTime(statusEffTimer.Time + duration);
+            statusEffTimer.SetNewTime(statusEffTimer.Time + duration);
             return true;
         }
 
         private void UpdateExternalMovementValue()
         {
+            // Reverse the loops to avoid out of range exceptions due to array shifting
+            
             float mult = 1;
             
             foreach (var statEff in currentStatusEffects)
@@ -150,23 +265,28 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         
         // Called ForceRemove as potions and spells would technically FORCE the removal of the status effects
         // So would status effects canceling each other out such as water and fire canceling each other out
-        public void ForceRemoveStatusEffect(StatusEffect statusEffect)
+        public void ForceRemoveStatusEffect(StatusEffectData statEffType, StatusEffect statEff)
         {
-            RemoveStatusEffect(statusEffect);
+            RemoveStatusEffect(statEffType, statEff);
         }
 
-        public bool RemoveAllOfType(Type statusEffectType)
+        public bool RemoveAllOfType(StatusEffectData statEffType)
         {
-            return currentStatusEffects.Remove(statusEffectType);
+            var res = currentStatusEffects.Remove(statEffType);
+            UpdateExternalMovementValue();
+
+            return res;
         }
 
-        private void RemoveStatusEffect(StatusEffect statusEffect)
+        private void RemoveStatusEffect(StatusEffectData key, StatusEffect statusEffect)
         {
-            var statusType = statusEffect.GetType();
-            
-            if (currentStatusEffects.ContainsKey(statusType))
+            if (currentStatusEffects.ContainsKey(key))
             {
-                currentStatusEffects[statusType].Remove(statusEffect);
+                if (currentStatusEffects[key].Count == 1)
+                {
+                    currentStatusEffects.Remove(key);
+                }
+                else currentStatusEffects[key].Remove(statusEffect);
             }
 
             UpdateExternalMovementValue();
@@ -182,10 +302,21 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         {
             var statEff = StatusEffectFactory.CreateStatusEffect(debugStatEffData);
             statEff.Init(gameObject, gameObject, debugStatEffData);
+
+            var entryExists = debugPrevAddedStatusEffects.Contains(statEff);
+            if (entryExists && (statEff.StackType == StatusEffectStackType.FullStack ||
+                statEff.StackType == StatusEffectStackType.DurationExtendAndFullStack))
+            {
+                debugPrevAddedStatusEffects.Add(statEff);
+            }
+            else if (!entryExists)
+            {
+                debugPrevAddedStatusEffects.Add(statEff);
+            }
+            // Should also be removed from here once it gets removed by the timer
             
-            debugPrevAddedStatusEffects.Add(statEff);
-            
-            AddStatusEffect(statEff, debugStatEffData.Duration);
+            var res = AddStatusEffect(debugStatEffData, statEff, debugStatEffData.Duration, out var buff);
+            Debug.Log(res);
         }
 
         [ContextMenu("Remove given status effect")]
@@ -193,7 +324,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         {
             if (debugPrevAddedStatusEffects.Count == 0) return;
             
-            ForceRemoveStatusEffect(debugPrevAddedStatusEffects[0]);
+            ForceRemoveStatusEffect(debugStatEffData, debugPrevAddedStatusEffects[0]);
         }
 
         [ContextMenu("Dump current data")]
@@ -212,6 +343,15 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             foreach (var entry in debugPrevAddedStatusEffects)
             {
                 Debug.Log(entry);
+            }
+        }
+        
+        [ContextMenu("Dump timers for previously added status effects")]
+        private void DumpTimerDataForStatusEffects()
+        {
+            foreach (var entry in debugPrevAddedStatusEffects)
+            {
+                Debug.Log(TimerTickerSingleton.Instance.GetTimer(entry));
             }
         }
         #endregion

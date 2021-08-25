@@ -24,6 +24,13 @@ namespace WizardGame.Utility.Timers
             // Time = defaultTime;
         }
 
+        public void SetNewTime(float time)
+        {
+            SetNewDefaultTime(time);
+            
+            Reset();
+        }
+
         public override bool TryTick(float deltaTime)
         {
             var timerFinished = Time == 0;

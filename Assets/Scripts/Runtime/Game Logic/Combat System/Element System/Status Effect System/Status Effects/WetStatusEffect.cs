@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine;
-using WizardGame.Movement.Position;
-
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
     public class WetStatusEffect : StatusEffect

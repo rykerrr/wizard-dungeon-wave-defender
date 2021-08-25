@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System;
+using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System.Spell_Effects
@@ -10,6 +12,7 @@ namespace WizardGame.Combat_System.Spell_Effects
         [SerializeField] private Renderer graphics;
         
         private GameObject caster = default;
+        private Element spellElement;
         
         private Collider[] colliderHits = default;
 
@@ -17,7 +20,7 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         private int actualSwDamage = default;
 
-        public void Init(int actualSwDamage, Vector3 swExtents, Color swColor, GameObject caster
+        public void Init(int actualSwDamage, Vector3 swExtents, Element spellElement, GameObject caster
             , ref Collider[] colliderHits)
         {
             this.colliderHits = colliderHits;
@@ -25,8 +28,11 @@ namespace WizardGame.Combat_System.Spell_Effects
             this.actualSwDamage = actualSwDamage;
             this.caster = caster;
             this.swExtents = swExtents;
+            this.spellElement = spellElement;
 
             Material graphMat = graphics.material;
+
+            Color swColor = spellElement.ElementColor;
             graphMat.color = new Color(swColor.r, swColor.g, swColor.b, graphMat.color.a);
             
             ProcessShockwave();
@@ -35,7 +41,13 @@ namespace WizardGame.Combat_System.Spell_Effects
         private void ProcessShockwave()
         {
             var healthSysBehavs = GetHealthSystemsInBoxIgnoreCaster();
-            healthSysBehavs.ForEach(x => x.HealthSystem.TakeDamage(actualSwDamage, caster));
+
+            foreach (var healthSysBehav in healthSysBehavs)
+            {
+                var dmg = TryApplyStatusEffect(healthSysBehav);
+                
+                healthSysBehav.HealthSystem.TakeDamage(dmg, caster);
+            }
         }
 
         // called by animation event
@@ -75,6 +87,28 @@ namespace WizardGame.Combat_System.Spell_Effects
             }
 
             return healthSystemBehaviours;
+        }
+        
+        private int TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
+        {
+            int dmg = actualSwDamage;
+            
+            var statEffData = spellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, hitImpactTarget.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = hitImpactTarget.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                dmg = (int)Math.Round(dmg * buff.Effectiveness);
+            }
+
+            return dmg;
         }
     }
 }

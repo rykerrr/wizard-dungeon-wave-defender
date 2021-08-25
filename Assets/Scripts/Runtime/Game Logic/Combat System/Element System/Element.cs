@@ -22,6 +22,7 @@ namespace WizardGame.Combat_System.Element_System
         }
 
         public ElementSpellData ElementSpellData => elementSpellData;
+        public StatusEffectData StatusEffectToApply => statusEffectToApply;
         public Sprite ElementSprite => elementSprite;
         public Color ElementColor => elementColor;
         

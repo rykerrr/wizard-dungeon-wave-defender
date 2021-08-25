@@ -11,7 +11,8 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         // load all types from the assembly
 
         private static string locationInResources = "Game Data/Status Effects";
-        
+        private static string namespacePath = "WizardGame.Combat_System.Element_System.Status_Effects";
+
         private static StringBuilder sb = new StringBuilder();
 
         private static Dictionary<StatusEffectData, Type> statusDataTypes 
@@ -23,12 +24,12 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             foreach (var data in dataTypes)
             {
-                var loadedType = data.StatEffectType;
+                var loadedType = Type.GetType($"{namespacePath}.{data.Name}StatusEffect");
                 
                 statusDataTypes.Add(data, loadedType);
             }
             
-            DumpStatusEffectData();
+            // DumpStatusEffectData();
         }
 
         public static StatusEffect CreateStatusEffect(StatusEffectData statEffData)
@@ -38,11 +39,15 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             return (StatusEffect) Activator.CreateInstance(statusDataTypes[statEffData]);
         }
 
-        public static StatusEffect CreateStatusEffect(Type statEffType)
+        public static StatusEffect CreateStatusEffect(StatusEffectData statEffData, GameObject caster,
+            GameObject target)
         {
-            if (!statusDataTypes.ContainsValue(statEffType)) return null;
+            var statEff = CreateStatusEffect(statEffData);
+            if (statEff == null) return null;
+            
+            statEff.Init(caster, target, statEffData);
 
-            return (StatusEffect) Activator.CreateInstance(statEffType);
+            return statEff;
         }
 
         public static Type GetType(StatusEffectData data)
@@ -52,6 +57,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             return statusDataTypes[data];
         }
 
+        #if UNITY_EDITOR
         private static void DumpStatusEffectData()
         {
             sb.Clear();
@@ -63,5 +69,6 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             Debug.Log(sb.ToString());
         }
+        #endif
     }
 }

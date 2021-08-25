@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Wet
   m_EditorClassIdentifier: 
   name: Wet
+  interactions:
+  - {fileID: 11400000, guid: b1962a54d6a4ac648b55d5813d137980, type: 2}
+  - {fileID: 11400000, guid: 3e6dc0fe5c7839748a8b6cb6ec986434, type: 2}
   duration: 15
-  movementSpeedMultuiplier: 0.3
+  movementSpeedMultuiplier: 0.7
   damagePerFrame: 0
-  stackType: 2
+  stackType: 1

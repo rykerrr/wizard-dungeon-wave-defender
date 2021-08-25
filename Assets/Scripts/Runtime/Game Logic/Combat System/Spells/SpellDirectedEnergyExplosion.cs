@@ -50,7 +50,7 @@ namespace WizardGame.Combat_System
         {
             explDelayTimer = new DownTimer(delayBetweenExplosions);
 
-            explDelayTimer.OnTimerEnd += CreateOnHitEffect;
+            explDelayTimer.OnTimerEnd += ProcessOnHitEffect;
             
             explDelayTimer.OnTimerEnd += () =>
             {
@@ -75,13 +75,11 @@ namespace WizardGame.Combat_System
             Debug.Log(explDelayTimer.TryTick(Time.deltaTime));
         }
 
-        public void CreateOnHitEffect()
+        public void ProcessOnHitEffect()
         {
             var explClone = GenerateAndProcessExplosion(explPos);
             
-            Debug.Log("wht");
-            
-            explClone.Init(actualExplosionDmg, actualRadius, SpellElement.ElementColor
+            explClone.Init(actualExplosionDmg, actualRadius, SpellElement
                 , Caster, ref colliderHits);
         }
 
@@ -90,7 +88,7 @@ namespace WizardGame.Combat_System
             var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
             onHitClone.transform.localScale = Vector3.one * actualRadius;
 
-            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement.ElementColor, Caster, ref colliderHits);
+            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, Caster, ref colliderHits);
 
             return onHitClone;
         }

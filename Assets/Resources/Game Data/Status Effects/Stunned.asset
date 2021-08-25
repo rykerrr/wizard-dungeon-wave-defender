@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stunned
   m_EditorClassIdentifier: 
   name: Stunned
+  interactions: []
   duration: 15
   movementSpeedMultuiplier: 0
   damagePerFrame: 0
-  stackType: 2
+  stackType: 1

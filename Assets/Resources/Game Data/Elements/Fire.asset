@@ -22,3 +22,4 @@ MonoBehaviour:
     healStrengthMult: 1
     buffStrengthMult: 1
     travelSpeedMult: 0.7
+  statusEffectToApply: {fileID: 11400000, guid: b85be529b39271d4fa60b8872eaf4732, type: 2}

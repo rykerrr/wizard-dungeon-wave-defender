@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f8c76b933e48ac834c2f74f725e8a6, type: 3}
+  m_Name: Target
+  m_EditorClassIdentifier: 
+  lifeValueExpMultiplier: 1
+  defaultEntityStats:
+  - name: Max Health
+    statType: {fileID: 11400000, guid: cab23c91775ef4248bf7dd8b7c7783c4, type: 2}
+    growthRate: 3
+  - name: Vigor
+    statType: {fileID: 11400000, guid: 1048c5b83fe312d4d9f216ea1de7f75a, type: 2}
+    growthRate: 3
+  - name: Resolve
+    statType: {fileID: 11400000, guid: 1908570cba78cce488d644522c72aaed, type: 2}
+    growthRate: 3

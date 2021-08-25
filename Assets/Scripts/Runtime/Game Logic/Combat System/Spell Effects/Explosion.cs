@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System;
+using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System.Spell_Effects
@@ -10,14 +12,14 @@ namespace WizardGame.Combat_System.Spell_Effects
         [SerializeField] private FadeMeshRendererOverLifetime fader = default;
     
         private GameObject caster;
+        private Element spellElement;
         
         private Collider[] colliderHits;
         private float explosionRadius;
         private int explosionDamage;
-
-        private float objLifetime = 0f;
-
-        public void Init(int explosionDamage, float explosionRadius, Color explColor, GameObject caster
+        
+        // Object's lifetime is handled by it's animation currently
+        public void Init(int explosionDamage, float explosionRadius, Element spellElement, GameObject caster
             , ref Collider[] colliderHits)
         {
             this.explosionDamage = explosionDamage;
@@ -25,7 +27,8 @@ namespace WizardGame.Combat_System.Spell_Effects
             this.caster = caster;
             this.colliderHits = colliderHits;
 
-            fader.CustomColor = explColor;
+            this.spellElement = spellElement;
+            fader.CustomColor = spellElement.ElementColor;
             
             ProcessExplosion();
         }
@@ -33,7 +36,32 @@ namespace WizardGame.Combat_System.Spell_Effects
         protected virtual void ProcessExplosion()
         {
             var healthSystemBehaviours = GetHealthSystemsInRadiusIgnoreCaster();
-            healthSystemBehaviours.ForEach(x => x.HealthSystem.TakeDamage(explosionDamage, caster));
+
+            foreach (var healthObj in healthSystemBehaviours)
+            {
+                int dmg = TryApplyStatusEffect(healthObj);
+
+                healthObj.HealthSystem.TakeDamage(dmg, caster);
+            }
+        }
+        
+        private int TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
+        {
+            var statEffData = spellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData
+            , caster, hitImpactTarget.gameObject);
+            
+            var statEffHandler = hitImpactTarget.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                return (int)Math.Round(explosionDamage * buff.Effectiveness);
+            }
+
+            return explosionDamage;
         }
         
         // called by animation event

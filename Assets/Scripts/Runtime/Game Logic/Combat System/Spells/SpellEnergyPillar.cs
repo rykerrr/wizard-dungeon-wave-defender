@@ -57,7 +57,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
     {
         swTimer = new DownTimer(swDelay);
         
-        swTimer.OnTimerEnd += CreateOnHitEffect;
+        swTimer.OnTimerEnd += ProcessOnHitEffect;
 
         swTimer.OnTimerEnd += () =>
         {
@@ -78,13 +78,13 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
         swTimer?.TryTick(Time.deltaTime);
     }
 
-    public void CreateOnHitEffect()
+    public void ProcessOnHitEffect()
     {
         var swClone = Instantiate(pillarShockwaveEffect, transform.position, Quaternion.identity);
         
         swClone.transform.up = transform.up;
         
-        swClone.Init(actualSwDamage, swExtents, SpellElement.ElementColor, Caster, ref swHitColliders);
+        swClone.Init(actualSwDamage, swExtents, SpellElement, Caster, ref swHitColliders);
     }
 
     public void ApplyBuff(params StatsSystemBehaviour[] targets)

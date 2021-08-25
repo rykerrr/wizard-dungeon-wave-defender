@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using WizardGame.Combat_System;
+using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 
@@ -58,7 +60,7 @@ namespace WizardGame.Combat_System
             rb.velocity *= 1.05f;
         }
 
-        public void CreateOnHitEffect()
+        public void ProcessOnHitEffect()
         {
             #if UNITY_EDITOR
                 Debug.Log($"Object {gameObject.name} owned by {caster.name} hit {collisionHit}"); 
@@ -66,14 +68,36 @@ namespace WizardGame.Combat_System
             
             var explClone = GenerateAndProcessExplosion(transform.position);
 
-            HealthSystemBehaviour hitImpactTarget;
-
-            if (!ReferenceEquals(hitImpactTarget = collisionHit.GetComponent<HealthSystemBehaviour>(), null))
+            HealthSystemBehaviour hitImpactTarget = default;
+            var targExist = !ReferenceEquals(hitImpactTarget = collisionHit.GetComponent<HealthSystemBehaviour>()
+                , null);
+            
+            if (targExist)
             {
+                TryApplyStatusEffect(hitImpactTarget);
+
                 hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, caster);
             }
             
             Destroy(gameObject);
+        }
+
+        private void TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
+        {
+            var statEffData = SpellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, hitImpactTarget.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = hitImpactTarget.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
+            }
         }
 
         private Explosion GenerateAndProcessExplosion(Vector3 pos)
@@ -81,8 +105,10 @@ namespace WizardGame.Combat_System
             var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
             onHitClone.transform.localScale = Vector3.one * explosionRadius;
 
-            onHitClone.Init(actualExplosionDmg, explosionRadius, SpellElement.ElementColor, Caster, ref colliderHits);
-            
+            // increase damage if specific element (status effect interaction)
+            onHitClone.Init(actualExplosionDmg, explosionRadius, SpellElement
+                , Caster, ref colliderHits);
+
             return onHitClone;
         }
 
@@ -92,7 +118,7 @@ namespace WizardGame.Combat_System
 
             if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
 
-            CreateOnHitEffect();
+            ProcessOnHitEffect();
         }
         
         public void OnCollisionEnter(Collision other)
@@ -101,7 +127,7 @@ namespace WizardGame.Combat_System
         
             if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
             
-            CreateOnHitEffect();
+            ProcessOnHitEffect();
         }
     }
 }
