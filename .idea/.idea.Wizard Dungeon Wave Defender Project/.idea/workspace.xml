@@ -20,20 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FrozenStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FrozenStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Utilities/Range.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/treeview/TimelineTreeView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Events/InputEventTrace.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthDisplayUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Runtime/Core/CinemachineDebug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/Linux/LinuxSupport.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,7 +131,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDB.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDB.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
@@ -177,7 +169,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" />
@@ -189,6 +180,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthDisplayUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -317,7 +310,7 @@
       <workItem from="1629815527985" duration="7572000" />
       <workItem from="1629881482157" duration="6778000" />
       <workItem from="1629899373344" duration="9027000" />
-      <workItem from="1629997268616" duration="6791000" />
+      <workItem from="1629997268616" duration="10165000" />
     </task>
     <servers />
   </component>

@@ -14,6 +14,7 @@ namespace WizardGame.Health_System
         
         // GameObject as falling rocks don't need to directly be living beings
         public event Action<GameObject> onDeathEvent = delegate { };
+        public event Action<int, int> onHealthChange = delegate { };
         
         private DownTimer healTimer = default;
         private StatsSystem statsSys = default;
@@ -71,6 +72,8 @@ namespace WizardGame.Health_System
                 // Exp gain functions by last hit due to this
                 Death(damageSource);
             }
+            
+            onHealthChange?.Invoke(curHealth, maxHealthStat.ActualValue);
         }
 
         public void Heal(int hp, object source)
@@ -81,6 +84,8 @@ namespace WizardGame.Health_System
             }
             
             curHealth = Mathf.Clamp(curHealth + hp, 0, maxHealthStat.ActualValue);
+            
+            onHealthChange?.Invoke(curHealth, maxHealthStat.ActualValue);
         }
         
         private void Death(GameObject source = null)
