@@ -8,7 +8,8 @@ namespace WizardGame.Level_System
     public class LevelSystemBehaviour : MonoBehaviour
     {
         [SerializeField] private StatsSystemBehaviour statsSystem = default;
-        [SerializeField] private List<StatType> statTypesToGrow = new List<StatType>(); 
+        [SerializeField] private List<StatType> statTypesToGrow = new List<StatType>();
+        [SerializeField] private int startLevel = 30;
         
         private LevelSystem levelSystem = default;
 
@@ -48,6 +49,8 @@ namespace WizardGame.Level_System
                     sourceLvSystem.AddExp(lifeExpValue);
                 }
             };
+            
+            LevelSystem.AddExp(LevelSystem.CalculateTotalExpRequiredForLevel(startLevel));
         }
 
         private List<StatBase> GetRequiredStatsFromStatTypes()

@@ -17,4 +17,4 @@ MonoBehaviour:
   duration: 15
   movementSpeedMultuiplier: 0
   damagePerFrame: 0
-  stackType: 1
+  stackType: 0

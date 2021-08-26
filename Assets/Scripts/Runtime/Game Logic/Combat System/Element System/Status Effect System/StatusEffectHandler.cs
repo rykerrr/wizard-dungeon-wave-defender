@@ -78,13 +78,15 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 {
                     case StatusEffectStackType.IgnoreIfExists:
                     {
-                        Debug.Log("Status effect already exists, ignoring");
+                        Debug.Log("Status effect exists with IgnoreIfExists, ignoring");
                         Debug.Log("-------------------------------");
                         
                         break;
                     }
                     case StatusEffectStackType.DurationExtend:
                     {
+                        // No point in grabbing anything but the first element as it can't stack in the first place
+                        
                         var statEffToExt = currentStatusEffects[statEffType][0];
                         
                         Debug.Log("Extending duration, prev duration: "
@@ -110,6 +112,27 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                         AddRemovalTimerForStatus(statEffType, statEff, duration);
                         
                         Debug.Log("New stack count: " + currentStatusEffects[statEffType].Count);
+                        Debug.Log("-------------------------------");
+                        
+                        break;
+                    }
+                    case StatusEffectStackType.DurationRefresh:
+                    {
+                        // No point in grabbing anything but the first element as it can't stack in the first place
+
+                        var statEffToRef = currentStatusEffects[statEffType][0];
+                        
+                        Debug.Log("Refreshing duration, prev duration: " + 
+                                  TimerTickerSingleton.Instance.GetTimer(statEffToRef).Time);
+                        
+                        if (!RefreshStatusEffectDuration(statEffToRef))
+                        {
+                            // Duration wasn't extended for whatever reason, most likely an error
+                            return StatusEffectAddResult.Failed;
+                        }
+                        
+                        Debug.Log("New duration: " 
+                                  + TimerTickerSingleton.Instance.GetTimer(statEffToRef).Time);
                         Debug.Log("-------------------------------");
                         
                         break;
@@ -228,6 +251,25 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
             TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
         }
+
+        private bool RefreshStatusEffectDuration(StatusEffect statEff)
+        {
+            var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
+                .GetTimer(statEff);
+
+            if (statusEffTimer == null)
+            {
+                Debug.LogError("We have a problem chief");
+                Debug.Break();
+
+                return false;
+            }
+            
+            statusEffTimer.Reset();
+
+            return true;
+        }
+        
         
         private bool ExtendStatusEffectDuration(float duration, StatusEffect statEff)
         {
@@ -243,6 +285,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             }
 
             statusEffTimer.SetNewTime(statusEffTimer.Time + duration);
+            
             return true;
         }
 
@@ -262,7 +305,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 mv.ExternalMult = mult;
             }
         }
-        
+
         // Called ForceRemove as potions and spells would technically FORCE the removal of the status effects
         // So would status effects canceling each other out such as water and fire canceling each other out
         public void ForceRemoveStatusEffect(StatusEffectData statEffType, StatusEffect statEff)

@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5892746305599960707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d61ba60d7529b4748b64d801e8032605, type: 3}
+  m_Script: {fileID: 11500000, guid: 356c3c5668c4bf74cb26b7d797da59df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castCooldown: 15
-  castingSpeed: 0
+  castCooldown: 1
+  timeToCast: 1
   spellPrefab: {fileID: 7403320579617459175, guid: 84ba5e6897bb58349b1c0900932c4b10, type: 3}
 --- !u!114 &5892746305599960710
 MonoBehaviour:

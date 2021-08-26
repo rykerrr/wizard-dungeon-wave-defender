@@ -41,17 +41,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5391195919196372970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecd72f48852468419f18959dfa0864a, type: 3}
+  m_Script: {fileID: 11500000, guid: 91add51bfc33edd49865100124954cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castingSpeed: 1
-  cooldownId: 6
   castCooldown: 3
+  timeToCast: 3
+  spellPrefab: {fileID: 0}
   statModifier:
-    type: 0
-    value: 0
-  keyName: Resolve
-  statModifierDuration: 8
+    type: 100
+    value: 5
+  keyName: Intelligence
+  statModifierDurationMult: 1.2
 --- !u!114 &5391195919196372972
 MonoBehaviour:
   m_ObjectHideFlags: 0

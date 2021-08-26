@@ -3,6 +3,7 @@
     public enum StatusEffectStackType
     {
         IgnoreIfExists,
+        DurationRefresh,
         DurationExtend,
         FullStack,
         DurationExtendAndFullStack

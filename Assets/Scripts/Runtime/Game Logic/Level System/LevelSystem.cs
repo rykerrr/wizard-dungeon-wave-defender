@@ -57,7 +57,7 @@ namespace WizardGame.Level_System
                                                                    + 2 * curLevel + 1);
         }
 
-        private static int CalculateTotalExpRequiredForLevel(int level)
+        public static int CalculateTotalExpRequiredForLevel(int level)
         {
             var expSum = 0;
 

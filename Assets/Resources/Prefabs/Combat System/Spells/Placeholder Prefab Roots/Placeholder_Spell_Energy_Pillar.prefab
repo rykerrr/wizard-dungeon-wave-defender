@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellElement: {fileID: 0}
-  shockwaveEffect: {fileID: 6310579541140641151, guid: 189e641d340564b419c097b1c8f7bc34, type: 3}
+  pillarShockwaveEffect: {fileID: 6310579541140641151, guid: 189e641d340564b419c097b1c8f7bc34, type: 3}
   amnOfShockwavesToCast: 5
   maxShockwaveTargets: 15
   avgShockwaveDmg: 5

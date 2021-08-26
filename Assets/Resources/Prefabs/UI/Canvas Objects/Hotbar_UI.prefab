@@ -498,6 +498,10 @@ PrefabInstance:
       propertyPath: m_FlexibleHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
 --- !u!224 &500110003971088507 stripped
@@ -646,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_FlexibleHeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -796,6 +804,10 @@ PrefabInstance:
       propertyPath: m_FlexibleHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
 --- !u!224 &3058052082601002642 stripped
@@ -944,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_FlexibleHeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1094,6 +1110,10 @@ PrefabInstance:
       propertyPath: m_FlexibleHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
 --- !u!224 &3941891819088623965 stripped
@@ -1242,6 +1262,10 @@ PrefabInstance:
     - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_FlexibleHeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1392,6 +1416,10 @@ PrefabInstance:
       propertyPath: m_FlexibleHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
 --- !u!224 &5343901887611405273 stripped
@@ -1540,6 +1568,10 @@ PrefabInstance:
     - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_FlexibleHeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
@@ -1690,6 +1722,10 @@ PrefabInstance:
       propertyPath: m_FlexibleHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
 --- !u!224 &6717563323272277898 stripped
@@ -1838,6 +1874,10 @@ PrefabInstance:
     - target: {fileID: 3942469051145594925, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
       propertyPath: m_FlexibleHeight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009009327529320140, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
+      propertyPath: m_Name
+      value: GameObject_CooldownDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d865e392711c241869a61a5cf5a2c2, type: 3}
