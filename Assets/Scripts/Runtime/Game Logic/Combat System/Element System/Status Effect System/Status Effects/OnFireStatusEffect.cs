@@ -9,18 +9,21 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         private int tickDamage;
         
         private HealthSystem targetHealthSys;
+        private Element element;
 
         public int TickDamage => tickDamage;
 
-        public override void Init(GameObject caster, GameObject target, StatusEffectData data)
+        public override void Init(GameObject caster, GameObject target, Element element, StatusEffectData data)
         {
-            base.Init(caster, target, data);
+            base.Init(caster, target, element, data);
 
             tickDamage = data.DamagePerFrame;
+            this.element = element;
             
             Debug.Log(caster + " | " + target);
             
             targetHealthSys = target.GetComponent<HealthSystemBehaviour>().HealthSystem;
+            
             Debug.Log(targetHealthSys);
         }
 
@@ -29,7 +32,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
              // Smack this on a timer?
              // Add some particle emission on the timer too?
             
-             targetHealthSys.TakeDamage(tickDamage, caster);
+             targetHealthSys.TakeDamage(tickDamage, element, caster);
         }
 
         public override void OnRemove()

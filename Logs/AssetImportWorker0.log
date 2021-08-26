@@ -3173,3 +3173,47 @@ Received Import Request.
 Start importing Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs using Guid(126921907070af44daef5d5319e8564e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3cfd6bb3ad962174259f54655ce010') in 0.002819 seconds
   Import took 0.009587 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008017 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.230 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1778 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.3 MB.
+System memory in use after: 179.4 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2596.
+Total: 2.820290 ms (FindLiveObjects: 0.253357 ms CreateObjectMapping: 0.081259 ms MarkObjects: 2.450660 ms  DeleteObjects: 0.032702 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007984 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.247 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1778 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.3 MB.
+System memory in use after: 179.4 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2599.
+Total: 3.162504 ms (FindLiveObjects: 0.240805 ms CreateObjectMapping: 0.079938 ms MarkObjects: 2.808068 ms  DeleteObjects: 0.031711 ms)
+

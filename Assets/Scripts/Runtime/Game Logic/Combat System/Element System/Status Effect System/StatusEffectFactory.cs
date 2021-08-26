@@ -40,12 +40,12 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         }
 
         public static StatusEffect CreateStatusEffect(StatusEffectData statEffData, GameObject caster,
-            GameObject target)
+            Element element, GameObject target)
         {
             var statEff = CreateStatusEffect(statEffData);
             if (statEff == null) return null;
             
-            statEff.Init(caster, target, statEffData);
+            statEff.Init(caster, target, element, statEffData);
 
             return statEff;
         }

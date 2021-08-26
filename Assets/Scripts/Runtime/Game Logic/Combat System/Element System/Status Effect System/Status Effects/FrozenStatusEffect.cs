@@ -7,11 +7,11 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
     {
         private readonly List<MonoBehaviour> monoBehavs = new List<MonoBehaviour>();
         
-        public override void Init(GameObject caster, GameObject target, StatusEffectData data)
+        public override void Init(GameObject caster, GameObject target, Element element, StatusEffectData data)
         {
             Debug.Log("Stunned newb");
             
-            base.Init(caster, target, data);
+            base.Init(caster, target, element, data);
             
             monoBehavs.Add(target.GetComponent<SpellCastHandler>());
 

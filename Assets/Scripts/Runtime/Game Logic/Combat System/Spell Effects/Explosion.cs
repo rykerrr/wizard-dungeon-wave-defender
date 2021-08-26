@@ -41,7 +41,7 @@ namespace WizardGame.Combat_System.Spell_Effects
             {
                 int dmg = TryApplyStatusEffect(healthObj);
 
-                healthObj.HealthSystem.TakeDamage(dmg, caster);
+                healthObj.HealthSystem.TakeDamage(dmg, spellElement, caster);
             }
         }
         
@@ -49,7 +49,7 @@ namespace WizardGame.Combat_System.Spell_Effects
         {
             var statEffData = spellElement.StatusEffectToApply;
             var statEff = StatusEffectFactory.CreateStatusEffect(statEffData
-            , caster, hitImpactTarget.gameObject);
+            , caster, spellElement, hitImpactTarget.gameObject);
             
             var statEffHandler = hitImpactTarget.StatusEffectHandler;
             

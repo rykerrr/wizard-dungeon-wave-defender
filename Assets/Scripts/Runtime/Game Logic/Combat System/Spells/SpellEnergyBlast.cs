@@ -76,7 +76,7 @@ namespace WizardGame.Combat_System
             {
                 TryApplyStatusEffect(hitImpactTarget);
 
-                hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, caster);
+                hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, SpellElement, caster);
             }
             
             Destroy(gameObject);
@@ -86,7 +86,7 @@ namespace WizardGame.Combat_System
         {
             var statEffData = SpellElement.StatusEffectToApply;
             var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
-                caster, hitImpactTarget.gameObject);
+                caster, SpellElement, hitImpactTarget.gameObject);
 
             // Delegate this over to HealthSystemBehaviour
             var statEffHandler = hitImpactTarget.StatusEffectHandler;

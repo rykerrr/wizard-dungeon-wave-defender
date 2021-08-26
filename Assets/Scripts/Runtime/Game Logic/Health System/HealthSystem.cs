@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 using WizardGame.Utility.Timers;
 
@@ -60,7 +61,7 @@ namespace WizardGame.Health_System
             var ticked = healTimer.TryTick(Time.deltaTime);
         }
 
-        public void TakeDamage(int dmg, GameObject damageSource = null)
+        public void TakeDamage(int dmg, Element damageElement, GameObject damageSource = null)
         {
             curHealth = Mathf.Clamp(curHealth - dmg, 0, maxHealthStat.ActualValue);
             healTimer.Reset();

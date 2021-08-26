@@ -338,13 +338,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         #region debug
         [Header("Debug data")]
         [SerializeField] private StatusEffectData debugStatEffData = default;
+        [SerializeField] private Element elementOfStatEff = default;
         [SerializeField] private List<StatusEffect> debugPrevAddedStatusEffects = new List<StatusEffect>();
         
         [ContextMenu("Add given status effect")]
         public void AddStatusGivenEffect()
         {
             var statEff = StatusEffectFactory.CreateStatusEffect(debugStatEffData);
-            statEff.Init(gameObject, gameObject, debugStatEffData);
+            statEff.Init(gameObject, gameObject, elementOfStatEff, debugStatEffData);
 
             var entryExists = debugPrevAddedStatusEffects.Contains(statEff);
             if (entryExists && (statEff.StackType == StatusEffectStackType.FullStack ||
