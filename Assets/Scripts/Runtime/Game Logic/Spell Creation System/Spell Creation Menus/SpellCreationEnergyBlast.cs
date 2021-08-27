@@ -1,17 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using WizardGame.Combat_System;
-using WizardGame.Item_System;
-using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
 
 namespace WizardGame.Spell_Creation
 {
     public class SpellCreationEnergyBlast : SpellCreationMenuBase
     {
+        [Header("Spell creation helper data")]
+        [SerializeField] private SpellCreationHandler spellCreationHandler = default;
+        [SerializeField] private UnityEvent onSpellCreatedSelectThis = default;
+        
+        [Header("Spell data")]        
         [SerializeField] private TextMeshProUGUI impactDamageLabel = default;
         [SerializeField] private TextMeshProUGUI explosionDamageLabel = default;
 
@@ -21,6 +22,22 @@ namespace WizardGame.Spell_Creation
         public override SpellBookItem SpellFoundation => baseItem;
         public override BaseSpellCastData Data => data;
 
+        protected override void Awake()
+        {
+            base.Awake();
+
+            spellCreationHandler.onSpellCreated += (spellDataType) =>
+            {
+                if (spellDataType != data.GetType()) return;
+                
+                data = new EnergyBlastData(data);
+                
+                onSpellCreatedSelectThis?.Invoke();
+                
+                UpdateLabels();
+            };
+        }
+        
         public void InputField_SetAmount(string amn)
         {
             if (int.TryParse(amn, out int res))

@@ -67,6 +67,15 @@ namespace WizardGame.Combat_System
             }
         }
 
+        public DirectedEnergyExplosionData() { }
+
+        public DirectedEnergyExplosionData(DirectedEnergyExplosionData data)
+        {
+            ExplosionAmount = data.ExplosionAmount;
+            ExplosionSize = data.ExplosionSize;
+            Location = data.Location;
+        }
+        
         private int CalculateExplosionDamage()
         {
             var retVal = (int)Math.Round(3f / explosionAmount + 10f / explosionSize) / (int)location;

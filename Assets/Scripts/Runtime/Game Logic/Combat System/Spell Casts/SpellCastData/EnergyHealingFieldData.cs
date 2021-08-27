@@ -60,6 +60,15 @@ namespace WizardGame.Combat_System
             }
         }
         
+        public EnergyHealingFieldData() { }
+
+        public EnergyHealingFieldData(EnergyHealingFieldData data)
+        {
+            TickAmount = data.TickAmount;
+            FieldSize = data.FieldSize;
+            HealStrength = data.HealStrength;
+        }
+        
         public int CalculateTickHeal()
         {
             var retVal = (int) Math.Round(2f / (healStrength + tickAmount) + 3f / fieldSize);

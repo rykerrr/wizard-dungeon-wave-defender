@@ -75,6 +75,15 @@ namespace WizardGame.Combat_System
             }
         }
 
+        public EnergyBlastData() { }
+        
+        public EnergyBlastData(EnergyBlastData data)
+        {
+            BlastAmount = data.BlastAmount;
+            ImpactSize = data.ImpactSize;
+            ExplosionSize = data.ExplosionSize;
+        }
+
         private void UpdateDamageValues()
         {
             baseImpactDamage = (int) Math.Round(10f / spellSize + 5f / BlastAmount);

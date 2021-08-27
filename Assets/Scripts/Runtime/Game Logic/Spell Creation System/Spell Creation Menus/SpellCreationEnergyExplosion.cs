@@ -2,15 +2,19 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using WizardGame.Combat_System;
-using WizardGame.Item_System;
-using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
 
 namespace WizardGame.Spell_Creation
 {
     public class SpellCreationEnergyExplosion : SpellCreationMenuBase
     {
+        [Header("Spell creation helper data")]
+        [SerializeField] private SpellCreationHandler spellCreationHandler = default;
+        [SerializeField] private UnityEvent onSpellCreatedSelectThis = default;
+        
+        [Header("Spell data")]
         [SerializeField] private TextMeshProUGUI explosionDamageLabel = default;
         
         [SerializeField] private TMP_Dropdown locationDropdown = default;
@@ -28,6 +32,17 @@ namespace WizardGame.Spell_Creation
             
             if (!loadDropdownOptionsOnAwake) return;
             LoadDropdownOptions();
+            
+            spellCreationHandler.onSpellCreated += (spellDataType) =>
+            {
+                if (spellDataType != data.GetType()) return;
+                
+                data = new DirectedEnergyExplosionData(data);
+                
+                onSpellCreatedSelectThis?.Invoke();
+                
+                UpdateLabels();
+            };
         }
 
         private void LoadDropdownOptions()

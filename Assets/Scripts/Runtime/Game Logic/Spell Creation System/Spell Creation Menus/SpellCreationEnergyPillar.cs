@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using WizardGame.Combat_System;
 using WizardGame.Item_System.Items;
 
@@ -10,6 +8,11 @@ namespace WizardGame.Spell_Creation
 {
     public class SpellCreationEnergyPillar : SpellCreationMenuBase
     {
+        [Header("Spell creation helper data")]
+        [SerializeField] private SpellCreationHandler spellCreationHandler = default;
+        [SerializeField] private UnityEvent onSpellCreatedSelectThis = default;
+        
+        [Header("Spell data")]
         [SerializeField] private TextMeshProUGUI shockwaveDamageLabel = default;
 
         [SerializeField] private SpellBookItem baseItem = default;
@@ -18,6 +21,22 @@ namespace WizardGame.Spell_Creation
         public override SpellBookItem SpellFoundation => baseItem;
         public override BaseSpellCastData Data => data;
 
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            spellCreationHandler.onSpellCreated += (spellDataType) =>
+            {
+                if (spellDataType != data.GetType()) return;
+                
+                data = new EnergyPillarData(data);
+                
+                onSpellCreatedSelectThis?.Invoke();
+                
+                UpdateLabels();
+            };
+        }
+        
         public void InputField_ShockwaveAmount(string amn)
         {
             if(int.TryParse(amn, out int res))

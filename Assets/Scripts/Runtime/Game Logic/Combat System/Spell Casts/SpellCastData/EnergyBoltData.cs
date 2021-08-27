@@ -63,6 +63,14 @@ namespace WizardGame.Combat_System
             }
         }
 
+        public EnergyBoltData() { }
+
+        public EnergyBoltData(EnergyBoltData data)
+        {
+            ImpactSize = data.ImpactSize;
+            ExplosionSize = data.ExplosionSize;
+        }
+        
         private void UpdateDamageValues()
         {
             // / 2 for spell type, only makes sense given it's instantaneous

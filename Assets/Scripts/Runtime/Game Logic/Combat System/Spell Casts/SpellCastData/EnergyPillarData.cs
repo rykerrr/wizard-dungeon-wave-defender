@@ -61,6 +61,15 @@ namespace WizardGame.Combat_System
             }
         }
         
+        public EnergyPillarData() { }
+
+        public EnergyPillarData(EnergyPillarData data)
+        {
+            ShockwaveAmount = data.ShockwaveAmount;
+            SpellSize = data.SpellSize;
+            DelayBetweenWaves = data.DelayBetweenWaves;
+        }
+        
         private int CalculateSwDamage()
         {
             var retVal = (int)Math.Round(2f / shockwaveAmount + 1f / spellSize + 5f / delayBetweenWaves);

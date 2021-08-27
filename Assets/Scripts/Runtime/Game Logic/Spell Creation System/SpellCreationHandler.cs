@@ -20,6 +20,7 @@ namespace WizardGame.Spell_Creation
         private string spellName = default;
         
         public event Action<string> onDefaultSpellNameChanged = delegate { };
+        public event Action<Type> onSpellCreated = delegate { };
         
         public string SpellName
         {
@@ -134,10 +135,13 @@ namespace WizardGame.Spell_Creation
             
             var spellId = Guid.NewGuid();
 
-            data = (BaseSpellCastData)Activator.CreateInstance(data.GetType());
-
+            // data = (BaseSpellCastData) Activator.CreateInstance(data.GetType());
+            // will probably need to re-call SelectMenu in ChangeSpellCreationData
+            
             SpellName = "";
             UpdateDefaultSpellName();
+
+            onSpellCreated?.Invoke(data.GetType());
             
             return newItem;
         }

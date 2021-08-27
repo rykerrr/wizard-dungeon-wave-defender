@@ -49,6 +49,14 @@ namespace WizardGame.Combat_System
             }
         }
         
+        public TimedStatBuffData() { }
+
+        public TimedStatBuffData(TimedStatBuffData data)
+        {
+            StatType = data.StatType;
+            Duration = data.Duration;
+        }
+        
         private int CalculateBuffStrength()
         {
             var retVal = (int) Math.Round(3f / duration);
