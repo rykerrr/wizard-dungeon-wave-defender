@@ -137,17 +137,17 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                         
                         break;
                     }
-                    case StatusEffectStackType.DurationExtendAndFullStack:
+                    case StatusEffectStackType.DurationRefreshAndFullStack:
                     {
                         var statEffs = currentStatusEffects[statEffType];
                         
-                        Debug.Log("Extending duration and full stack, prev count:"
+                        Debug.Log("Refreshing duration and full stack, prev count:"
                                   + statEffs.Count + " , Prev dur of first element: " 
                                   + TimerTickerSingleton.Instance.GetTimer(statEffs[0]).Time);
                         
-                        foreach (var statEffToExt in statEffs)
+                        foreach (var statEffToRef in statEffs)
                         {
-                            if (!ExtendStatusEffectDuration(duration, statEffToExt))
+                            if (!RefreshStatusEffectDuration(statEffToRef))
                             {
                                 // Duration wasn't extended for whatever reason, most likely an error
                                 return StatusEffectAddResult.Failed;
@@ -155,6 +155,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                         }
 
                         statEffs.Add(statEff);
+                        AddRemovalTimerForStatus(statEffType, statEff, duration);
 
                         Debug.Log("New count: " + statEffs.Count + " , New dur of first element:"
                         + TimerTickerSingleton.Instance.GetTimer(statEffs[0]).Time);
@@ -248,7 +249,8 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 }
             };
 
-            timer.OnTimerEnd += () => TimerTickerSingleton.Instance.RemoveTimer(statusEffect);
+            timer.OnTimerEnd += () => Debug.Log("Removed: " + statusEffect + " : " + TimerTickerSingleton.Instance.RemoveTimer(statusEffect));
+            
             TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
         }
 
@@ -349,7 +351,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             var entryExists = debugPrevAddedStatusEffects.Contains(statEff);
             if (entryExists && (statEff.StackType == StatusEffectStackType.FullStack ||
-                statEff.StackType == StatusEffectStackType.DurationExtendAndFullStack))
+                statEff.StackType == StatusEffectStackType.DurationRefreshAndFullStack))
             {
                 debugPrevAddedStatusEffects.Add(statEff);
             }

@@ -1,16 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using WizardGame.Health_System;
 
-public class HealthDisplayUI : MonoBehaviour
+public class HealthBarDisplay : MonoBehaviour
 {
     [SerializeField] private HealthSystemBehaviour healthSysBehav = default;
     [SerializeField] private Image healthFillImg = default;
-    [SerializeField] private TextMeshProUGUI healthPercentText = default;
 
     [SerializeField] private Gradient hpColGradient = default;
     
@@ -19,6 +14,7 @@ public class HealthDisplayUI : MonoBehaviour
     private void Awake()
     {
         healthSysBehav.HealthSystem.onHealthChange += ProcessHealthChange;
+        
         healthFillImgRect = healthFillImg.rectTransform;
     }
 
@@ -32,8 +28,6 @@ public class HealthDisplayUI : MonoBehaviour
 
         var newCol = ColorFromGradient(hpFill);
         healthFillImg.color = newCol;
-
-        healthPercentText.text = $"{hpFill * 100:0.#}%";
     }
 
     private Color ColorFromGradient(float val)

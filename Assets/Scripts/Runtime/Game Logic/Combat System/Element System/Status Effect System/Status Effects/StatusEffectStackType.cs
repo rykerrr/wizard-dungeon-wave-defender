@@ -6,6 +6,6 @@
         DurationRefresh,
         DurationExtend,
         FullStack,
-        DurationExtendAndFullStack
+        DurationRefreshAndFullStack
     }
 }
