@@ -14,6 +14,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         [Header("Stat effect data")] 
         [SerializeField] private List<StatusEffectInteraction> interactions = 
             new List<StatusEffectInteraction>();
+        [SerializeField] private Sprite statusEffectIcon = default;
         [SerializeField] private float duration = default;
         [SerializeField] private float movementSpeedMultuiplier = 1f;
         [SerializeField] private int damagePerFrame = 0;
@@ -43,7 +44,8 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             get => name;
             private set => name = value;
         }
-        
+
+        public Sprite StatusEffectIcon => statusEffectIcon;
         public float Duration => duration;
         public float MovementSpeedMultiplier => movementSpeedMultuiplier;
         public int DamagePerFrame => damagePerFrame;

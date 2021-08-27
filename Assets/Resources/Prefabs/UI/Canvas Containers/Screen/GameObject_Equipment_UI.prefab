@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 2075623557351328507}
   - component: {fileID: 2075623557351328504}
   m_Layer: 0
-  m_Name: Equipment_UI
+  m_Name: GameObject_Equipment_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

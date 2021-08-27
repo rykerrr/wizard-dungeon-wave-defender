@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 2620037837498513913}
   - component: {fileID: 2620037837498513903}
   m_Layer: 0
-  m_Name: Hotbar_UI
+  m_Name: GameObject_Hotbar_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

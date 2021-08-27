@@ -16179,7 +16179,7 @@ GameObject:
   - component: {fileID: 7349998443200828182}
   - component: {fileID: 7349998443200828181}
   m_Layer: 0
-  m_Name: SpellBookCreation_UI
+  m_Name: GameObject_SpellBookCreation_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
