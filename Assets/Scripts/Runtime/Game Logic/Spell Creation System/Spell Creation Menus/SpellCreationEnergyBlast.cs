@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -29,6 +30,8 @@ namespace WizardGame.Spell_Creation
             spellCreationHandler.onSpellCreated += (spellDataType) =>
             {
                 if (spellDataType != data.GetType()) return;
+                
+                Debug.Log(Data + " | " + Activator.CreateInstance(Data.GetType()));
                 
                 data = new EnergyBlastData(data);
                 
