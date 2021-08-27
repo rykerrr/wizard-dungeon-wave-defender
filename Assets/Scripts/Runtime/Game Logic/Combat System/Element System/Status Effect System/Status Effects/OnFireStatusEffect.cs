@@ -4,7 +4,7 @@ using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class OnFireStatusEffect : StatusEffect
+    public class OnFireStatusEffect : StatusEffectBase
     {
         private int tickDamage;
         

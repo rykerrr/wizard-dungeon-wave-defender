@@ -54,7 +54,10 @@ namespace WizardGame.Item_System.UI
                 cdDisplay.UpdateData(ReferencedSlotItem);
                 
                 slotItemIconImage.sprite = ItemSlot.invItem.Icon;
-                itemQuantText.text = ItemSlot.Quantity > 0 ? ItemSlot.Quantity.ToString() : " ";
+                
+                Debug.Log(ItemSlot.Quantity + "  | " + ItemSlot.invItem);
+                itemQuantText.text = ItemSlot.Quantity > 1 ? ItemSlot.Quantity.ToString() : " ";
+                Debug.Log(itemQuantText.text);
             }
         }
 

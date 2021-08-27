@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class FrozenStatusEffect : StatusEffect
+    public class FrozenStatusEffect : StatusEffectBase
     {
         private readonly List<MonoBehaviour> monoBehavs = new List<MonoBehaviour>();
         

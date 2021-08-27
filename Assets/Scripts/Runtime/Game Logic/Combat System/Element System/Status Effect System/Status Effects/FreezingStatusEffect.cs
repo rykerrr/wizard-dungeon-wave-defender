@@ -2,7 +2,7 @@
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class FreezingStatusEffect : StatusEffect
+    public class FreezingStatusEffect : StatusEffectBase
     {
         public override void Tick()
         {

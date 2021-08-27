@@ -125,7 +125,7 @@ namespace WizardGame.Spell_Creation
             
             var newItem = (SpellBookItem) ScriptableObject.CreateInstance(spellFoundation.GetType());
             
-            newItem.Init(SpellName, spellFoundation.Icon);
+            newItem.Init(SpellName, SpellElement.ElementSprite);
             newItem.InitCooldown(spellFoundation.CooldownDuration);
             newItem.Init(spellFoundation.Rarity, spellFoundation.SellPrice, spellFoundation.MaxStack);
             newItem.Init(spellFoundation.SpellCastPrefab, spellFoundation.SpellCirclePrefab, data

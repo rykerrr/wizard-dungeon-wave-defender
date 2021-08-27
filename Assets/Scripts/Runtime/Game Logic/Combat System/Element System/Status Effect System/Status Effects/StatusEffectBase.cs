@@ -5,7 +5,7 @@ using WizardGame.Utility.Timers;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public abstract class StatusEffect
+    public abstract class StatusEffectBase
     {
         protected GameObject caster;
         protected GameObject target;

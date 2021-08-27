@@ -11,14 +11,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         [SerializeField] private TextMeshProUGUI statEffCount = default;
         [SerializeField] private Image icon = default;
         
-        private readonly List<StatusEffect> statusEffects = new List<StatusEffect>();
+        private readonly List<StatusEffectBase> statusEffects = new List<StatusEffectBase>();
 
         public void UpdateImageIcon(Sprite sprite)
         {
             icon.sprite = sprite;
         }
         
-        public void AddStatusEffect(StatusEffect statusEffect)
+        public void AddStatusEffect(StatusEffectBase statusEffect)
         {
             statusEffects.Add(statusEffect);
 
@@ -34,7 +34,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             }
         }
 
-        public bool RemoveStatusEffect(StatusEffect statusEffect)
+        public bool RemoveStatusEffect(StatusEffectBase statusEffect)
         {
             statusEffects.Remove(statusEffect);
             

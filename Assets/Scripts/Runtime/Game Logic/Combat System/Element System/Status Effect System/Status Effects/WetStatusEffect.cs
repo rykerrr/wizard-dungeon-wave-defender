@@ -1,6 +1,6 @@
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class WetStatusEffect : StatusEffect
+    public class WetStatusEffect : StatusEffectBase
     {
         public override void Tick()
         {

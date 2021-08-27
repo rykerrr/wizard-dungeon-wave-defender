@@ -32,14 +32,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             // DumpStatusEffectData();
         }
 
-        public static StatusEffect CreateStatusEffect(StatusEffectData statEffData)
+        public static StatusEffectBase CreateStatusEffect(StatusEffectData statEffData)
         {
             if (!statusDataTypes.ContainsKey(statEffData)) return null;
 
-            return (StatusEffect) Activator.CreateInstance(statusDataTypes[statEffData]);
+            return (StatusEffectBase) Activator.CreateInstance(statusDataTypes[statEffData]);
         }
 
-        public static StatusEffect CreateStatusEffect(StatusEffectData statEffData, GameObject caster,
+        public static StatusEffectBase CreateStatusEffect(StatusEffectData statEffData, GameObject caster,
             Element element, GameObject target)
         {
             var statEff = CreateStatusEffect(statEffData);

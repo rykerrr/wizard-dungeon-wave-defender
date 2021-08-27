@@ -12,11 +12,11 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         [Header("References")] [SerializeField]
         private List<MovementModifierBehaviour> movements = new List<MovementModifierBehaviour>();
 
-        public event System.Action<StatusEffectData, StatusEffect> onStatEffAdded = delegate { };
-        public event System.Action<StatusEffectData, StatusEffect> onStatEffRemoved = delegate { };
+        public event System.Action<StatusEffectData, StatusEffectBase> onStatEffAdded = delegate { };
+        public event System.Action<StatusEffectData, StatusEffectBase> onStatEffRemoved = delegate { };
 
-        private Dictionary<StatusEffectData, List<StatusEffect>> currentStatusEffects =
-            new Dictionary<StatusEffectData, List<StatusEffect>>();
+        private Dictionary<StatusEffectData, List<StatusEffectBase>> currentStatusEffects =
+            new Dictionary<StatusEffectData, List<StatusEffectBase>>();
 
         private void Update()
         {
@@ -44,7 +44,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             return null;
         }
 
-        public StatusEffectAddResult AddStatusEffect(StatusEffectData statEffType, StatusEffect statEff, float duration
+        public StatusEffectAddResult AddStatusEffect(StatusEffectData statEffType, StatusEffectBase statEff, float duration
             , out StatusEffectInteraction buffInteraction)
         {
             buffInteraction = null;
@@ -174,7 +174,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 Debug.Log("Added new status effect: " + statEffType.Name);
                 Debug.Log("-------------------------------");
 
-                currentStatusEffects.Add(statEffType, new List<StatusEffect>() {statEff});
+                currentStatusEffects.Add(statEffType, new List<StatusEffectBase>() {statEff});
                 AddRemovalTimerForStatus(statEffType, statEff, duration);
 
                 onStatEffAdded?.Invoke(statEffType, statEff);
@@ -242,7 +242,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             return StatusEffectAddResult.Failed;
         }
 
-        private void AddRemovalTimerForStatus(StatusEffectData statusEffectType, StatusEffect statusEffect,
+        private void AddRemovalTimerForStatus(StatusEffectData statusEffectType, StatusEffectBase statusEffect,
             float duration)
         {
             var timer = new DownTimer(duration)
@@ -260,7 +260,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             TimerTickerSingleton.Instance.AddTimer(timer, statusEffect);
         }
 
-        private bool RefreshStatusEffectDuration(StatusEffect statEff)
+        private bool RefreshStatusEffectDuration(StatusEffectBase statEff)
         {
             var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
                 .GetTimer(statEff);
@@ -279,7 +279,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         }
 
 
-        private bool ExtendStatusEffectDuration(float duration, StatusEffect statEff)
+        private bool ExtendStatusEffectDuration(float duration, StatusEffectBase statEff)
         {
             var statusEffTimer = (DownTimer) TimerTickerSingleton.Instance
                 .GetTimer(statEff);
@@ -316,7 +316,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
         // Called ForceRemove as potions and spells would technically FORCE the removal of the status effects
         // So would status effects canceling each other out such as water and fire canceling each other out
-        public void ForceRemoveStatusEffect(StatusEffectData statEffType, StatusEffect statEff)
+        public void ForceRemoveStatusEffect(StatusEffectData statEffType, StatusEffectBase statEff)
         {
             RemoveStatusEffect(statEffType, statEff);
         }
@@ -344,7 +344,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             UpdateExternalMovementValue();
         }
 
-        private void RemoveStatusEffect(StatusEffectData key, StatusEffect statusEffect)
+        private void RemoveStatusEffect(StatusEffectData key, StatusEffectBase statusEffect)
         {
             if (currentStatusEffects.ContainsKey(key))
             {
@@ -371,7 +371,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         private StatusEffectData debugStatEffData = default;
 
         [SerializeField] private Element elementOfStatEff = default;
-        [SerializeField] private List<StatusEffect> debugPrevAddedStatusEffects = new List<StatusEffect>();
+        [SerializeField] private List<StatusEffectBase> debugPrevAddedStatusEffects = new List<StatusEffectBase>();
 
         [ContextMenu("Add given status effect")]
         public void AddStatusGivenEffect()

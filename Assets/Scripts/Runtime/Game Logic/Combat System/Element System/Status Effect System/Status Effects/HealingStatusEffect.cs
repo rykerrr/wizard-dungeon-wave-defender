@@ -3,7 +3,7 @@ using WizardGame.Health_System;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class HealingStatusEffect : StatusEffect
+    public class HealingStatusEffect : StatusEffectBase
     {
         private HealthSystem targetHealthSys;
         private int healPerTick = 0;

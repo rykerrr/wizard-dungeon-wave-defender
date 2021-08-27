@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wind
   m_EditorClassIdentifier: 
   name: Wind
-  elementSprite: {fileID: 0}
+  elementSprite: {fileID: 21300000, guid: b380be8c59b8efc4bb137bdeb5d07179, type: 3}
   elementColor: {r: 0.38587746, g: 0.5754717, b: 0.1764418, a: 1}
   elementSpellData:
     impactStrengthMult: 1
@@ -22,3 +22,4 @@ MonoBehaviour:
     healStrengthMult: 1
     buffStrengthMult: 1
     travelSpeedMult: 1.5
+  statusEffectToApply: {fileID: 0}

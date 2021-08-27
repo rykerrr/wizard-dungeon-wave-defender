@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pSys: {fileID: 6319391073321088634}
   waterPuddlePrefab: {fileID: 7533510952678227729, guid: c57cf78736f0f5949897a25839d29484, type: 3}
-  puddleSpawnChance: 10
+  puddleSpawnChance: 5
   puddlesCanSpawnOn:
     serializedVersion: 2
     m_Bits: 128

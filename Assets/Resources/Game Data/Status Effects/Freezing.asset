@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Freezing
   interactions:
   - {fileID: 11400000, guid: 6ce6a3fc748a3884b9fb86237c039d3f, type: 2}
+  statusEffectIcon: {fileID: 21300000, guid: 3bf820d0e65cd6d428c7f61fab308113, type: 3}
   duration: 6
   movementSpeedMultuiplier: 0.6
   damagePerFrame: 0

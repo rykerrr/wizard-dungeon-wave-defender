@@ -21,7 +21,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             statEffHandler.onStatEffRemoved += OnStatusEffectRemoved;
         }
 
-        private void OnStatusEffectAdded(StatusEffectData data, StatusEffect statEff)
+        private void OnStatusEffectAdded(StatusEffectData data, StatusEffectBase statEff)
         {
             if (existingListings.ContainsKey(data))
             {
@@ -38,7 +38,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             }
         }
 
-        private void OnStatusEffectRemoved(StatusEffectData data, StatusEffect statEff)
+        private void OnStatusEffectRemoved(StatusEffectData data, StatusEffectBase statEff)
         {
             if (!existingListings.ContainsKey(data)) return;
 

@@ -12,7 +12,15 @@ public class OnParticleCollissionCreateWaterPuddle : MonoBehaviour
     
     private List<ParticleCollisionEvent> collEvents = new List<ParticleCollisionEvent>();
 
-    private Random rand = new Random();
+    private Random rand = default;
+    
+    // TODO: Rewrite entire chance thingy to actually work better for chances
+    // E.g: 10% chance to spawn a puddle
+    
+    private void Awake()
+    {
+        rand = new Random((int)Time.realtimeSinceStartup);
+    }
     
     private void CreatePuddle(Vector3 pos, Vector3 upDir)
     {
@@ -22,7 +30,7 @@ public class OnParticleCollissionCreateWaterPuddle : MonoBehaviour
     
     private void OnParticleCollision(GameObject other)
     {
-        int nCollEvents = pSys.GetCollisionEvents(other, collEvents);
+        var nCollEvents = pSys.GetCollisionEvents(other, collEvents);
 
         var mask = puddlesCanSpawnOn.value;
         var layerInBitForm = 1 << other.layer;

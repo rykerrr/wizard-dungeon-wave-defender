@@ -5,7 +5,7 @@ using WizardGame.Movement.Position;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    public class StunnedStatusEffect : StatusEffect
+    public class StunnedStatusEffect : StatusEffectBase
     {
         private readonly List<MonoBehaviour> monoBehavs = new List<MonoBehaviour>();
         
