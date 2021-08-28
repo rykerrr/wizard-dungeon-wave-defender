@@ -19,12 +19,14 @@ namespace WizardGame.Tooltips
         
         protected RectTransform prevObj = default;
 
-        private void Update()
+        protected virtual void Update()
         {
             if (!popupObjTransform.gameObject.activeSelf) return;
             
             if (stayOnHoveredObj)
             {
+                Debug.Log("e " + prevObj);
+                
                 StayOnHoveredObject();
             }
             else
@@ -91,7 +93,7 @@ namespace WizardGame.Tooltips
             popupObjTransform.gameObject.SetActive(true);
         }
         
-        public void HideTooltip()
+        public virtual void HideTooltip()
         {
             popupObjTransform.gameObject.SetActive(false);
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   interactions:
   - {fileID: 11400000, guid: d850e0ca071ab2e42852acb2c3612f68, type: 2}
   statusEffectIcon: {fileID: 21300000, guid: e04ee0a8d6ff2b647a26835b307eba81, type: 3}
-  duration: 4
+  duration: 10
   movementSpeedMultuiplier: 1
   damagePerFrame: 1
   stackType: 3

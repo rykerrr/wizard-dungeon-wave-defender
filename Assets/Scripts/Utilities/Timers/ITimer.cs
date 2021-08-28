@@ -1,4 +1,6 @@
-﻿namespace WizardGame.Utility.Timers
+﻿using System;
+
+namespace WizardGame.Utility.Timers
 {
     public interface ITimer
     {

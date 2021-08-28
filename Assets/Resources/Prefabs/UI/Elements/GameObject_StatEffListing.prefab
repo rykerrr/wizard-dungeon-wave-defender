@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5190619313013642590}
   - component: {fileID: 5190619313013642589}
+  - component: {fileID: 8894932670319321972}
   m_Layer: 0
   m_Name: GameObject_StatEffListing
   m_TagString: Untagged
@@ -51,6 +52,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statEffCount: {fileID: 5190619313511245881}
   icon: {fileID: 5190619313063397933}
+--- !u!114 &8894932670319321972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190619313013642591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d81f52d94e724183d6bf64c943a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisListing: {fileID: 5190619313013642589}
 --- !u!1 &5190619313063397935
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +232,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.4
+  m_fontSize: 1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

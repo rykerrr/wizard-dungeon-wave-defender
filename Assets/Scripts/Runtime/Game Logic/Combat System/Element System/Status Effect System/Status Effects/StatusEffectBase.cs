@@ -7,15 +7,20 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
     public abstract class StatusEffectBase
     {
+        private string name = default;
+        
         protected GameObject caster;
         protected GameObject target;
         protected StatusEffectStackType stackType;
         protected float externalMultiplier = 1;
         protected Element statEffElement = default;
+
+        public string Name => name;
+        
         public GameObject Caster => caster;
         public GameObject Target => target;
         public StatusEffectStackType StackType => stackType;
-        
+
         public float MovementMultiplier { get; protected set; }
         public float ExternalMultiplier 
         { 
@@ -28,6 +33,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             this.caster = caster;
             this.target = target;
 
+            name = data.Name;
             stackType = data.StackType;
             MovementMultiplier = data.MovementSpeedMultiplier;
         }
