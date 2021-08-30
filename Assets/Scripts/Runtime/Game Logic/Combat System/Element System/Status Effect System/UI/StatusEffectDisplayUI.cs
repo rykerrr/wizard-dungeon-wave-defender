@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using WizardGame.Tooltips;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
@@ -8,11 +7,13 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
     {
         [Header("Functional references")]
         [SerializeField] private StatusEffectHandler statEffHandler = default;
-        [SerializeField] private StatusEffectListingUI listingPrefab = default;
+        [SerializeField] private StatusEffectListingUI listingPrefab = default; 
+        
+        [Tooltip("Keep at null for WorldUI, this injects the tooltip into the tooltip shower for each listing")] 
+        [SerializeField] private InjectTooltipIntoTooltipShower injector = default;
 
         [Header("UI references")] 
         [SerializeField] private Transform gridTransform;
-        [SerializeField] private StatusEffectListingTooltip tooltip = default;
         
         private readonly Dictionary<StatusEffectData, StatusEffectListingUI> existingListings
             = new Dictionary<StatusEffectData, StatusEffectListingUI>();
@@ -58,9 +59,12 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         {
             var listingClone = Instantiate(listingPrefab, gridTransform);
 
-            var tooltipShower = listingClone.GetComponent<ShowStatusEffectListingTooltip>();
-            tooltipShower.Init(tooltip);
-            
+            var injIsNull = ReferenceEquals(injector, null);
+            if (!injIsNull)
+            {
+                injector.TryInject(listingClone);
+            }
+
             return listingClone;
         }
     }

@@ -334,7 +334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSlotUI: {fileID: 1407084492970565923}
   parentForDrag: {fileID: 0}
-  tooltipPopup: {fileID: 0}
 --- !u!1 &2686152636249351574
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +345,7 @@ GameObject:
   - component: {fileID: 253111825828891669}
   - component: {fileID: 3942469051145594925}
   - component: {fileID: 1407084492970565923}
+  - component: {fileID: 694857333088285020}
   - component: {fileID: 1101439113506790675}
   m_Layer: 0
   m_Name: GameObject_HotbarSlot
@@ -413,6 +413,21 @@ MonoBehaviour:
   cdDisplay: {fileID: 3371916074393658982}
   owner: {fileID: 0}
   inventory: {fileID: 11400000, guid: 353164f307e241741ad78bf5f7ca44f4, type: 2}
+  referencedSlotSlotItem: {fileID: 0}
+--- !u!114 &694857333088285020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686152636249351574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290e412ca6075a14683ad7fbd5fd2c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlotUI: {fileID: 1407084492970565923}
+  tooltip: {fileID: 0}
 --- !u!114 &1101439113506790675
 MonoBehaviour:
   m_ObjectHideFlags: 0

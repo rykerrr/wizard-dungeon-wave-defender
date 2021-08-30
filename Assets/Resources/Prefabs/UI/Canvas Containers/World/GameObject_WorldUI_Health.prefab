@@ -613,6 +613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statEffHandler: {fileID: 0}
-  listingPrefab: {fileID: 5190619313013642589, guid: 4c15110b0bb6f2d44b405c922fa443f0, type: 3}
+  listingPrefab: {fileID: 5190619313013642589, guid: d65e542757e645b418e70b4524b5ac0e, type: 3}
+  injector: {fileID: 0}
   gridTransform: {fileID: 2915910577499558273}
-  tooltip: {fileID: 0}

@@ -9,12 +9,11 @@ using WizardGame.Tooltips;
 
 namespace WizardGame.Item_System.UI
 {
-    public abstract class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+    public abstract class ItemSlotUI : MonoBehaviour, IDropHandler
     {
         [SerializeField] protected Image slotItemIconImage = default;
         [SerializeField] protected TextMeshProUGUI itemQuantText = default;
         [SerializeField] protected CooldownDisplay cdDisplay = default;
-        [SerializeField] private ItemTooltipPopup tooltipPopup = default;
         
         [SerializeField] private Transform owner; // field is temporary until i figure out what file it
         // fits in best
@@ -57,22 +56,5 @@ namespace WizardGame.Item_System.UI
         public abstract void OnDrop(PointerEventData eventData);
 
         private void OnEnable() => UpdateSlotUi();
-
-        private void TryShowTooltip() => tooltipPopup.ShowTooltip(this);
-        private void TryHideTooltip() => tooltipPopup.HideTooltip();
-        
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            if (!ReferencedSlotItem || eventData.dragging) return;
-
-            TryShowTooltip();
-        }
-
-        public void OnPointerExit(PointerEventData eventData)
-        {
-            if (!ReferencedSlotItem) return;
-
-            TryHideTooltip();
-        }
     }
 }

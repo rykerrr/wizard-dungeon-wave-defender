@@ -21,17 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/OnFire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/OnFire.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Tooltip_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Tooltip_UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_Health.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_Health.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_PlayerHealth_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_PlayerHealth_UI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectListingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectListingUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/TooltipPopupBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/TooltipPopupBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/BaseTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/BaseTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/ITimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/ITimer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
@@ -94,11 +86,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.7/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/ShowStatTooltip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/0e/3174896a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/InjectTooltipIntoTooltipShower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellNameSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/D9ED5CA2-9A42-41B0-B24D-FAF65753B9D6/47/40abd997/MiscUtil.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,9 +137,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/FireBlastParticles.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/SetObjParentToSceneOnDisable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreatePuddle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ApplyWetOnCollision.cs" />
@@ -186,7 +177,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/ShowStatusEffectListingTooltip.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectListingUI.cs" />
@@ -194,6 +184,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/BaseTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/TooltipPopupBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/StatusEffectListingTooltip.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/InjectTooltipIntoTooltipShower.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/ShowStatTooltip.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/StatDisplayUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -325,7 +319,8 @@
       <workItem from="1629997268616" duration="11247000" />
       <workItem from="1630050052135" duration="10572000" />
       <workItem from="1630081502497" duration="1656000" />
-      <workItem from="1630152233060" duration="5249000" />
+      <workItem from="1630152233060" duration="5783000" />
+      <workItem from="1630309059069" duration="606000" />
     </task>
     <servers />
   </component>
