@@ -31,6 +31,8 @@ namespace WizardGame.Item_System.Items
         public Guid Id => id;
         public float CooldownDuration => cooldownDuration;
 
+		public HotbarItem() => sb = new StringBuilder();
+		
         public void Init(string name, Sprite icon)
         {
             this.name = name;
@@ -51,20 +53,34 @@ namespace WizardGame.Item_System.Items
 
         public abstract string GetInfoDisplayText();
 
-        public HotbarItem() => sb = new StringBuilder();
         
-        protected virtual void OnValidate()
-        {
-            var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
-            
-            name = Path.GetFileNameWithoutExtension(assetPath);
-        }
-        
-        public virtual void UseItem()
+		public virtual void UseItem()
         {
             itemUseEvent.Raise(this);
         }
+		
+		private void SetNameAsAssetFileName()
+		{
+            var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
+            
+            name = Path.GetFileNameWithoutExtension(assetPath);
+		}
+		
+        protected virtual void OnValidate()
+        {
+			SetNameAsAssetFileName();
+        }
+        
+        private void OnEnable()
+        {
+            EditorApplication.projectChanged += SetNameAsAssetFileName;
+        }
 
+        private void OnDisable()
+        {
+            EditorApplication.projectChanged -= SetNameAsAssetFileName;
+        }
+		
         public override string ToString()
         {
             // Can't figure out why StringBuilder isn't being initialized in the field, I assume it's due to the 
