@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.nika.contentresizer": {
+      "version": "https://github.com/rykerrr/com-nika-contentresizer.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "9a060aab855a8487d4a38daecf27d18c377f1090"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
