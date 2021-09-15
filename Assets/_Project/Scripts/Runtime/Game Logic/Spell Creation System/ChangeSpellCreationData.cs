@@ -10,6 +10,8 @@ namespace WizardGame.Spell_Creation
         [SerializeField] private SpellCreationHandler thisHandler;
         [SerializeField] private SpellCreationMenuBase thisMenu = default;
         [SerializeField] private Transform creationPanelsContainer = default;
+
+        public SpellCreationMenuBase ThisMenu => thisMenu;
         
         public void OnClick_SelectMenu()
         {

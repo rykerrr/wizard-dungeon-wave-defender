@@ -2630,10 +2630,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7688099183843187784}
   - component: {fileID: 7688099183843187792}
-  - component: {fileID: 7688099183843187798}
-  - component: {fileID: 7688099183843187788}
-  - component: {fileID: 7688099183843187795}
   - component: {fileID: 7688099183843187789}
+  - component: {fileID: 7688099183843187788}
+  - component: {fileID: 5816780043449606277}
+  - component: {fileID: 7688099183843187798}
+  - component: {fileID: 7688099183843187795}
   - component: {fileID: 7688099183843187794}
   - component: {fileID: 7688099183843187793}
   - component: {fileID: 7688099183843187799}
@@ -2753,59 +2754,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7688099183843187798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688099183843187785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0597486cba01b428ed871f4bee1ff4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talentOverviewUI: {fileID: 7688099183843187795}
-  hiddenTalentGrid: {fileID: 7688099182817521409}
-  showHiddenTalentButton: {fileID: 7688099183528578059}
-  hiddenTalentPrefab: {fileID: -5285984259558408008, guid: d5edc22f6ae761d4b81b884bbae0f81c, type: 3}
-  hiddenTalents:
-  - {fileID: 11400000, guid: 06f8395fc42266f44968c987cd874acd, type: 2}
-  - {fileID: 11400000, guid: 6ae0efe658d786c4eb290cf7e532ec57, type: 2}
-  - {fileID: 11400000, guid: 397e75fc18ee1054998a77ecf2b9d6bf, type: 2}
---- !u!114 &7688099183843187788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688099183843187785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91735ce106e4354b65da0df10cf236e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talentContainer: {fileID: 7688099181989826288}
-  points: 300
---- !u!114 &7688099183843187795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688099183843187785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebedc2a754334f6b95b0757987e27990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dynamicTalentHandler: {fileID: 7688099183843187788}
-  talentIconImage: {fileID: 7688099182870606553}
-  talentNameText: {fileID: 7688099182162509305}
-  talentDescriptionText: {fileID: 7688099183679075560}
-  talentLevelDisplayText: {fileID: 7688099183466165404}
-  unlockTalentButton: {fileID: 7688099181985491067}
-  talentIconParent: {fileID: 7688099183407265176}
 --- !u!114 &7688099183843187789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,6 +2780,74 @@ MonoBehaviour:
   yDistanceFromNode: 300
   partWidth: 15
   createdTalentUIs: []
+--- !u!114 &7688099183843187788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688099183843187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91735ce106e4354b65da0df10cf236e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talentContainer: {fileID: 7688099181989826288}
+  injector: {fileID: 0}
+  points: 300
+--- !u!114 &5816780043449606277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688099183843187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39762c8b5e7c0ca4496c05c156d2bc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsSystemBehav: {fileID: 0}
+  talentHandler: {fileID: 7688099183843187788}
+--- !u!114 &7688099183843187798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688099183843187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0597486cba01b428ed871f4bee1ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talentOverviewUI: {fileID: 7688099183843187795}
+  hiddenTalentGrid: {fileID: 7688099182817521409}
+  showHiddenTalentButton: {fileID: 7688099183528578059}
+  hiddenTalentPrefab: {fileID: -5285984259558408008, guid: d5edc22f6ae761d4b81b884bbae0f81c, type: 3}
+  hiddenTalents:
+  - {fileID: 11400000, guid: 06f8395fc42266f44968c987cd874acd, type: 2}
+  - {fileID: 11400000, guid: 6ae0efe658d786c4eb290cf7e532ec57, type: 2}
+  - {fileID: 11400000, guid: 397e75fc18ee1054998a77ecf2b9d6bf, type: 2}
+--- !u!114 &7688099183843187795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688099183843187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebedc2a754334f6b95b0757987e27990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talentHandler: {fileID: 0}
+  talentIconImage: {fileID: 7688099182870606553}
+  talentNameText: {fileID: 7688099182162509305}
+  talentDescriptionText: {fileID: 7688099183679075560}
+  talentLevelDisplayText: {fileID: 7688099183466165404}
+  unlockTalentButton: {fileID: 7688099181985491067}
+  talentIconParent: {fileID: 7688099183407265176}
 --- !u!114 &7688099183843187794
 MonoBehaviour:
   m_ObjectHideFlags: 0

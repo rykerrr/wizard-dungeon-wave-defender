@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace WizardGame.Stats_System
 {
+    [Serializable]
     public abstract class StatBase
     {
         private string name;        

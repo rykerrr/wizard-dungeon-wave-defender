@@ -35,18 +35,33 @@ namespace Talent_Tree.UI
 
             talentContainer = new TalentContainer(talent);
 
+            AssignLevelupActions();
+
             unlockState = unlockStateOnDefault;
             links = talentLinks;
 
             UpdateImageIcon();
             UpdateTalentUI();
         }
-
+        
         private void UpdateImageIcon()
         {
             iconImage.sprite = talentContainer.Talent.Icon;
         }
 
+        private void AssignLevelupActions()
+        {
+            foreach (var action in talentContainer.Talent.TalentUnlockActions)
+            {
+                onTalentUnlocked += action.LevelUp;
+            }
+
+            foreach (var action in talentContainer.Talent.TalentLevelUpActions)
+            {
+                onTalentLeveledUp += action.LevelUp;;
+            }
+        }
+        
         public bool TryLevelUp(int points)
         {
             if (unlockState != UnlockState.Unlockable && unlockState != UnlockState.Unlocked)
@@ -73,8 +88,7 @@ namespace Talent_Tree.UI
                     foreach (var link in links)
                     {
                         if (!link.CanTraverse(talentContainer.CurrentTalentLevel)) continue;
-
-
+                        
                         link.Destination.TrySetUnlockState(UnlockState.Unlockable);
                     }
 

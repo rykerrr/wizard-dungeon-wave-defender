@@ -17,23 +17,25 @@ namespace Talent_Tree
 		
 		[Header("Preferences")]
 		[SerializeField] private DynamicTalentUI hiddenTalentPrefab = default;
-		[SerializeField] private List<Talent> hiddenTalents = new List<Talent>();
+		[SerializeField] private List<Talent> hiddenHiddenTalents = new List<Talent>();
 
+		public List<Talent> HiddenTalents => hiddenHiddenTalents;
+		
 		private int count = 0;
 
 		private void Update()
 		{
 			if (Keyboard.current.spaceKey.wasPressedThisFrame)
 			{
-				if (count == hiddenTalents.Count) return;
+				if (count == hiddenHiddenTalents.Count) return;
 				
-				Debug.Log("Unlocked: " + TryUnlockHiddenTalent(hiddenTalents[count++]));
+				Debug.Log("Unlocked: " + TryUnlockHiddenTalent(hiddenHiddenTalents[count++]));
 			}
 		}
 
 		public bool TryUnlockHiddenTalent(Talent talent)
 		{
-			if (!hiddenTalents.Contains(talent)) return false;
+			if (!hiddenHiddenTalents.Contains(talent)) return false;
 
 			if(!showHiddenTalentButton.activeSelf) showHiddenTalentButton.SetActive(true);
 			

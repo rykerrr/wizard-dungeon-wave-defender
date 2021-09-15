@@ -20,953 +20,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/SpellUnlockLevelUpAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/SpellUnlockLevelUpAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/StatTalentLevelUpAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/StatTalentLevelUpAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/TalentLevelUpAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/TalentLevelUpAction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/AnimatorController.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/AnimatorController/PlayerXBot.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/AnimatorController/PlayerXBot.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts/3D Text LiberationSans SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts/3D Text LiberationSans SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Bullet.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Bullet.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Earth.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Earth.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Fade.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Fade.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Fire.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Fire.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ItemFieldEffectMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ItemFieldEffectMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ItemMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/ItemMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Water.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Water.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Wind.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Wind.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump Running Landing.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump Running Landing.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump Running.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump Running.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Jump.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Land To Standing Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Land To Standing Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Back.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Back.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Run Right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Sprint Forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Sprint Forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Turn Left 90.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Turn Left 90.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Turn Right 90.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Turn Right 90.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Back.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Back.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/Locomotion/Standing Walk Right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/xbot.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Mixamo/xbot.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Models/bullet.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Models/bullet.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/3DTextShader - Cull Back.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/3DTextShader - Cull Back.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/3DTextShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/3DTextShader.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bolt_1_4_15_Source.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bolt_1_4_15_Source.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastAnimation_NormalSpell.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastAnimation_NormalSpell.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastAnimation_SpellBolt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastAnimation_SpellBolt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastCircle_NormalSpell.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastCircle_NormalSpell.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastCircle_SpellBolt.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/CastCircle_SpellBolt.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_Blast_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_EnergyBlast.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Blast/Spell_EnergyBlast.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_Bolt_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_EnergyBolt.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Bolt/Spell_EnergyBolt.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedEnergyExplosion.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedEnergyExplosion.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealField_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealingField.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Healing_Field/Spell_HealingField.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_EnergyPillar.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_EnergyPillar.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_Energy_Pillar/Spell_Pillar_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Begin.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Begin.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Loop.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell Circle/Spell_TimedBuff/Spell_TimedBuff_Loop.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell/Energy_Pillar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell/Energy_Pillar/Energy_Pillar.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell/Energy_Pillar/Energy_Pillar.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell/Energy_Pillar/Energy_Pillar_Entry_Rise.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/Spell/Energy_Pillar/Energy_Pillar_Entry_Rise.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/DE_DisableSelf.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/DE_DisableSelf.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/DE_Expand_Fade_And_Shockwave.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/DE_Expand_Fade_And_Shockwave.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/Effect_Directed_Explosion.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Directed_Explosion/Effect_Directed_Explosion.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Effect_Regular_Explosion.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Effect_Regular_Explosion.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Explosion_DisableSelf.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Explosion_DisableSelf.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Explosion_Expand_And_Fade.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Explosions/Regular_Explosion/Explosion_Expand_And_Fade.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Effect_Shockwave.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Effect_Shockwave.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_DisableSelf.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_DisableSelf.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_Spawn.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Animations/VFX/Pillar_Shockwave/Shockwave_Spawn.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Bolt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Bolt/FactorizedPlrSphereStateMachine.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Bolt/FactorizedPlrSphereStateMachine.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Bolt/PlrSphereStateMachine.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Bolt/PlrSphereStateMachine.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/CustomUIControls.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/CustomUIControls.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/CustomUIControls.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/CustomUIControls.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/PlayerActionsAsset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/PlayerActionsAsset.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/PlayerActionsAsset.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Input/PlayerActionsAsset.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Materials/Transparent_Crimson.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Materials/Transparent_Crimson.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Materials/Transparent_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Materials/Transparent_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Particle Systems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Particle Systems/Fire_OverDistance_Trail.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Particle Systems/Fire_OverDistance_Trail.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Particle Systems/Water_OverDistance_Trail.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Data/Particle Systems/Water_OverDistance_Trail.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Factory Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Factory Prefabs/PhysicalItemPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Earth.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Earth.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Fire.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Fire.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Water.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Water.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Wind.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Elements/Wind.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_CooldownUpdate.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_CooldownUpdate.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_EquipItem.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_EquipItem.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnEquipSpell.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnEquipSpell.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnInventoryItemsUpdated.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnInventoryItemsUpdated.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnUnEquipItem.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnUnEquipItem.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnUseConsumable.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_OnUseConsumable.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_ThrowItemEvent.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_Inventory_ThrowItemEvent.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_OnSpellCastEnd.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Game Event Instances/Game_Player_OnSpellCastEnd.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Inventories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Inventories/Inventory_PlayerInventory.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Inventories/Inventory_PlayerInventory.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Consumables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Consumables/Health Potion.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Consumables/Health Potion.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Emerald Amulet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Emerald Amulet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Iron Helmet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Iron Helmet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Iron Leggings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Iron Leggings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Leather Boots.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Leather Boots.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Ruby Amulet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Ruby Amulet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Steel Helmet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Steel Helmet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Weapons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Weapons/Indigo Feather.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Weapons/Indigo Feather.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Weapons/Ruby Catalyst.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Equipment/Weapons/Ruby Catalyst.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Directed Energy Explosion Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Blast Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Bolt Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Healing Field Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Energy Pillar Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Normal Spell Book Foundations/Timed Stat Buff Foundation.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/Special Spells Books.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/how to create a spell.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Items/Spells/how to create a spell.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Common.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Common.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Rare.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Rare.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Uncommon.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Item System/Rarities/Uncommon.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Mana Beast.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Mana Beast.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Player.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Player.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Target.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Entity Stat Defaults/Target.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Intelligence.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Intelligence.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Mana Capacity.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Mana Capacity.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Max Health.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Max Health.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Resolve.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Resolve.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Vigor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Vigor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Wisdom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Stat System/Stat Types/Wisdom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Freezing.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Freezing.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Frozen.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Frozen.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/FireWaterCancel.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/FireWaterCancel.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/FreezingWetCombineFrozen.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/FreezingWetCombineFrozen.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/WaterFireCancel.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/WaterFireCancel.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/WetFreezingCombineFrozen.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Interactions/WetFreezingCombineFrozen.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/OnFire.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/OnFire.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Stunned.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Stunned.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Wet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Game Data/Status Effects/Wet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Timed_Stat_Buff.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Casts/Spell_Cast_Timed_Stat_Buff.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Timed_Buff.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell Circles/Spell_Cast_Circle_Timed_Buff.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_Shockwave.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_Shockwave.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_WaterPuddle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spell and On Hit effects/Effect_WaterPuddle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Placeholder_Spell_Energy_Pillar_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Placeholder_Spell_Energy_Pillar_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Directed_Energy_Explosion_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Directed_Energy_Explosion_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Blast_Element.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Blast_Element.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Bolt_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Earth/Spell_Energy_Bolt_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Placeholder_Spell_Energy_Pillar_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Placeholder_Spell_Energy_Pillar_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Directed_Energy_Explosion_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Directed_Energy_Explosion_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Blast_Element.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Blast_Element.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Bolt_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Fire/Spell_Energy_Bolt_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Placeholder_Spell_Energy_Pillar_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Placeholder_Spell_Energy_Pillar_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Directed_Energy_Explosion_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Directed_Energy_Explosion_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Bolt_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Bolt_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Placeholder_Spell_Energy_Healing_Field_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Placeholder_Spell_Energy_Pillar_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Placeholder_Spell_Energy_Pillar_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Directed_Energy_Explosion_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Directed_Energy_Explosion_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Blast_Element.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Blast_Element.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Bolt_Elemental.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Elemental/Wind/Spell_Energy_Bolt_Elemental.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Directed_Energy_Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Directed_Energy_Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Blast.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Blast.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Bolt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Bolt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Healing_Field.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Healing_Field.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Pillar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Pillar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Equipment_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Equipment_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Hotbar_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Hotbar_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Inventory_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Inventory_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_PlayerHealth_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_PlayerHealth_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_SpellBookCreation_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_SpellBookCreation_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_StatsDisplay_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_StatsDisplay_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Tooltip_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_Tooltip_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_Health.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_Health.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_ItemInfoBillboard.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas Containers/World/GameObject_WorldUI_ItemInfoBillboard.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_CooldownDisplay.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_CooldownDisplay.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_EquipmentSlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_EquipmentSlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_HotbarSlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_HotbarSlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_InventorySlot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_InventorySlot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing_ScreenUI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing_ScreenUI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing_WorldUI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/GameObject_StatEffListing_WorldUI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/ItemInfo_Billboard.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Elements/ItemInfo_Billboard.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests For Stuff To Integrate/Input System Testing.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/A.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/A.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/An.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/An.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Production.Infrastructure.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Production.Infrastructure.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/DownTimerDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/DownTimerDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/ForceReceiverDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/ForceReceiverDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/GravityMovementDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/GravityMovementDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/JumpingMovementDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/JumpingMovementDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/LocomotionMovementDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/LocomotionMovementDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/NullTimerDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/NullTimerDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/StopwatchDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/StopwatchDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/TimerDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Test Data Builders/TimerDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Production.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Production.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Character.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Character.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/IHasCooldown.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Cooldown System/IHasCooldown.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/ElementSpellData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/ElementSpellData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/InteractionType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/InteractionType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FreezingStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FreezingStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FrozenStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FrozenStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/WetStatusEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectAddResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectAddResult.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectInteraction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectInteraction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/InjectTooltipIntoTooltipShower.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/InjectTooltipIntoTooltipShower.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/ShowStatusEffectListingTooltip.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/ShowStatusEffectListingTooltip.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectDisplayUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectListingUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/UI/StatusEffectListingUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/BaseSpellCastData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/BaseSpellCastData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/DirectedEnergyExplosionData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/DirectedEnergyExplosionData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBlastData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBlastData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBoltData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBoltData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyHealingFieldData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyHealingFieldData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyPillarData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyPillarData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/TimedStatBuffData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/TimedStatBuffData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyBlast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyBlast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyBolt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyBolt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyHealingField.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyHealingField.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyPillar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastEnergyPillar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastTimedStatBuff.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastTimedStatBuff.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IBuffingSpell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IBuffingSpell.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IDamagingSpell.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IHealingSpell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/IHealingSpell.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ApplyElementStatusEffectOnCollisionStay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ApplyElementStatusEffectOnCollisionStay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyHealingField.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/FadeMeshRendererOverLifetime.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/FadeMeshRendererOverLifetime.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/SetFadeTimeAsAnimationClip.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/Object Fader/SetFadeTimeAsAnimationClip.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/RotateAroundSelf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/RotateAroundSelf.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/Draggable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/UI/Draggable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystemBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystemBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI/HealthBarDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI/HealthBarDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI/HealthPercentTextDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI/HealthPercentTextDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem/Data/EquipHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem/Data/EquipHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem/Data/EquipmentType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/EquipmentSystem/Data/EquipmentType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/HotbarBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/HotbarBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/IItemContainer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/IItemContainer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/Inventory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/Inventory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/ItemComparer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/ItemComparer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/ItemSlot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/ItemSlot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/ConsumableItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/ConsumableItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/EquipmentItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/EquipmentItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/EquippableItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/EquippableItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/InventoryItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/InventoryItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/MaterialItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/MaterialItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/SpellBookItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/SpellBookItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/WeaponItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Items/WeaponItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Rarity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/Rarity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/CooldownDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/CooldownDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/EquipmentDragHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/EquipmentDragHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/EquipmentSlotUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/EquipmentSlotUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/HotbarDragHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/HotbarDragHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ShowItemTooltip.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ShowItemTooltip.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/CharacterMovementMotor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/CharacterMovementMotor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/ItemGravityBehavior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/ItemGravityBehavior.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/GravityMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/GravityMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/JumpingMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/JumpingMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/LocomotionMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/LocomotionMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/MovementModifierBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/MovementModifierBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/NullMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/NullMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/SlidingMovementBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/SlidingMovementBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/FloatOverGroundMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/FloatOverGroundMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/ForceReceiverMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/ForceReceiverMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/GravityMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/GravityMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/IMovementModifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/IMovementModifier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/JumpingMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/JumpingMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/LocomotionMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/LocomotionMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/NullMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/NullMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/SlidingMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/SlidingMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/PhysicalItemRotationBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/PhysicalItemRotationBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/RotateObjectAroundAxis.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/RotateObjectAroundAxis.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/RotateObjectTowardsTarget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Movement System/Rotation/RotateObjectTowardsTarget.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SelectElementDropdown.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SelectElementDropdown.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyBlast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyBlast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyBolt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyBolt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyExplosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyExplosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyHealingField.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyHealingField.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyPillar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationEnergyPillar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationMenuBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationMenuBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationTimedBuff.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/Spell Creation Menus/SpellCreationTimedBuff.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellNameSetter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Spell Creation System/SpellNameSetter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/DependantStat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/DependantStat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/EntityStat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/EntityStat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/EntityStats.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/EntityStats.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Modifier.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/ModifierType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/ModifierType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/BaseStatType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/BaseStatType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/DependantStatType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/DependantStatType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDependency.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeDependency.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat Types/StatTypeFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/Stat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatDependency.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatDependency.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/StatDisplayUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/StatDisplayUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/DescriptionObjectInfoTooltip.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/DescriptionObjectInfoTooltip.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/ItemTooltipPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/ItemTooltipPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/StatTooltipPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/StatTooltipPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/StatusEffectListingTooltip.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/StatusEffectListingTooltip.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/TooltipPopupBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Tooltips/TooltipPopupBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Production.Runtime.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Production.Runtime.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Data/ItemThrowData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Data/ItemThrowData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Data/VoidData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Data/VoidData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/BaseGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/BaseGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/BoolGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/BoolGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/CooldownDataEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/CooldownDataEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/FloatGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/FloatGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/HotbarItemGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/HotbarItemGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/IntGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/IntGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/ItemThrowEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/ItemThrowEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/VoidGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Game Events/VoidGameEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/BaseGameEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/BaseGameEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/BoolEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/BoolEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/CooldownDataEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/CooldownDataEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/FloatEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/FloatEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/HotbarItemEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/HotbarItemEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/IGameEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/IGameEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/IntEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/IntEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/ItemThrowEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/ItemThrowEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/VoidEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Listeners/VoidEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityBoolEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityBoolEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityCooldownDataEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityCooldownDataEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityFloatEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityFloatEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityHotbarItemEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityHotbarItemEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityIntEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityIntEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityItemThrowEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityItemThrowEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityVoidEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityVoidEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns/AbstractDataBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns/AbstractDataBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns/InheritableSingleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns/InheritableSingleton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Common Patterns/State Machine.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/Unity Extensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Production.Utilities.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Production.Utilities.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serializable Data Types.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/BaseTimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/BaseTimer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/DownTimer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/ITimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/ITimer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/NullTimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/NullTimer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/Stopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/Stopwatch.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/TimerTickerSingleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timers/TimerTickerSingleton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/HotbarTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/HotbarTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/ItemContainerTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/MovementTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/Tests.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/Tests.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Editmode/TimerTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Playmode.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Playmode/Tests.Playmode.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Playmode/Tests.Playmode.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_SpellBookCreation_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_SpellBookCreation_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_TalentTree_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_TalentTree_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Hidden Talents/Hidden Talent 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 17.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 17.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 18.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 18.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 19.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 19.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 20.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 20.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 21.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 21.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 22.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 22.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 23.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 23.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Data/Scriptable Objects/Dynamic Talents/Talent Tree Talents/Talent 9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/DynamicTalentHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/DynamicTalentHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/HiddenTalentHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/HiddenTalentHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/TalentOverviewUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/TalentOverviewUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UnlockState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UnlockState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/com.nika.talent-tree.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/com.nika.talent-tree.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -992,24 +131,30 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/b6/f9b61f35/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/ff/50f979b9/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/IInputRuntime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/SpriteEditorModule/SpriteOutlineModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Controls/ButtonControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Devices/Commands/EnableDeviceCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/69/bb01e5a8/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/HID/HID.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/21/05359ff4/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/8c/84913ddf/Action`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/a8/40ddc58c/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Utilities/Range.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/PlayerInputEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/0e/3174896a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/bd/dd0692d2/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/treeview/TimelineTreeView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetEditor/InputActionEditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Events/InputEventTrace.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Runtime/Core/CinemachineDebug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/23/614e4d50/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRegistry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputControlScheme.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Runtime/Canvas/NestedCanvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetEditor/NameAndParameterListView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/Linux/LinuxSupport.cs" root0="SKIP_HIGHLIGHTING" />
@@ -1023,68 +168,44 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/AssemblyNameProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/c0/1413e112/Collider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/da/6739f929/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/8f/08e45346/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/Api/ITestAdaptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/02/cc29505c/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/e7/f6c3acd8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/D9ED5CA2-9A42-41B0-B24D-FAF65753B9D6/47/40abd997/MiscUtil.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/Api/TestAdaptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Extensions/AnimationTrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/7b/5304430b/Rect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/62/2bef858a/EqualConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Extensions/TrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/f7/4f11e700/Is.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.3.9/Editor/Components/Menus/FloatingMenu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/71/02ba9721/Assert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/1c/59c7e47b/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.7/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/SpriteEditorModule/SpriteOutlineModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/8c/84913ddf/Action`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/0e/3174896a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRegistry.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Runtime/Canvas/NestedCanvas.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/8f/08e45346/Time.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/D9ED5CA2-9A42-41B0-B24D-FAF65753B9D6/47/40abd997/MiscUtil.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/Api/TestAdaptor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/7b/5304430b/Rect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/5D49C0DB-2965-4913-B50F-CDA59A204032/1d/53dd0323/020004AB.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetImporter/InputActionCodeGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Runtime/Behaviours/CinemachineMixingCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetImporter/InputActionImporterEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.3.9/Editor/Components/Menus/FloatingMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Utility/ReflectionMethodsCache.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/62/ce6420e2/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/71/02ba9721/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Items/ItemsGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/1c/59c7e47b/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/e8/2de8f8b2/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Editor/PropertyDrawers/EmbeddedAssetPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/421852A5-267C-4284-AEC1-A2BA29ECBCE5/79/51b1530a/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.7/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D49C0DB-2965-4913-B50F-CDA59A204032/3c/d75757cb/IReadOnlyList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/State/SequenceState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/05/1477f7c5/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/HealingStatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/FrozenStatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/OnFireStatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StunnedStatusEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBolt.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthPercentTextDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthDisplayUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/HealthBarDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Health System/UI/HealthPercentTextDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/Status Effects/StatusEffectStackType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Element System/Status Effect System/StatusEffectHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBlastData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/EnergyBoltData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastData/DirectedEnergyExplosionData.cs" />
@@ -1117,6 +238,25 @@
       <option value="$PROJECT_DIR$/Assets/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentTreeCreator.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentTreeCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentUnlockAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/DynamicTalentHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentStatLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/StatLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/LevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/TalentLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/StatTalentLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/HiddenTalentHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Talent.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/TalentOverviewUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/TalentContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/SpellUnlockLevelUpAction.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -1250,7 +390,8 @@
       <workItem from="1630081502497" duration="1656000" />
       <workItem from="1630152233060" duration="5783000" />
       <workItem from="1630309059069" duration="1437000" />
-      <workItem from="1631604971048" duration="1699000" />
+      <workItem from="1631604971048" duration="2375000" />
+      <workItem from="1631723704207" duration="8535000" />
     </task>
     <servers />
   </component>

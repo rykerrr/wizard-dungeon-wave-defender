@@ -4,7 +4,8 @@
     "references": [
         "Unity.InputSystem",
         "Unity.TextMeshPro",
-        "com.NikA.ContentResizer.Runtime"
+        "com.NikA.ContentResizer.Runtime",
+        "Production.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

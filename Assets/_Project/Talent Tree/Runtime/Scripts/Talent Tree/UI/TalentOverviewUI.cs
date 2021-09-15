@@ -8,7 +8,7 @@ namespace Talent_Tree.UI
     public class TalentOverviewUI : MonoBehaviour
     {
         [Header("References")] 
-        [SerializeField] private DynamicTalentHandler dynamicTalentHandler = default;
+        [SerializeField] private TalentHandler talentHandler = default;
         
         [Header("UI References")]
         [SerializeField] private Image talentIconImage = default;
@@ -51,7 +51,7 @@ namespace Talent_Tree.UI
             var talent = talContainer.Talent;
 
             talentNameText.text = talent.Name;
-            talentDescriptionText.text = talent.Description;
+            talentDescriptionText.text = talent.GetDescriptionText();
             talentLevelDisplayText.text = 
                 $"Current Level/Max Level: {talContainer.CurrentTalentLevel}/{talent.MaxTalentLevel}\n"
                 + $"Points required for level up: {talent.SingleLevelWeight}";
@@ -88,7 +88,7 @@ namespace Talent_Tree.UI
         {
             Debug.Log($"Attempting to level up talent: {selectedTalentUi}");
             
-            dynamicTalentHandler.TryLevelupTalent(selectedTalentUi);
+            talentHandler.TryLevelupTalent(selectedTalentUi);
         }
     }
 }
