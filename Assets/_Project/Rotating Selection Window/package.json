@@ -1,0 +1,10 @@
+
+{
+	"name": "com.nika.rotatingselectwindow",
+	"version": "1.0.0",
+	"unity": "2019.1",
+	"displayName": "Rotating Selection Window",
+	"author": "Nik A",
+	"description": "A UI window that has similar functionality to a ScrollView, but rather than moving it up/down it \"rotates\" the objects around a center object after dynamically instantiating them.",
+	"keywords": ["Rotating Selection Window", "Rotating Scroll View"]
+}

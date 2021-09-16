@@ -7,9 +7,8 @@ using System.Collections.Generic;
 namespace PrimitivePlusEditor
 {
 	[CustomEditor(typeof(PrimitivePlusMaterial)), CanEditMultipleObjects]
-	public class PrimitivePlusMaterialEditor : Editor
+	public class PrimitivePlusMaterialEditor : UnityEditor.Editor
 	{
-
 		private void OnDisable()
 		{
 			Resources.UnloadUnusedAssets();
