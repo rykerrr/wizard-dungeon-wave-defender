@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 
-namespace SelectionWindow
+namespace WizardGame.SelectionWindow
 {
     public class RotatingDisplayWindowHandler : MonoBehaviour
     {

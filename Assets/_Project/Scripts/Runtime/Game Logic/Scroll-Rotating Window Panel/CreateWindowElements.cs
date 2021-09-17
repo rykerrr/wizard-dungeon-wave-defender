@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace SelectionWindow
+namespace WizardGame.SelectionWindow
 {
     public class CreateWindowElements : MonoBehaviour
     {
@@ -11,6 +12,13 @@ namespace SelectionWindow
         [SerializeField] private Transform elementContainer = default;
 
         private List<WindowElementData> elementData = new List<WindowElementData>();
+
+        private void Start()
+        {
+            Debug.Log("Creating SelectionWindow elements");
+            
+            CreateElementUis();
+        }
 
         public void SetDataForUICreation(List<WindowElementData> datas)
         {

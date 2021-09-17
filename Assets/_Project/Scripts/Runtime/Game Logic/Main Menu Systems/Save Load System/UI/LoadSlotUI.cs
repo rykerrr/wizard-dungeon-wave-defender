@@ -26,8 +26,11 @@ public class LoadSlotUI : MonoBehaviour
         saveSlotText.text = originText;
 
         downTimer.CreateTimer(saveSlotEmptyTextDur);
+        
         downTimer.OnTimerEnd += () => saveSlotText.text = originText;
-        downTimer.DisableTimer();
+        downTimer.OnTimerEnd += () => downTimer.gameObject.SetActive(false);
+        
+        downTimer.gameObject.SetActive(false);
     }
 
     public void OnClick_LoadIfSlotExists()
@@ -41,6 +44,8 @@ public class LoadSlotUI : MonoBehaviour
 
         Debug.Log("save file is m.t.");
         saveSlotText.text = emptySaveSlotText;
+        
+        if(!downTimer.gameObject.activeSelf) downTimer.gameObject.SetActive(true);
         downTimer.ResetTimer();
     }
 }

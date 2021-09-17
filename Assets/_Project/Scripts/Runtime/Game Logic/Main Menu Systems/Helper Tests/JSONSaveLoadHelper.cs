@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System.Element_System;
 
-namespace WizardGame.MainMenu
+namespace WizardGame.MainMenu.HelperTests
 {
     public class JSONSaveLoadHelper : MonoBehaviour
     {

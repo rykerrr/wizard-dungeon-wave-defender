@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace SelectionWindow.ManualTesting
+namespace WizardGame.SelectionWindow.ManualTesting
 {
     public class InjectStubDataToElementWindowCreator : MonoBehaviour
     {

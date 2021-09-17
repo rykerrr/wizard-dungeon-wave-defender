@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SelectionWindow
+namespace WizardGame.SelectionWindow
 {
     public class SetWindowElementInOverviewOnClick : MonoBehaviour
     {

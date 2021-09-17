@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace SelectionWindow
+namespace WizardGame.SelectionWindow
 {
     public class SelectionWindowElement : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace SelectionWindow
+namespace WizardGame.SelectionWindow
 {
     [Serializable]
     public struct WindowElementData
