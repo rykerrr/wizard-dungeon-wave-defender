@@ -10,20 +10,20 @@ namespace WizardGame.SelectionWindow
         [SerializeField] private TextMeshProUGUI nameText = default;
         [SerializeField] private TextMeshProUGUI descText = default;
         
-        public SelectionWindowElement SelectedElement { get; private set; }
+        public SelectionWindowElement SelectedWindowElement { get; private set; }
         
-        public void DisplayElement(SelectionWindowElement elem)
+        public void DisplayElement(SelectionWindowElement windowElementUi)
         {
-            SelectedElement = elem;
+            SelectedWindowElement = windowElementUi;
             
-            var elemData = elem.Data;
-            var img = elem.IconImage;
+            var element = windowElementUi.Element;
+            var img = windowElementUi.IconImage;
 
-            nameText.text = elemData.Name;
-            descText.text = elemData.Description;
+            nameText.text = element.Name;
+            descText.text = element.Description;
             
-            iconDisplayImage.sprite = elemData.Sprite;
-            iconDisplayImage.color = elemData.Color;
+            iconDisplayImage.sprite = element.ElementSprite;
+            iconDisplayImage.color = element.ElementColor;
             
             iconDisplayImage.type = img.type;
             iconDisplayImage.fillCenter = img.fillCenter;
@@ -37,7 +37,7 @@ namespace WizardGame.SelectionWindow
             iconDisplayImage.sprite = null;
             iconDisplayImage.color = Color.white;
 
-            SelectedElement = null;
+            SelectedWindowElement = null;
         }
     }
 }

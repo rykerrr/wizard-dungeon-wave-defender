@@ -9,6 +9,8 @@ namespace WizardGame.Combat_System.Element_System
     public class Element : ScriptableObject
     {
         [SerializeField] private new string name = "New Element";
+        [SerializeField] [Multiline] private string description = "Description";
+            
         [SerializeField] private Sprite elementSprite = default;
         [SerializeField] private Color elementColor;
         
@@ -21,6 +23,8 @@ namespace WizardGame.Combat_System.Element_System
             private set => name = value;
         }
 
+        public string Description => description;
+        
         public ElementSpellData ElementSpellData => elementSpellData;
         public StatusEffectData StatusEffectToApply => statusEffectToApply;
         public Sprite ElementSprite => elementSprite;

@@ -12,7 +12,7 @@ namespace WizardGame.SelectionWindow
         {
             popup.gameObject.SetActive(true);
             
-            // popup.UpdateUI(overviewWindow.SelectedElement.Data);
+            popup.UpdateUI(overviewWindow.SelectedWindowElement.Element);
         }
     }
 }

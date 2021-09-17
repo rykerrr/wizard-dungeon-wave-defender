@@ -15,7 +15,7 @@ namespace WizardGame.SelectionWindow
         [SerializeField] private Ease easeType = Ease.Linear;
         [SerializeField] private float tweenDur = 1f;
         
-        [SerializeField] private List<SelectionWindowElement> elements = default;
+        [SerializeField] private List<SelectionWindowElement> windowUiElements = default;
 
         private float angle = 0f;
         private int curInd = 0;
@@ -41,11 +41,11 @@ namespace WizardGame.SelectionWindow
 
         private void SetElementsCircularlyAroundCenter()
         {
-            angle = 360f / elements.Count;
+            angle = 360f / windowUiElements.Count;
             
-            for (int i = 0; i < elements.Count; i++)
+            for (int i = 0; i < windowUiElements.Count; i++)
             {
-                var elemRectTransf = (RectTransform) elements[i].transform;
+                var elemRectTransf = (RectTransform) windowUiElements[i].transform;
                 var elemAngle = angle * i;
 
                 var x = Mathf.Cos(elemAngle * Mathf.Deg2Rad);
@@ -55,13 +55,13 @@ namespace WizardGame.SelectionWindow
 
                 elemRectTransf.anchoredPosition = center.anchoredPosition + posAdd;
 
-                elements[i].CurrentAngle = elemAngle;
+                windowUiElements[i].CurrentAngle = elemAngle;
             }
         }
 
         private void ScrollBy(int indiceScrollAmn)
         {
-            foreach (var elem in elements)
+            foreach (var elem in windowUiElements)
             {
                 var elemRectTransf = (RectTransform) elem.transform;
 
@@ -99,21 +99,21 @@ namespace WizardGame.SelectionWindow
         {
             while (newInd < 0)
             {
-                newInd += elements.Count;
+                newInd += windowUiElements.Count;
             }
             
-            if (newInd >= elements.Count) newInd %= elements.Count;
+            if (newInd >= windowUiElements.Count) newInd %= windowUiElements.Count;
 
             ScrollBy(curInd - newInd); 
             
             curInd = newInd;
 
-            selWindow.DisplayElement(elements[curInd]);
+            selWindow.DisplayElement(windowUiElements[curInd]);
         }
 
         public void Init(List<SelectionWindowElement> elements)
         {
-            this.elements = elements;
+            this.windowUiElements = elements;
 
             SetElementsCircularlyAroundCenter();
             SelectElement(0);

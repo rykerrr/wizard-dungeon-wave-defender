@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   name: Water
+  description: Water go brrrrrrrrrrrrrr
   elementSprite: {fileID: 21300000, guid: 7aadf0d10da7fcf45a21406f2968c771, type: 3}
   elementColor: {r: 0.096787095, g: 0.28490597, b: 0.8207547, a: 1}
   elementSpellData:

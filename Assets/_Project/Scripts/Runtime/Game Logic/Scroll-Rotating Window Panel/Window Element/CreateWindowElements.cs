@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.SelectionWindow
 {
@@ -11,7 +12,7 @@ namespace WizardGame.SelectionWindow
 
         [SerializeField] private Transform elementContainer = default;
 
-        private List<WindowElementData> elementData = new List<WindowElementData>();
+        private List<Element> elementData = new List<Element>();
 
         private void Start()
         {
@@ -20,7 +21,7 @@ namespace WizardGame.SelectionWindow
             CreateElementUis();
         }
 
-        public void SetDataForUICreation(List<WindowElementData> datas)
+        public void SetDataForUICreation(List<Element> datas)
         {
             elementData = datas;
         }
@@ -33,7 +34,7 @@ namespace WizardGame.SelectionWindow
             {
                 var elemClone = Instantiate(elementPrefab, elementContainer);
 
-                elemClone.Data = data;
+                elemClone.Element = data;
                 elemList.Add(elemClone);
 
                 var button = elemClone.GetComponent<SetWindowElementInOverviewOnClick>();

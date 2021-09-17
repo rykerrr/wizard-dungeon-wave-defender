@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.SelectionWindow.ManualTesting
 {
@@ -7,11 +8,11 @@ namespace WizardGame.SelectionWindow.ManualTesting
     {
         [SerializeField] private CreateWindowElements windowCreator = default;
 
-        [SerializeField] private List<WindowElementData> elemDatas = default;
+        [SerializeField] private List<Element> elements = default;
 
         private void Awake()
         {
-            windowCreator.SetDataForUICreation(elemDatas);
+            windowCreator.SetDataForUICreation(elements);
         }
     }
 }

@@ -21,32 +21,32 @@
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Earth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Earth.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Fire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Fire.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Water.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Wind.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Elements/Wind.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Prefabs/GameObject_SelectionWindowElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Prefabs/GameObject_SelectionWindowElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scenes/Panel Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scenes/Panel Testing Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/CreateWindowElements.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/CreateWindowElements.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/Manual Testing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SelectionWindowElement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SelectionWindowElement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SetWindowElementInOverviewOnClick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SetWindowElementInOverviewOnClick.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/WindowElementData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/WindowElementData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/com.NikA.RotatingScrollSelectWindow.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/com.NikA.RotatingScrollSelectWindow.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Production.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Production.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoadHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoadHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Production.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Production.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/CreateWindowElements.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/CreateWindowElements.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectionWindowElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectionWindowElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/WindowElementData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/WindowElementData.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,11 +115,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/da/6739f929/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/MainMenuControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/8f/08e45346/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/ShapeEditor/ShapeEditorRectSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SceneLoadController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/SaveSlotUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/Api/ITestAdaptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.3.9/Editor/Models/IChangesModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/02/cc29505c/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/e7/f6c3acd8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/D9ED5CA2-9A42-41B0-B24D-FAF65753B9D6/47/40abd997/MiscUtil.cs" root0="SKIP_HIGHLIGHTING" />
@@ -128,6 +131,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/7b/5304430b/Rect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/62/2bef858a/EqualConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Extensions/TrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/ba/945f0bd6/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/f7/4f11e700/Is.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/5D49C0DB-2965-4913-B50F-CDA59A204032/1d/53dd0323/020004AB.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetImporter/InputActionCodeGenerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -151,13 +155,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Stat System/UI/StatDisplayUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ShowItemTooltip.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentTreeCreator.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/DynamicTalentTreeCreator.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentUnlockAction.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/DynamicTalentHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentStatLevelUpAction.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpAction.cs" />
@@ -186,22 +183,29 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoadHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/SaveSlotUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/LoadSlotUI.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Timers/Components/DownTimerBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Helper Tests/JSONSaveLoadHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/CreateWindowElements.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/CreateWindowElements.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectionWindowElement.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SetWindowElementInOverviewOnClick.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/WindowElementData.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SelectElementFromOverviewOnClick.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/ElementSelectionConfirmPopup.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/LoadSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Window Element/WindowElementData.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Window Element/CharacterElementWindowElementData.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Window Element/CreateWindowElements.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Element System/Element.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingWindowElementOverview.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Manual Testing/InjectStubDataToElementWindowCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/SelectElementFromOverviewOnClick.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/Window Element/SelectionWindowElement.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SceneLoadController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -338,7 +342,8 @@
       <workItem from="1631604971048" duration="2375000" />
       <workItem from="1631723704207" duration="9741000" />
       <workItem from="1631787088146" duration="1287000" />
-      <workItem from="1631882391304" duration="10016000" />
+      <workItem from="1631882391304" duration="10666000" />
+      <workItem from="1631894532921" duration="4133000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using WizardGame.Combat_System.Element_System;
+using WizardGame.MainMenu;
 
 namespace WizardGame.SelectionWindow
 {
@@ -16,14 +17,15 @@ namespace WizardGame.SelectionWindow
         [Header("References")] [SerializeField]
         private TextMeshProUGUI popupText = default;
         [SerializeField] private Image elementIconImage = default;
-
+        [SerializeField] private SceneLoadController sceneLoad = default;
+        
         private Element element = default;
         
         public void UpdateUI(Element element)
         {
             this.element = element;
             
-            popupText.text = $"{selectionConfirmMessage} {element.Name} element?\n {warnMessage}";
+            popupText.text = $"{selectionConfirmMessage} the {element.Name} element?\n {warnMessage}";
 
             elementIconImage.sprite = element.ElementSprite;
         }
@@ -31,6 +33,8 @@ namespace WizardGame.SelectionWindow
         public void OnClick_ConfirmSelection()
         {
             Debug.Log($"Load scene with character data with {element} and save as character data");
+            
+            sceneLoad.LoadScene();
         }
 
         public void OnClick_CancelSelection()

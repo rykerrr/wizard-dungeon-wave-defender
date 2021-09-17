@@ -1,21 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.SelectionWindow
 {
     public class SelectionWindowElement : MonoBehaviour
     {
-        [SerializeField] private WindowElementData data = default;
+        [SerializeField] private Element element = default;
         
         [SerializeField] private Image iconImage = default;
 
-        public WindowElementData Data
+        public Element Element
         {
-            get => data;
+            get => element;
             
             set
             {
-                data = value;
+                element = value;
                 
                 UpdateUI();
             }
@@ -33,9 +34,9 @@ namespace WizardGame.SelectionWindow
 
         private void UpdateUI()
         {
-            iconImage.sprite = data.Sprite;
+            iconImage.sprite = element.ElementSprite;
 
-            iconImage.color = data.Color;
+            iconImage.color = element.ElementColor;
         }
         
         private void SetNameAsSiblingIndex()

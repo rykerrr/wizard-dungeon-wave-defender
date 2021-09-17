@@ -4,5 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Rotating Selection Window/Runtime/Scenes/Panel Testing
+      Scene.unity
+    guid: f7a88b4f2a75fd6438f6957fe5e6df78
+  - enabled: 1
+    path: Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing
+      Scene.unity
+    guid: 3074314ea6b21e341baa72b94832306e
   m_configObjects: {}

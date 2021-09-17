@@ -4,7 +4,7 @@ using UnityEngine;
 namespace WizardGame.SelectionWindow
 {
     [Serializable]
-    public struct WindowElementData
+    public class WindowElementData
     {
         [SerializeField] private string name;
         [SerializeField] private string description;
