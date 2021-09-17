@@ -9,8 +9,7 @@ namespace WizardGame.MainMenu
 {
     public class JSONSaveLoadHelper : MonoBehaviour
     {
-        [SerializeField] private string saveFile = "saveFile1";
-        [SerializeField] private string extension = "json";
+        [SerializeField] private string saveFileName = "saveSlot1";
         
         [SerializeField] private Element[] elements;
 
@@ -21,17 +20,15 @@ namespace WizardGame.MainMenu
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 var charData = new CharacterData(elements);
-                var sfWithExt = $"{saveFile}.{extension}";
                 
-                JSONSaveManager.SaveCharacterDataFile(sfWithExt, charData);
+                JSONSaveManager.SaveCharacterDataFile(saveFileName, charData);
 
                 Debug.Log($"Saved: {charData.ToString()}");
             }
 
             if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             {
-                var sfWithExt = $"{saveFile}.{extension}";
-                var charData = JSONSaveManager.LoadCharacterDataFile(sfWithExt);
+                var charData = JSONSaveManager.LoadCharacterDataFile(saveFileName);
 
                 Debug.Log($"Loaded: {charData.ToString()}");
             }

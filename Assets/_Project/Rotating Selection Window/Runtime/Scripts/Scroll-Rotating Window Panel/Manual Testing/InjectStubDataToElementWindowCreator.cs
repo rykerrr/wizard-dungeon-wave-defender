@@ -11,7 +11,7 @@ namespace SelectionWindow.ManualTesting
 
         private void Awake()
         {
-            windowCreator.CreateElementUis(elemDatas);
+            windowCreator.SetDataForUICreation(elemDatas);
         }
     }
 }

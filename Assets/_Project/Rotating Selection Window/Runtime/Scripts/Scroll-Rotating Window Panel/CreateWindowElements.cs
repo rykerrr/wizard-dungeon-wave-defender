@@ -10,11 +10,18 @@ namespace SelectionWindow
 
         [SerializeField] private Transform elementContainer = default;
 
-        public void CreateElementUis(List<WindowElementData> datas)
+        private List<WindowElementData> elementData = new List<WindowElementData>();
+
+        public void SetDataForUICreation(List<WindowElementData> datas)
+        {
+            elementData = datas;
+        }
+        
+        public void CreateElementUis()
         {
             var elemList = new List<SelectionWindowElement>();
 
-            foreach (var data in datas)
+            foreach (var data in elementData)
             {
                 var elemClone = Instantiate(elementPrefab, elementContainer);
 
