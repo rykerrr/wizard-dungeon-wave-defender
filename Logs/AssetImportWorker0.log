@@ -15,11 +15,11 @@ F:/Unity/Projects/Wizard Dungeon Wave Defender Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49922
+55225
 Successfully changed project path to: F:/Unity/Projects/Wizard Dungeon Wave Defender Project
 F:/Unity/Projects/Wizard Dungeon Wave Defender Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.14 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 63.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path F:/Unity/Versions/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -36,48 +36,86 @@ Initialize mono
 Mono path[0] = 'F:/Unity/Versions/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Unity/Versions/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/Unity/Versions/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Unity/Versions/2020.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/Unity/Versions/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: F:/Unity/Versions/2020.3.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002963 seconds.
+Registered in 0.002256 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 60.11 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 56.75 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.850 seconds
+- Completed reload, in  2.374 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010497 seconds.
+Registered in 0.009775 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 57.83 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 58.60 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.432 seconds
+- Completed reload, in  1.426 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1885 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 178.8 MB.
-System memory in use after: 178.9 MB.
+System memory in use before: 178.7 MB.
+System memory in use after: 178.8 MB.
 
 Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2431.
-Total: 2.501861 ms (FindLiveObjects: 0.284077 ms CreateObjectMapping: 0.100088 ms MarkObjects: 2.082021 ms  DeleteObjects: 0.033693 ms)
+Total: 2.562974 ms (FindLiveObjects: 0.270534 ms CreateObjectMapping: 0.093151 ms MarkObjects: 2.163944 ms  DeleteObjects: 0.033363 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/_Project/com-nika-rotatingscrollselectwindow/Runtime/com.NikA.RotatingScrollSelectWindow.asmdef
-  artifactKey: Guid(f5e3079ddf9b24145873e2860d0eba12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Project/com-nika-rotatingscrollselectwindow/Runtime/com.NikA.RotatingScrollSelectWindow.asmdef using Guid(f5e3079ddf9b24145873e2860d0eba12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac31b84ac2e446fb7dcd97193a0c3728') in 0.030116 seconds
-  Import took 0.034367 seconds .
+  path: Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems
+  artifactKey: Guid(0e0a2a7d6e14b954dbdc4698fe138db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems using Guid(0e0a2a7d6e14b954dbdc4698fe138db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31acd4488886418d1cbdbaf9409cdd9b') in 0.006676 seconds
+  Import took 0.010801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.192303 seconds.
+  path: Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System
+  artifactKey: Guid(f9482646d0e0ff7438e048530f92d13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System using Guid(f9482646d0e0ff7438e048530f92d13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cec0ea1f5231b839682a3bf70343b16') in 0.002734 seconds
+  Import took 0.006859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 536.571095 seconds.
+  path: Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoad.cs
+  artifactKey: Guid(9dce4ce1f35ac08499f0c1cb79de0000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoad.cs using Guid(9dce4ce1f35ac08499f0c1cb79de0000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7848f1e37ce891b2ad096fcb337b59ea') in 0.025726 seconds
+  Import took 0.030046 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010941 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.733 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1863 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.2 MB.
+System memory in use after: 177.3 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2435.
+Total: 2.651500 ms (FindLiveObjects: 0.235190 ms CreateObjectMapping: 0.089187 ms MarkObjects: 2.293430 ms  DeleteObjects: 0.031381 ms)
 
