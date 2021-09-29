@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace WizardGame.Utility.Patterns
 {
@@ -46,6 +47,11 @@ namespace WizardGame.Utility.Patterns
                     return instance;
                 }
             }
+        }
+
+        protected virtual void Awake()
+        {
+            SceneManager.sceneUnloaded += (s) => instance = null;
         }
 
         private void OnEnable()
