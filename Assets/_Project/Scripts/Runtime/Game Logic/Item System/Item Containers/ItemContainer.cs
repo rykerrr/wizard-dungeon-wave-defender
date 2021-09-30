@@ -196,7 +196,7 @@ namespace WizardGame.Item_System.Item_Containers
             OnItemsUpdated?.Invoke();
         }
 
-        public PhysicalItem DropItem(int slotIndex, Vector3 location)
+        public InteractablePhysicalItem DropItem(int slotIndex, Vector3 location)
         {
             InventoryItem item = this[slotIndex].invItem;
             if (!HasItem(item)) return null;

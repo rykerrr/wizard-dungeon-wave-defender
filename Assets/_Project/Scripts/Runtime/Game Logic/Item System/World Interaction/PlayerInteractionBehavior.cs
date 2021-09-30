@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,35 +12,61 @@ namespace WizardGame.Item_System.World_Interaction
     public class PlayerInteractionBehavior : MonoBehaviour
     {
         [SerializeField] private Inventory inventory = default;
-        [SerializeField] private Interactor interactor = default;
+        [SerializeField] private GetClosestInteractable getClosestInteractable = default;
 
-        private PhysicalItemInteractions physInteractions = default;
-        StringBuilder sb;
+        private readonly List<IInteraction> interactions = new List<IInteraction>();
+        
+        private StringBuilder sb;
 
         private void Awake()
         {
-            physInteractions = new PhysicalItemInteractions(inventory.ItemContainer);
+            interactions.Add(new PhysicalItemInteractions(inventory.ItemContainer));
+            interactions.Add(new UIStandInteractions());
+            
             sb = new StringBuilder();
         }
 
         private void Update()
         {
-            var hits = interactor.FindInteractables(transform.position, transform.forward);
+            // get nearest
+            var hits = getClosestInteractable.FindInteractables(transform.position, transform.forward);
+            
+            if (hits == null) return;
 
-            if (hits.Length == 0) return;
+            var nearestInteractable = hits[0].gameObject.GetComponent<IInteractable>();
 
-            // TODO: Convert to method and use Input Actions
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-            {
-                Debug.Log("Pressed");
+            var tryInteract = InputMethod();
+            // Debug.Log(tryInteract);
+            // Debug.Log(hits[0].gameObject, hits[0]);
+            
+            if (!tryInteract) return;
                 
-                physInteractions.TryPickupItems(hits);
+            foreach (var interaction in interactions)
+            {
+                if (interaction.TryInteract(nearestInteractable)) break;
             }
         }
 
+        private bool InputMethod()
+        {
+            var notPressedThisFrame = !Keyboard.current.eKey.wasPressedThisFrame;
+            if (notPressedThisFrame) return false;
+            
+            // Debug.Log("Pressed");
+            return true;
+        }
+
+        // move this somewhere else
         public void ThrowPhysicalItem(ItemThrowData data)
         {
-            physInteractions.ThrowPhysicalItem(data);
+            // physInteractions.ThrowPhysicalItem(data);
+            
+            var physItem = data.PhysItem;
+            
+            var rb = physItem.GetComponent<Rigidbody>();
+            
+//             Debug.Log(data.ThrowForce);
+            rb.AddForce(data.ThrowForce, ForceMode.Impulse);
         }
         
         [ContextMenu("Test PhysicalItemFactory.CreateInstance")]

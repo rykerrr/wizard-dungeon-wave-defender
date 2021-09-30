@@ -5,15 +5,15 @@ using UnityEngine;
 namespace WizardGame.Item_System.World_Interaction
 {
     [Serializable]
-    // Probably better to be renamed once i find a better name for it, it just supplies colliders of layer Interactable
-    public class Interactor
+    public class GetClosestInteractable
     {
         [SerializeField] private LayerMask interactablesLayer;
         [SerializeField] private float findRange = default;
         [SerializeField] private float findWidth = default;
-
+        
         private Vector3 HalfExtents => Vector3.one * findWidth / 2;
-
+        private RaycastHit[] res = new RaycastHit[1];
+        
         public float FindWidth
         {
             get => findWidth;
@@ -32,12 +32,15 @@ namespace WizardGame.Item_System.World_Interaction
             set => interactablesLayer = value;
         }
 
-        public Collider[] FindInteractables(Vector3 center, Vector3 dir)
+        public GameObject[] FindInteractables(Vector3 center, Vector3 dir)
         {
-            RaycastHit[] hits = Physics.BoxCastAll(center, HalfExtents, dir, Quaternion.identity, FindRange,
-                interactablesLayer, QueryTriggerInteraction.Ignore);
+            // boxcast 5 targets, return nearest
+            var hits = Physics.BoxCastNonAlloc(center, HalfExtents, dir, res, Quaternion.identity, FindRange, InteractablesLayer,
+                QueryTriggerInteraction.Ignore);
 
-            return hits.Select(x => x.collider).ToArray();
+            // Debug.Log($"Hit count: {hits}");
+            
+            return hits == 0 ? null : res.Select(x => x.rigidbody ? x.rigidbody.gameObject : x.collider.gameObject).ToArray();
         }
     }
 }

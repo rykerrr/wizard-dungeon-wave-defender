@@ -21,12 +21,12 @@ namespace WizardGame.Item_System.Items
         [Header("Properties")]
         [SerializeField] protected HotbarItemGameEvent itemUseEvent;
 
-        protected StringBuilder sb = new StringBuilder();
+        protected StringBuilder sb;
         
         public string Name => name;
         public abstract string ColouredName { get; }
         public Sprite Icon => icon;
-        public virtual HotbarItemGameEvent ItemUseEvent { get => itemUseEvent; set => itemUseEvent = value; }
+        public HotbarItemGameEvent ItemUseEvent { get => itemUseEvent; set => itemUseEvent = value; }
 
         public Guid Id => id;
         public float CooldownDuration => cooldownDuration;
@@ -83,11 +83,6 @@ namespace WizardGame.Item_System.Items
 		
         public override string ToString()
         {
-            // Can't figure out why StringBuilder isn't being initialized in the field, I assume it's due to the 
-            // unity's serialization, but if you don't initialize it here in one way or another it'll throw
-            // a null ref exception
-            //  (sb ??= new StringBuilder()).Clear();
-
             sb.Append("Hotbar Item | Name: ").Append(Name).Append(", Icon: ").Append(Icon.ToString())
                 .Append(", Use Event: ").Append(itemUseEvent.ToString()).AppendLine();
             
