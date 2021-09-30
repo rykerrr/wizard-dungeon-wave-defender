@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using WizardGame.Item_System;
 using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
@@ -21,7 +22,7 @@ namespace WizardGame.Item_System.World_Interaction
             this.itemContainer = itemContainer;
         }
 
-        public void TryPickupItems(Collider[] possibleItems)
+        public void TryPickupItems(params Collider[] possibleItems)
         {
             foreach (var collider in possibleItems)
             {

@@ -35,9 +35,9 @@ namespace WizardGame.Item_System.World_Interaction
         public Collider[] FindInteractables(Vector3 center, Vector3 dir)
         {
             RaycastHit[] hits = Physics.BoxCastAll(center, HalfExtents, dir, Quaternion.identity, FindRange,
-                interactablesLayer);
+                interactablesLayer, QueryTriggerInteraction.Ignore);
 
-            return hits.Where(x => x.collider != null).Select(x => x.collider).ToArray();
+            return hits.Select(x => x.collider).ToArray();
         }
     }
 }

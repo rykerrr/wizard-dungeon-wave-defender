@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.CustomEventSystem;
@@ -13,21 +14,25 @@ namespace WizardGame.Item_System.World_Interaction
         [SerializeField] private Interactor interactor = default;
 
         private PhysicalItemInteractions physInteractions = default;
-        
+        StringBuilder sb;
+
         private void Awake()
         {
             physInteractions = new PhysicalItemInteractions(inventory.ItemContainer);
+            sb = new StringBuilder();
         }
 
         private void Update()
         {
-            Collider[] hits = interactor.FindInteractables(transform.position, transform.forward);
+            var hits = interactor.FindInteractables(transform.position, transform.forward);
 
             if (hits.Length == 0) return;
 
             // TODO: Convert to method and use Input Actions
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
+                Debug.Log("Pressed");
+                
                 physInteractions.TryPickupItems(hits);
             }
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 502165781}
   - component: {fileID: 502165780}
   - component: {fileID: 502165779}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ForwIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2082507929050577108}
   - component: {fileID: 2082507929050577115}
   - component: {fileID: 2082507929050577114}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
     offset: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   maxDistanceToGround: 2.5
 --- !u!114 &254028076
 MonoBehaviour:
@@ -407,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6876387449441682762}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PhysicalItemObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,12 +487,20 @@ PrefabInstance:
       value: ItemInfo_Billboard
       objectReference: {fileID: 0}
     - target: {fileID: 4846095580229333159, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846095580229333159, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6336979355151919488, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
       propertyPath: m_Color.a
       value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336979355151919502, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6336979355151919503, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
       propertyPath: m_LocalScale.x
@@ -522,6 +530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 6336979355825799431, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6336979355825799480, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -546,6 +558,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 7822395895888101689, guid: 53614f81d858b984ea75d8c0687c5f72, type: 2}
+    - target: {fileID: 6336979356309902662, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb29221629eae7d47bdef1beff7bdd76, type: 3}
 --- !u!4 &4878966894479786776 stripped

@@ -140,6 +140,7 @@ namespace WizardGame.Item_System.Item_Containers
             if (quantityAfterRemoval == 0) slot = ItemSlot.Empty;
             
             itemSlots[slotIndex] = new ItemSlot(slot.invItem, quantityAfterRemoval);
+            
             OnItemsUpdated?.Invoke();
         }
 

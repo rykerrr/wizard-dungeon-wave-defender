@@ -16,23 +16,23 @@ MonoBehaviour:
   itemContainer:
     itemSlots:
     - quantity: 1
-      invItem: {fileID: 0}
+      invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
     - quantity: 15
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
-    - quantity: 6
+    - quantity: 8
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 1
-      invItem: {fileID: 0}
-    - quantity: 1
       invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
-    - quantity: 1
-      invItem: {fileID: 11400000, guid: 6200df6c87b453d40be0ac9a23cfaebb, type: 2}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 1
-      invItem: {fileID: 11400000, guid: 6a07199e9fe4b7c4a89f590c9e043903, type: 2}
+    - quantity: 0
+      invItem: {fileID: 0}
+    - quantity: 0
+      invItem: {fileID: 0}
+    - quantity: 0
+      invItem: {fileID: 0}
     - quantity: 1
       invItem: {fileID: 11400000, guid: a97808306e4c3894d81bd87d4c079910, type: 2}
     - quantity: 1
@@ -41,13 +41,13 @@ MonoBehaviour:
       invItem: {fileID: 11400000, guid: 9a72e5dfd9a5e684a9ae6eaf096e6f11, type: 2}
     - quantity: 15
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
-    - quantity: 1
+    - quantity: 0
       invItem: {fileID: 0}
     - quantity: 1
       invItem: {fileID: 0}
@@ -55,5 +55,5 @@ MonoBehaviour:
       invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
-  itemToAdd: {fileID: 11400000, guid: 9a72e5dfd9a5e684a9ae6eaf096e6f11, type: 2}
-  quantity: 1
+  itemToAdd: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
+  quantity: 2

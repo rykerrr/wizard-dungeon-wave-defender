@@ -19,11 +19,13 @@ namespace WizardGame.Movement.Position
         
         private void KeepDistanceToGround()
         {
-            bool didHit = Physics.Raycast(transform.position, Vector3.down,
+            var position = transform.position;
+            bool didHit = Physics.Raycast(position, Vector3.down,
                 out RaycastHit hitInfo, maxDistanceToGround, whatIsGround);
 
             floatMovement.Tick(Time.deltaTime, didHit, hitInfo.distance, maxDistanceToGround);
-            transform.position += floatMovement.Value;
+            position += floatMovement.Value;
+            transform.position = position;
         }
     }
 }

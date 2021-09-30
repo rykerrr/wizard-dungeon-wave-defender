@@ -21,9 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Item System/Inventories/Inventory_PlayerInventory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Game Data/Item System/Inventories/Inventory_PlayerInventory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/ItemGravityBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/ItemGravityBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,12 +142,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/SpellUnlockLevelUpAction.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Talent.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/com-nika-rotatingscrollselectwindow/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/PrimitivePlus/Editor/PrimitivePlusMaterialEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scripts/Scroll-Rotating Window Panel/RotatingDisplayWindowHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveLoad.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/MainMenuControls.cs" />
@@ -184,9 +184,15 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterData.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Character.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Position/Movement Behaviours/ItemGravityBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -328,7 +334,7 @@
       <workItem from="1632736527410" duration="337000" />
       <workItem from="1632928012703" duration="2418000" />
       <workItem from="1632941680654" duration="5699000" />
-      <workItem from="1632985054828" duration="5940000" />
+      <workItem from="1632985054828" duration="10017000" />
     </task>
     <servers />
   </component>

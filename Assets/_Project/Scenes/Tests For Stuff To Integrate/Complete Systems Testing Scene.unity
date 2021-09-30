@@ -695,8 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8160e70b8eee4f4385aa1cf11bea04fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterElements:
-  - {fileID: 11400000, guid: 0383c2a560eef3a46801387c87d4770e, type: 2}
 --- !u!54 &391138506
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1027,8 +1025,6 @@ GameObject:
   - component: {fileID: 659508427}
   - component: {fileID: 659508430}
   - component: {fileID: 659508423}
-  - component: {fileID: 659508425}
-  - component: {fileID: 659508429}
   - component: {fileID: 659508431}
   - component: {fileID: 659508432}
   m_Layer: 0
@@ -1335,6 +1331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1127306432}
+  - {fileID: 1951648956}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1380,35 +1377,6 @@ MonoBehaviour:
       m_Bits: 64
     findRange: 5
     findWidth: 3
---- !u!114 &659508425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659508408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417f0e8f498280c48b579a68e2e3ccec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 938af53b04cb0034d8bcf132c9c74fed, type: 2}
-  eventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 659508424}
-        m_TargetAssemblyTypeName: WizardGame.ItemSystem.World_Interaction.PlayerInteractionBehavior,
-          ProductionScripts
-        m_MethodName: ThrowPhysicalItem
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &659508426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,34 +1427,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsSysBehaviour: {fileID: 659508426}
   statusEffectHandler: {fileID: 659508432}
---- !u!114 &659508429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659508408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021329b993ee91a41823bf61481bfa1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: c8c8ca9c4d82414438a4e3f5f9e44fa0, type: 2}
-  eventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 659508423}
-        m_TargetAssemblyTypeName: WizardGame.Combat_System.SpellCastHandler, Production.Runtime
-        m_MethodName: TryEquipSpell
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &659508430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,7 +1451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8160e70b8eee4f4385aa1cf11bea04fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterElements: []
 --- !u!114 &659508432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2666,6 +2605,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7455533320292035353, guid: 562a692ed74ad674b83a271c68273062, type: 3}
   m_PrefabInstance: {fileID: 7455533319759142005}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1951648955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951648956}
+  - component: {fileID: 1951648958}
+  - component: {fileID: 1951648957}
+  m_Layer: 0
+  m_Name: Listeners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951648956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951648955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 659508422}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951648957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951648955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021329b993ee91a41823bf61481bfa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c8c8ca9c4d82414438a4e3f5f9e44fa0, type: 2}
+  eventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 659508423}
+        m_TargetAssemblyTypeName: WizardGame.Combat_System.SpellCastHandler, Production.Runtime
+        m_MethodName: TryEquipSpell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1951648958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951648955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417f0e8f498280c48b579a68e2e3ccec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 938af53b04cb0034d8bcf132c9c74fed, type: 2}
+  eventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 659508424}
+        m_TargetAssemblyTypeName: WizardGame.ItemSystem.World_Interaction.PlayerInteractionBehavior,
+          ProductionScripts
+        m_MethodName: ThrowPhysicalItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1980149047 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7349998441818397747, guid: ec728e3104c3d87458c120de2da7152f, type: 3}
@@ -4614,6 +4642,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3543899849181506369, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 3543899849181506369, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
@@ -4694,49 +4726,97 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 659508430}
     - target: {fileID: 7455533319309641346, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533319309641346, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533319350776406, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533319350776406, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533319378330364, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533319378330364, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533319382156617, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533319382156617, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533319482075998, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533319482075998, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533319487403452, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533319487403452, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533319548934538, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533319548934538, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533319569639476, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533319569639476, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533319688179734, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533319688179734, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533320224897506, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533320224897506, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533320228230994, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533320228230994, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533320273961937, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533320273961937, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
@@ -4790,29 +4870,57 @@ PrefabInstance:
       value: Inventory_UI
       objectReference: {fileID: 0}
     - target: {fileID: 7455533320491138436, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533320491138436, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533320594007858, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533320594007858, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533320801385601, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533320801385601, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533321140137249, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533321140137249, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533321143728373, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533321143728373, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 7455533321224205530, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 7455533321224205530, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 7455533321255067914, guid: 562a692ed74ad674b83a271c68273062, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7455533321255067914, guid: 562a692ed74ad674b83a271c68273062, type: 3}
       propertyPath: tooltipPopup
       value: 
