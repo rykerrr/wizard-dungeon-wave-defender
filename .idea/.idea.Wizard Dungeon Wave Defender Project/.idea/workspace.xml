@@ -20,33 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Element System/ElementDB.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Element System/ElementDB.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterSaveData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterSaveData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/OnSceneLoadedCharacterDataLoad.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/OnSceneLoadedCharacterDataLoad.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scenes/Panel Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Rotating Selection Window/Runtime/Scenes/Panel Testing Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Helper Tests/JSONSaveLoadHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Helper Tests/JSONSaveLoadHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/JSONSaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/LoadSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/LoadSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/SaveSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/SaveSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SceneLoadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SceneLoadController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Scroll-Rotating Window Panel/ElementSelectionConfirmPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,9 +136,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/UI/TalentOverviewUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/TalentContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatBase.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/ChangeSpellCreationData.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/Talents/Level Up Actions/SpellUnlockLevelUpAction.cs" />
@@ -209,6 +184,9 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/CharacterData.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Character.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/Serializable Data Types/SerializableDictionary.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystemBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -350,7 +328,7 @@
       <workItem from="1632736527410" duration="337000" />
       <workItem from="1632928012703" duration="2418000" />
       <workItem from="1632941680654" duration="5699000" />
-      <workItem from="1632985054828" duration="4594000" />
+      <workItem from="1632985054828" duration="5940000" />
     </task>
     <servers />
   </component>

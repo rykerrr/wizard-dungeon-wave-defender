@@ -16,7 +16,7 @@ namespace Utilities.Serializable_Data_Types
         {
             keys.Clear();
             values.Clear();
-            foreach (KeyValuePair<TKey, TValue> pair in this)
+            foreach (var pair in this)
             {
                 keys.Add(pair.Key);
                 values.Add(pair.Value);
@@ -26,14 +26,15 @@ namespace Utilities.Serializable_Data_Types
         // load dictionary from lists
         public void OnAfterDeserialize()
         {
-            this.Clear();
+            Clear();
 
             if (keys.Count != values.Count)
                 throw new Exception(
-                    $"there are {keys.Count} keys and {values.Count} values after deserialization. Make sure that both key and value types are serializable.");
+                    $"there are {keys.Count} keys and {values.Count} values after deserialization. Make sure that both key and value types are serializable." +
+                    $"Key type: {(keys.Count > 0 ? keys[0].GetType().ToString() : "N/A")} Value Type: {(values.Count > 0 ? values[0].GetType().ToString() : "N/A")}");
 
-            for (int i = 0; i < keys.Count; i++)
-                this.Add(keys[i], values[i]);
+            for (var i = 0; i < keys.Count; i++)
+                Add(keys[i], values[i]);
         }
     }
 }

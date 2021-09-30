@@ -11,8 +11,9 @@ namespace WizardGame.Stats_System
     [Serializable]
     public class StatsSystem
     {
-       [SerializeField] private SerializableDictionary<StatType, StatBase> stats = new SerializableDictionary<StatType, StatBase>();
-        private SerializableDictionary<StatType, StatBase> Stats => stats;
+        private Dictionary<StatType, StatBase> stats = new Dictionary<StatType, StatBase>();
+       
+        private Dictionary<StatType, StatBase> Stats => stats;
         
         private StringBuilder sb = new StringBuilder();
         private TimerTickerSingleton timeTicker = default;
