@@ -724,13 +724,17 @@ PrefabInstance:
       value: GameObject_SaveSlot3
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 996752918}
+    - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot3
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: elementSelectionPanel
       value: 
-      objectReference: {fileID: 838557486}
+      objectReference: {fileID: 1214692751}
     - target: {fileID: 6219218699167366727, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1152,49 +1156,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -800, y: -360}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &400296860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 400296861}
-  - component: {fileID: 400296862}
-  m_Layer: 0
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &400296861
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400296860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 536.0016, y: -12.057373, z: 234.01587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &400296862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400296860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b52f8a9793d7c14f8cf342d47d4d127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &409893773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,6 +2392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_LoadSlot3
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653562, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9157721397706653563, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2515,6 +2480,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: sceneLoad
+      value: 
+      objectReference: {fileID: 1026242340}
     - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot3
@@ -3582,7 +3551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1214692752
 Transform:
   m_ObjectHideFlags: 0
@@ -3919,13 +3888,17 @@ PrefabInstance:
       value: GameObject_SaveSlot4
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 996752918}
+    - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot4
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: elementSelectionPanel
       value: 
-      objectReference: {fileID: 838557486}
+      objectReference: {fileID: 1214692751}
     - target: {fileID: 6219218699167366727, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4299,13 +4272,17 @@ PrefabInstance:
       value: GameObject_SaveSlot2
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 996752918}
+    - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot2
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: elementSelectionPanel
       value: 
-      objectReference: {fileID: 838557486}
+      objectReference: {fileID: 1214692751}
     - target: {fileID: 6219218699167366727, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4558,6 +4535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_LoadSlot2
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653562, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9157721397706653563, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4642,6 +4623,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: sceneLoad
+      value: 
+      objectReference: {fileID: 1026242340}
     - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot2
@@ -4739,6 +4724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_LoadSlot4
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653562, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9157721397706653563, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -4823,6 +4812,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: sceneLoad
+      value: 
+      objectReference: {fileID: 1026242340}
     - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: saveSlotFileName
       value: saveSlot4
@@ -5307,9 +5300,13 @@ PrefabInstance:
       value: GameObject_SaveSlot1
       objectReference: {fileID: 0}
     - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 996752918}
+    - target: {fileID: 6219218699167366726, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: elementSelectionPanel
       value: 
-      objectReference: {fileID: 838557486}
+      objectReference: {fileID: 1214692751}
     - target: {fileID: 6219218699167366727, guid: f728cb1ac60ee374cb87af80d42bebcc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5407,6 +5404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject_LoadSlot1
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653562, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9157721397706653563, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5491,6 +5492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
+      propertyPath: sceneLoad
+      value: 
+      objectReference: {fileID: 1026242340}
     - target: {fileID: 9157721397706653572, guid: 64c887ac849c751419256d1bc8b71e5d, type: 3}
       propertyPath: emptySaveSlotText
       value: 'Empty

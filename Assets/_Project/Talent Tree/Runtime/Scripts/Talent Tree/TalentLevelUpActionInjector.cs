@@ -60,11 +60,11 @@ public class TalentLevelUpActionInjector : MonoBehaviour
                                                                                == x.ThisMenu.SpellFoundation.SpellPrefab
                                                                                    .GetType());
 
-                Debug.Log(
-                    $"SpellUnlock: {spellUnlock.Name}, Its spell: {spellUnlock.SpellWeUnlock} Type: {spellUnlock.SpellWeUnlock.GetType()}  ");
-                Debug.Log(
-                    $"menu: {spellUnlock.SpellCreationPanel} Its spell: {spellUnlock.SpellCreationPanel.ThisMenu.SpellFoundation}" +
-                    $" Type: {spellUnlock.SpellCreationPanel.ThisMenu.SpellFoundation.GetType()}");
+                // Debug.Log(
+                    // $"SpellUnlock: {spellUnlock.Name}, Its spell: {spellUnlock.SpellWeUnlock} Type: {spellUnlock.SpellWeUnlock.GetType()}  ");
+                // Debug.Log(
+                    // $"menu: {spellUnlock.SpellCreationPanel} Its spell: {spellUnlock.SpellCreationPanel.ThisMenu.SpellFoundation}" +
+                    // $" Type: {spellUnlock.SpellCreationPanel.ThisMenu.SpellFoundation.GetType()}");
 
                 break;
             }

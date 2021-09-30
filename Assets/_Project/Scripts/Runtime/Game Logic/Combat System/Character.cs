@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using WizardGame.Combat_System.Element_System;
+using WizardGame.MainMenu;
 
 namespace WizardGame.Combat_System
 {
@@ -7,8 +8,13 @@ namespace WizardGame.Combat_System
     // Will contain team-based data in the future
     public class Character : MonoBehaviour
     {
-        [SerializeField] private Element[] characterElements = default;
+        private Element[] characterElements = default;
 
         public Element[] CharacterElement => characterElements;
+
+        public void InitCharacterData(CharacterData data)
+        {
+            characterElements = data.Elements;
+        }
     }
 }

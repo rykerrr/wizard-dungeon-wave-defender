@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.IO;
+using System.Linq;
+using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.MainMenu
 {
@@ -8,10 +10,14 @@ namespace WizardGame.MainMenu
         private static string saveDirLocation = "SaveData";
         private static string saveFileExtension = "json";
 
-        public static CharacterData LoadCharacterDataFile(string saveSlotName)
+        public static string selectedSaveSlot;
+        
+        public static CharacterSaveData LoadCharacterDataFile(string saveSlotName)
         {
             var dirPath = Path.Combine(Application.persistentDataPath, saveDirLocation);
             var filePath = $"{Path.Combine(dirPath, saveSlotName)}.{saveFileExtension}";
+
+            Debug.Log(dirPath + " | " + filePath + " | " + Application.persistentDataPath);
 
             if (!Directory.Exists(dirPath) || !File.Exists(filePath))
             {
@@ -23,12 +29,27 @@ namespace WizardGame.MainMenu
             }
             
             var jsonStr = File.ReadAllText(filePath);
-            var loadedObj = JsonUtility.FromJson<CharacterData>(jsonStr);
+            var loadedObj = JsonUtility.FromJson<CharacterSaveData>(jsonStr);
 
+            Debug.Break();
+            
             return loadedObj;
         }
 
-        public static void SaveCharacterDataFile(string saveSlotName, CharacterData data)
+        public static void SaveCharacterDataFileToSelectedSlot(CharacterSaveData data)
+        {
+            if (string.IsNullOrEmpty(selectedSaveSlot))
+            {
+                Debug.LogError($"Selected Save File is null or empty. ({selectedSaveSlot})");
+                Debug.Break();
+
+                return;
+            }
+            
+            SaveCharacterDataFile(selectedSaveSlot, data);
+        }
+
+        public static void SaveCharacterDataFile(string saveSlotName, CharacterSaveData data)
         {
             var dirPath = Path.Combine(Application.persistentDataPath, saveDirLocation);
             
@@ -41,14 +62,10 @@ namespace WizardGame.MainMenu
                 Directory.CreateDirectory(dirPath);
             }
 
-            var json = JsonUtility.ToJson(data);
+            var json = JsonUtility.ToJson(data, true);
 
-            var filePath = Path.Combine(dirPath, saveSlotName);
+            var filePath = $"{Path.Combine(dirPath, saveSlotName)}.{saveFileExtension}";
 
-            // if (!File.Exists(filePath))
-            // {
-            //     File.Create(filePath);
-            // }
             File.WriteAllText(filePath, json);
         }
 
@@ -60,9 +77,7 @@ namespace WizardGame.MainMenu
 
             var filePath = $"{Path.Combine(dirPath, saveSlotName)}.{saveFileExtension}";
 
-            if (!File.Exists(filePath)) return false;
-
-            return true;
+            return File.Exists(filePath);
         }
     }
 }

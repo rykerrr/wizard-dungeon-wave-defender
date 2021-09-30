@@ -10,10 +10,7 @@ namespace WizardGame.Combat_System
 {
     public static class SpellFactory
     {
-        private static string elementsLocationInResources = "Game Data/Elements";
         private static string spellLocationsInResources = "Prefabs/Combat System/Spells/Elemental";
-
-        private static List<string> elementNames = new List<string>();
 
         private static StringBuilder sb = new StringBuilder();
 
@@ -27,25 +24,19 @@ namespace WizardGame.Combat_System
 
         private static void InitSpells()
         {
-            LoadElementNames();
             LoadSpellsByElement();
             DumpElementNamesAndSpells();
         }
 
-        private static void LoadElementNames()
-        {
-            var elements = Resources.LoadAll<Element>(elementsLocationInResources);
-
-            elementNames = elements.Select(x => x.Name).ToList();
-        }
-
         private static void LoadSpellsByElement()
         {
-            if (elementNames.Count == 0) return;
+            var elemNames = ElementDB.Elements.Select(x => x.Name).ToList();
+            
+            if (elemNames.Count == 0) return;
 
             List<SpellBase> spellBases = new List<SpellBase>();
             
-            foreach (var elName in elementNames)
+            foreach (var elName in elemNames)
             {
                 var spellsOfElement = Resources.LoadAll<SpellBase>(Path.Combine(spellLocationsInResources, elName));
                 
@@ -79,7 +70,6 @@ namespace WizardGame.Combat_System
         
         public static void ReloadSpells()
         {
-            elementNames.Clear();
             spells.Clear();
             
             InitSpells();

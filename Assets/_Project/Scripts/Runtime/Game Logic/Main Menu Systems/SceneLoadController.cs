@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +8,17 @@ namespace WizardGame.MainMenu
     {
         [SerializeField] private int sceneToLoadIndex = 1;
         [SerializeField] private Transform loadingBarFill = default;
-
+        
         private AsyncOperation sceneLoadOperation = null;
 
+        private string thisDataSaveFileName = "";
+        
+        public string ThisDataSaveFileName
+        {
+            get => thisDataSaveFileName;
+            set => thisDataSaveFileName = value;
+        }
+        
         private void Update()
         {
             if (sceneLoadOperation == null || sceneLoadOperation.isDone)

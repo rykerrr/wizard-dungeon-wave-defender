@@ -55,9 +55,9 @@ namespace WizardGame.Item_System.UI
                 
                 slotItemIconImage.sprite = ItemSlot.invItem.Icon;
                 
-                Debug.Log(ItemSlot.Quantity + "  | " + ItemSlot.invItem);
+                // Debug.Log(ItemSlot.Quantity + "  | " + ItemSlot.invItem);
                 itemQuantText.text = ItemSlot.Quantity > 1 ? ItemSlot.Quantity.ToString() : " ";
-                Debug.Log(itemQuantText.text);
+                // Debug.Log(itemQuantText.text);
             }
         }
 

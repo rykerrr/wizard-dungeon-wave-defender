@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.MainMenu;
+using WizardGame.MainMenu.HelperTests;
 
 namespace WizardGame.SelectionWindow
 {
@@ -33,6 +34,11 @@ namespace WizardGame.SelectionWindow
         public void OnClick_ConfirmSelection()
         {
             Debug.Log($"Load scene with character data with {element} and save as character data");
+
+            var newCharData = new CharacterData(element);
+
+            OnSceneLoadedCharacterDataLoad.LoadedCharacterData = newCharData;
+            JSONSaveManager.SaveCharacterDataFileToSelectedSlot(newCharData.Data);
             
             sceneLoad.LoadScene();
         }

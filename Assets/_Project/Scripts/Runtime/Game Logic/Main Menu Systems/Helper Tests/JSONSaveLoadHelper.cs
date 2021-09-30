@@ -21,7 +21,7 @@ namespace WizardGame.MainMenu.HelperTests
             {
                 var charData = new CharacterData(elements);
                 
-                JSONSaveManager.SaveCharacterDataFile(saveFileName, charData);
+                JSONSaveManager.SaveCharacterDataFile(saveFileName, charData.Data);
 
                 Debug.Log($"Saved: {charData.ToString()}");
             }

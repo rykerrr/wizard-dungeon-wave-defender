@@ -17,7 +17,8 @@ public class LoadSlotUI : MonoBehaviour
     [Header("References")] 
     [SerializeField] private TextMeshProUGUI saveSlotText = default;
     [SerializeField] private DownTimerBehaviour downTimer = default;
-
+    [SerializeField] private SceneLoadController sceneLoad = default;
+    
     private string originText = "";
 
     public void Awake()
@@ -29,8 +30,8 @@ public class LoadSlotUI : MonoBehaviour
         
         downTimer.OnTimerEnd += () => saveSlotText.text = originText;
         downTimer.OnTimerEnd += () => downTimer.gameObject.SetActive(false);
-        
-        downTimer.gameObject.SetActive(false);
+
+        downTimer.enabled = false;
     }
 
     public void OnClick_LoadIfSlotExists()
@@ -39,13 +40,22 @@ public class LoadSlotUI : MonoBehaviour
         {
             Debug.Log("load save file logic cause save file exists yes");
 
+            LoadSaveFile();
+            
             return;
         }
 
         Debug.Log("save file is m.t.");
         saveSlotText.text = emptySaveSlotText;
-        
-        if(!downTimer.gameObject.activeSelf) downTimer.gameObject.SetActive(true);
+
+        if (!downTimer.enabled) downTimer.enabled = true;
         downTimer.ResetTimer();
+    }
+
+    private void LoadSaveFile()
+    {
+        OnSceneLoadedCharacterDataLoad.LoadedCharacterData = (CharacterData) JSONSaveManager.LoadCharacterDataFile(saveSlotFileName);
+        
+        sceneLoad.LoadScene();
     }
 }
