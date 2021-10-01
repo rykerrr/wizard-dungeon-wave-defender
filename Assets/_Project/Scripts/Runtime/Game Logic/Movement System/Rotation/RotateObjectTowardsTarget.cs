@@ -9,7 +9,7 @@ namespace WizardGame.Movement.Rotation
         [SerializeField] private Transform objToRotate = default;
         [SerializeField] private Transform target = default;
         [SerializeField] private bool enableRotate = default;
-        
+
         public Transform ObjectToRotate
         {
             get => objToRotate;
@@ -32,15 +32,11 @@ namespace WizardGame.Movement.Rotation
         {
             if (!enableRotate) return;
 
-            var relative = objToRotate.position - target.position;
+            var relative = target.position - objToRotate.position;
 
-            objToRotate.LookAt(target, Vector3.up);
-            
-            // var newLookRotation = Quaternion.LookRotation(relative);
-            //
-            // Debug.Log(newLookRotation);
-            //
-            // objToRotate.rotation = newLookRotation;
+            var newLookRotation = Quaternion.LookRotation(relative);
+
+            objToRotate.rotation = newLookRotation;
         }
     }
 }
