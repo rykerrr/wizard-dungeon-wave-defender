@@ -6,7 +6,7 @@ namespace WizardGame.Item_System.World_Interaction
     {
         string InteractableDescription { get; }
         
-        void OnPlayerEnter(Transform plr);
-        void OnPlayerExit(Transform plr);
+        void OnCharacterEnter(Transform plr);
+        void OnCharacterExit(Transform plr);
     }
 }

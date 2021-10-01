@@ -13,12 +13,12 @@ namespace WizardGame.Item_System.World_Interaction
         public GameObject UIObjectToShow => uiObjectToShow;
         public string InteractableDescription => interactableDescription;
 
-        public void OnPlayerEnter(Transform plr)
+        public void OnCharacterEnter(Transform plr)
         {
             throw new System.NotImplementedException();
         }
 
-        public void OnPlayerExit(Transform plr)
+        public void OnCharacterExit(Transform plr)
         {
             throw new System.NotImplementedException();
         }

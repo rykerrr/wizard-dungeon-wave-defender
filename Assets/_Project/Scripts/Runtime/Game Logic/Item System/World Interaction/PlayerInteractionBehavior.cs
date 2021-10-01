@@ -72,12 +72,18 @@ namespace WizardGame.Item_System.World_Interaction
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.GetComponent<IInteractable>() != null) Debug.Log("going to, is interactable", other);
+            IInteractable interactable;
+            if (ReferenceEquals(interactable = other.GetComponent<IInteractable>(), null)) return;
+            
+            interactable.OnCharacterEnter(transform);
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if(other.GetComponent<IInteractable>() != null) Debug.Log("going away, but is interactable", other);
+            IInteractable interactable;
+            if (ReferenceEquals(interactable = other.GetComponent<IInteractable>(), null)) return;
+            
+            interactable.OnCharacterExit(transform);
         }
 
         #if UNITY_EDITOR

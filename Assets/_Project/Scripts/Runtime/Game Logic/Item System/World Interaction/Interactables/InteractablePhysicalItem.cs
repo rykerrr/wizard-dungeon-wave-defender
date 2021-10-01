@@ -24,6 +24,8 @@ namespace WizardGame.Item_System.World_Interaction
         public InventoryItem TargetItem => targetItem;
         public string InteractableDescription => $"Item: {TargetItem.Name}\n{interactableDescription}";
 
+        private int enterCount = 0;
+        
         private void Awake()
         {
             physItemRotation ??= GetComponent<PhysicalItemRotationBehaviour>();
@@ -38,40 +40,58 @@ namespace WizardGame.Item_System.World_Interaction
             targetItem = itemToInit;
         }
 
-        private void OnEnable()
+        public void OnCharacterEnter(Transform plr)
         {
-            // May not need to be implemented, OnPlayerEnter/Exit will still be called
+            enterCount++;
+            
+            monoBehavEnabler.WaitEnableMonoBehaviour(false, gravBehaviour, forceBehaviour);
+            monoBehavEnabler.WaitEnableMonoBehaviour(true, floatBehaviour);
+
+            var isDisabled = !physItemRotation.enabled;
+            if (isDisabled) physItemRotation.enabled = true;
+            
+            physItemRotation.OnCharacterEnter(plr);
+        }
+
+        public void OnCharacterExit(Transform plr)
+        {
+            enterCount--;
+
+            if (enterCount < 0)
+            {
+                Debug.LogError($"We have an issue, enterCount under 0, last to acess: {plr}");
+                
+                throw new ArgumentOutOfRangeException();
+            }
+            
+            if (enterCount == 0)
+            {
+                monoBehavEnabler.ForceMonoBehaviourSet(false, floatBehaviour);
+                monoBehavEnabler.ForceMonoBehaviourSet(true, gravBehaviour, forceBehaviour);
+                
+                var isEnabled = physItemRotation.enabled;
+                if (isEnabled) physItemRotation.enabled = false;
+            }
+
+            physItemRotation.OnCharacterExit(plr);
         }
 
         private void OnDisable()
         {
-            // May not need to be implemented, OnPlayerEnter/Exit will still be called
-        }
-
-        public void OnPlayerEnter(Transform plr)
-        {
-            monoBehavEnabler.WaitEnableMonoBehaviour(false, gravBehaviour, forceBehaviour);
-            monoBehavEnabler.WaitEnableMonoBehaviour(true, floatBehaviour);
-
-            physItemRotation.OnPlayerEnter(plr);
-        }
-
-        public void OnPlayerExit(Transform plr)
-        {
             monoBehavEnabler.ForceMonoBehaviourSet(false, floatBehaviour);
             monoBehavEnabler.ForceMonoBehaviourSet(true, gravBehaviour, forceBehaviour);
 
-            physItemRotation.OnPlayerExit(plr);
+            enterCount = 0;
         }
 
 #if UNITY_EDITOR
         [Header("Debug")] [SerializeField] private Transform plr = default;
 
         [ContextMenu("OnPlayerEnter")]
-        public void CallOnPlayerEnter() => OnPlayerEnter(plr);
+        public void CallOnPlayerEnter() => OnCharacterEnter(plr);
 
         [ContextMenu("OnPlayerExit")]
-        public void CallOnPlayerExit() => OnPlayerExit(plr);
+        public void CallOnPlayerExit() => OnCharacterExit(plr);
 #endif
     }
 }

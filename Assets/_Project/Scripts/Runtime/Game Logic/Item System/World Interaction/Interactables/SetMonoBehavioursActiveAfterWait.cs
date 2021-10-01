@@ -17,7 +17,7 @@ namespace WizardGame.Item_System.World_Interaction
             {
                 mb.enabled = setEnabled;
                 
-                Debug.Log($"{mb} set enabled: {setEnabled}!");
+                // Debug.Log($"{mb} set enabled: {setEnabled}!");
             }            
         }
 

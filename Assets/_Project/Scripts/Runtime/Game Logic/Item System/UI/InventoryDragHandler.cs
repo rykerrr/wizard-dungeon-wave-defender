@@ -38,9 +38,6 @@ namespace WizardGame.Item_System.UI
             var itemDropLocation = owner.position + forward * 3;
             var force = forward * 0.6f + new Vector3(0f, 1.4f, 0f);
             
-            var slot = inventory.ItemContainer[itemSlotUI.SlotIndexOnUI];
-            Debug.Log($"Item: {slot.invItem}, Quantity: {slot.Quantity}");
-            
             var physItem = PhysicalItemFactory.CreateInstance(itemDropLocation, Quaternion.identity,
                 (InventoryItem) itemSlotUI.ReferencedSlotItem);
             inventory.ItemContainer.RemoveAt(ItemSlotUI.SlotIndexOnUI);

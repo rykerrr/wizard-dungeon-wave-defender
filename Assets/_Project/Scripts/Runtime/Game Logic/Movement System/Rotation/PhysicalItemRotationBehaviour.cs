@@ -1,4 +1,5 @@
-﻿using WizardGame.Item_System.World_Interaction;
+﻿using System.Collections.Generic;
+using WizardGame.Item_System.World_Interaction;
 using UnityEngine;
 
 namespace WizardGame.Movement.Rotation
@@ -8,46 +9,81 @@ namespace WizardGame.Movement.Rotation
         [SerializeField] private RotateObjectAroundAxis rotatePhysItemAroundAxis = default;
         [SerializeField] private RotateObjectTowardsTarget rotatePhysItemTowardsTarg = default;
 
+        private readonly List<Transform> targetQueue = new List<Transform>();
         private Transform actualTarget = default;
 
         private void Update()
         {
+            Debug.Log($"Target is null: {ReferenceEquals(actualTarget, null)}");
+            
             if (ReferenceEquals(actualTarget, null))
             {
+                Debug.Log("attempting to rotate around axis");
                 rotatePhysItemAroundAxis.Tick(Vector3.one, 1f);
             }
             else
             {
-                rotatePhysItemTowardsTarg.Tick(Vector3.one);
+                rotatePhysItemTowardsTarg.Tick();
             }
         }
 
-        public void OnPlayerEnter(Transform plr)
+        public void OnCharacterEnter(Transform plr)
         {
-            actualTarget = plr;
-            
-            rotatePhysItemTowardsTarg.Target = actualTarget;
+            AddTarget(plr);
+
+            if (actualTarget != null)
+            {
+                rotatePhysItemTowardsTarg.EnableRotate = true;
+                rotatePhysItemAroundAxis.EnableRotate = false;
+            }
         }
 
-        public void OnPlayerExit(Transform plr)
+        public void OnCharacterExit(Transform plr)
         {
-            if (plr != actualTarget) return; 
-            
-            actualTarget = null;
-        }
-        
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!other.GetComponent<PlayerInteractionBehavior>()) return;
+            RemoveTarget(plr);
 
-
+            if (actualTarget == null)
+            {
+                rotatePhysItemTowardsTarg.EnableRotate = false;
+                rotatePhysItemAroundAxis.EnableRotate = true;
+            }
         }
 
-        private void OnTriggerExit(Collider other)
+        private void AddTarget(Transform plr)
         {
-            if (!other.GetComponent<PlayerInteractionBehavior>()) return;
-            
+            if (targetQueue.Contains(plr)) return;
 
+            targetQueue.Add(plr);
+
+            if (actualTarget == null)
+            {
+                Debug.Log($"Current target doesn't exist, switching to: {targetQueue[0]}");
+
+                actualTarget = targetQueue[0];
+
+                rotatePhysItemTowardsTarg.Target = actualTarget;
+            }
+        }
+
+        private void RemoveTarget(Transform plr)
+        {
+            if (targetQueue.Contains(plr)) targetQueue.Remove(plr);
+
+            var o = actualTarget.gameObject;
+            Debug.Log($"e.........{o}", o);
+            
+            if (actualTarget == plr)
+            {
+                if (targetQueue.Count > 0)
+                {
+                    Debug.Log($"Current target is being removed, switching to: {targetQueue[0]}", targetQueue[0]);
+
+                    actualTarget = targetQueue[0];
+                }
+                else actualTarget = null;
+
+                rotatePhysItemTowardsTarg.Target = actualTarget;
+            }
         }
     }
 }

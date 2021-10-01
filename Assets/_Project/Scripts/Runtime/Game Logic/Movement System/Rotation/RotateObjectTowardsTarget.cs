@@ -28,16 +28,19 @@ namespace WizardGame.Movement.Rotation
             set => enableRotate = value;
         }
         
-        // rotation mask keeps rotation in it's axis only, e.g 0,1,0 is rotation on y only
-        public void Tick(Vector3 rotationMask)
+        public void Tick()
         {
             if (!enableRotate) return;
 
-            Vector3 forward = (target.position - objToRotate.position).normalized;
+            var relative = objToRotate.position - target.position;
 
-            Vector3 newLookRotation = Quaternion.LookRotation(forward, Vector3.up).eulerAngles;
-
-            objToRotate.rotation = Quaternion.Euler(Vector3.Scale(newLookRotation, rotationMask));
+            objToRotate.LookAt(target, Vector3.up);
+            
+            // var newLookRotation = Quaternion.LookRotation(relative);
+            //
+            // Debug.Log(newLookRotation);
+            //
+            // objToRotate.rotation = newLookRotation;
         }
     }
 }
