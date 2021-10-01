@@ -1,47 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.CustomEventSystem;
 using WizardGame.Item_System.Item_Containers;
+using WizardGame.Item_System.World_Interaction.UI;
 using WizardGame.Movement.Position;
-using WizardGame.Utility.Infrastructure.Factories;
 
 namespace WizardGame.Item_System.World_Interaction
 {
     public class PlayerInteractionBehavior : MonoBehaviour
     {
+        [Header("References")] 
+        [SerializeField] private InteractButtonUI interactButton;
+        
+        [Header("Preferences")]
         [SerializeField] private Inventory inventory = default;
         [SerializeField] private GetClosestInteractable getClosestInteractable = default;
 
         private readonly List<IInteraction> interactions = new List<IInteraction>();
+        private IInteractable nearestInteractable = default;
         
         private StringBuilder sb;
 
         private void Awake()
         {
+            InitInteractions();
+
+            sb = new StringBuilder();
+        }
+
+        private void InitInteractions()
+        {
             interactions.Add(new PhysicalItemInteractions(inventory.ItemContainer));
             interactions.Add(new UIStandInteractions());
-            
-            sb = new StringBuilder();
         }
 
         private void Update()
         {
-            // get nearest
-            var hits = getClosestInteractable.FindInteractables(transform.position, transform.forward);
-            
-            if (hits == null) return;
+            if (GetNearestInteractable()) return;
 
-            var nearestInteractable = hits[0].gameObject.GetComponent<IInteractable>();
-
-            var tryInteract = InputMethod();
-            // Debug.Log(tryInteract);
-            // Debug.Log(hits[0].gameObject, hits[0]);
-            
-            if (!tryInteract) return;
+            var input = InputMethod();
+            if (!input) return;
                 
+            TryProcessInteraction();
+        }
+
+        private bool GetNearestInteractable()
+        {
+            var hits = getClosestInteractable.FindInteractables(transform.position, transform.forward);
+
+            if (hits == null)
+            {
+                interactButton.TryDisable();
+
+                return true;
+            }
+
+            nearestInteractable = hits[0].gameObject.GetComponent<IInteractable>();
+            if (ReferenceEquals(nearestInteractable, null)) return false;
+
+            interactButton.UpdateUI(nearestInteractable.InteractUseDescription);
+
+            return false;
+        }
+
+        public void TryProcessInteraction()
+        {
             foreach (var interaction in interactions)
             {
                 if (interaction.TryInteract(nearestInteractable)) break;
@@ -60,38 +85,11 @@ namespace WizardGame.Item_System.World_Interaction
         // move this somewhere else
         public void ThrowPhysicalItem(ItemThrowData data)
         {
-            // physInteractions.ThrowPhysicalItem(data);
-            
             var physItem = data.PhysItem;
             
             var rb = physItem.GetComponent<ForceReceiverMovementBehaviour>();
             
-//             Debug.Log(data.ThrowForce);
             rb.AddForce(data.ThrowForce);
         }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            IInteractable interactable;
-            if (ReferenceEquals(interactable = other.GetComponent<IInteractable>(), null)) return;
-            
-            interactable.OnCharacterEnter(transform);
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            IInteractable interactable;
-            if (ReferenceEquals(interactable = other.GetComponent<IInteractable>(), null)) return;
-            
-            interactable.OnCharacterExit(transform);
-        }
-
-        #if UNITY_EDITOR
-        [ContextMenu("Test PhysicalItemFactory.CreateInstance")]
-        private void CreateInstanceTest()
-        {
-            PhysicalItemFactory.CreateInstance(Vector3.zero, Quaternion.identity, null);
-        }
-        #endif
     }
 }

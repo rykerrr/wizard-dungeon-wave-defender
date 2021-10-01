@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 445445057754037335}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 445445058016505230}
   - component: {fileID: 445445058016505229}
   - component: {fileID: 445445058016505228}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TableLeg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObjectToShow: {fileID: 0}
-  interactableDescription: Open UI
+  interactUseText: 
 --- !u!65 &1514240443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 445445058527259004}
   - component: {fileID: 445445058527259003}
   - component: {fileID: 445445058527259002}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TableLeg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 445445059599628775}
   - component: {fileID: 445445059599628774}
   - component: {fileID: 445445059599628773}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TableTopPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 445445059752263254}
   - component: {fileID: 445445059752263253}
   - component: {fileID: 445445059752263252}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TableLeg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 445445059806850975}
   - component: {fileID: 445445059806850974}
   - component: {fileID: 445445059806850973}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TableLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,8 +13,6 @@ namespace WizardGame.Movement.Rotation
 
         private void Update()
         {
-            Debug.Log($"Target is null: {ReferenceEquals(actualTarget, null)}");
-            
             if (ReferenceEquals(actualTarget, null))
             {
                 Debug.Log("attempting to rotate around axis");

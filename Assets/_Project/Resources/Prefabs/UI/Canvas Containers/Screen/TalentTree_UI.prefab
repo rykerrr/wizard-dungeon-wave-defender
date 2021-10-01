@@ -2639,7 +2639,7 @@ GameObject:
   - component: {fileID: 7688099183843187793}
   - component: {fileID: 7688099183843187799}
   m_Layer: 0
-  m_Name: GameObject_TalentTree_UI
+  m_Name: TalentTree_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2808,7 +2808,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsSystemBehav: {fileID: 0}
+  spellCreationPanels: []
   talentHandler: {fileID: 7688099183843187788}
+  hiddenTalentHandler: {fileID: 0}
 --- !u!114 &7688099183843187798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2825,10 +2827,7 @@ MonoBehaviour:
   hiddenTalentGrid: {fileID: 7688099182817521409}
   showHiddenTalentButton: {fileID: 7688099183528578059}
   hiddenTalentPrefab: {fileID: -5285984259558408008, guid: d5edc22f6ae761d4b81b884bbae0f81c, type: 3}
-  hiddenTalents:
-  - {fileID: 11400000, guid: 06f8395fc42266f44968c987cd874acd, type: 2}
-  - {fileID: 11400000, guid: 6ae0efe658d786c4eb290cf7e532ec57, type: 2}
-  - {fileID: 11400000, guid: 397e75fc18ee1054998a77ecf2b9d6bf, type: 2}
+  hiddenHiddenTalents: []
 --- !u!114 &7688099183843187795
 MonoBehaviour:
   m_ObjectHideFlags: 0

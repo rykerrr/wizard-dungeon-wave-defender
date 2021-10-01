@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4385618796715450694}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PhysicalItemObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7183537159293588761}
   - component: {fileID: 7183537159293588760}
   - component: {fileID: 7183537159293588767}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ForwIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 9175944676200635608}
   - component: {fileID: 9175944676200635607}
   - component: {fileID: 9175944676200635606}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ MonoBehaviour:
   floatBehaviour: {fileID: 9175944677152671818}
   monoBehavEnabler: {fileID: 9175944677152671816}
   targetItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
-  interactableDescription: Get Item
+  interactUseText: get
   plr: {fileID: 0}
 --- !u!114 &9175944677152671816
 MonoBehaviour:
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 9175944677548450526}
   - component: {fileID: 9175944677548450529}
   - component: {fileID: 7973925412670000927}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ItemField
   m_TagString: Untagged
   m_Icon: {fileID: 0}

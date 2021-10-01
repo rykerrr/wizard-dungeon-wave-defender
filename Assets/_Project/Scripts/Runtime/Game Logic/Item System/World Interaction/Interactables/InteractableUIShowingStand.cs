@@ -8,10 +8,11 @@ namespace WizardGame.Item_System.World_Interaction
         [SerializeField] private GameObject uiObjectToShow = default;
 
         [Header("Preferences")] [SerializeField]
-        private string interactableDescription = default;
+        private string overrideUiName = default;
         
         public GameObject UIObjectToShow => uiObjectToShow;
-        public string InteractableDescription => interactableDescription;
+        public string InteractUseDescription => 
+            $"show {(string.IsNullOrEmpty(overrideUiName) ? uiObjectToShow.name : overrideUiName)}";
 
         public void OnCharacterEnter(Transform plr)
         {

@@ -19,10 +19,8 @@ namespace WizardGame.Item_System.World_Interaction
         [Header("Preferences")] [SerializeField]
         private InventoryItem targetItem = default;
 
-        [SerializeField] private string interactableDescription = default;
-
         public InventoryItem TargetItem => targetItem;
-        public string InteractableDescription => $"Item: {TargetItem.Name}\n{interactableDescription}";
+        public string InteractUseDescription => $"Get item: {TargetItem.Name}";
 
         private int enterCount = 0;
         

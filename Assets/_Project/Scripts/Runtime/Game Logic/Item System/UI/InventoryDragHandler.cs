@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using WizardGame.CustomEventSystem;
-using WizardGame.Item_System.Item_Containers;
 using WizardGame.Item_System.Items;
+using WizardGame.Movement.Position;
 using WizardGame.Utility.Infrastructure.Factories;
 
 namespace WizardGame.Item_System.UI
@@ -30,19 +30,26 @@ namespace WizardGame.Item_System.UI
         {
             if (ReferenceEquals(itemSlotUI, null) ||
                 ReferenceEquals((InventoryItem) ItemSlotUI.ReferencedSlotItem, null)) return;
-
-            var inventory = itemSlotUI.Inventory;
-            var owner = itemSlotUI.Owner;
-
-            var forward = owner.forward;
-            var itemDropLocation = owner.position + forward * 3;
-            var force = forward * 0.6f + new Vector3(0f, 1.4f, 0f);
             
-            var physItem = PhysicalItemFactory.CreateInstance(itemDropLocation, Quaternion.identity,
-                (InventoryItem) itemSlotUI.ReferencedSlotItem);
+            // remove item
+            var inventory = itemSlotUI.Inventory;
             inventory.ItemContainer.RemoveAt(ItemSlotUI.SlotIndexOnUI);
 
-            itemThrowEvent.Raise(new ItemThrowData(physItem, force));
+            // get throw force
+            var owner = itemSlotUI.Owner;
+            var forward = owner.forward;
+            var force = forward * 0.6f + new Vector3(0f, 1.4f, 0f);
+
+            // get spawn pos
+            var itemDropLocation = owner.position + forward * 3;
+
+            // create the item
+            var physItem = PhysicalItemFactory.CreateInstance(itemDropLocation, Quaternion.identity,
+                (InventoryItem) itemSlotUI.ReferencedSlotItem);
+
+            // add force
+            var rb = physItem.GetComponent<ForceReceiverMovementBehaviour>();
+            rb.AddForce(force);
         }
     }
 }
