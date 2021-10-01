@@ -323,8 +323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementMotor: {fileID: 9175944677152671817}
   forceReceiver:
-    drag: 2
-    snapForceUnder: 0.1
+    drag: 3
+    snapForceUnder: 0.3
 --- !u!114 &9175944677152671818
 MonoBehaviour:
   m_ObjectHideFlags: 0

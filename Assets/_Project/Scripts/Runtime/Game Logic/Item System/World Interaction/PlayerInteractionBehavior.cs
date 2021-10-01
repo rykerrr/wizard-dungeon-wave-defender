@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -68,11 +69,23 @@ namespace WizardGame.Item_System.World_Interaction
 //             Debug.Log(data.ThrowForce);
             rb.AddForce(data.ThrowForce);
         }
-        
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.GetComponent<IInteractable>() != null) Debug.Log("going to, is interactable", other);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if(other.GetComponent<IInteractable>() != null) Debug.Log("going away, but is interactable", other);
+        }
+
+        #if UNITY_EDITOR
         [ContextMenu("Test PhysicalItemFactory.CreateInstance")]
         private void CreateInstanceTest()
         {
             PhysicalItemFactory.CreateInstance(Vector3.zero, Quaternion.identity, null);
         }
+        #endif
     }
 }
