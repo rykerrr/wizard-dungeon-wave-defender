@@ -15,11 +15,6 @@ namespace WizardGame.Movement.Position
             set => ForceReceiver.ExternalMult = value;
         }
 
-        protected override void Awake()
-        {
-            base.Awake();
-        }
-
         protected override void OnEnable() => movementMotor.AddModifier(ForceReceiver);
         protected override void OnDisable() => movementMotor.RemoveModifier(ForceReceiver);
         protected override void FixedUpdate() => ForceReceiver.Tick(Time.fixedDeltaTime);

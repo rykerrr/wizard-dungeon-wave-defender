@@ -8,8 +8,8 @@ namespace WizardGame.Movement.Position
     [Serializable]
     public class GravityMovement : IMovementModifier
     {
-        [SerializeField] private float gravMagnitude;
-        [SerializeField] private float groundedPullMagnitude;
+        [SerializeField] private float gravMagnitude = 5;
+        [SerializeField] private float groundedPullMagnitude = 20;
 
         private float externalMult = 1f;
 

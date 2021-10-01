@@ -36,7 +36,7 @@ namespace WizardGame.Item_System.UI
 
             var forward = owner.forward;
             var itemDropLocation = owner.position + forward * 3;
-            var force = forward * 4f + new Vector3(0f, 5f, 0f);
+            var force = forward * 0.6f + new Vector3(0f, 1.4f, 0f);
             
             var slot = inventory.ItemContainer[itemSlotUI.SlotIndexOnUI];
             Debug.Log($"Item: {slot.invItem}, Quantity: {slot.Quantity}");

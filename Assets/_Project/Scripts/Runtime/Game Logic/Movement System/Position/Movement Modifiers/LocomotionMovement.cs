@@ -7,7 +7,7 @@ namespace WizardGame.Movement.Position
     [Serializable]
     public class LocomotionMovement : IMovementModifier
     {
-        [SerializeField] private  float mvSpeed = default;
+        [SerializeField] private  float mvSpeed = 20;
 
         private float externalMult = 1f;
 

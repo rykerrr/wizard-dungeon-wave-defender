@@ -16,11 +16,6 @@ namespace WizardGame.Movement.Position
             get => Locomotion.ExternalMult;
             set => Locomotion.ExternalMult = value;
         }
-        
-        protected override void Awake()
-        {
-            base.Awake();
-        }
 
         protected override void OnEnable() => movementMotor.AddModifier(Locomotion);
         protected override void OnDisable() => movementMotor.RemoveModifier(Locomotion);

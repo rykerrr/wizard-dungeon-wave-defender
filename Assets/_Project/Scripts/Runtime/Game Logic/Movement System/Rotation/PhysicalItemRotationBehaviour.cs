@@ -7,7 +7,6 @@ namespace WizardGame.Movement.Rotation
     {
         [SerializeField] private RotateObjectAroundAxis rotatePhysItemAroundAxis = default;
         [SerializeField] private RotateObjectTowardsTarget rotatePhysItemTowardsTarg = default;
-        [SerializeField] private RotateObjectTowardsTarget rotateBillboardTowardsTarg = default;
 
         private Transform actualTarget = default;
 
@@ -20,25 +19,35 @@ namespace WizardGame.Movement.Rotation
             else
             {
                 rotatePhysItemTowardsTarg.Tick(Vector3.one);
-                rotateBillboardTowardsTarg.Tick(new Vector3(0, 1, 0));
             }
         }
 
+        public void OnPlayerEnter(Transform plr)
+        {
+            actualTarget = plr;
+            
+            rotatePhysItemTowardsTarg.Target = actualTarget;
+        }
+
+        public void OnPlayerExit(Transform plr)
+        {
+            if (plr != actualTarget) return; 
+            
+            actualTarget = null;
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             if (!other.GetComponent<PlayerInteractionBehavior>()) return;
 
-            actualTarget = other.transform;
-            
-            rotatePhysItemTowardsTarg.Target = actualTarget;
-            rotateBillboardTowardsTarg.Target = actualTarget;
+
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (!other.GetComponent<PlayerInteractionBehavior>()) return;
             
-            actualTarget = null;
+
         }
     }
 }

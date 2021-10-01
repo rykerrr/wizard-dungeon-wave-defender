@@ -7,8 +7,8 @@ namespace WizardGame.Movement.Position
     [Serializable]
     public class JumpingMovement : IMovementModifier
     {
-        [SerializeField] private float jumpForce = default;
-        [SerializeField] private float drag = default;
+        [SerializeField] private float jumpForce = 100;
+        [SerializeField] private float drag = 3;
 
         private float externalMult = 1f;
 

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.CustomEventSystem;
 using WizardGame.Item_System.Item_Containers;
+using WizardGame.Movement.Position;
 using WizardGame.Utility.Infrastructure.Factories;
 
 namespace WizardGame.Item_System.World_Interaction
@@ -63,10 +63,10 @@ namespace WizardGame.Item_System.World_Interaction
             
             var physItem = data.PhysItem;
             
-            var rb = physItem.GetComponent<Rigidbody>();
+            var rb = physItem.GetComponent<ForceReceiverMovementBehaviour>();
             
 //             Debug.Log(data.ThrowForce);
-            rb.AddForce(data.ThrowForce, ForceMode.Impulse);
+            rb.AddForce(data.ThrowForce);
         }
         
         [ContextMenu("Test PhysicalItemFactory.CreateInstance")]
