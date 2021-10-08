@@ -2,7 +2,7 @@
 using UnityEngine;
 using WizardGame.Item_System.Items;
 
-namespace WizardGame.Utility.Infrastructure.Factories
+namespace WizardGame.Item_System.World_Interaction
 {
     public static class PhysicalItemFactory
     {

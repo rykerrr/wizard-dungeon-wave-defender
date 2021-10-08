@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using WizardGame.CustomEventSystem;
-using WizardGame.Item_System.Items;
-using WizardGame.Movement.Position;
-using WizardGame.Utility.Infrastructure.Factories;
+using WizardGame.Item_System.World_Interaction;
 
 namespace WizardGame.Item_System.UI
 {
@@ -11,45 +9,27 @@ namespace WizardGame.Item_System.UI
     {
         [SerializeField] public ItemThrowEvent itemThrowEvent;
 
+        private ItemThrower itemThrower = default;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            itemThrower = new ItemThrower(itemSlotUI);
+        }
+        
         public override void OnPointerUp(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
 
             if (eventData.hovered.Count == 0)
             {
-                // drop item
-                TryPhysicallyThrowItem(Vector3.zero);
+                itemThrower.TryPhysicallyThrowItem(Vector3.zero);
             }
 
             // base logic is called beforehand on dapperdino's item system implementation, but do we even need to call it
             // if we want the item destroyed?
             base.OnPointerUp(eventData);
-        }
-
-        private void TryPhysicallyThrowItem(Vector3 dropForce)
-        {
-            if (ReferenceEquals(itemSlotUI, null) ||
-                ReferenceEquals((InventoryItem) ItemSlotUI.ReferencedSlotItem, null)) return;
-            
-            // remove item
-            var inventory = itemSlotUI.Inventory;
-            inventory.ItemContainer.RemoveAt(ItemSlotUI.SlotIndexOnUI);
-
-            // get throw force
-            var owner = itemSlotUI.Owner;
-            var forward = owner.forward;
-            var force = forward * 0.6f + new Vector3(0f, 1.4f, 0f);
-
-            // get spawn pos
-            var itemDropLocation = owner.position + forward * 3;
-
-            // create the item
-            var physItem = PhysicalItemFactory.CreateInstance(itemDropLocation, Quaternion.identity,
-                (InventoryItem) itemSlotUI.ReferencedSlotItem);
-
-            // add force
-            var rb = physItem.GetComponent<ForceReceiverMovementBehaviour>();
-            rb.AddForce(force);
         }
     }
 }

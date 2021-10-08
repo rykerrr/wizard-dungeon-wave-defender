@@ -21,7 +21,7 @@ namespace WizardGame.Item_System.UI
         private RectTransform thisTransform = default;
         private RectTransform itemSlotTransform = default;
         
-        private void Awake()
+        protected virtual void Awake()
         {
             thisTransform = (RectTransform)transform;
             itemSlotTransform = (RectTransform) ItemSlotUI.transform;

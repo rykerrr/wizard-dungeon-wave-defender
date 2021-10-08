@@ -3,7 +3,6 @@ using System.Linq;
 using WizardGame.Item_System.World_Interaction;
 using UnityEngine;
 using WizardGame.Item_System.Items;
-using WizardGame.Utility.Infrastructure.Factories;
 
 namespace WizardGame.Item_System.Item_Containers
 {

@@ -15,7 +15,7 @@ namespace WizardGame.Item_System.UI
             
             if (eventData.hovered.Count != 0) return;
 
-            (ItemSlotUI as EquipmentSlotUI).ClearItem();
+            (ItemSlotUI as EquipmentSlotUI)?.ClearItem();
         }
     }
 }
