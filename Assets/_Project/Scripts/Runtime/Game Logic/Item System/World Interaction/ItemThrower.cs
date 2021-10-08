@@ -7,9 +7,9 @@ namespace WizardGame.Item_System.World_Interaction
 {
     public class ItemThrower
     {
-        private ItemSlotUI slotUi = default;
+        private InventorySlotUI slotUi = default;
         
-        public ItemThrower(ItemSlotUI slotUi)
+        public ItemThrower(InventorySlotUI slotUi)
         {
             this.slotUi = slotUi;
         }
@@ -17,11 +17,7 @@ namespace WizardGame.Item_System.World_Interaction
         public void TryPhysicallyThrowItem(Vector3 dropForce)
         {
             if (ReferenceEquals(slotUi, null) ||
-                ReferenceEquals((InventoryItem) slotUi.ReferencedSlotItem, null)) return;
-            
-            // remove item
-            var inventory = slotUi.Inventory;
-            inventory.ItemContainer.RemoveAt(slotUi.SlotIndexOnUI);
+                ReferenceEquals(slotUi.ReferencedSlotItem, null)) return;
 
             // get throw force
             var owner = slotUi.Owner;
@@ -30,11 +26,15 @@ namespace WizardGame.Item_System.World_Interaction
 
             // get spawn pos
             var itemDropLocation = owner.position + forward * 3;
-
+            
             // create the item
             var physItem = PhysicalItemFactory.CreateInstance(itemDropLocation, Quaternion.identity,
                 (InventoryItem) slotUi.ReferencedSlotItem);
-
+            
+            // remove item
+            var inventory = slotUi.Inventory;
+            inventory.ItemContainer.RemoveAt(slotUi.SlotIndexOnUI);
+            
             // add force
             var forceReceiver = physItem.GetComponent<ForceReceiverMovementBehaviour>();
             forceReceiver.AddForce(force);

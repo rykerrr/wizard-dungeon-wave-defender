@@ -14,10 +14,14 @@ namespace WizardGame.Item_System.UI
         protected override void Awake()
         {
             base.Awake();
-            
-            itemThrower = new ItemThrower(itemSlotUI);
+
+            Debug.Log(itemSlotUI);
+            Debug.Log(itemSlotUI.ReferencedSlotItem);
+            ((InventorySlotUI) itemSlotUI).LogItemSlot();
+
+            itemThrower = new ItemThrower((InventorySlotUI) itemSlotUI);
         }
-        
+
         public override void OnPointerUp(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;

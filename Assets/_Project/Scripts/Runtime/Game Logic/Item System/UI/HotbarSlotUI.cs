@@ -20,8 +20,9 @@ namespace WizardGame.Item_System.UI
                 referencedSlotSlotItem = value;
                 
                 UpdateSlotUi();
-                
-                cdDisplay.UpdateData(referencedSlotSlotItem.CooldownData);
+
+                var itemIsNull = ReferenceEquals(referencedSlotSlotItem, null);
+                cdDisplay.UpdateData(itemIsNull ? null : referencedSlotSlotItem.CooldownData);
             }
         }
 

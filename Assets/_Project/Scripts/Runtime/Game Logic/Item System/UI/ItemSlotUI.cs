@@ -47,15 +47,25 @@ namespace WizardGame.Item_System.UI
             ReferencedSlotItem.UseItem();
         }
 
+        public abstract void UpdateSlotUi();
+        public abstract void OnDrop(PointerEventData eventData);
+
+        private void OnEnable() => UpdateSlotUi();
+        
+        #if UNITY_EDITOR
+        [ContextMenu("Check if item null")]
+        public void CheckIfItemNull()
+        {
+            var itemIsNull = ReferenceEquals(ReferencedSlotItem, null);
+            
+            Debug.Log($"Item: {ReferencedSlotItem}, is null: {itemIsNull}");
+        }
+        
         [ContextMenu("Test UseReferencedItem for given item (Will not be used if null)")]
         public void TestUseReferencedItem()
         {
             UseReferencedItem();
         }
-        
-        public abstract void UpdateSlotUi();
-        public abstract void OnDrop(PointerEventData eventData);
-
-        private void OnEnable() => UpdateSlotUi();
+        #endif
     }
 }

@@ -16,30 +16,30 @@ MonoBehaviour:
   itemContainer:
     itemSlots:
     - quantity: 1
-      invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
-    - quantity: 15
-      invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
+      invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
     - quantity: 14
+      invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
+    - quantity: 15
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 1
       invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
     - quantity: 1
-      invItem: {fileID: 11400000, guid: b18ff1bd3d732e141bcf336406bcc51d, type: 2}
-    - quantity: 0
-      invItem: {fileID: 0}
-    - quantity: 0
-      invItem: {fileID: 0}
-    - quantity: 0
-      invItem: {fileID: 0}
-    - quantity: 0
-      invItem: {fileID: 0}
+      invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
     - quantity: 1
-      invItem: {fileID: 11400000, guid: a97808306e4c3894d81bd87d4c079910, type: 2}
+      invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
+    - quantity: 0
+      invItem: {fileID: 0}
+    - quantity: 0
+      invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
     - quantity: 1
       invItem: {fileID: 11400000, guid: 9a72e5dfd9a5e684a9ae6eaf096e6f11, type: 2}
-    - quantity: 15
+    - quantity: 12
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 0
       invItem: {fileID: 0}
@@ -55,5 +55,5 @@ MonoBehaviour:
       invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
-  itemToAdd: {fileID: 11400000, guid: b18ff1bd3d732e141bcf336406bcc51d, type: 2}
+  itemToAdd: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
   quantity: 1

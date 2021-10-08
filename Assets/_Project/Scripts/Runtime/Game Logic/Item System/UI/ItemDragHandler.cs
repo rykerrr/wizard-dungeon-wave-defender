@@ -46,10 +46,12 @@ namespace WizardGame.Item_System.UI
             
             thisTransform.anchoredPosition = Vector2.zero;
 
-            var refSlotItem = itemSlotUI.ReferencedSlotItem;
-            ItemSlotUI.CdDisplay.UpdateData(refSlotItem.CooldownData);
-            
+            var refSlotItem = ItemSlotUI.ReferencedSlotItem;
+
             canvGroup.blocksRaycasts = true;
+
+            var itemIsNull = ReferenceEquals(refSlotItem, null);
+            ItemSlotUI.CdDisplay.UpdateData(itemIsNull ? null : refSlotItem.CooldownData);
         }
 
         // TODO: Check out "Horrors of OnPointerDown versus OnBeginDrag in Unity3D"
