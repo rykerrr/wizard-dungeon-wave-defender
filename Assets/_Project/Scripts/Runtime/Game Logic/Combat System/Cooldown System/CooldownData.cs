@@ -15,7 +15,12 @@ namespace WizardGame.Combat_System.Cooldown_System
         public Guid Id => id;
         public float CooldownDuration => cooldownDuration;
 
-        public void Init(float cooldownDuration, bool initGuid)
+        public CooldownData() { }
+
+        public CooldownData(float cooldownDuration, bool initGuid = false) =>
+            Init(cooldownDuration, initGuid);
+        
+        public void Init(float cooldownDuration, bool initGuid = false)
         {
             this.cooldownDuration = cooldownDuration;
             

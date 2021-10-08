@@ -112,18 +112,9 @@ namespace WizardGame.Combat_System
             return onHitClone;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            Debug.Log("Tremble in fear!");
-
-            if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
-
-            ProcessOnHitEffect();
-        }
-        
         public void OnCollisionEnter(Collision other)
         {
-            Debug.Log("Tremble in fear!");
+            Debug.Log("Tremble in collisions!");
         
             if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
             

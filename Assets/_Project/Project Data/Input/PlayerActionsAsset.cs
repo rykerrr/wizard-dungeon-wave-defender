@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Project Data/Input/PlayerActionsAsset.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Project/Project Data/Input/PlayerActionsAsset.inputactions'
 
 using System;
 using System.Collections;
@@ -41,6 +41,14 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ShowIndicator"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""22759a0f-7e69-4d81-8399-8b0e413c3b18"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=0.1)""
                 }
             ],
             ""bindings"": [
@@ -175,6 +183,17 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea0a24b6-3263-40bf-995c-45b108f19fc3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowIndicator"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -186,6 +205,7 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_ShowIndicator = m_Player.FindAction("ShowIndicator", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -238,6 +258,7 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_ShowIndicator;
     public struct PlayerActions
     {
         private @PlayerActionsAsset m_Wrapper;
@@ -245,6 +266,7 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        public InputAction @ShowIndicator => m_Wrapper.m_Player_ShowIndicator;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -263,6 +285,9 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                @ShowIndicator.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowIndicator;
+                @ShowIndicator.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowIndicator;
+                @ShowIndicator.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowIndicator;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -276,6 +301,9 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
+                @ShowIndicator.started += instance.OnShowIndicator;
+                @ShowIndicator.performed += instance.OnShowIndicator;
+                @ShowIndicator.canceled += instance.OnShowIndicator;
             }
         }
     }
@@ -285,5 +313,6 @@ public class @PlayerActionsAsset : IInputActionCollection, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnShowIndicator(InputAction.CallbackContext context);
     }
 }

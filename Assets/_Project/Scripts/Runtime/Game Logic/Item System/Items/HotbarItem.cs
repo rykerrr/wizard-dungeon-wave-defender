@@ -31,12 +31,17 @@ namespace WizardGame.Item_System.Items
 		
         public void Init(string name, Sprite icon)
         {
+            cooldownData ??= new CooldownData();
+            
             this.name = name;
             this.icon = icon;
         }
 
         public void InitCooldown(float cooldownDuration, bool initGuid = false)
         {
+            Debug.Log(cooldownData);
+            Debug.Log(icon);
+
             cooldownData.Init(cooldownDuration, initGuid);
         }
 

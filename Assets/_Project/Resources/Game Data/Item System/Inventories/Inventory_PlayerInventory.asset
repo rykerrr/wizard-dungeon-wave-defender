@@ -15,16 +15,16 @@ MonoBehaviour:
   onInventoryItemsUpdated: {fileID: 11400000, guid: 0c248363774646042bed35f4be45f823, type: 2}
   itemContainer:
     itemSlots:
-    - quantity: 0
-      invItem: {fileID: 0}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
     - quantity: 15
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 14
       invItem: {fileID: 11400000, guid: 9b61509090a25064fa3dada9b5a15268, type: 2}
     - quantity: 1
       invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
-    - quantity: 0
-      invItem: {fileID: 0}
+    - quantity: 1
+      invItem: {fileID: 11400000, guid: b18ff1bd3d732e141bcf336406bcc51d, type: 2}
     - quantity: 0
       invItem: {fileID: 0}
     - quantity: 0
@@ -55,5 +55,5 @@ MonoBehaviour:
       invItem: {fileID: 0}
     - quantity: 0
       invItem: {fileID: 0}
-  itemToAdd: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
-  quantity: 2
+  itemToAdd: {fileID: 11400000, guid: b18ff1bd3d732e141bcf336406bcc51d, type: 2}
+  quantity: 1
