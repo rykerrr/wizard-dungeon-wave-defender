@@ -3305,7 +3305,7 @@ GameObject:
   - component: {fileID: 2015192198}
   - component: {fileID: 2015192197}
   m_Layer: 0
-  m_Name: Yeet Light
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3322,7 +3322,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3858,6 +3858,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 659508430}
     - target: {fileID: 643531306251873037, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 643531306251873037, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
@@ -3869,6 +3873,10 @@ PrefabInstance:
       propertyPath: tooltip
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 1654355291628834125, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 1654355291628834125, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
@@ -3914,9 +3922,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 2539309318077832530, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 2539309318077832530, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 2605224116947621382, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 2605224116947621382, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
@@ -3973,6 +3989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hotbar_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2788191613716288619, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 2788191613716288619, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
@@ -4086,6 +4106,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 4212464426433932196, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 4212464426433932196, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
@@ -4154,6 +4178,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5565420516930863804, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 5565420516930863804, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
@@ -4166,9 +4194,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 620915256}
     - target: {fileID: 6497733621508337391, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
+    - target: {fileID: 6497733621508337391, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
       objectReference: {fileID: 620915256}
+    - target: {fileID: 6666531897571178217, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 6666531897571178217, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 
@@ -4205,6 +4241,10 @@ PrefabInstance:
       propertyPath: cdSystem
       value: 
       objectReference: {fileID: 659508430}
+    - target: {fileID: 7871953314241114598, guid: 507e402c11577bc488500317272c806e, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 659508422}
     - target: {fileID: 7871953314241114598, guid: 507e402c11577bc488500317272c806e, type: 3}
       propertyPath: tooltipPopup
       value: 

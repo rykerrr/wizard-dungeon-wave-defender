@@ -30,7 +30,8 @@ namespace WizardGame.Item_System.UI
         {
             SlotIndexOnUI = transform.GetSiblingIndex();
             UpdateSlotUi();
-            
+
+            if (ReferenceEquals(ReferencedSlotItem, null)) return;
             CdDisplay.UpdateData(ReferencedSlotItem.CooldownData);
         }
 

@@ -31,8 +31,6 @@ namespace WizardGame.MainMenu
             var jsonStr = File.ReadAllText(filePath);
             var loadedObj = JsonUtility.FromJson<CharacterSaveData>(jsonStr);
 
-            Debug.Break();
-            
             return loadedObj;
         }
 

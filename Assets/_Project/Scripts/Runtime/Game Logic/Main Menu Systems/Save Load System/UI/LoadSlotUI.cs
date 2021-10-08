@@ -56,6 +56,6 @@ public class LoadSlotUI : MonoBehaviour
     {
         OnSceneLoadedCharacterDataLoad.LoadedCharacterData = (CharacterData) JSONSaveManager.LoadCharacterDataFile(saveSlotFileName);
         
-        sceneLoad.LoadScene();
+        sceneLoad.StartAsyncSceneLoad();
     }
 }

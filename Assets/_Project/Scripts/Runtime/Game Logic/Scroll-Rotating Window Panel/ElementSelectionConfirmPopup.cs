@@ -40,7 +40,7 @@ namespace WizardGame.SelectionWindow
             OnSceneLoadedCharacterDataLoad.LoadedCharacterData = newCharData;
             JSONSaveManager.SaveCharacterDataFileToSelectedSlot(newCharData.Data);
             
-            sceneLoad.LoadScene();
+            sceneLoad.StartAsyncSceneLoad();
         }
 
         public void OnClick_CancelSelection()

@@ -27,6 +27,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Utility",
+            "id": "2e53faf2-1d0a-4587-91aa-d17d5d06c014",
+            "actions": [
+                {
+                    "name": "AnyKey",
+                    "type": "Button",
+                    "id": "039d889c-7209-435d-a217-f3fae9b6806c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "eba4a8c8-01da-40ef-9017-a323053256ef",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Input/CustomUIControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Project/Project Data/Input/CustomUIControls.inputactions'
 
 using System;
 using System.Collections;
@@ -40,6 +40,33 @@ public class @CustomUIControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Utility"",
+            ""id"": ""2e53faf2-1d0a-4587-91aa-d17d5d06c014"",
+            ""actions"": [
+                {
+                    ""name"": ""AnyKey"",
+                    ""type"": ""Button"",
+                    ""id"": ""039d889c-7209-435d-a217-f3fae9b6806c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""eba4a8c8-01da-40ef-9017-a323053256ef"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -64,6 +91,9 @@ public class @CustomUIControls : IInputActionCollection, IDisposable
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_ScrollThroughHotbarSlots = m_Inventory.FindAction("Scroll Through Hotbar Slots", throwIfNotFound: true);
+        // Utility
+        m_Utility = asset.FindActionMap("Utility", throwIfNotFound: true);
+        m_Utility_AnyKey = m_Utility.FindAction("AnyKey", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -142,6 +172,39 @@ public class @CustomUIControls : IInputActionCollection, IDisposable
         }
     }
     public InventoryActions @Inventory => new InventoryActions(this);
+
+    // Utility
+    private readonly InputActionMap m_Utility;
+    private IUtilityActions m_UtilityActionsCallbackInterface;
+    private readonly InputAction m_Utility_AnyKey;
+    public struct UtilityActions
+    {
+        private @CustomUIControls m_Wrapper;
+        public UtilityActions(@CustomUIControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @AnyKey => m_Wrapper.m_Utility_AnyKey;
+        public InputActionMap Get() { return m_Wrapper.m_Utility; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UtilityActions set) { return set.Get(); }
+        public void SetCallbacks(IUtilityActions instance)
+        {
+            if (m_Wrapper.m_UtilityActionsCallbackInterface != null)
+            {
+                @AnyKey.started -= m_Wrapper.m_UtilityActionsCallbackInterface.OnAnyKey;
+                @AnyKey.performed -= m_Wrapper.m_UtilityActionsCallbackInterface.OnAnyKey;
+                @AnyKey.canceled -= m_Wrapper.m_UtilityActionsCallbackInterface.OnAnyKey;
+            }
+            m_Wrapper.m_UtilityActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @AnyKey.started += instance.OnAnyKey;
+                @AnyKey.performed += instance.OnAnyKey;
+                @AnyKey.canceled += instance.OnAnyKey;
+            }
+        }
+    }
+    public UtilityActions @Utility => new UtilityActions(this);
     private int m_KMSchemeIndex = -1;
     public InputControlScheme KMScheme
     {
@@ -154,5 +217,9 @@ public class @CustomUIControls : IInputActionCollection, IDisposable
     public interface IInventoryActions
     {
         void OnScrollThroughHotbarSlots(InputAction.CallbackContext context);
+    }
+    public interface IUtilityActions
+    {
+        void OnAnyKey(InputAction.CallbackContext context);
     }
 }

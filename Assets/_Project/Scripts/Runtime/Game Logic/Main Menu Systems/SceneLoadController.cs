@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace WizardGame.MainMenu
@@ -8,6 +8,8 @@ namespace WizardGame.MainMenu
     {
         [SerializeField] private int sceneToLoadIndex = 1;
         [SerializeField] private Transform loadingBarFill = default;
+
+        [SerializeField] private GameObject pressAnyKeyText = default;
         
         private AsyncOperation sceneLoadOperation = null;
 
@@ -36,14 +38,31 @@ namespace WizardGame.MainMenu
 
             if (loadProgress + Mathf.Epsilon >= 0.9f)
             {
-                Debug.Log("Finished loading");
-                Debug.Break();
-
-                sceneLoadOperation.allowSceneActivation = true;
+                EnablePressAnyKey();
             }
         }
 
-        public void LoadScene()
+        private void LoadScene()
+        {
+            sceneLoadOperation.allowSceneActivation = true;
+        }
+        
+        private void EnablePressAnyKey()
+        {
+            pressAnyKeyText.SetActive(true);
+            
+            // enabled = false;
+        }
+
+        public void OnAnyKey_LoadScene(InputAction.CallbackContext ctx)
+        {
+            if (ctx.phase != InputActionPhase.Performed) return;
+            
+            Debug.Log("Scene Load");
+            LoadScene();
+        }
+
+        public void StartAsyncSceneLoad()
         {
             sceneLoadOperation = SceneManager.LoadSceneAsync(sceneToLoadIndex);
             sceneLoadOperation.allowSceneActivation = false;

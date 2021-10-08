@@ -22,8 +22,6 @@ namespace WizardGame.Item_System.World_Interaction.UI
         
         public void TryDisable()
         {
-            Debug.Log("Disabled called");
-            
             if(gameObject.activeSelf) gameObject.SetActive(false);
         }
         
