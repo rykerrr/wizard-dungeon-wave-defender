@@ -15,10 +15,10 @@ public class ForwardIndicator : MonoBehaviour
 		thisTransf = transform;
 	}
 
-	private void Update()
-	{
-		thisTransf.forward = keepForward.Tick();
-	}
+	// private void Update()
+	// {
+	// 	thisTransf.forward = keepForward.Tick();
+	// }
 
 	public void PressRelease(InputAction.CallbackContext ctx)
 	{

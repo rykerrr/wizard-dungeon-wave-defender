@@ -145,16 +145,28 @@ namespace WizardGame.Item_System.Item_Containers
 
         public int GetTotalQuantity(InventoryItem item)
         {
-            int totalQuant = 0;
+            var totalQuant = 0;
 
-            for (int i = itemSlots.Length - 1; i >= 0; i--)
+            switch (item)
             {
-                if (itemSlots[i].invItem == item)
+                case SpellBookItem spellItem:
                 {
-                    totalQuant += itemSlots[i].Quantity;
+                    totalQuant = 1;
+                    break;
+                }
+                case EquipmentItem equipItem:
+                {
+                    totalQuant = 1;
+                    break;
+                }
+                default:
+                {
+                    totalQuant += itemSlots.Sum(x => x.invItem == item ? x.Quantity : 0);
+                    
+                    break;
                 }
             }
-
+            
             return totalQuant;
         }
 

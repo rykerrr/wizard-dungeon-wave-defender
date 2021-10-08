@@ -6,7 +6,6 @@ namespace WizardGame.Movement.Rotation
     [Serializable]
     public class KeepObjectForwardSameAsTarget
     {
-        [SerializeField] private bool enabledFollow = false;
         [SerializeField] private Transform forwardTarget = default;
 
         public Transform ForwardTarget
