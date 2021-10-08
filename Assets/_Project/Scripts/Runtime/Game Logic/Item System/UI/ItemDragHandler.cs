@@ -45,8 +45,9 @@ namespace WizardGame.Item_System.UI
             thisTransform.SetSiblingIndex(1);
             
             thisTransform.anchoredPosition = Vector2.zero;
-            
-            ItemSlotUI.CdDisplay.UpdateData(itemSlotUI.ReferencedSlotItem);
+
+            var refSlotItem = itemSlotUI.ReferencedSlotItem;
+            ItemSlotUI.CdDisplay.UpdateData(refSlotItem.CooldownData);
             
             canvGroup.blocksRaycasts = true;
         }

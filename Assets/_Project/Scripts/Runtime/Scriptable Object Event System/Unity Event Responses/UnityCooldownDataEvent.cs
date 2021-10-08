@@ -5,7 +5,7 @@ using WizardGame.Combat_System.Cooldown_System;
 namespace WizardGame.CustomEventSystem
 {
     [Serializable]
-    public class UnityCooldownDataEvent : UnityEvent<CooldownData>
+    public class UnityCooldownDataEvent : UnityEvent<Cooldown>
     {
         
     }

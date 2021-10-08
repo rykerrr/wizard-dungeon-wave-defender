@@ -20,7 +20,7 @@ namespace WizardGame.Item_System.UI
         private Guid id;
 
         private RectTransform imgRectTransf = default;
-        private CooldownData data = default;
+        private Cooldown data = default;
 
         public Guid Id => id;
 

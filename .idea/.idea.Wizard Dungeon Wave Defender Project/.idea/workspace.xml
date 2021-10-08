@@ -20,18 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/Cooldown.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/Cooldown.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/PhysicalItemPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/UIStandPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Factory Prefabs/UIStandPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_TalentTree_UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/UI/Canvas Containers/Screen/GameObject_TalentTree_UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/IInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/IInteractable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/InteractablePhysicalItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/InteractablePhysicalItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/InteractableUIShowingStand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/InteractableUIShowingStand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Rotation/PhysicalItemRotationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Rotation/PhysicalItemRotationBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/CooldownDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/CooldownDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Game Events/CooldownDataEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Game Events/CooldownDataEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Listeners/CooldownDataEventListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Listeners/CooldownDataEventListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityCooldownDataEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Scriptable Object Event System/Unity Event Responses/UnityCooldownDataEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
     </list>
@@ -153,16 +161,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/OnInputEventTryInteract.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/CameraFollowObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/ThisTransformFollowOtherTransform.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Physical Item/PhysicalItemDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/UIShowingStandDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Refactored/IInteraction.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Refactored/IInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/IInteraction.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/IInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PhysicalItemInteractions.cs" />
@@ -195,7 +193,6 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Tests/Editmode/MovementTests.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Position/Movement Humble Objects/ForceReceiverMovementBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Position/Movement Modifiers/ForceReceiverMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/SetMonoBehavioursActiveAfterWait.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Rotation/RotateObjectTowardsTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Rotation/PhysicalItemRotationBehaviour.cs" />
@@ -204,6 +201,17 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/UI/InteractButtonUI.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/TriggerInteractableCharacterCallbacks.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/PlayerInteractionBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventoryDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/Cooldown.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Cooldown System/CooldownData.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/SpellCastHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/InventorySlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/HotbarSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/UI/ItemSlotUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Spell Creation System/SpellCreationHandler.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -348,7 +356,9 @@
       <workItem from="1632985054828" duration="14718000" />
       <workItem from="1633024675593" duration="6911000" />
       <workItem from="1633078527439" duration="14229000" />
-      <workItem from="1633099095159" duration="8301000" />
+      <workItem from="1633099095159" duration="8846000" />
+      <workItem from="1633638566990" duration="92000" />
+      <workItem from="1633673219421" duration="1105000" />
     </task>
     <servers />
   </component>

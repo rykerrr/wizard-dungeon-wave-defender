@@ -8,15 +8,12 @@ using WizardGame.CustomEventSystem;
 
 namespace WizardGame.Item_System.Items
 {
-    public abstract class HotbarItem : ScriptableObject, IHasCooldown
+    public abstract class HotbarItem : ScriptableObject
     {
         [SerializeField] private new string name = "New Item";
         [SerializeField] private Sprite icon = default;
 
-        [Header("Cooldown data")] 
-        [SerializeField] private float cooldownDuration;
-        // TODO: Create a serializable GUID
-        [SerializeField] private Guid id = Guid.NewGuid();
+        [SerializeField] private CooldownData cooldownData = default;
         
         [Header("Properties")]
         [SerializeField] protected HotbarItemGameEvent itemUseEvent;
@@ -28,8 +25,7 @@ namespace WizardGame.Item_System.Items
         public Sprite Icon => icon;
         public HotbarItemGameEvent ItemUseEvent { get => itemUseEvent; set => itemUseEvent = value; }
 
-        public Guid Id => id;
-        public float CooldownDuration => cooldownDuration;
+        public CooldownData CooldownData => cooldownData;
 
 		public HotbarItem() => sb = new StringBuilder();
 		
@@ -41,9 +37,7 @@ namespace WizardGame.Item_System.Items
 
         public void InitCooldown(float cooldownDuration, bool initGuid = false)
         {
-            this.cooldownDuration = cooldownDuration;
-            
-            if(initGuid) id = Guid.NewGuid();
+            cooldownData.Init(cooldownDuration, initGuid);
         }
 
         protected virtual void Awake()
@@ -92,7 +86,7 @@ namespace WizardGame.Item_System.Items
         [ContextMenu("Log GUID")]
         public void LogId()
         {
-            Debug.Log(id);
+            Debug.Log(cooldownData.Id);
         }
     }
 }

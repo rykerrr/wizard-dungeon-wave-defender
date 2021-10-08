@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using WizardGame.CustomEventSystem;
 using WizardGame.Utility.Patterns;
@@ -8,7 +9,7 @@ namespace WizardGame.Combat_System.Cooldown_System
 {
     public class CooldownSystem : MonoBehaviour
     {
-        private readonly List<CooldownData> cdData = new List<CooldownData>();
+        private readonly List<Cooldown> cdData = new List<Cooldown>();
 
         public bool IsOnCooldown(Guid id)
         {
@@ -32,7 +33,7 @@ namespace WizardGame.Combat_System.Cooldown_System
                 return false;
             }
 
-            var data = new CooldownData(cd);
+            var data = new Cooldown(cd);
             cdData.Add(data);
             
             return true;
@@ -46,7 +47,7 @@ namespace WizardGame.Combat_System.Cooldown_System
         }
 
         // TODO: Turn into indexer property
-        public CooldownData GetCooldown(Guid id)
+        public Cooldown GetCooldown(Guid id)
         {
             return cdData.Find(x => x.Id == id);
         }

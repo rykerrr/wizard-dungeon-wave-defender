@@ -21,7 +21,7 @@ namespace WizardGame.Item_System.UI
                 
                 UpdateSlotUi();
                 
-                cdDisplay.UpdateData(referencedSlotSlotItem);
+                cdDisplay.UpdateData(referencedSlotSlotItem.CooldownData);
             }
         }
 
@@ -66,7 +66,7 @@ namespace WizardGame.Item_System.UI
 
             ReferencedSlotItem = itemToAdd;
 
-            cdDisplay.UpdateData(ReferencedSlotItem);
+            cdDisplay.UpdateData(ReferencedSlotItem.CooldownData);
 
             return true;
         }

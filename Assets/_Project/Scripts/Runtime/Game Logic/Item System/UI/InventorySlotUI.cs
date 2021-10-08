@@ -28,7 +28,7 @@ namespace WizardGame.Item_System.UI
                 case InventorySlotUI itemSlotUI:
                 {
                     inventory.ItemContainer.Swap(itemSlotUI.SlotIndexOnUI, SlotIndexOnUI);
-                    cdDisplay.UpdateData(ReferencedSlotItem);
+                    cdDisplay.UpdateData(ReferencedSlotItem.CooldownData);
                     
                     break;
                 }
@@ -51,7 +51,7 @@ namespace WizardGame.Item_System.UI
             else
             {
                 EnableSlotUI(true);
-                cdDisplay.UpdateData(ReferencedSlotItem);
+                cdDisplay.UpdateData(ReferencedSlotItem.CooldownData);
                 
                 slotItemIconImage.sprite = ItemSlot.invItem.Icon;
                 

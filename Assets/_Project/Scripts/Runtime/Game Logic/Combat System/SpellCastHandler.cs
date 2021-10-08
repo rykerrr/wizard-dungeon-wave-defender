@@ -120,7 +120,7 @@ namespace WizardGame.Combat_System
             
             spellCircleClone.gameObject.SetActive(false);
             spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
-                , baseItem.Id, spellCircleClone, baseItem.SpellCastData
+                , baseItem.CooldownData.Id, spellCircleClone, baseItem.SpellCastData
                 , baseItem.SpellPrefab, movementScripts);
             
             existingSpellCasts.Add(baseItem, spellCasterClone);

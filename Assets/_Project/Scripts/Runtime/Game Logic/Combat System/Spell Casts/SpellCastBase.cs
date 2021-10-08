@@ -47,7 +47,7 @@ namespace WizardGame.Combat_System
         public bool IsCasting => isCasting;
 
         private List<MonoBehaviour> movementScripts = new List<MonoBehaviour>();
-        private CooldownData cdData = default;
+        private Cooldown _cd = default;
         private EventSystem curEvSystem = default;
         private bool[] prevEnableStates;
 
@@ -86,7 +86,7 @@ namespace WizardGame.Combat_System
         {
             castingTimeWait = new WaitForSeconds(timeToCast);
             
-            cdData = cooldownSys.GetCooldown(Id);
+            _cd = cooldownSys.GetCooldown(Id);
         }
         
         public void CastSpell()
@@ -94,8 +94,8 @@ namespace WizardGame.Combat_System
             if (!CanCast  || curEvSystem.IsPointerOverGameObject())
             {
 #if UNITY_EDITOR
-                Debug.Log($"Can't cast due to: Timer Enabled: {cdData.CdTimer.IsTimerEnabled}" +
-                          $" | Is casting: {isCasting} | Cooldown for cast left: {cdData.CdTimer.Time}");
+                Debug.Log($"Can't cast due to: Timer Enabled: {_cd.CdTimer.IsTimerEnabled}" +
+                          $" | Is casting: {isCasting} | Cooldown for cast left: {_cd.CdTimer.Time}");
 #endif
 
                 return;
@@ -109,8 +109,8 @@ namespace WizardGame.Combat_System
 
         protected void EnableCastCooldown()
         {
-            cdData.CdTimer.Reset();
-            cdData.CdTimer.EnableTimer();
+            _cd.CdTimer.Reset();
+            _cd.CdTimer.EnableTimer();
         }
         
         protected void DeactivateMovementScripts()

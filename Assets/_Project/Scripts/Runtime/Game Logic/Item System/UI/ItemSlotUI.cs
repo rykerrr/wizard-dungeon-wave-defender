@@ -31,7 +31,7 @@ namespace WizardGame.Item_System.UI
             SlotIndexOnUI = transform.GetSiblingIndex();
             UpdateSlotUi();
             
-            CdDisplay.UpdateData(ReferencedSlotItem);
+            CdDisplay.UpdateData(ReferencedSlotItem.CooldownData);
         }
 
         protected virtual void EnableSlotUI(bool enable)
