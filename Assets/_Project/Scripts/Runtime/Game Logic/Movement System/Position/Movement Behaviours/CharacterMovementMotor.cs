@@ -13,6 +13,8 @@ namespace WizardGame.Movement.Position
 
         public Vector3 GroundNormal { get; private set; } = Vector3.zero;
 
+        public Vector3 LastFrameMovement { get; private set; } = Vector3.zero;
+        
         private Vector3 lastHitPoint = Vector3.zero;
         private Vector3 lastGroundNormal = Vector3.zero;
 
@@ -29,12 +31,12 @@ namespace WizardGame.Movement.Position
         private void Update() => Tick(Time.deltaTime);
         private void Tick(float deltaTime)
         {
-            Vector3 currentFrameMovement = CalculateCurrentFrameMovement();
+            var currentFrameMovement = CalculateCurrentFrameMovement();
 
-            Vector3 lookVector = new Vector3(currentFrameMovement.x, 0f, currentFrameMovement.z).normalized;
+            var lookVector = new Vector3(currentFrameMovement.x, 0f, currentFrameMovement.z).normalized;
             
             if(lookVector.sqrMagnitude != 0)
-                transform.forward = lookVector;
+                LastFrameMovement = lookVector;
 
             characterController.Move(currentFrameMovement);
         }

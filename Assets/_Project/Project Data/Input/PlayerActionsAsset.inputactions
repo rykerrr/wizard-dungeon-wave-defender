@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold(duration=0.1)"
+                },
+                {
+                    "name": "MouseMove",
+                    "type": "PassThrough",
+                    "id": "03f9f602-ec9a-438a-8288-2aa71645aed4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.1)"
                 }
             ],
             "bindings": [
@@ -174,11 +182,22 @@
                 {
                     "name": "",
                     "id": "ea0a24b6-3263-40bf-995c-45b108f19fc3",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ShowIndicator",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c60045dc-d0f6-40f3-b0ad-279ed15d56d1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
