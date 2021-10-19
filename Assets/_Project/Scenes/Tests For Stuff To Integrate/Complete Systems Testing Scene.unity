@@ -1362,6 +1362,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &619002904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619002905}
+  m_Layer: 0
+  m_Name: SpellCastPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619002905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619002904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 659508422}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &620915256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3299247773605219648, guid: fe149dca2b4f0ce43a55beb29b3f5bf9, type: 3}
@@ -1731,6 +1761,7 @@ Transform:
   - {fileID: 584261645}
   - {fileID: 1204772810}
   - {fileID: 1144776192}
+  - {fileID: 619002905}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1748,6 +1779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsSystemBehaviour: {fileID: 659508426}
   cooldownSys: {fileID: 659508430}
+  castCirclePlacement: {fileID: 619002905}
   movementScripts:
   - {fileID: 659508413}
   - {fileID: 659508412}
@@ -3265,7 +3297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456515112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.66, y: 1.25, z: 0}
+  m_LocalPosition: {x: 7.66, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 677135965}
@@ -3374,6 +3406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsSystemBehaviour: {fileID: 1456515116}
   cooldownSys: {fileID: 1456515119}
+  castCirclePlacement: {fileID: 816652702}
   movementScripts: []
   prewarmSpellBook: {fileID: 0}
   equippedSpellCastBase: {fileID: 0}
@@ -5656,6 +5689,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7349998443200828181, guid: ec728e3104c3d87458c120de2da7152f, type: 3}
+      propertyPath: plrCdSys
+      value: 
+      objectReference: {fileID: 659508430}
     - target: {fileID: 7349998443200828182, guid: ec728e3104c3d87458c120de2da7152f, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Item_System.Items;
@@ -12,7 +13,8 @@ namespace WizardGame.Combat_System
     {
         [Header("Spell cast dependencies")] 
         [SerializeField] private StatsSystemBehaviour statsSystemBehaviour = default;
-        [SerializeField] private CooldownSystem cooldownSys;
+        [SerializeField] private CooldownSystem cooldownSys = default;
+        [SerializeField] private Transform castCirclePlacement = default;
         
         // Not movement modifier as it disables BOLT's state machine that's used for switching between MovementModifier
         // behaviours for state change
@@ -44,7 +46,8 @@ namespace WizardGame.Combat_System
         public void Input_TryCastSpell(InputAction.CallbackContext ctx)
         {
             var notPointerDown = ctx.phase != InputActionPhase.Started;
-            if(notPointerDown) return;
+            
+            if(notPointerDown || EventSystem.current.IsPointerOverGameObject()) return;
             
             TryCastSpell();
         }
@@ -126,9 +129,10 @@ namespace WizardGame.Combat_System
             var spellCircleClone = Instantiate(baseItem.SpellCirclePrefab, Vector3.zero, Quaternion.identity);
             
             spellCircleClone.gameObject.SetActive(false);
-            
+
+            spellCircleClone.Init(spellCasterClone);
             spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
-                , baseItem.CooldownData.Id, spellCircleClone, baseItem.SpellCastData
+                , baseItem.CooldownData.Id, castCirclePlacement, spellCircleClone, baseItem.SpellCastData
                 , baseItem.SpellPrefab, movementScripts);
             
             existingSpellCasts.Add(baseItem, spellCasterClone);

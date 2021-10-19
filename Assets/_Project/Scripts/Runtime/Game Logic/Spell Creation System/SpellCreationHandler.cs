@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using WizardGame.Combat_System;
+using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Item_System;
 using WizardGame.Item_System.Item_Containers;
@@ -11,7 +12,8 @@ namespace WizardGame.Spell_Creation
     public class SpellCreationHandler : MonoBehaviour
     {
         [SerializeField] private Inventory targetInventory = default;
-
+        [SerializeField] private CooldownSystem plrCdSys = default;
+        
         private SpellBookItem spellFoundation = default;
         private BaseSpellCastData data = default;
         private Element spellElement = default;
@@ -126,14 +128,14 @@ namespace WizardGame.Spell_Creation
             var newItem = (SpellBookItem) ScriptableObject.CreateInstance(spellFoundation.GetType());
             
             newItem.Init(SpellName, SpellElement.ElementSprite);
-            newItem.InitCooldown(spellFoundation.CooldownData.CooldownDuration);
+            newItem.InitCooldown(spellFoundation.CooldownData.CooldownDuration, true);
             newItem.Init(spellFoundation.Rarity, spellFoundation.SellPrice, spellFoundation.MaxStack);
             newItem.Init(spellFoundation.SpellCastPrefab, spellFoundation.SpellCirclePrefab, data
                 , SpellFactory.Spells[spellKey]);
 
             newItem.ItemUseEvent = spellFoundation.ItemUseEvent;
             
-            var spellId = Guid.NewGuid();
+            plrCdSys.AddCooldown(newItem.CooldownData);
 
             // data = (BaseSpellCastData) Activator.CreateInstance(data.GetType());
             // will probably need to re-call SelectMenu in ChangeSpellCreationData

@@ -39,9 +39,6 @@ namespace WizardGame.Item_System.Items
 
         public void InitCooldown(float cooldownDuration, bool initGuid = false)
         {
-            Debug.Log(cooldownData);
-            Debug.Log(icon);
-
             cooldownData.Init(cooldownDuration, initGuid);
         }
 

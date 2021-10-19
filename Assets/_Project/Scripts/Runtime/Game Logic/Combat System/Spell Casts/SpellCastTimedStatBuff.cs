@@ -21,7 +21,7 @@ namespace WizardGame.Combat_System
         public override BaseSpellCastData Data
         {
             get => data;
-            set
+            protected set
             {
                 value ??= new TimedStatBuffData();
 
@@ -34,10 +34,10 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             ,params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
                 , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
@@ -50,7 +50,7 @@ namespace WizardGame.Combat_System
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
 
-            castCircleTransf.position = ownerTransf.position;
+            castCircleTransf.position = castCirclePlacement.position;
             castCircleTransf.forward = ownerTransf.up;
             
             castCircleAnimator.SetBool(BeginCastHash, true);

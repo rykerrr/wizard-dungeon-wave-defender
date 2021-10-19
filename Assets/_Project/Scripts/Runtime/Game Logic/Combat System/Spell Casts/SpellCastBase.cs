@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
@@ -24,7 +23,8 @@ namespace WizardGame.Combat_System
 
         protected static int BeginCastHash = Animator.StringToHash("BeginSpellCast");
         protected static int EndCastHash = Animator.StringToHash("EndSpellCast");
-        
+
+        protected Transform castCirclePlacement;
         protected CastPlaceholder castCircle = default;
         
         protected StatsSystem statsSys = default;
@@ -39,43 +39,42 @@ namespace WizardGame.Combat_System
         public Element Element => element;
         
         public GameObject Owner { get; private set; } = default;
-        public abstract BaseSpellCastData Data { get; set; }
+        public abstract BaseSpellCastData Data { get; protected set; }
 
-        public bool CanCast => !isCasting && !cooldownSys.IsOnCooldown(Id);
+        public bool CanCast => !isCasting && !cooldownSys.IsOnCooldown(Id); //&& !castCircle.gameObject.activeSelf;
         
         protected bool isCasting = false;
         public bool IsCasting => isCasting;
 
         private List<MonoBehaviour> movementScripts = new List<MonoBehaviour>();
         private Cooldown cd = default;
-        private EventSystem curEvSystem = default;
         private bool[] prevEnableStates;
 
         // change owner param type to StatsSystemBehaviour since we REQUIRE it?
         // just init castCircle or also instantiate it here? think init fits more
         public virtual void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
             Debug.Log($"{owner} | NEXT: | {statsSys} | NEXT: | {cooldownSys} | NEXT: | {id} | NEXT: |" +
                       $" {castCircle} | NEXT: | {data} | NEXT: | {spellPrefab} | NEXT: | {movementScripts.Length}");
             
             Owner = owner;
+            element = spellPrefab.SpellElement;
 
             this.id = id;
             this.movementScripts = movementScripts.ToList();
             this.cooldownSys = cooldownSys;
             this.statsSys = statsSys;
+            this.castCirclePlacement = castCirclePlacement;
             this.castCircle = castCircle;
             this.spellPrefab = spellPrefab;
-            element = spellPrefab.SpellElement;
-            
+
             this.castCircle.onCastEnd += FinishSpellCast;
             castCircleAnimator = castCircle.GetComponent<Animator>();
 
             Data = data;
             
-            curEvSystem = EventSystem.current;
             prevEnableStates = new bool[movementScripts.Length];
             
             InitTimer();
@@ -95,7 +94,7 @@ namespace WizardGame.Combat_System
         
         public void CastSpell()
         {
-            if (!CanCast  || curEvSystem.IsPointerOverGameObject())
+            if (!CanCast)
             {
 #if UNITY_EDITOR
                 Debug.Log($"Can't cast due to: Timer Enabled: {cd.CdTimer.IsTimerEnabled}" +
@@ -139,10 +138,14 @@ namespace WizardGame.Combat_System
             cooldownSys.RemoveCooldown(Id);
         }
         
+        #region Debug
+        #if UNITY_EDITOR
         [ContextMenu("Log GUID")]
         public void LogId()
         {
             Debug.Log(id);
         }
+        #endif
+        #endregion
     }
 }

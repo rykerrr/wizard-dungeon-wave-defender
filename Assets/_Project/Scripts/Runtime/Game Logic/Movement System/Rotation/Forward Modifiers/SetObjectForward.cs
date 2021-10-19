@@ -17,6 +17,8 @@ namespace WizardGame.Movement.Rotation.ForwardModifiers
 
 		private void UpdateFowVector()
 		{
+			if (NextForwardVector.Equals(Vector3.zero)) return;
+			
 			targetToSet.forward = NextForwardVector;
 		}
 

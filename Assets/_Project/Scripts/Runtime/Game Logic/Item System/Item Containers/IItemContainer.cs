@@ -15,6 +15,5 @@ namespace WizardGame.Item_System.Item_Containers
         void RemoveAt(int slotIndex, int quantity);
         int GetTotalQuantity(InventoryItem item);
         void Swap(int slotIndexOne, int slotIndexTwo);
-        InteractablePhysicalItem DropItem(int slotIndex, Vector3 location);
     }
 }

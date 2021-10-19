@@ -5,6 +5,7 @@ using UnityEngine;
 using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
+using Object = UnityEngine.Object;
 
 namespace WizardGame.Combat_System
 {
@@ -51,7 +52,7 @@ namespace WizardGame.Combat_System
             
             HealthSystemBehaviour hitImpactTarget = default;
 
-            var targExists = !ReferenceEquals(objHit, null) &&
+            var targExists = !(objHit == null) &&
                                              !ReferenceEquals(
                                                  hitImpactTarget = objHit.GetComponent<HealthSystemBehaviour>()
                                                  , null);

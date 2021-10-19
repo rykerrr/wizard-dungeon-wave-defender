@@ -26,7 +26,7 @@ public class SpellCastEnergyPillar : SpellCastBase
     public override BaseSpellCastData Data
     {
         get => data;
-        set
+        protected set
         {
             value ??= new EnergyPillarData();
 
@@ -39,10 +39,10 @@ public class SpellCastEnergyPillar : SpellCastBase
     }
 
     public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-        , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+        , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
         , params MonoBehaviour[] movementScripts)
     {
-        base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+        base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
             , spellPrefab, movementScripts);
 
         ownerTransf = Owner.transform;
@@ -57,13 +57,14 @@ public class SpellCastEnergyPillar : SpellCastBase
 
     protected override IEnumerator StartSpellCast()
     {
+        isCasting = true;
+
         pillarSpawnPos = GetMouseHitPos();
 
-        isCasting = true;
         DeactivateMovementScripts();
         castCircle.gameObject.SetActive(true);
 
-        castCircleTransf.position = ownerTransf.position;
+        castCircleTransf.position = castCirclePlacement.position;
 
         castCircleAnimator.SetBool(BeginCastHash, true);
 
@@ -74,16 +75,12 @@ public class SpellCastEnergyPillar : SpellCastBase
 
     public override void FinishSpellCast()
     {
-        var spellClone = (SpellEnergyPillar) Instantiate(spellPrefab, pillarSpawnPos, Quaternion.identity);
-        spellClone.transform.up = pillarSpawnNormal;
-
         var statKey = StatTypeFactory.GetType("Vigor");
         var statModifierToApply = new StatModifier(ModifierType.Flat, 20f, Owner);
 
         var shockwaveDmg = data.BaseShockwaveDamage * Element.ElementSpellData.ExplosionStrengthMult;
 
-        spellClone.InitSpell(shockwaveDmg, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply,
-            Owner);
+        CreateSpellObject(shockwaveDmg, statKey, statModifierToApply);
 
         castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);
@@ -92,6 +89,15 @@ public class SpellCastEnergyPillar : SpellCastBase
         ReactivateMovementScripts();
 
         isCasting = false;
+    }
+
+    private void CreateSpellObject(float shockwaveDmg, StatType statKey, StatModifier statModifierToApply)
+    {
+        var spellClone = (SpellEnergyPillar) Instantiate(spellPrefab, pillarSpawnPos, Quaternion.identity);
+        spellClone.transform.up = pillarSpawnNormal;
+
+        spellClone.InitSpell(shockwaveDmg, data.DelayBetweenWaves, data.ShockwaveAmount, statKey, statModifierToApply,
+            Owner);
     }
 
     private Vector3 GetMouseHitPos()

@@ -21,7 +21,7 @@ namespace WizardGame.Combat_System
         public override BaseSpellCastData Data
         {
             get => data;
-            set
+            protected set
             {
                 value ??= new EnergyBlastData();
 
@@ -34,10 +34,10 @@ namespace WizardGame.Combat_System
         }
 
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
                 , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
@@ -48,16 +48,17 @@ namespace WizardGame.Combat_System
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
+            
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
-
-            var ownerPos = ownerTransf.position;
+            
+            var castCirclePlacementPos = castCirclePlacement.position;
             var ownerForw = ownerTransf.forward;
             
-            castCircleTransf.position = ownerPos + ownerForw * 2f;
-            castCircleTransf.forward = ownerForw;
+            castCircleTransf.position = castCirclePlacementPos + ownerForw * 2f;
+            castCircleTransf.forward =  ownerForw;
             
-            NextSpawnPos = ownerPos + ownerForw * 2;
+            NextSpawnPos = castCirclePlacementPos + castCirclePlacement.forward * 1.5f;
             NextSpawnRotation = ownerTransf.rotation;
             
             castCircleAnimator.SetBool(BeginCastHash, true);
@@ -83,10 +84,7 @@ namespace WizardGame.Combat_System
 
             for (var i = 0; i < data.BlastAmount; i++)
             {
-                var spellClone = (SpellEnergyBlast) Instantiate(spellPrefab, NextSpawnPos, NextSpawnRotation);
-                spellClone.InitSpell(explSize, data.ImpactSize
-                    , explDmg, impactDmg,
-                    elData.TravelSpeedMult, Owner);
+                CreateSpellObject(explSize, explDmg, impactDmg, elData);
 
                 yield return waitForDelay;
             }
@@ -98,6 +96,15 @@ namespace WizardGame.Combat_System
             ReactivateMovementScripts();
 
             isCasting = false;
+        }
+
+        private void CreateSpellObject(float explSize, float explDmg, float impactDmg, ElementSpellData elData)
+        {
+            var spellClone = (SpellEnergyBlast) Instantiate(spellPrefab, NextSpawnPos, NextSpawnRotation);
+            
+            spellClone.InitSpell(explSize, data.ImpactSize
+                , explDmg, impactDmg,
+                elData.TravelSpeedMult, Owner);
         }
     }
 }

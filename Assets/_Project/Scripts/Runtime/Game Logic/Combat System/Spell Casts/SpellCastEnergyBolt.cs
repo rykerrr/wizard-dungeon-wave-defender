@@ -24,7 +24,7 @@ namespace WizardGame.Combat_System
         public override BaseSpellCastData Data
         {
             get => spellData;
-            set
+            protected set
             {
                 value ??= new EnergyBoltData();
 
@@ -37,10 +37,10 @@ namespace WizardGame.Combat_System
         }
 
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
                 , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
@@ -56,17 +56,24 @@ namespace WizardGame.Combat_System
         protected override IEnumerator StartSpellCast()
         {
             isCasting = true;
+         
+            Debug.Log($"I CAST UNTO THEE! {isCasting}");
+            
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
 
-            castCircleTransf.position = ownerTransf.position + ownerTransf.forward * 2f;
-            castCircleTransf.forward = ownerTransf.forward;
+            var castCirclePlacementPos = castCirclePlacement.position;
+            var ownerForw = ownerTransf.forward;
+            
+            castCircleTransf.position = castCirclePlacementPos + ownerForw * 2f;
+            castCircleTransf.forward = ownerForw;
 
             mouseHitPos = GetMouseHitPos();
             castCircleAnimator.SetBool(BeginCastHash, true);
 
             yield return castingTimeWait;
 
+            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, true);
         }
 
@@ -74,6 +81,20 @@ namespace WizardGame.Combat_System
         {
             var spawnPos = ownerTransf.position + ownerTransf.up * 2f + ownerTransf.forward;
 
+            CreateSpellObject(spawnPos);
+
+            castCircleAnimator.SetBool(BeginCastHash, false);
+            castCircleAnimator.SetBool(EndCastHash, false);
+
+            EnableCastCooldown();
+            ReactivateMovementScripts();
+
+            Debug.Log("Finished casting");
+            isCasting = false;
+        }
+
+        private void CreateSpellObject(Vector3 spawnPos)
+        {
             var spellClone = (SpellEnergyBolt) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
             var spellTransf = spellClone.transform;
             var spellLocalScale = spellTransf.localScale;
@@ -82,9 +103,9 @@ namespace WizardGame.Combat_System
 
             var newScale = new Vector3(spellLocalScale.x, spellLocalScale.y,
                 (spawnPos - mouseHitPos).magnitude);
-            
+
             spellTransf.localScale = newScale;
-            
+
             var elData = element.ElementSpellData;
             var explSize = spellData.ExplosionSize * elData.ExplosionRadiusMult;
             var explDmg = spellData.BaseExplosionDamage * elData.ExplosionStrengthMult;
@@ -93,14 +114,6 @@ namespace WizardGame.Combat_System
             spellClone.InitSpell(explSize, spellData.ImpactSize
                 , explDmg, impactDmg,
                 mouseHitPos, objHit, Owner);
-
-            castCircleAnimator.SetBool(BeginCastHash, false);
-            castCircleAnimator.SetBool(EndCastHash, false);
-
-            EnableCastCooldown();
-            ReactivateMovementScripts();
-
-            isCasting = false;
         }
 
         private Vector3 GetMouseHitPos()

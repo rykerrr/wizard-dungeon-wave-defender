@@ -21,7 +21,7 @@ namespace WizardGame.Combat_System
         public override BaseSpellCastData Data
         {
             get => data;
-            set
+            protected set
             {
                 value ??= new DirectedEnergyExplosionData();
 
@@ -34,10 +34,10 @@ namespace WizardGame.Combat_System
         }
         
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
-            ,params MonoBehaviour[] movementScripts)
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
                 , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
@@ -56,7 +56,7 @@ namespace WizardGame.Combat_System
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
 
-            castCircleTransf.position = ownerTransf.position;
+            castCircleTransf.position = castCirclePlacement.position;
             castCircleTransf.forward = ownerTransf.up;
             
             castCircleAnimator.SetBool(BeginCastHash, true);
@@ -70,15 +70,8 @@ namespace WizardGame.Combat_System
         {
             Vector3 spawnPos = GetSpawnPosition();
 
-            var spellClone = (SpellDirectedEnergyExplosion) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
+            CreateSpellObject(spawnPos);
 
-            var elData = element.ElementSpellData;
-            var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
-            var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
-            
-            spellClone.InitSpell(explSize, explDmg
-                , data.ExplosionAmount, spawnPos, Owner);
-            
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
             
@@ -86,6 +79,18 @@ namespace WizardGame.Combat_System
             ReactivateMovementScripts();
 
             isCasting = false;
+        }
+
+        private void CreateSpellObject(Vector3 spawnPos)
+        {
+            var spellClone = (SpellDirectedEnergyExplosion) Instantiate(spellPrefab, spawnPos, Quaternion.identity);
+
+            var elData = element.ElementSpellData;
+            var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
+            var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
+
+            spellClone.InitSpell(explSize, explDmg
+                , data.ExplosionAmount, spawnPos, Owner);
         }
 
         private Vector3 GetSpawnPosition()

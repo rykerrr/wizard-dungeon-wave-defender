@@ -18,7 +18,7 @@ namespace WizardGame.Combat_System
         public override BaseSpellCastData Data
         {
             get => data;
-            set
+            protected set
             {
                 value ??= new EnergyHealingFieldData();
 
@@ -31,10 +31,10 @@ namespace WizardGame.Combat_System
         }
 
         public override void Init(GameObject owner, StatsSystem statsSys, CooldownSystem cooldownSys
-            , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
+            , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
-            base.Init(owner, statsSys, cooldownSys, id, castCircle, data
+            base.Init(owner, statsSys, cooldownSys, id, castCirclePlacement, castCircle, data
                 , spellPrefab, movementScripts);
 
             ownerTransf = Owner.transform;
@@ -48,7 +48,7 @@ namespace WizardGame.Combat_System
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
 
-            castCircleTransf.position = ownerTransf.position;
+            castCircleTransf.position = castCirclePlacement.position;
             castCircleTransf.forward = ownerTransf.up;
 
             castCircleAnimator.SetBool(BeginCastHash, true);
@@ -60,12 +60,7 @@ namespace WizardGame.Combat_System
 
         public override void FinishSpellCast()
         {
-            var spellClone =
-                (SpellEnergyHealingField) Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
-
-            var healPerTick = data.TickHeal * element.ElementSpellData.HealStrengthMult;
-
-            spellClone.InitSpell(healPerTick, data.TickAmount, Owner);
+            CreateSpellObject();
 
             castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
@@ -74,6 +69,16 @@ namespace WizardGame.Combat_System
             ReactivateMovementScripts();
 
             isCasting = false;
+        }
+
+        private void CreateSpellObject()
+        {
+            var spellClone =
+                (SpellEnergyHealingField) Instantiate(spellPrefab, ownerTransf.position, Quaternion.identity);
+
+            var healPerTick = data.TickHeal * element.ElementSpellData.HealStrengthMult;
+
+            spellClone.InitSpell(healPerTick, data.TickAmount, Owner);
         }
     }
 }

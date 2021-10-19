@@ -52,6 +52,7 @@ namespace WizardGame.Item_System.UI
 
         private void OnEnable() => UpdateSlotUi();
         
+        #region debug
         #if UNITY_EDITOR
         [ContextMenu("Check if item null")]
         public void CheckIfItemNull()
@@ -67,5 +68,6 @@ namespace WizardGame.Item_System.UI
             UseReferencedItem();
         }
         #endif
+        #endregion
     }
 }

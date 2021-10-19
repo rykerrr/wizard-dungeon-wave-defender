@@ -24,15 +24,11 @@ namespace WizardGame.Item_System.Items
 
         public void Init(Rarity rarity, int sellPrice, int maxStack)
         {
-            Debug.Log("inventory innit blimey mate");
-            
             this.rarity = rarity;
             this.sellPrice = sellPrice;
             this.maxStack = maxStack;
         }
         
-        public InventoryItem() : base() { }
-
         public abstract override string GetInfoDisplayText();
 
         public override string ToString()

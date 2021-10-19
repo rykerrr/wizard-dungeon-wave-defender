@@ -226,16 +226,5 @@ namespace WizardGame.Item_System.Item_Containers
             
             OnItemsUpdated?.Invoke();
         }
-
-        public InteractablePhysicalItem DropItem(int slotIndex, Vector3 location)
-        {
-            InventoryItem item = this[slotIndex].invItem;
-            if (!HasItem(item)) return null;
-            
-            RemoveAt(slotIndex, 1);
-            OnItemsUpdated?.Invoke();
-            
-            return PhysicalItemFactory.CreateInstance(location, Quaternion.identity, item);
-        }
     }
 }
