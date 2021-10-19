@@ -70,7 +70,7 @@ namespace WizardGame.Item_System.UI
         [ContextMenu("Log ItemSlot")]
         public void LogItemSlot()
         {
-            Debug.Log(ItemSlot + "\n bob: " + ReferencedSlotItem, this);
+            // Debug.Log(ItemSlot + "\n bob: " + ReferencedSlotItem, this);
         }
     }
 }

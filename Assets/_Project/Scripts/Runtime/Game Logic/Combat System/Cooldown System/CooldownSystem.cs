@@ -23,6 +23,14 @@ namespace WizardGame.Combat_System.Cooldown_System
 
             return false;
         }
+
+        public void InitializeCooldowns(IHasCooldown[] cooldowns)
+        {
+            foreach (var cd in cooldowns)
+            {
+                AddCooldown(cd);
+            }
+        }
         
         public bool AddCooldown(IHasCooldown cd)
         {

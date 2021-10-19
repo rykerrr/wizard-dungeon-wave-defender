@@ -33,9 +33,7 @@ namespace WizardGame.Item_System.UI
             
             cooldownText.text = string.Empty;
         }
-        // To cut the debugging short, not all cooldowns are the same, it technically works as intended
-        // They're just set to 3 so it seems like they are the same, after all they tick in the same
-        // update loop....
+        
         public void UpdateData(IHasCooldown cd)
         {
             if (ReferenceEquals(cd, null))
@@ -46,19 +44,15 @@ namespace WizardGame.Item_System.UI
             }
             
             var newData = cdSystem.GetCooldown(cd.Id);
-            
-            var sameData = !ReferenceEquals(data, null) && ReferenceEquals(data, newData);
+
+            var curDataNotNull = !ReferenceEquals(data, null);
+            var sameData = curDataNotNull && ReferenceEquals(data, newData);
             if (sameData) return;
             
-            id = cd.Id;
             data?.RemoveListenAction(UpdateDisplay);
 
+            id = cd.Id;
             data = newData;
-            if(ReferenceEquals(data, null))
-            {
-                cdSystem.AddCooldown(cd);
-                data = cdSystem.GetCooldown(id);
-            }
 
             data?.AddListenAction(UpdateDisplay);
         }
@@ -84,6 +78,8 @@ namespace WizardGame.Item_System.UI
             cooldownText.text = remainingTime == 0 ? string.Empty : $"{remainingTime}s";
         }
 
+        #region debug
+        #if UNITY_EDITOR
         [ContextMenu("Log debug data")]
         public void LogDebugData()
         {
@@ -109,5 +105,7 @@ namespace WizardGame.Item_System.UI
             
             cd?.RemoveListenAction(UpdateDisplay);
         }
+        #endif
+        #endregion
     }
 }

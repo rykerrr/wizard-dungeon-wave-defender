@@ -15,8 +15,8 @@ namespace WizardGame.Item_System.UI
         {
             base.Awake();
 
-            Debug.Log(itemSlotUI);
-            Debug.Log(itemSlotUI.ReferencedSlotItem);
+            // Debug.Log(itemSlotUI);
+            // Debug.Log(itemSlotUI.ReferencedSlotItem);
             ((InventorySlotUI) itemSlotUI).LogItemSlot();
 
             itemThrower = new ItemThrower((InventorySlotUI) itemSlotUI);

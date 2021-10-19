@@ -44,8 +44,6 @@ public class OnParticleCollissionCreateWaterPuddle : MonoBehaviour
 
                 if (num <= puddleSpawnChance)
                 {
-                    Debug.Log(num + " | " + other);
-                    
                     CreatePuddle(collEvents[i].intersection, collEvents[i].normal);
                 }
             }

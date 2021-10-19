@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using WizardGame.Item_System.World_Interaction;
 using UnityEngine;
@@ -37,6 +38,8 @@ namespace WizardGame.Item_System.Item_Containers
         public bool HasItem(InventoryItem item) => itemSlots.Contains(new ItemSlot(item, 0), new ItemComparer());
         
         public ItemSlot this[int index] => itemSlots[index];
+
+        public ReadOnlyCollection<ItemSlot> ItemSlots => itemSlots.ToList().AsReadOnly();
 
         // if we used ID's, we could pass in an ID here instead
         public ItemSlot AddItem(ItemSlot itemSlot)
