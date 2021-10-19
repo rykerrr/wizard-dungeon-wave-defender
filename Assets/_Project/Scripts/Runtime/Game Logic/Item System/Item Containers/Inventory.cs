@@ -14,26 +14,18 @@ namespace WizardGame.Item_System.Item_Containers
 
         public void OnEnable()
         {
-            if (itemContainer == null) return;
-
+            if (itemContainer == null  || onInventoryItemsUpdated == null) return;
+            
             ItemContainer.OnItemsUpdated += onInventoryItemsUpdated.Raise;
         }
 
         public void OnDisable()
         {
-            if (itemContainer == null) return;
+            if (itemContainer == null || onInventoryItemsUpdated == null) return;
 
             ItemContainer.OnItemsUpdated -= onInventoryItemsUpdated.Raise;
         }
 
-        public void RemoveItem(HotbarItem item)
-        {
-            InventoryItem invItem = (InventoryItem) item;
-            if (invItem == null) return;
-            
-            itemContainer.Remove(new ItemSlot(invItem, 1));
-        }
-        
         #region debug
         [Header("Debug")]
         [SerializeField] private InventoryItem itemToAdd = default;

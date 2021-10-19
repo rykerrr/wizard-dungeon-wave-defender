@@ -15,6 +15,9 @@ namespace WizardGame.Combat_System
         private Transform ownerTransf = default;
         private StatBase intStat = default;
 
+        private Vector3 NextSpawnPos { get; set; }
+        private Quaternion NextSpawnRotation { get; set; }
+        
         public override BaseSpellCastData Data
         {
             get => data;
@@ -48,9 +51,15 @@ namespace WizardGame.Combat_System
             DeactivateMovementScripts();
             castCircle.gameObject.SetActive(true);
 
-            castCircleTransf.position = ownerTransf.position + ownerTransf.forward * 2f;
-            castCircleTransf.forward = ownerTransf.forward;
-
+            var ownerPos = ownerTransf.position;
+            var ownerForw = ownerTransf.forward;
+            
+            castCircleTransf.position = ownerPos + ownerForw * 2f;
+            castCircleTransf.forward = ownerForw;
+            
+            NextSpawnPos = ownerPos + ownerForw * 2;
+            NextSpawnRotation = ownerTransf.rotation;
+            
             castCircleAnimator.SetBool(BeginCastHash, true);
 
             yield return castingTimeWait;
@@ -66,16 +75,15 @@ namespace WizardGame.Combat_System
         private IEnumerator MultiCast()
         {
             var waitForDelay = new WaitForSeconds(0.5f);
-            var spawnPos = ownerTransf.position + ownerTransf.forward * 2;
 
             var elData = element.ElementSpellData;
             var explSize = data.ExplosionSize * elData.ExplosionRadiusMult;
             var explDmg = data.BaseExplosionDamage * elData.ExplosionStrengthMult;
             var impactDmg = data.BaseImpactDamage * elData.ImpactStrengthMult;
 
-            for (int i = 0; i < data.BlastAmount; i++)
+            for (var i = 0; i < data.BlastAmount; i++)
             {
-                var spellClone = (SpellEnergyBlast) Instantiate(spellPrefab, spawnPos, ownerTransf.rotation);
+                var spellClone = (SpellEnergyBlast) Instantiate(spellPrefab, NextSpawnPos, NextSpawnRotation);
                 spellClone.InitSpell(explSize, data.ImpactSize
                     , explDmg, impactDmg,
                     elData.TravelSpeedMult, Owner);

@@ -15,7 +15,24 @@ namespace WizardGame.Item_System.Item_Containers
         // OnItemsUpdated gets invoked, inventory SO's subscribed custom event's raise method is invoked and the listeners
         // deal with it, basically ends up being something like chaining for events?
 
-        public ItemContainer(int size) => itemSlots = new ItemSlot[size];
+        public ItemContainer(int size)
+        {
+            Debug.Log("Creating item container...");
+            
+            itemSlots = new ItemSlot[size];
+        }
+        
+        public ItemContainer(ItemContainer container) : this(container.itemSlots.Length)
+        {
+            Debug.Log(itemSlots.Length);
+            
+            foreach (var slot in container.itemSlots)
+            {
+                if (slot.invItem == null) continue;
+                
+                AddItem(slot);
+            }
+        }
 
         public bool HasItem(InventoryItem item) => itemSlots.Contains(new ItemSlot(item, 0), new ItemComparer());
         

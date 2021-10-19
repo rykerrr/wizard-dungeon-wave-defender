@@ -47,7 +47,7 @@ namespace WizardGame.Combat_System
         public bool IsCasting => isCasting;
 
         private List<MonoBehaviour> movementScripts = new List<MonoBehaviour>();
-        private Cooldown _cd = default;
+        private Cooldown cd = default;
         private EventSystem curEvSystem = default;
         private bool[] prevEnableStates;
 
@@ -57,6 +57,9 @@ namespace WizardGame.Combat_System
             , Guid id, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
+            Debug.Log($"{owner} | NEXT: | {statsSys} | NEXT: | {cooldownSys} | NEXT: | {id} | NEXT: |" +
+                      $" {castCircle} | NEXT: | {data} | NEXT: | {spellPrefab} | NEXT: | {movementScripts.Length}");
+            
             Owner = owner;
 
             this.id = id;
@@ -65,8 +68,9 @@ namespace WizardGame.Combat_System
             this.statsSys = statsSys;
             this.castCircle = castCircle;
             this.spellPrefab = spellPrefab;
-            this.element = spellPrefab.SpellElement;
+            element = spellPrefab.SpellElement;
             
+            this.castCircle.onCastEnd += FinishSpellCast;
             castCircleAnimator = castCircle.GetComponent<Animator>();
 
             Data = data;
@@ -86,7 +90,7 @@ namespace WizardGame.Combat_System
         {
             castingTimeWait = new WaitForSeconds(timeToCast);
             
-            _cd = cooldownSys.GetCooldown(Id);
+            cd = cooldownSys.GetCooldown(Id);
         }
         
         public void CastSpell()
@@ -94,8 +98,8 @@ namespace WizardGame.Combat_System
             if (!CanCast  || curEvSystem.IsPointerOverGameObject())
             {
 #if UNITY_EDITOR
-                Debug.Log($"Can't cast due to: Timer Enabled: {_cd.CdTimer.IsTimerEnabled}" +
-                          $" | Is casting: {isCasting} | Cooldown for cast left: {_cd.CdTimer.Time}");
+                Debug.Log($"Can't cast due to: Timer Enabled: {cd.CdTimer.IsTimerEnabled}" +
+                          $" | Is casting: {isCasting} | Cooldown for cast left: {cd.CdTimer.Time}", Owner);
 #endif
 
                 return;
@@ -109,8 +113,8 @@ namespace WizardGame.Combat_System
 
         protected void EnableCastCooldown()
         {
-            _cd.CdTimer.Reset();
-            _cd.CdTimer.EnableTimer();
+            cd.CdTimer.Reset();
+            cd.CdTimer.EnableTimer();
         }
         
         protected void DeactivateMovementScripts()

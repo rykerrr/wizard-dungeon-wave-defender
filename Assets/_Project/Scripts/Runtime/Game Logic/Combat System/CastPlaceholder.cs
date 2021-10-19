@@ -8,11 +8,11 @@ namespace WizardGame.Combat_System
 {
     public class CastPlaceholder : MonoBehaviour
     {
-        [SerializeField] private VoidGameEvent onCastEnd;
+        public Action onCastEnd = delegate { };
         
         public void InvokeCastEnd()
         {
-            onCastEnd.Raise();
+            onCastEnd?.Invoke();
         }
 
         public void DisableSelf() => gameObject.SetActive(false);

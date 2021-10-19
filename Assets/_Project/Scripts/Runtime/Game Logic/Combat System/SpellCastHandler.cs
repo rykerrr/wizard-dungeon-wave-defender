@@ -41,16 +41,23 @@ namespace WizardGame.Combat_System
         }
 
         // Used by input system
-        public void TryCastSpell(InputAction.CallbackContext ctx)
+        public void Input_TryCastSpell(InputAction.CallbackContext ctx)
+        {
+            var notPointerDown = ctx.phase != InputActionPhase.Started;
+            if(notPointerDown) return;
+            
+            TryCastSpell();
+        }
+
+        public void TryCastSpell()
         {
             var noEquippedSpell = ReferenceEquals(equippedSpellCastBase, null);
-            var notPointerDown = ctx.phase != InputActionPhase.Started;
-
-            if (!enabled || noEquippedSpell || notPointerDown) return;
+            
+            if (!enabled || noEquippedSpell) return;
             
             equippedSpellCastBase.CastSpell();
         }
-
+        
         public void TryEquipSpell(HotbarItem hotbarItem)
         {
             if (!enabled) return;
@@ -119,6 +126,7 @@ namespace WizardGame.Combat_System
             var spellCircleClone = Instantiate(baseItem.SpellCirclePrefab, Vector3.zero, Quaternion.identity);
             
             spellCircleClone.gameObject.SetActive(false);
+            
             spellCasterClone.Init(gameObject, statsSystemBehaviour.StatsSystem, cooldownSys
                 , baseItem.CooldownData.Id, spellCircleClone, baseItem.SpellCastData
                 , baseItem.SpellPrefab, movementScripts);

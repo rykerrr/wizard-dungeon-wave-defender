@@ -28,7 +28,7 @@ MonoBehaviour:
     - quantity: 1
       invItem: {fileID: 11400000, guid: 7753f26abef035c41a494fe40335f393, type: 2}
     - quantity: 1
-      invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
+      invItem: {fileID: 11400000, guid: b18ff1bd3d732e141bcf336406bcc51d, type: 2}
     - quantity: 1
       invItem: {fileID: 11400000, guid: 68c328c2fddd8f048b6f8bfffca12040, type: 2}
     - quantity: 0
