@@ -29,7 +29,7 @@ namespace WizardGame.Combat_System
         private int actualExplosionDmg = default;
         private float explosionRadius = default;
 
-        private GameObject collisionHit = default;
+        private Collision collisionHit = default;
         
         private void Awake()
         {
@@ -69,8 +69,12 @@ namespace WizardGame.Combat_System
             var explClone = GenerateAndProcessExplosion(transform.position);
 
             HealthSystemBehaviour hitImpactTarget = default;
-            var targExist = !ReferenceEquals(hitImpactTarget = collisionHit.GetComponent<HealthSystemBehaviour>()
-                , null);
+            var targExist = (collisionHit.rigidbody) != null && (hitImpactTarget = collisionHit.rigidbody.GetComponent<HealthSystemBehaviour>()) != null;
+            if (!targExist)
+            {
+                targExist = !ReferenceEquals(hitImpactTarget = collisionHit.gameObject.GetComponent<HealthSystemBehaviour>()
+                    , null);
+            }
             
             if (targExist)
             {
@@ -116,7 +120,7 @@ namespace WizardGame.Combat_System
         {
             Debug.Log("Tremble in collisions!");
         
-            if(!ReferenceEquals(other, null)) collisionHit = other.gameObject;
+            if(!ReferenceEquals(other, null)) collisionHit = other;
             
             ProcessOnHitEffect();
         }

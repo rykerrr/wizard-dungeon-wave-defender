@@ -366,7 +366,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
         }
 
         #region debug
-
+        #if UNITY_EDITOR
         [Header("Debug data")] [SerializeField]
         private StatusEffectData debugStatEffData = default;
 
@@ -430,7 +430,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
                 Debug.Log(TimerTickerSingleton.Instance.GetTimer(entry));
             }
         }
-
+        #endif
         #endregion
     }
 }

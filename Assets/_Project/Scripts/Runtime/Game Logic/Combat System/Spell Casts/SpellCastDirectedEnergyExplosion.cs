@@ -72,7 +72,6 @@ namespace WizardGame.Combat_System
 
             CreateSpellObject(spawnPos);
 
-            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
             
             EnableCastCooldown();

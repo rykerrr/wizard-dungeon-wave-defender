@@ -56,8 +56,8 @@ namespace WizardGame.Combat_System
             , Guid id, Transform castCirclePlacement, CastPlaceholder castCircle, BaseSpellCastData data, SpellBase spellPrefab
             , params MonoBehaviour[] movementScripts)
         {
-            Debug.Log($"{owner} | NEXT: | {statsSys} | NEXT: | {cooldownSys} | NEXT: | {id} | NEXT: |" +
-                      $" {castCircle} | NEXT: | {data} | NEXT: | {spellPrefab} | NEXT: | {movementScripts.Length}");
+            // Debug.Log($"{owner} | NEXT: | {statsSys} | NEXT: | {cooldownSys} | NEXT: | {id} | NEXT: |" +
+            //           $" {castCircle} | NEXT: | {data} | NEXT: | {spellPrefab} | NEXT: | {movementScripts.Length}");
             
             Owner = owner;
             element = spellPrefab.SpellElement;

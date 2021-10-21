@@ -10,14 +10,14 @@ namespace WizardGame.Combat_System.Spell_Effects
     public class Explosion : MonoBehaviour
     {
         [SerializeField] private FadeMeshRendererOverLifetime fader = default;
-    
+
         private GameObject caster;
         private Element spellElement;
-        
+
         private Collider[] colliderHits;
         private float explosionRadius;
         private int explosionDamage;
-        
+
         // Object's lifetime is handled by it's animation currently
         public void Init(int explosionDamage, float explosionRadius, Element spellElement, GameObject caster
             , ref Collider[] colliderHits)
@@ -29,7 +29,7 @@ namespace WizardGame.Combat_System.Spell_Effects
 
             this.spellElement = spellElement;
             fader.CustomColor = spellElement.ElementColor;
-            
+
             ProcessExplosion();
         }
 
@@ -39,18 +39,19 @@ namespace WizardGame.Combat_System.Spell_Effects
 
             foreach (var healthObj in healthSystemBehaviours)
             {
-                int dmg = TryApplyStatusEffect(healthObj);
+                var dmg = TryApplyStatusEffect(healthObj);
 
                 healthObj.HealthSystem.TakeDamage(dmg, spellElement, caster);
             }
         }
-        
+
         private int TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
         {
             var statEffData = spellElement.StatusEffectToApply;
-            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData
-            , caster, spellElement, hitImpactTarget.gameObject);
             
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData
+                , caster, spellElement, hitImpactTarget.gameObject);
+
             var statEffHandler = hitImpactTarget.StatusEffectHandler;
             
             var res = statEffHandler.AddStatusEffect(statEffData, statEff
@@ -58,43 +59,53 @@ namespace WizardGame.Combat_System.Spell_Effects
 
             if (res == StatusEffectAddResult.SpellBuff)
             {
-                return (int)Math.Round(explosionDamage * buff.Effectiveness);
+                return (int) Math.Round(explosionDamage * buff.Effectiveness);
             }
 
             return explosionDamage;
         }
-        
+
         // called by animation event
         public void DisableSelf()
         {
             Destroy(gameObject, 1f);
         }
-        
+
         private List<HealthSystemBehaviour> GetHealthSystemsInRadiusIgnoreCaster()
         {
             Array.Clear(colliderHits, 0, colliderHits.Length);
-            
-            var explosionHits = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, 
+
+            var explosionHits = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius,
                 colliderHits, ~0, QueryTriggerInteraction.Ignore);
             // hit every layer but ignore triggers
-            
+
             var healthSystemBehaviours = ReturnHealthSystemsFromColliders(explosionHits);
-            
+
             return healthSystemBehaviours;
         }
 
         private List<HealthSystemBehaviour> ReturnHealthSystemsFromColliders(int explosionHits)
         {
             List<HealthSystemBehaviour> healthSystemBehaviours = new List<HealthSystemBehaviour>();
-            
+
             for (var i = explosionHits - 1; i >= 0; i--)
             {
-                if (colliderHits[i].gameObject == caster) continue;
-
                 HealthSystemBehaviour behav = default;
 
-                if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))
+                if (colliderHits[i].attachedRigidbody)
                 {
+                    if ((behav = colliderHits[i].attachedRigidbody.GetComponent<HealthSystemBehaviour>()) != null)
+                    {
+                        if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
+                        
+                        healthSystemBehaviours.Add(behav);
+                        continue;
+                    }
+                }
+                
+                if ((behav = colliderHits[i].GetComponent<HealthSystemBehaviour>()) != null)
+                {
+                    if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
                     healthSystemBehaviours.Add(behav);
                 }
             }

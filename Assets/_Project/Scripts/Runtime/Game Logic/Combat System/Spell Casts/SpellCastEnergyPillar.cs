@@ -70,7 +70,8 @@ public class SpellCastEnergyPillar : SpellCastBase
 
         yield return castingTimeWait;
 
-        castCircleAnimator.SetBool(EndCastHash, true);
+            castCircleAnimator.SetBool(BeginCastHash, false);
+            castCircleAnimator.SetBool(EndCastHash, true);
     }
 
     public override void FinishSpellCast()
@@ -82,7 +83,6 @@ public class SpellCastEnergyPillar : SpellCastBase
 
         CreateSpellObject(shockwaveDmg, statKey, statModifierToApply);
 
-        castCircleAnimator.SetBool(BeginCastHash, false);
         castCircleAnimator.SetBool(EndCastHash, false);
 
         EnableCastCooldown();

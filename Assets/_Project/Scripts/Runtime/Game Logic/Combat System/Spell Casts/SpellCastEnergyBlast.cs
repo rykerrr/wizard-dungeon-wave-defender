@@ -65,6 +65,7 @@ namespace WizardGame.Combat_System
 
             yield return castingTimeWait;
 
+            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, true);
         }
 
@@ -89,7 +90,6 @@ namespace WizardGame.Combat_System
                 yield return waitForDelay;
             }
 
-            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
 
             EnableCastCooldown();

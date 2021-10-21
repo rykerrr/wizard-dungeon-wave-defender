@@ -21,7 +21,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgImpactDmg = default;
         [SerializeField] private int avgExplosionDmg = default;
 
-        private GameObject objHit = default;
+        private HealthSystemBehaviour objHit = default;
         private Collider[] colliderHits;
         
         private Vector3 hitPos = default;
@@ -31,7 +31,7 @@ namespace WizardGame.Combat_System
         private float actualRadius = default;
 
         public void InitSpell(float explosionRadius, float impactRadius, float explosionDmgMult
-            , float impactDmgMult, Vector3 hitPos, GameObject objHit, GameObject caster)
+            , float impactDmgMult, Vector3 hitPos, HealthSystemBehaviour objHit, GameObject caster)
         {
             actualImpactDmg = (int)Math.Round(avgImpactDmg * impactDmgMult);
             actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
@@ -50,17 +50,12 @@ namespace WizardGame.Combat_System
         {
             var explClone = GenerateAndProcessExplosion(hitPos);
             
-            HealthSystemBehaviour hitImpactTarget = default;
-
-            var targExists = !(objHit == null) &&
-                                             !ReferenceEquals(
-                                                 hitImpactTarget = objHit.GetComponent<HealthSystemBehaviour>()
-                                                 , null);
+            var targExists = objHit != null;
             if (targExists)
             {
-                TryApplyStatusEffect(hitImpactTarget);
+                TryApplyStatusEffect(objHit);
                 
-                hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, SpellElement, caster);
+                objHit.HealthSystem.TakeDamage(actualImpactDmg, SpellElement, caster);
             }
             
             Destroy(gameObject, 0.3f);
@@ -72,6 +67,8 @@ namespace WizardGame.Combat_System
             onHitClone.transform.localScale = Vector3.one * actualRadius;
 
             onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, Caster, ref colliderHits);
+            
+            Debug.Log("on hit clone exists bruv", onHitClone);
             
             return onHitClone;
         }

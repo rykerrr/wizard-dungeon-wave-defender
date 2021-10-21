@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Combat_System.Element_System;
+using WizardGame.Health_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System
@@ -16,7 +17,7 @@ namespace WizardGame.Combat_System
         private Transform castCircleTransf = default;
         private Transform ownerTransf = default;
 
-        private GameObject objHit = default;
+        private HealthSystemBehaviour hitHealthSys = default;
         private Vector3 mouseHitPos = default;
         private Camera mainCam = default;
         private StatBase intStat = default;
@@ -83,7 +84,6 @@ namespace WizardGame.Combat_System
 
             CreateSpellObject(spawnPos);
 
-            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, false);
 
             EnableCastCooldown();
@@ -113,18 +113,21 @@ namespace WizardGame.Combat_System
 
             spellClone.InitSpell(explSize, spellData.ImpactSize
                 , explDmg, impactDmg,
-                mouseHitPos, objHit, Owner);
+                mouseHitPos, hitHealthSys, Owner);
         }
 
         private Vector3 GetMouseHitPos()
         {
-            Ray mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
-            bool didHit = Physics.Raycast(mouseRay, out RaycastHit hitInfo, 500f);
+            var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            var didHit = Physics.Raycast(mouseRay, out RaycastHit hitInfo, 500f);
 
-            objHit = null;
-            if (hitInfo.collider)
-                objHit = hitInfo.collider.gameObject;
-
+            var rb = hitInfo.collider.attachedRigidbody;
+            var targExist = rb != null && (hitHealthSys = rb.gameObject.GetComponent<HealthSystemBehaviour>()) != null;
+            if (!targExist && hitInfo.collider != null)
+            {
+                hitHealthSys = hitInfo.collider.GetComponent<HealthSystemBehaviour>();
+            }
+            
             if (didHit) return hitInfo.point;
 
             return mouseRay.direction * 50f;

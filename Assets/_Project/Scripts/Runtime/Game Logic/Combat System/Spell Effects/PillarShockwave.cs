@@ -73,15 +73,25 @@ namespace WizardGame.Combat_System.Spell_Effects
         private List<HealthSystemBehaviour> GetHealthSystemsFromColliders(int shockwaveHits)
         {
             List<HealthSystemBehaviour> healthSystemBehaviours = new List<HealthSystemBehaviour>();
-            
+
             for (var i = shockwaveHits - 1; i >= 0; i--)
             {
-                if (colliderHits[i].gameObject == caster) continue;
-
                 HealthSystemBehaviour behav = default;
 
-                if (!ReferenceEquals(behav = colliderHits[i].GetComponent<HealthSystemBehaviour>(), null))
+                if (colliderHits[i].attachedRigidbody)
                 {
+                    if ((behav = colliderHits[i].attachedRigidbody.GetComponent<HealthSystemBehaviour>()) != null)
+                    {
+                        if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
+                        
+                        healthSystemBehaviours.Add(behav);
+                        continue;
+                    }
+                }
+                
+                if ((behav = colliderHits[i].GetComponent<HealthSystemBehaviour>()) != null)
+                {
+                    if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
                     healthSystemBehaviours.Add(behav);
                 }
             }

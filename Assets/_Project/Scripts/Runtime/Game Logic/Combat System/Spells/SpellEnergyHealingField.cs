@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Health_System;
@@ -77,7 +76,7 @@ namespace WizardGame.Combat_System
             
             healthSysBehavs.ForEach(x => x.HealthSystem.Heal(actualHealPerTick, caster));
 
-            Random rand = new Random();
+            var rand = new Random();
             int particleAmn = rand.Next(1, healthSysBehavs.Count + 1) * particleAmnMult;
             
             healFieldEffect.Emit(particleAmn);
@@ -94,8 +93,20 @@ namespace WizardGame.Combat_System
             {
                 HealthSystemBehaviour behav = default;
 
-                if (!ReferenceEquals(behav = colliders[i].GetComponent<HealthSystemBehaviour>(), null))
+                if (colliders[i].attachedRigidbody)
                 {
+                    if ((behav = colliders[i].attachedRigidbody.GetComponent<HealthSystemBehaviour>()) != null)
+                    {
+                        if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
+
+                        healthSystemBehaviours.Add(behav);
+                        continue;
+                    }
+                }
+
+                if ((behav = colliders[i].GetComponent<HealthSystemBehaviour>()) != null)
+                {
+                    if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
                     healthSystemBehaviours.Add(behav);
                 }
             }
