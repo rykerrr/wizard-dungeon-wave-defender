@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using WizardGame.Combat_System;
-using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 
@@ -15,6 +11,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private Explosion onHitEffect = default;
 
         [Header("Properties, do not change in prefab variants")]
+        [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private float baseTravelSpd = default;
         [SerializeField] private float avgExplosionRadius = default;
 
@@ -46,7 +43,7 @@ namespace WizardGame.Combat_System
             
             this.explosionRadius = avgExplosionRadius * explosionRadius;
             this.caster = caster;
-
+            
             transform.localScale = Vector3.one * impactRadius;
 
             var travelSpd = baseTravelSpd * travelSpdMult;
@@ -66,41 +63,28 @@ namespace WizardGame.Combat_System
                 Debug.Log($"Object {gameObject.name} owned by {caster.name} hit {collisionHit}"); 
             #endif
             
-            var explClone = GenerateAndProcessExplosion(transform.position);
+            GenerateAndProcessExplosion(transform.position);
 
-            HealthSystemBehaviour hitImpactTarget = default;
-            var targExist = (collisionHit.rigidbody) != null && (hitImpactTarget = collisionHit.rigidbody.GetComponent<HealthSystemBehaviour>()) != null;
-            if (!targExist)
-            {
-                targExist = !ReferenceEquals(hitImpactTarget = collisionHit.gameObject.GetComponent<HealthSystemBehaviour>()
-                    , null);
-            }
-            
-            if (targExist)
-            {
-                TryApplyStatusEffect(hitImpactTarget);
+            DealDamageToImpactTarget();
 
-                hitImpactTarget.HealthSystem.TakeDamage(actualImpactDmg, SpellElement, caster);
-            }
-            
             Destroy(gameObject);
         }
 
-        private void TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
+        private void DealDamageToImpactTarget()
         {
-            var statEffData = SpellElement.StatusEffectToApply;
-            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
-                caster, SpellElement, hitImpactTarget.gameObject);
-
-            // Delegate this over to HealthSystemBehaviour
-            var statEffHandler = hitImpactTarget.StatusEffectHandler;
+            IHealth hitImpactTarget = default;
+            var targExist = (collisionHit.rigidbody) != null &&
+                            (hitImpactTarget = collisionHit.rigidbody.GetComponent<IHealth>()) != null;
             
-            var res = statEffHandler.AddStatusEffect(statEffData, statEff
-                , statEffData.Duration, out var buff);
-
-            if (res == StatusEffectAddResult.SpellBuff)
+            if (!targExist)
             {
-                actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
+                targExist = !ReferenceEquals(hitImpactTarget = collisionHit.gameObject.GetComponent<IHealth>()
+                    , null);
+            }
+
+            if (targExist)
+            {
+                hitImpactTarget.TakeDamage(actualImpactDmg, SpellElement, caster);
             }
         }
 
@@ -111,7 +95,7 @@ namespace WizardGame.Combat_System
 
             // increase damage if specific element (status effect interaction)
             onHitClone.Init(actualExplosionDmg, explosionRadius, SpellElement
-                , Caster, ref colliderHits);
+                , Caster, entitiesLayerMask, ref colliderHits);
 
             return onHitClone;
         }

@@ -12,7 +12,7 @@ namespace WizardGame.Item_System.World_Interaction
         {
             _baseInteractablePhysicalItemDisplayPrefab = Resources.Load<InteractablePhysicalItem>("Factory Prefabs/PhysicalItemPrefab");
             
-            if(_baseInteractablePhysicalItemDisplayPrefab == null) Debug.LogWarning("No physical item found at .../Assets/Resources/Factory Prefabs/PhysicalItemPrefab");
+            if(_baseInteractablePhysicalItemDisplayPrefab == null) Debug.LogWarning("No physical item found at ../Assets/Resources/Factory Prefabs/PhysicalItemPrefab");
         }
 
         public static InteractablePhysicalItem CreateInstance(Vector3 position, Quaternion rotation, InventoryItem itemBase, Transform parent = null)

@@ -67,7 +67,7 @@ namespace WizardGame.Movement.Rotation
             if (targetQueue.Contains(plr)) targetQueue.Remove(plr);
 
             var o = actualTarget.gameObject;
-            Debug.Log($"e.........{o}", o);
+            Debug.Log($"e.....{o}", o);
             
             if (actualTarget == plr)
             {

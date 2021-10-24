@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 using WizardGame.Utility.Timers;
@@ -11,8 +12,9 @@ namespace WizardGame.Combat_System
     {
         [Header("References")]
         [SerializeField] private Explosion onHitEffect = default;
-        
-        [Header("Properties, do not change in prefab variants")]
+
+        [Header("Properties, do not change in prefab variants")] 
+        [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private float avgExplosionRadius = default;
         [SerializeField] private float delayBetweenExplosions = 0.3f;
         
@@ -29,6 +31,9 @@ namespace WizardGame.Combat_System
         private float actualRadius = default;
 
         private int ExplCount { get; set; } = 0;
+        
+        private GetEntitiesInRadius<IDamageable> radiusEntitiesGetter;
+        private GetEntitiesWithoutCaster<IDamageable> noCasterEntitiesExtractor;
 
         public void InitSpell(float explosionRadMult, float explosionDmgMult, int explAmn
             , Vector3 explPos, GameObject caster)
@@ -42,6 +47,10 @@ namespace WizardGame.Combat_System
             this.explPos = explPos;
             
             this.caster = caster;
+            
+            radiusEntitiesGetter =
+                new GetEntitiesInRadius<IDamageable>(entitiesLayerMask, explPos, actualRadius);
+            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IDamageable>();
 
             InitTimer();
         }
@@ -80,7 +89,7 @@ namespace WizardGame.Combat_System
             var explClone = GenerateAndProcessExplosion(explPos);
             
             explClone.Init(actualExplosionDmg, actualRadius, SpellElement
-                , Caster, ref colliderHits);
+                , Caster, entitiesLayerMask, ref colliderHits);
         }
 
         private Explosion GenerateAndProcessExplosion(Vector3 pos)
@@ -88,7 +97,8 @@ namespace WizardGame.Combat_System
             var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
             onHitClone.transform.localScale = Vector3.one * actualRadius;
 
-            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, Caster, ref colliderHits);
+            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement
+                , Caster, entitiesLayerMask, ref colliderHits);
 
             return onHitClone;
         }

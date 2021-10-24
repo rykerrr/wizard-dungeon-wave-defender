@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Health_System;
 using WizardGame.Utility.Timers;
 using Random = System.Random;
@@ -13,25 +13,31 @@ namespace WizardGame.Combat_System
         [SerializeField] private Transform healFieldGraphic = default;
         [SerializeField] private ParticleSystem healFieldEffect = default;
 
-        [Header("Properties, do not change in prefab variants")]
+        [Header("Properties, do not change in prefab variants")] 
+        [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private Vector3 fieldSizeHalfExtents = default;
         [SerializeField] private Vector3 fieldCenter = default;
         [SerializeField] private int amnOfTicks = default;
         [SerializeField] private int avgHealPerTick = default;
         [SerializeField] private int particleAmnMult = 10;
+        [SerializeField] private int maxHealTargets = 20;
         [SerializeField] private float delayBetweenHealWaves = default;
 
         private DownTimer healWaveTimer = default;
-
+        private Collider[] colliderHits = default;
+        
         private int actualHealPerTick = default;
         
         public int CurrentTickCount { get; private set; } = 0;
         
+        private GetEntitiesInBox<IHealable> boxEntitiesGetter;
+        private GetEntitiesWithoutCaster<IHealable> noCasterEntitiesExtractor;
+
         public void InitSpell(float healPerTickMult, int amnOfTicks, GameObject caster, Vector3? fieldCenter = null, Vector3? fieldSizeHalfExtents = null)
         {
             this.caster = caster;
             this.amnOfTicks = amnOfTicks;
-            
+
             if(fieldCenter.HasValue) this.fieldCenter = fieldCenter.Value;
             if(fieldSizeHalfExtents.HasValue) this.fieldSizeHalfExtents = fieldSizeHalfExtents.Value;
 
@@ -41,6 +47,13 @@ namespace WizardGame.Combat_System
             fieldEffectShape.scale = new Vector2(this.fieldSizeHalfExtents.x, this.fieldSizeHalfExtents.z);
 
             actualHealPerTick = (int)Math.Round(avgHealPerTick * healPerTickMult);
+            
+            colliderHits = new Collider[maxHealTargets];
+
+            boxEntitiesGetter =
+                new GetEntitiesInBox<IHealable>(entitiesLayerMask, fieldCenter.HasValue ? fieldCenter.Value : transform.position, 
+                    fieldSizeHalfExtents.HasValue ? fieldSizeHalfExtents.Value : transform.position);
+            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IHealable>();
             
             InitTimer();
         }
@@ -72,46 +85,14 @@ namespace WizardGame.Combat_System
 
         public void ApplyHeal()
         {
-            var healthSysBehavs = GetHealthSystemsInBox();
-            
-            healthSysBehavs.ForEach(x => x.HealthSystem.Heal(actualHealPerTick, caster));
+            var healthSysBehavs = noCasterEntitiesExtractor.GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
+
+            healthSysBehavs.ForEach(x => x.Heal(actualHealPerTick, caster));
 
             var rand = new Random();
-            int particleAmn = rand.Next(1, healthSysBehavs.Count + 1) * particleAmnMult;
-            
+            var particleAmn = rand.Next(1, healthSysBehavs.Count + 1) * particleAmnMult;
+
             healFieldEffect.Emit(particleAmn);
-        }
-
-        private List<HealthSystemBehaviour> GetHealthSystemsInBox()
-        {
-            var colliders = Physics.OverlapBox(fieldCenter, fieldSizeHalfExtents, Quaternion.identity, ~0,
-                QueryTriggerInteraction.Ignore);
-
-            var healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-            for (var i = colliders.Length - 1; i >= 0; i--)
-            {
-                HealthSystemBehaviour behav = default;
-
-                if (colliders[i].attachedRigidbody)
-                {
-                    if ((behav = colliders[i].attachedRigidbody.GetComponent<HealthSystemBehaviour>()) != null)
-                    {
-                        if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
-
-                        healthSystemBehaviours.Add(behav);
-                        continue;
-                    }
-                }
-
-                if ((behav = colliders[i].GetComponent<HealthSystemBehaviour>()) != null)
-                {
-                    if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
-                    healthSystemBehaviours.Add(behav);
-                }
-            }
-
-            return healthSystemBehaviours;
         }
     }
 }

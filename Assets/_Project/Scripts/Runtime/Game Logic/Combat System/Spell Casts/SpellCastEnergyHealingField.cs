@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using WizardGame.Combat_System.Cooldown_System;
-using WizardGame.Combat_System.Element_System;
 using WizardGame.Stats_System;
 
 namespace WizardGame.Combat_System

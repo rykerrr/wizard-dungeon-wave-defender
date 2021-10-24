@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Combat_System.Element_System.Status_Effects;
+using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 using Object = UnityEngine.Object;
@@ -14,7 +15,8 @@ namespace WizardGame.Combat_System
         [Header("References")]
         [SerializeField] private Explosion onHitEffect = default;
 
-        [Header("Properties, do not change in prefab variants")]
+        [Header("Properties, do not change in prefab variants")] 
+        [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private float avgExplosionRadius = default;
 
         [SerializeField] private int maxExplosionTargets = default;
@@ -48,14 +50,12 @@ namespace WizardGame.Combat_System
 
         public void ProcessOnHitEffect()
         {
-            var explClone = GenerateAndProcessExplosion(hitPos);
+            GenerateAndProcessExplosion(hitPos);
             
             var targExists = objHit != null;
             if (targExists)
             {
-                TryApplyStatusEffect(objHit);
-                
-                objHit.HealthSystem.TakeDamage(actualImpactDmg, SpellElement, caster);
+                objHit.TakeDamage(actualImpactDmg, SpellElement, caster);
             }
             
             Destroy(gameObject, 0.3f);
@@ -66,29 +66,12 @@ namespace WizardGame.Combat_System
             var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
             onHitClone.transform.localScale = Vector3.one * actualRadius;
 
-            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, Caster, ref colliderHits);
+            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, 
+                Caster, entitiesLayerMask, ref colliderHits);
             
             Debug.Log("on hit clone exists bruv", onHitClone);
             
             return onHitClone;
-        }
-        
-        private void TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
-        {
-            var statEffData = SpellElement.StatusEffectToApply;
-            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
-                caster, SpellElement, hitImpactTarget.gameObject);
-
-            // Delegate this over to HealthSystemBehaviour
-            var statEffHandler = hitImpactTarget.StatusEffectHandler;
-            
-            var res = statEffHandler.AddStatusEffect(statEffData, statEff
-                , statEffData.Duration, out var buff);
-
-            if (res == StatusEffectAddResult.SpellBuff)
-            {
-                actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
-            }
         }
     }
 }

@@ -45,12 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3f3182d0df06240b0f86be242c858b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellElement: {fileID: 0}
   healFieldGraphic: {fileID: 2327106717546070866}
   healFieldEffect: {fileID: 2327106716576943696}
+  entitiesLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   fieldSizeHalfExtents: {x: 5, y: 0.25, z: 5}
   fieldCenter: {x: 0, y: 0, z: 0}
-  amnOfTicksToDo: 5
+  amnOfTicks: 0
   avgHealPerTick: 5
+  particleAmnMult: 10
+  maxHealTargets: 20
   delayBetweenHealWaves: 1
 --- !u!1 &2327106716576943703
 GameObject:

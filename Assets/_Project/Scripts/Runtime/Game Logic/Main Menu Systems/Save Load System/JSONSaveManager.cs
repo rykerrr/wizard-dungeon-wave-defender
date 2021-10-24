@@ -55,7 +55,7 @@ namespace WizardGame.MainMenu
 
             if (!Directory.Exists(dirPath))
             {
-                Debug.LogWarning("Attempting to load but dir does not exist, creating...");
+                Debug.LogWarning("Attempting to load but dir does not exist, creating..");
                 
                 Directory.CreateDirectory(dirPath);
             }

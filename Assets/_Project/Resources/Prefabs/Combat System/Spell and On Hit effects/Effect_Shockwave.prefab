@@ -177,3 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphics: {fileID: 6310579539960704892}
+  healthsGetter:
+    damageablesLayerMask:
+      serializedVersion: 2
+      m_Bits: 256

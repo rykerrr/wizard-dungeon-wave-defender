@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
 using WizardGame.Combat_System;
+using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Spell_Effects;
+using WizardGame.Health_System;
 using WizardGame.Stats_System;
 using WizardGame.Utility.Timers;
 
@@ -11,6 +13,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
     [SerializeField] private PillarShockwave pillarShockwaveEffect = default;
 
     [Header("Properties, do not change in prefab variants")]
+    [SerializeField] private LayerMask entityLayers;
     [SerializeField] private int amnOfShockwavesToCast = default;
     [SerializeField] private int maxShockwaveTargets = default;
     [SerializeField] private int avgShockwaveDmg = default;
@@ -47,7 +50,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
         
         casterStatsSysBehav = caster.GetComponent<StatsSystemBehaviour>();
         swHitColliders = new Collider[maxShockwaveTargets];
-        
+
         actualSwDamage = (int)Math.Round(avgShockwaveDmg * shockwaveDmgMult);
         
         InitTimer();
@@ -84,7 +87,7 @@ public class SpellEnergyPillar : SpellBase, IDamagingSpell, IBuffingSpell
         
         swClone.transform.up = transform.up;
         
-        swClone.Init(actualSwDamage, swExtents, SpellElement, Caster, ref swHitColliders);
+        swClone.Init(actualSwDamage, swExtents, SpellElement, Caster, entityLayers, ref swHitColliders);
     }
 
     public void ApplyBuff(params StatsSystemBehaviour[] targets)

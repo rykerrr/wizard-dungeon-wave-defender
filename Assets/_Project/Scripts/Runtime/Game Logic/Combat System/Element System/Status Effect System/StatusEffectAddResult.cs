@@ -4,6 +4,6 @@
     {
         Finished,
         Failed,
-        SpellBuff
+        SpellBuff,
     }
 }

@@ -67,6 +67,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 4672617303962772228}
+  healthsGetter:
+    damageablesLayerMask:
+      serializedVersion: 2
+      m_Bits: 256
 --- !u!114 &4672617303962772228
 MonoBehaviour:
   m_ObjectHideFlags: 0

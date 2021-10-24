@@ -5,7 +5,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
     public class HealingStatusEffect : StatusEffectBase
     {
-        private HealthSystem targetHealthSys;
+        private IHealable targetHealthSys;
         private int healPerTick = 0;
         
         public override void Init(GameObject caster, GameObject target, Element element, StatusEffectData data)
@@ -14,7 +14,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
 
             healPerTick = data.DamagePerFrame;
             
-            targetHealthSys = target.GetComponent<HealthSystemBehaviour>().HealthSystem;
+            targetHealthSys = target.GetComponent<IHealable>();
         }
         
         public override void Tick()

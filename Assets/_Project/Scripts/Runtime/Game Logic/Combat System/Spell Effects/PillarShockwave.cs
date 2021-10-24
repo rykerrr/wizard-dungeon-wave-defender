@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Ludiq;
 using UnityEngine;
+using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Health_System;
@@ -10,6 +12,9 @@ namespace WizardGame.Combat_System.Spell_Effects
     public class PillarShockwave : MonoBehaviour
     {
         [SerializeField] private Renderer graphics;
+
+        private GetEntitiesInBox<IDamageable> boxEntitiesGetter = default;
+        private GetEntitiesWithoutCaster<IDamageable> noCasterEntitiesExtractor = default;
         
         private GameObject caster = default;
         private Element spellElement;
@@ -20,8 +25,8 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         private int actualSwDamage = default;
 
-        public void Init(int actualSwDamage, Vector3 swExtents, Element spellElement, GameObject caster
-            , ref Collider[] colliderHits)
+        public void Init(int actualSwDamage, Vector3 swExtents, Element spellElement, GameObject caster,
+            LayerMask entitiesLayerMask, ref Collider[] colliderHits)
         {
             this.colliderHits = colliderHits;
 
@@ -34,19 +39,20 @@ namespace WizardGame.Combat_System.Spell_Effects
 
             Color swColor = spellElement.ElementColor;
             graphMat.color = new Color(swColor.r, swColor.g, swColor.b, graphMat.color.a);
-            
+
+            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IDamageable>();
+            boxEntitiesGetter = new GetEntitiesInBox<IDamageable>(entitiesLayerMask, transform.position, swExtents);
+
             ProcessShockwave();
         }
 
         private void ProcessShockwave()
         {
-            var healthSysBehavs = GetHealthSystemsInBoxIgnoreCaster();
+            var healthSysBehavs = noCasterEntitiesExtractor.GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
 
-            foreach (var healthSysBehav in healthSysBehavs)
+            foreach (var health in healthSysBehavs)
             {
-                var dmg = TryApplyStatusEffect(healthSysBehav);
-                
-                healthSysBehav.HealthSystem.TakeDamage(dmg, spellElement, caster);
+                health.TakeDamage(actualSwDamage, spellElement, caster);
             }
         }
 
@@ -54,71 +60,6 @@ namespace WizardGame.Combat_System.Spell_Effects
         public void DisableSelf()
         {
             Destroy(gameObject, 1f);
-        }
-
-        private List<HealthSystemBehaviour> GetHealthSystemsInBoxIgnoreCaster()
-        {
-            Array.Clear(colliderHits, 0, colliderHits.Length);
-
-            var shockwaveHits = Physics.OverlapBoxNonAlloc(transform.position, swExtents, colliderHits,
-                Quaternion.identity,
-                ~0, QueryTriggerInteraction.Ignore);
-            // hit every layer but ignore triggers
-
-            var healthSystemBehaviours = GetHealthSystemsFromColliders(shockwaveHits);
-
-            return healthSystemBehaviours;
-        }
-
-        private List<HealthSystemBehaviour> GetHealthSystemsFromColliders(int shockwaveHits)
-        {
-            List<HealthSystemBehaviour> healthSystemBehaviours = new List<HealthSystemBehaviour>();
-
-            for (var i = shockwaveHits - 1; i >= 0; i--)
-            {
-                HealthSystemBehaviour behav = default;
-
-                if (colliderHits[i].attachedRigidbody)
-                {
-                    if ((behav = colliderHits[i].attachedRigidbody.GetComponent<HealthSystemBehaviour>()) != null)
-                    {
-                        if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
-                        
-                        healthSystemBehaviours.Add(behav);
-                        continue;
-                    }
-                }
-                
-                if ((behav = colliderHits[i].GetComponent<HealthSystemBehaviour>()) != null)
-                {
-                    if (healthSystemBehaviours.Contains(behav) || behav.gameObject == caster) continue;
-                    healthSystemBehaviours.Add(behav);
-                }
-            }
-
-            return healthSystemBehaviours;
-        }
-        
-        private int TryApplyStatusEffect(HealthSystemBehaviour hitImpactTarget)
-        {
-            int dmg = actualSwDamage;
-            
-            var statEffData = spellElement.StatusEffectToApply;
-            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
-                caster, spellElement, hitImpactTarget.gameObject);
-
-            // Delegate this over to HealthSystemBehaviour
-            var statEffHandler = hitImpactTarget.StatusEffectHandler;
-            
-            var res = statEffHandler.AddStatusEffect(statEffData, statEff
-                , statEffData.Duration, out var buff);
-
-            if (res == StatusEffectAddResult.SpellBuff)
-            {
-                dmg = (int)Math.Round(dmg * buff.Effectiveness);
-            }
-
-            return dmg;
         }
     }
 }

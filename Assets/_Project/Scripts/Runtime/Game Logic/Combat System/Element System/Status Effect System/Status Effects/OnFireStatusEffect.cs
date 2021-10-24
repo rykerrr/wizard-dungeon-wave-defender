@@ -8,7 +8,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
     {
         private int tickDamage;
         
-        private HealthSystem targetHealthSys;
+        private IDamageable targetHealthSys;
         private Element element;
 
         public int TickDamage => tickDamage;
@@ -22,7 +22,7 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             
             Debug.Log(caster + " | " + target);
             
-            targetHealthSys = target.GetComponent<HealthSystemBehaviour>().HealthSystem;
+            targetHealthSys = target.GetComponent<IDamageable>();
             
             Debug.Log(targetHealthSys);
         }

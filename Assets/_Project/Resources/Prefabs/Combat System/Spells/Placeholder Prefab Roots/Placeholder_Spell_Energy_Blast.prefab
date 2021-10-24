@@ -159,6 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellElement: {fileID: 0}
   onHitEffect: {fileID: 4695745886429010704, guid: b8dc9416ef1a4e64a81d8c65f56f586b, type: 3}
+  entitiesLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   baseTravelSpd: 80
   avgExplosionRadius: 0.7
   maxExplosionTargets: 10
