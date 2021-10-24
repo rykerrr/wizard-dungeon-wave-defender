@@ -63,7 +63,7 @@ namespace WizardGame.Health_System
             var ticked = healTimer.TryTick(Time.deltaTime);
         }
 
-        public DamageResult TakeDamage(int dmg, Element damageElement, GameObject damageSource = null)
+        public void TakeDamage(int dmg, Element damageElement, GameObject damageSource = null)
         {
             currentHealth = Mathf.Clamp(currentHealth - dmg, 0, MaxHealth);
             healTimer.Reset();
@@ -75,8 +75,6 @@ namespace WizardGame.Health_System
             }
 
             onHealthChange?.Invoke(currentHealth, MaxHealth);
-
-            return new DamageResult(true);
         }
 
         public void Heal(int hp, object source)

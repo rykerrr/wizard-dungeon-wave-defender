@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
 
@@ -72,19 +73,47 @@ namespace WizardGame.Combat_System
 
         private void DealDamageToImpactTarget()
         {
-            IHealth hitImpactTarget = default;
-            var targExist = (collisionHit.rigidbody) != null &&
-                            (hitImpactTarget = collisionHit.rigidbody.GetComponent<IHealth>()) != null;
-            
-            if (!targExist)
-            {
-                targExist = !ReferenceEquals(hitImpactTarget = collisionHit.gameObject.GetComponent<IHealth>()
-                    , null);
-            }
+            if (ReferenceEquals(collisionHit, null)) return;
 
-            if (targExist)
+            IDamageable hitImpactTarget = default;
+
+            bool targetExists = false;
+            if (collisionHit.rigidbody != null)
+                targetExists = (hitImpactTarget = collisionHit.rigidbody.GetComponent<IDamageable>()) != null;
+            
+            if(!targetExists) targetExists = (hitImpactTarget = collisionHit.collider.GetComponent<IDamageable>()) != null;
+            
+            if (targetExists)
             {
                 hitImpactTarget.TakeDamage(actualImpactDmg, SpellElement, caster);
+            }
+
+            if (targetExists)
+            {
+                TryApplyStatusEffect(hitImpactTarget);
+
+                hitImpactTarget.TakeDamage(actualImpactDmg, SpellElement, caster);
+            }
+        }
+        
+        private void TryApplyStatusEffect(IDamageable hitImpactTarget)
+        {
+            var healthBehav = hitImpactTarget as HealthSystemBehaviour;
+            if (healthBehav == null) return;
+            
+            var statEffData = SpellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, SpellElement, healthBehav.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = healthBehav.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
             }
         }
 

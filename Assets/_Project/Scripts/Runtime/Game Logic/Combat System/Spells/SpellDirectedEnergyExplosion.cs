@@ -32,9 +32,6 @@ namespace WizardGame.Combat_System
 
         private int ExplCount { get; set; } = 0;
         
-        private GetEntitiesInRadius<IDamageable> radiusEntitiesGetter;
-        private GetEntitiesWithoutCaster<IDamageable> noCasterEntitiesExtractor;
-
         public void InitSpell(float explosionRadMult, float explosionDmgMult, int explAmn
             , Vector3 explPos, GameObject caster)
         {
@@ -48,10 +45,6 @@ namespace WizardGame.Combat_System
             
             this.caster = caster;
             
-            radiusEntitiesGetter =
-                new GetEntitiesInRadius<IDamageable>(entitiesLayerMask, explPos, actualRadius);
-            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IDamageable>();
-
             InitTimer();
         }
 

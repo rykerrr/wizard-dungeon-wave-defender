@@ -52,13 +52,50 @@ namespace WizardGame.Combat_System
         {
             GenerateAndProcessExplosion(hitPos);
             
-            var targExists = objHit != null;
+            DealDamageToImpactTarget();
+
+            Destroy(gameObject, 0.3f);
+        }
+
+        private void DealDamageToImpactTarget()
+        {
+            if (ReferenceEquals(objHit, null)) return;
+            
+            IDamageable hitImpactTarget = default;
+            
+            var targExists = (hitImpactTarget = objHit.GetComponent<IDamageable>()) != null;
             if (targExists)
             {
                 objHit.TakeDamage(actualImpactDmg, SpellElement, caster);
             }
+
+            if (targExists)
+            {
+                TryApplyStatusEffect(hitImpactTarget);
+
+                hitImpactTarget.TakeDamage(actualImpactDmg, SpellElement, caster);
+            }
+        }
+
+        private void TryApplyStatusEffect(IDamageable hitImpactTarget)
+        {
+            var healthBehav = hitImpactTarget as HealthSystemBehaviour;
+            if (healthBehav == null) return;
             
-            Destroy(gameObject, 0.3f);
+            var statEffData = SpellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, SpellElement, healthBehav.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = healthBehav.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
+            }
         }
         
         private Explosion GenerateAndProcessExplosion(Vector3 pos)

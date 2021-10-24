@@ -48,11 +48,34 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         private void ProcessShockwave()
         {
-            var healthSysBehavs = noCasterEntitiesExtractor.GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
+            var damageables = noCasterEntitiesExtractor.GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
 
-            foreach (var health in healthSysBehavs)
+            foreach (var damageable in damageables)
             {
-                health.TakeDamage(actualSwDamage, spellElement, caster);
+                TryApplyStatusEffect(damageable);
+
+                damageable.TakeDamage(actualSwDamage, spellElement, caster);
+            }
+        }
+        
+        private void TryApplyStatusEffect(IDamageable hitImpactTarget)
+        {
+            var healthBehav = hitImpactTarget as HealthSystemBehaviour;
+            if (healthBehav == null) return;
+            
+            var statEffData = spellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, spellElement, healthBehav.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = healthBehav.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                actualSwDamage = (int)Math.Round(actualSwDamage * buff.Effectiveness);
             }
         }
 

@@ -25,6 +25,8 @@ namespace WizardGame.Combat_System.EntityGetters
         
         public override List<T> GetTs(ref Collider[] colliderHits)
         {
+            Debug.Log(center + " | " + halfExtents);
+
             Array.Clear(colliderHits, 0, colliderHits.Length);
 
             var explosionHits = Physics.OverlapBoxNonAlloc(center, halfExtents,

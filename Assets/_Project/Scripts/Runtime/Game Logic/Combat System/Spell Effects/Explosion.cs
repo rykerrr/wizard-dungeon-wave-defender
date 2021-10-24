@@ -43,12 +43,35 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         protected virtual void ProcessExplosion()
         {
-            var healthSystemBehaviours =
+            var damageables =
                 noCasterEntitiesExtractor.GetTsWithoutCaster(radiusEntitiesGetter, caster, ref colliderHits);
 
-            foreach (var damageable in healthSystemBehaviours)
+            foreach (var damageable in damageables)
             {
+                TryApplyStatusEffect(damageable);
+
                 damageable.TakeDamage(explosionDamage, spellElement, caster);
+            }
+        }
+        
+        private void TryApplyStatusEffect(IDamageable hitImpactTarget)
+        {
+            var healthBehav = hitImpactTarget as HealthSystemBehaviour;
+            if (healthBehav == null) return;
+            
+            var statEffData = spellElement.StatusEffectToApply;
+            var statEff = StatusEffectFactory.CreateStatusEffect(statEffData,
+                caster, spellElement, healthBehav.gameObject);
+
+            // Delegate this over to HealthSystemBehaviour
+            var statEffHandler = healthBehav.StatusEffectHandler;
+            
+            var res = statEffHandler.AddStatusEffect(statEffData, statEff
+                , statEffData.Duration, out var buff);
+
+            if (res == StatusEffectAddResult.SpellBuff)
+            {
+                explosionDamage = (int)Math.Round(explosionDamage * buff.Effectiveness);
             }
         }
 

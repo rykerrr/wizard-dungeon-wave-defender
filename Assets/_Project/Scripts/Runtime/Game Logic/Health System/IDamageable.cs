@@ -5,6 +5,6 @@ namespace WizardGame.Health_System
 {
     public interface IDamageable
     {
-        public DamageResult TakeDamage(int dmg, Element damageElement, GameObject damageSource = null);
+        public void TakeDamage(int dmg, Element damageElement, GameObject damageSource = null);
     }
 }
