@@ -13,7 +13,7 @@ public class HealthBarDisplay : MonoBehaviour
     
     private void Awake()
     {
-        healthSysBehav.HealthSystem.onHealthChange += ProcessHealthChange;
+        healthSysBehav.HealthContainer.onHealthChange += ProcessHealthChange;
         
         healthFillImgRect = healthFillImg.rectTransform;
     }

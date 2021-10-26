@@ -2,75 +2,52 @@
 using System.Text;
 using UnityEngine;
 using WizardGame.Combat_System.Element_System;
+using WizardGame.Health_System.Death;
 using WizardGame.Stats_System;
-using WizardGame.Utility.Timers;
 
 namespace WizardGame.Health_System
 {
-    [Serializable]
-    public class HealthSystem : IHealth
+    public class HealthContainer
     {
-        [SerializeField] private int currentHealth = default;
-
         // GameObject as falling rocks don't need to directly be living beings
-        public event Action<GameObject> onDeathEvent = delegate { };
         public event Action<int, int> onHealthChange = delegate { };
 
-        private DownTimer healTimer = default;
         private StatsSystem statsSys = default;
         private StatBase maxHealthStat = default;
-        private StatBase vigorStat = default;
-        private StatBase resolveStat = default;
+        private IDeathProcessor deathProcessor;
+
+        private int currentHealth = default;
 
         public int CurrentHealth => currentHealth;
         public int MaxHealth => maxHealthStat.ActualValue;
 
-        private bool hasDied = default;
 
         private StringBuilder sb;
 
-        public HealthSystem(StatsSystem statsSys)
+        public HealthContainer(StatsSystem statsSys, IDeathProcessor deathProcessor)
         {
+            this.deathProcessor = deathProcessor;
+            
             Init(statsSys);
         }
 
-        public void Init(StatsSystem statsSys)
+        private void Init(StatsSystem statsSys)
         {
             sb = new StringBuilder();
 
             this.statsSys = statsSys;
 
             maxHealthStat = this.statsSys.GetStat(StatTypeFactory.GetType("Max Health"));
-            vigorStat = this.statsSys.GetStat(StatTypeFactory.GetType("Vigor"));
-            resolveStat = this.statsSys.GetStat(StatTypeFactory.GetType("Resolve"));
 
             currentHealth = MaxHealth;
-
-            InitAutoHealTimer();
-        }
-
-        private void InitAutoHealTimer()
-        {
-            healTimer = new DownTimer(1f / vigorStat.ActualValue);
-
-            healTimer.OnTimerEnd += () => Heal(resolveStat.ActualValue, this);
-            healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
-            healTimer.OnTimerEnd += () => healTimer.Reset();
-        }
-
-        public void Tick()
-        {
-            var ticked = healTimer.TryTick(Time.deltaTime);
         }
 
         public void TakeDamage(int dmg, Element damageElement, GameObject damageSource = null)
         {
             currentHealth = Mathf.Clamp(currentHealth - dmg, 0, MaxHealth);
-            healTimer.Reset();
 
-            if (!hasDied && currentHealth == 0)
+            if (!deathProcessor.HasDied && currentHealth == 0)
             {
-                // Exp gain functions by last hit due to this
                 Death(damageSource);
             }
 
@@ -91,21 +68,18 @@ namespace WizardGame.Health_System
 
         private void Death(GameObject source = null)
         {
-            hasDied = true;
-
-            onDeathEvent?.Invoke(source);
+            deathProcessor.ProcessDeath(source);
         }
 
         public override string ToString()
         {
-            // cur health / max health | curhp/maxhp percentage | next heal time
+            // cur health / max health | curhp/maxhp percentage
 
             sb.Clear();
             sb.Append("Health/MaxHealth: ").Append(CurrentHealth).Append("/").Append(MaxHealth)
                 .AppendLine();
             sb.Append("Health Percentage: ").Append(Math.Round((float) CurrentHealth / MaxHealth, 3) * 100f)
                 .Append("%").AppendLine();
-            sb.Append("Next heal in: ").Append(healTimer.Time).AppendLine();
 
             return sb.ToString();
         }

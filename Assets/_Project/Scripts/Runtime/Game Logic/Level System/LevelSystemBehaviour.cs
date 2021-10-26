@@ -30,7 +30,7 @@ namespace WizardGame.Level_System
                 }
             };
             
-            healthSysBehaviour.HealthSystem.onDeathEvent += source =>
+            healthSysBehaviour.DeathProcessor.onDeathEvent += source =>
             {
                 // This code runs on the object that gets killed
                 

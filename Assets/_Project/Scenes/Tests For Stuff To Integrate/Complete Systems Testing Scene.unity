@@ -811,6 +811,8 @@ GameObject:
   - component: {fileID: 391138506}
   - component: {fileID: 391138503}
   - component: {fileID: 391138502}
+  - component: {fileID: 391138508}
+  - component: {fileID: 391138507}
   - component: {fileID: 391138501}
   - component: {fileID: 391138500}
   - component: {fileID: 391138504}
@@ -943,6 +945,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &391138507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391138498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7d3e9337214246882ce6544a87e695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsSysBehav: {fileID: 391138500}
+  healthSysBehav: {fileID: 391138502}
+--- !u!114 &391138508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391138498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1d48d3b2da478ba58767a7764b5be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &437851147 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 437851147, guid: fe149dca2b4f0ce43a55beb29b3f5bf9, type: 3}
@@ -1533,6 +1561,8 @@ GameObject:
   - component: {fileID: 659508409}
   - component: {fileID: 659508426}
   - component: {fileID: 659508428}
+  - component: {fileID: 659508425}
+  - component: {fileID: 659508424}
   - component: {fileID: 659508427}
   - component: {fileID: 659508430}
   - component: {fileID: 659508423}
@@ -1895,6 +1925,32 @@ MonoBehaviour:
   - {fileID: 659508417}
   prewarmSpellBook: {fileID: 0}
   equippedSpellCastBase: {fileID: 0}
+--- !u!114 &659508424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659508408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7d3e9337214246882ce6544a87e695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsSysBehav: {fileID: 659508426}
+  healthSysBehav: {fileID: 659508428}
+--- !u!114 &659508425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659508408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1d48d3b2da478ba58767a7764b5be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &659508426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,6 +3437,8 @@ GameObject:
   - component: {fileID: 1456515113}
   - component: {fileID: 1456515123}
   - component: {fileID: 1456515117}
+  - component: {fileID: 1456515125}
+  - component: {fileID: 1456515124}
   - component: {fileID: 1456515116}
   - component: {fileID: 1456515115}
   - component: {fileID: 1456515114}
@@ -3569,6 +3627,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1456515124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456515112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7d3e9337214246882ce6544a87e695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsSysBehav: {fileID: 1456515116}
+  healthSysBehav: {fileID: 1456515117}
+--- !u!114 &1456515125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456515112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1d48d3b2da478ba58767a7764b5be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1496521825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 298535679336382538, guid: cd4593b8e1f55ed48bfa68ed0eb153ac, type: 3}

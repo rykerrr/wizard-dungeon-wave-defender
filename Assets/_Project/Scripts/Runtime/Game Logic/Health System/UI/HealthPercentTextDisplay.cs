@@ -11,7 +11,7 @@ public class HealthPercentTextDisplay : MonoBehaviour
     
     private void Awake()
     {
-        healthSysBehav.HealthSystem.onHealthChange += ProcessHealthChange;
+        healthSysBehav.HealthContainer.onHealthChange += ProcessHealthChange;
     }
 
     private void ProcessHealthChange(int curHealth, int maxHealth)
