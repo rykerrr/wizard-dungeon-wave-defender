@@ -7,7 +7,7 @@ using WizardGame.Stats_System;
 
 namespace WizardGame.Health_System
 {
-    public class HealthContainer
+    public class StatsBasedHealthContainer
     {
         // GameObject as falling rocks don't need to directly be living beings
         public event Action<int, int> onHealthChange = delegate { };
@@ -24,7 +24,7 @@ namespace WizardGame.Health_System
 
         private StringBuilder sb;
 
-        public HealthContainer(StatsSystem statsSys, IDeathProcessor deathProcessor)
+        public StatsBasedHealthContainer(StatsSystem statsSys, IDeathProcessor deathProcessor)
         {
             this.deathProcessor = deathProcessor;
             

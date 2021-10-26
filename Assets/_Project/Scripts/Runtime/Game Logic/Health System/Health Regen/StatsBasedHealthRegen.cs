@@ -39,7 +39,7 @@ namespace WizardGame.Health_System.HealthRegeneration
             healTimer.OnTimerEnd += () => healTimer.SetNewDefaultTime(1f / vigorStat.ActualValue);
             healTimer.OnTimerEnd += () => healTimer.Reset();
             
-            healthSysBehav.HealthContainer.onHealthChange += (cur, max) =>
+            healthSysBehav.StatsBasedHealthContainer.onHealthChange += (cur, max) =>
             {
                 var wasDamaged = cur < prevHealth;
                 if (wasDamaged) healTimer.Reset();
