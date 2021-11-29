@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Combat_System.Element_System.Status_Effects;
-using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
-using Object = UnityEngine.Object;
 
 namespace WizardGame.Combat_System
 {
@@ -16,6 +12,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private Explosion onHitEffect = default;
 
         [Header("Properties, do not change in prefab variants")] 
+        [SerializeField] private ExplosionGenerator explGenerator;
         [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private float avgExplosionRadius = default;
 
@@ -28,16 +25,14 @@ namespace WizardGame.Combat_System
         
         private Vector3 hitPos = default;
 
-        private int actualExplosionDmg = default; 
         private int actualImpactDmg = default;
-        private float actualRadius = default;
 
         public void InitSpell(float explosionRadius, float impactRadius, float explosionDmgMult
             , float impactDmgMult, Vector3 hitPos, HealthSystemBehaviour objHit, GameObject caster)
         {
             actualImpactDmg = (int)Math.Round(avgImpactDmg * impactDmgMult);
-            actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
-            actualRadius = avgExplosionRadius * explosionRadius;
+            var actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
+            var actualExplosionRadius = avgExplosionRadius * explosionRadius;
 
             colliderHits = new Collider[maxExplosionTargets];
 
@@ -45,12 +40,14 @@ namespace WizardGame.Combat_System
             this.caster = caster;
             this.hitPos = hitPos;
             
+            explGenerator.Init(caster, spellElement, actualExplosionRadius, actualExplosionDmg
+            , colliderHits);
             ProcessOnHitEffect();
         }
 
         public void ProcessOnHitEffect()
         {
-            GenerateAndProcessExplosion(hitPos);
+            explGenerator.GenerateAndProcessExplosion(hitPos);
             
             DealDamageToImpactTarget();
 
@@ -96,19 +93,6 @@ namespace WizardGame.Combat_System
             {
                 actualImpactDmg = (int)Math.Round(actualImpactDmg * buff.Effectiveness);
             }
-        }
-        
-        private Explosion GenerateAndProcessExplosion(Vector3 pos)
-        {
-            var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
-            onHitClone.transform.localScale = Vector3.one * actualRadius;
-
-            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement, 
-                Caster, entitiesLayerMask, ref colliderHits);
-            
-            Debug.Log("on hit clone exists bruv", onHitClone);
-            
-            return onHitClone;
         }
     }
 }

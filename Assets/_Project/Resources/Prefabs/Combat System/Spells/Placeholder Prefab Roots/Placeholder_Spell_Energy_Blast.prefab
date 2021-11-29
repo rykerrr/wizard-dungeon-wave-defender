@@ -204,10 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e3fb20855ce35429d2152063ae9a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitEffect: {fileID: 4695745886429010704, guid: b8dc9416ef1a4e64a81d8c65f56f586b, type: 3}
-  entitiesLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
+  explGenerator:
+    onHitEffect: {fileID: 4695745886429010704, guid: b8dc9416ef1a4e64a81d8c65f56f586b, type: 3}
+    entitiesLayerMask:
+      serializedVersion: 2
+      m_Bits: 256
 --- !u!114 &3597836602947042555
 MonoBehaviour:
   m_ObjectHideFlags: 0

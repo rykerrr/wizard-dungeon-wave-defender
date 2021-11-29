@@ -25,11 +25,12 @@ namespace WizardGame.Combat_System
         private OnCollisionEnterApplyStatusEffectAndDealDamage damager;
         private OnCollisionEnterRemoveObjectIfNotOwner removeIfNotOwner;
         
-        private Collision collisionHit = default;
-
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            damager = GetComponent<OnCollisionEnterApplyStatusEffectAndDealDamage>();
+            explosionGenerator = GetComponent<OnCollisionEnterGenerateExplosion>();
+            removeIfNotOwner = GetComponent<OnCollisionEnterRemoveObjectIfNotOwner>();
         }
 
         public void InitSpell(float explosionRadius
@@ -47,10 +48,6 @@ namespace WizardGame.Combat_System
 
             var travelSpd = baseTravelSpd * travelSpdMult;
             rb.velocity = caster.transform.forward * (travelSpd * Time.fixedDeltaTime);
-
-            damager = GetComponent<OnCollisionEnterApplyStatusEffectAndDealDamage>();
-            explosionGenerator = GetComponent<OnCollisionEnterGenerateExplosion>();
-            removeIfNotOwner = GetComponent<OnCollisionEnterRemoveObjectIfNotOwner>();
 
             removeIfNotOwner.Init(caster);
             damager.Init(spellElement, caster, actualImpactDmg);

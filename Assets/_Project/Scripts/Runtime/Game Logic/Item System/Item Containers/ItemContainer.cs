@@ -18,7 +18,7 @@ namespace WizardGame.Item_System.Item_Containers
 
         public ItemContainer(int size)
         {
-            Debug.Log("Creating item container..");
+            // Debug.Log("Creating item container..");
             
             itemSlots = new ItemSlot[size];
         }

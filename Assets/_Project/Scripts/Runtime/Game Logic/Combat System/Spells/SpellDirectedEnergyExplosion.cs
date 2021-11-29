@@ -1,20 +1,14 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Spell_Effects;
-using WizardGame.Health_System;
 using WizardGame.Utility.Timers;
 
 namespace WizardGame.Combat_System
 {
-    public class SpellDirectedEnergyExplosion : SpellBase, IDamagingSpell
+    public class SpellDirectedEnergyExplosion : SpellBase
     {
-        [Header("References")]
-        [SerializeField] private Explosion onHitEffect = default;
-
         [Header("Properties, do not change in prefab variants")] 
-        [SerializeField] private LayerMask entitiesLayerMask;
+        [SerializeField] private ExplosionGenerator explGenerator;
         [SerializeField] private float avgExplosionRadius = default;
         [SerializeField] private float delayBetweenExplosions = 0.3f;
         
@@ -26,25 +20,24 @@ namespace WizardGame.Combat_System
         
         private Vector3 explPos = default;
         
-        private int actualExplosionDmg = default;
         private int explAmn = 1;
-        private float actualRadius = default;
 
         private int ExplCount { get; set; } = 0;
         
         public void InitSpell(float explosionRadMult, float explosionDmgMult, int explAmn
             , Vector3 explPos, GameObject caster)
         {
-            actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
-            actualRadius = avgExplosionRadius * explosionRadMult;
+            var actualExplosionDmg = (int)Math.Round(avgExplosionDmg * explosionDmgMult);
+            var actualRadius = avgExplosionRadius * explosionRadMult;
 
             colliderHits = new Collider[maxExplosionTargets];
             
             this.explAmn = explAmn;
             this.explPos = explPos;
-            
             this.caster = caster;
             
+            explGenerator.Init(caster, spellElement, actualRadius, actualExplosionDmg,
+                colliderHits);
             InitTimer();
         }
 
@@ -52,7 +45,7 @@ namespace WizardGame.Combat_System
         {
             explDelayTimer = new DownTimer(delayBetweenExplosions);
 
-            explDelayTimer.OnTimerEnd += ProcessOnHitEffect;
+            explDelayTimer.OnTimerEnd += GenerateExplosion;
             
             explDelayTimer.OnTimerEnd += () =>
             {
@@ -66,28 +59,16 @@ namespace WizardGame.Combat_System
             };
             
             explDelayTimer.OnTimerEnd += explDelayTimer.Reset;
-
-            Debug.Log("E");
-            Debug.Log(explDelayTimer.Time + " | " + explDelayTimer.DefaultTime + " | " + explDelayTimer.OnTimerEnd.Method);
         }
 
-        public void ProcessOnHitEffect()
+        private void Update()
         {
-            var explClone = GenerateAndProcessExplosion(explPos);
-            
-            explClone.Init(actualExplosionDmg, actualRadius, SpellElement
-                , Caster, entitiesLayerMask, ref colliderHits);
+            explDelayTimer.TryTick(Time.deltaTime);
         }
 
-        private Explosion GenerateAndProcessExplosion(Vector3 pos)
+        private void GenerateExplosion()
         {
-            var onHitClone = Instantiate(onHitEffect, pos, Quaternion.identity);
-            onHitClone.transform.localScale = Vector3.one * actualRadius;
-
-            onHitClone.Init(actualExplosionDmg, actualRadius, SpellElement
-                , Caster, entitiesLayerMask, ref colliderHits);
-
-            return onHitClone;
+            explGenerator.GenerateAndProcessExplosion(explPos);
         }
     }
 }
