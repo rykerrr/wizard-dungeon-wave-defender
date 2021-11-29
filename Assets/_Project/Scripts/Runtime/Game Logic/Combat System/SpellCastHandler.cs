@@ -61,14 +61,14 @@ namespace WizardGame.Combat_System
             equippedSpellCastBase.CastSpell();
         }
         
-        public void TryEquipSpell(HotbarItem hotbarItem)
+        public void TryEquipSpell(HotBarItem hotBarItem)
         {
             if (!enabled) return;
 
             SpellBookItem spellItem = default;
             
-            var isSpell = !ReferenceEquals(hotbarItem, null) &&
-                          !ReferenceEquals(spellItem = hotbarItem as SpellBookItem, null);
+            var isSpell = !ReferenceEquals(hotBarItem, null) &&
+                          !ReferenceEquals(spellItem = hotBarItem as SpellBookItem, null);
             
             if (!isSpell) return;
 
@@ -94,7 +94,7 @@ namespace WizardGame.Combat_System
         }
         
         // on item drop or item trash
-        public bool RemoveSpellCast(HotbarItem baseItem)
+        public bool RemoveSpellCast(HotBarItem baseItem)
         {
             SpellBookItem key = null;
 

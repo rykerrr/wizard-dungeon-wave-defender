@@ -30,7 +30,7 @@ namespace WizardGame.Item_System
             }
         }
 
-        public void Add(HotbarItem itemToAdd)
+        public void Add(HotBarItem itemToAdd)
         {
             foreach (var slot in hotbarSlots)
             {

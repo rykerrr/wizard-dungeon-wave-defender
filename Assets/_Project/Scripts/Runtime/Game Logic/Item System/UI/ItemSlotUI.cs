@@ -22,7 +22,7 @@ namespace WizardGame.Item_System.UI
         public Inventory Inventory => inventory;
         public CooldownDisplay CdDisplay => cdDisplay;
         public int SlotIndexOnUI { get; private set; }
-        public virtual HotbarItem ReferencedSlotItem { get; protected set; }
+        public virtual HotBarItem ReferencedSlotItem { get; protected set; }
 
         public Transform Owner => owner;
         

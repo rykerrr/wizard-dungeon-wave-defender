@@ -16,7 +16,7 @@ namespace WizardGame.Level_System
         public LevelSystem LevelSystem => levelSystem ??= new LevelSystem(
             0);
 
-        private void Awake()
+        private void Start()
         {
             // LevelSystem.Init(0, statsSystem.StatsSystem, GetRequiredStatsFromStatTypes());
 

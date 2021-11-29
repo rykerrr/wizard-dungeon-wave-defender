@@ -4,27 +4,19 @@ using UnityEngine;
 
 namespace WizardGame.Stats_System
 {
-    [CreateAssetMenu(fileName = "Base Dependant Stat Type", menuName = "Stats/Default Dependant Stat")]
+    [CreateAssetMenu(fileName = "New Dependant Stat Type", menuName = "Stats/Default Dependant Stat")]
     public class DependantStatType : StatType
     {
-        [SerializeField] private new string name = default;
         [SerializeField] private List<StatTypeDependency> statsDependingOn = new List<StatTypeDependency>();
         
         [SerializeField] private int value = default;
 
         public List<StatTypeDependency> StatsDependingOn => statsDependingOn;
 
-        public override string Name
-        {
-            get => name;
-            protected set => name = value;
-        }
         public override int Value => value;
 
-        protected override void OnValidate()
+        protected override void OnValidateUtility()
         {
-            base.OnValidate();
-            
             try
             {
                 foreach (var statTypeDep in statsDependingOn)

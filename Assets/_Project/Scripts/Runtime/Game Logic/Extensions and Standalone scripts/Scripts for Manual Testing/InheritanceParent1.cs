@@ -6,9 +6,11 @@ namespace WizardGame.ManualTestStuff
 {
     public class InheritanceParent1 : MonoBehaviour
     {
-        protected void Awake()
+        protected virtual string Gog => "Parent";
+
+        private void Awake()
         {
-            Debug.Log("Parent");
+            Debug.Log(Gog, this);
         }
     }
 }

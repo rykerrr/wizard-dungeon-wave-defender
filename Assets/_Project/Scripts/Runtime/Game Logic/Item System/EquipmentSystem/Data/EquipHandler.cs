@@ -17,7 +17,7 @@ namespace WizardGame.Item_System.Equipment_system
             statsSystem = statsSystemBehaviour.StatsSystem;
         }
 
-        public void ProcessEquip(HotbarItem item)
+        public void ProcessEquip(HotBarItem item)
         {
             var equippable = (EquippableItem) item;
             if (ReferenceEquals(equippable, null)) return;
@@ -26,7 +26,7 @@ namespace WizardGame.Item_System.Equipment_system
             statsSystem.AddModifierTo(equippable.StatType, equippable.StatModifier);
         }
 
-        public void ProcessUnEquip(HotbarItem item)
+        public void ProcessUnEquip(HotBarItem item)
         {
             var equippable = (EquippableItem) item;
             if (ReferenceEquals(equippable, null)) return;

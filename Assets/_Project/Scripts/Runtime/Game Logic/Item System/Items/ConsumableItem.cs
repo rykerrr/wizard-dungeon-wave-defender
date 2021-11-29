@@ -2,7 +2,7 @@
 
 namespace WizardGame.Item_System.Items
 {
-    [CreateAssetMenu(fileName = "New Consumable Item", menuName = "Items/Consumable Item")]
+    [CreateAssetMenu(fileName = "New Consumable Item", menuName = "Items/New Consumable Item")]
     public class ConsumableItem : InventoryItem
     {
         public override void UseItem()

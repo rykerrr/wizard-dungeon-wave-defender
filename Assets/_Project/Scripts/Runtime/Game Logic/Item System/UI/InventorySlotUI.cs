@@ -7,7 +7,7 @@ namespace WizardGame.Item_System.UI
 {
     public class InventorySlotUI : ItemSlotUI
     {
-        public override HotbarItem ReferencedSlotItem => ItemSlot.invItem;
+        public override HotBarItem ReferencedSlotItem => ItemSlot.invItem;
         
         private ItemSlot ItemSlot => inventory.ItemContainer[SlotIndexOnUI];
 

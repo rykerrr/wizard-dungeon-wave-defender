@@ -1,14 +1,12 @@
-﻿using System.IO;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using WizardGame.Combat_System.Element_System.Status_Effects;
+using WizardGame.Utility;
 
 namespace WizardGame.Combat_System.Element_System
 {
     [CreateAssetMenu(menuName = "Elements/New Element", fileName = "New Element")]
-    public class Element : ScriptableObject
+    public class Element : ScriptableObjectAutoNameSet
     {
-        [SerializeField] private new string name = "New Element";
         [SerializeField] [Multiline] private string description = "Description";
             
         [SerializeField] private Sprite elementSprite = default;
@@ -16,12 +14,6 @@ namespace WizardGame.Combat_System.Element_System
         
         [SerializeField] private ElementSpellData elementSpellData = default;
         [SerializeField] private StatusEffectData statusEffectToApply = default;
-        
-        public string Name
-        {
-            get => name;
-            private set => name = value;
-        }
 
         public string Description => description;
         
@@ -29,26 +21,5 @@ namespace WizardGame.Combat_System.Element_System
         public StatusEffectData StatusEffectToApply => statusEffectToApply;
         public Sprite ElementSprite => elementSprite;
         public Color ElementColor => elementColor;
-        
-        private void SetNameAsAssetFileName()
-        {
-            var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
-            Name = Path.GetFileNameWithoutExtension(assetPath);
-        }
-        
-        private void OnValidate()
-        {
-            SetNameAsAssetFileName();
-        }
-
-        private void OnEnable()
-        {
-            EditorApplication.projectChanged += SetNameAsAssetFileName;
-        }
-
-        private void OnDisable()
-        {
-            EditorApplication.projectChanged -= SetNameAsAssetFileName;
-        }
     }
 }

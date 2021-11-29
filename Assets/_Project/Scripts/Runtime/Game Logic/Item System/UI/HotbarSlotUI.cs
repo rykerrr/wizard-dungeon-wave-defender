@@ -10,9 +10,9 @@ namespace WizardGame.Item_System.UI
     // the interface itself
     public class HotbarSlotUI : ItemSlotUI
     {
-        [SerializeField] private HotbarItem referencedSlotSlotItem = default;
+        [SerializeField] private HotBarItem referencedSlotSlotItem = default;
 
-        public override HotbarItem ReferencedSlotItem
+        public override HotBarItem ReferencedSlotItem
         {
             get => referencedSlotSlotItem;
             protected set
@@ -37,7 +37,7 @@ namespace WizardGame.Item_System.UI
                 case HotbarSlotUI hotbarSlotUi:
                 {
                     // is this needed? why not allow the item to be referenced on multiple slots?
-                    HotbarItem oldItem = ReferencedSlotItem;
+                    HotBarItem oldItem = ReferencedSlotItem;
                     ReferencedSlotItem = hotbarSlotUi.ReferencedSlotItem;
                     hotbarSlotUi.ReferencedSlotItem = oldItem;
                     // essentially switches them but yea
@@ -59,7 +59,7 @@ namespace WizardGame.Item_System.UI
             }
         }
 
-        public bool AddItem(HotbarItem itemToAdd)
+        public bool AddItem(HotBarItem itemToAdd)
         {
             Debug.Log("Is this getting called?");
 

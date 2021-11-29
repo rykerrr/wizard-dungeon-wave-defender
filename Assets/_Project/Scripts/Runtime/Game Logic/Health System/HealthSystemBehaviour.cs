@@ -10,11 +10,22 @@ namespace WizardGame.Health_System
     {
         [SerializeField] private StatsSystemBehaviour statsSysBehaviour = default;
         [SerializeField] private StatusEffectHandler statusEffectHandler = default;
-        
-        private StatsBasedHealthContainer statsBasedHealthContainer = default;
-        public StatsBasedHealthContainer StatsBasedHealthContainer => statsBasedHealthContainer ??= new StatsBasedHealthContainer(statsSysBehaviour.StatsSystem, DeathProcessor);
 
-        public IDeathProcessor DeathProcessor { get; private set; }
+        private StatsBasedHealthContainer statsBasedHealthContainer = default;
+        public StatsBasedHealthContainer StatsBasedHealthContainer => statsBasedHealthContainer ??=
+            new StatsBasedHealthContainer(statsSysBehaviour.StatsSystem, DeathProcessor);
+
+        private IDeathProcessor deathProcessor;
+
+        public IDeathProcessor DeathProcessor
+        {
+            get
+            {
+                if (deathProcessor == null) InitDeathProcessor();
+                return deathProcessor;
+            }
+            private set => deathProcessor = value;
+        }
         public StatusEffectHandler StatusEffectHandler => statusEffectHandler;
 
         private void Awake()
@@ -29,18 +40,20 @@ namespace WizardGame.Health_System
         }
 
         public void TakeDamage(int dmg, Element damageElement, GameObject damageSource = null)
-         => StatsBasedHealthContainer.TakeDamage(dmg, damageElement, damageSource);
+            => StatsBasedHealthContainer.TakeDamage(dmg, damageElement, damageSource);
 
         public void Heal(int hp, object source) => StatsBasedHealthContainer.Heal(hp, source);
 
         #region debug
-        #if UNITY_EDITOR
+
+#if UNITY_EDITOR
         [ContextMenu("Dump health system data")]
         public void DumpHealthSystemData()
         {
             Debug.Log(StatsBasedHealthContainer.ToString());
         }
-        #endif
+#endif
+
         #endregion
     }
 }

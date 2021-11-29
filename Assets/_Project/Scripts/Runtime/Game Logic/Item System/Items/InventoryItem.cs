@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace WizardGame.Item_System.Items
 {
-    public abstract class InventoryItem : HotbarItem
+    public abstract class InventoryItem : HotBarItem
     {
         [SerializeField] private Rarity rarity = default;
         [SerializeField] private int sellPrice = 1;

@@ -19,7 +19,7 @@ namespace WizardGame.Tooltips
             ShowTooltip();
         }
 
-        private void UpdateTooltipText(HotbarItem item)
+        private void UpdateTooltipText(HotBarItem item)
         {
             sb.Append("<size=35>").Append(item.ColouredName).Append("</size>").AppendLine();
             sb.Append(item.GetInfoDisplayText());

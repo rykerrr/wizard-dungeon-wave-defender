@@ -1,12 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using WizardGame.Combat_System;
-using WizardGame.Combat_System.Cooldown_System;
 using WizardGame.Combat_System.Element_System;
 
 namespace WizardGame.Item_System.Items
 {
-    [CreateAssetMenu(fileName = "New Spell Book Item", menuName = "Items/Spell Book Item")]
+    [CreateAssetMenu(fileName = "New Spell Book Item", menuName = "Items/New Spell Book Item")]
     public class SpellBookItem : InventoryItem
     {
         [Header("Spell properties")]
@@ -33,13 +31,11 @@ namespace WizardGame.Item_System.Items
             spellElement = spellPrefab.SpellElement;
         }
 
-        public SpellBookItem() : base() { }
-
         public override string GetInfoDisplayText()
         {
             return $"Spell: {Name}\nElement: {SpellElement.Name}";
         }
-
+        
         public override string ToString()
         {
             base.ToString();

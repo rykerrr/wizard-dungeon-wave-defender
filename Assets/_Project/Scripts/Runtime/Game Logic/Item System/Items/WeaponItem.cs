@@ -3,7 +3,7 @@ using WizardGame.Item_System.Items;
 
 namespace WizardGame.Item_System
 {
-    [CreateAssetMenu(fileName = "New Weapon Item", menuName = "Items/Weapon Item")]
+    [CreateAssetMenu(fileName = "New Weapon Item", menuName = "Items/New Weapon Item")]
     public class WeaponItem : EquippableItem
     {
         // Not merged with EquipmentItem as this'll contain data on how to physically equip a weapon

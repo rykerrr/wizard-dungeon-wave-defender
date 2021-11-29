@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using WizardGame.Utility;
 
 namespace WizardGame.Combat_System.Element_System.Status_Effects
 {
-    [CreateAssetMenu(menuName = "Status Effect/Status Effect Data", fileName = "New Status Effect Data")]
-    public class StatusEffectData : ScriptableObject
+    [CreateAssetMenu(menuName = "Status Effect/Status Effect Data", fileName = "Status Effect Data")]
+    public class StatusEffectData : ScriptableObjectAutoNameSet
     {
-        [SerializeField] private new string name = "";
-
         [Header("Stat effect data")] 
         [SerializeField] private List<StatusEffectInteraction> interactions = 
             new List<StatusEffectInteraction>();
@@ -39,34 +35,14 @@ namespace WizardGame.Combat_System.Element_System.Status_Effects
             }
         }
         
-        public string Name
-        {
-            get => name;
-            private set => name = value;
-        }
-
         public Sprite StatusEffectIcon => statusEffectIcon;
         public float Duration => duration;
         public float MovementSpeedMultiplier => movementSpeedMultuiplier;
         public int DamagePerFrame => damagePerFrame;
 
-        private void SetNameAsAssetFileName()
+        protected override void OnValidateUtility()
         {
-            var assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
-            Name = Path.GetFileNameWithoutExtension(assetPath);
-        }
-        
-        protected virtual void OnValidate()
-        {
-            SetNameAsAssetFileName();
-
             isDirty = true;
-        }
-        
-        // Note to self: projectChanged runs every time the file is renamed
-        private void OnEnable()
-        {
-            EditorApplication.projectChanged += SetNameAsAssetFileName;
         }
     }
 }

@@ -8,9 +8,9 @@ namespace WizardGame.Item_System.UI
     public class EquipmentSlotUI : ItemSlotUI
     {
         [SerializeField] private EquipmentType type;
-        [SerializeField] private HotbarItem referencedItem;
+        [SerializeField] private HotBarItem referencedItem;
 
-        public override HotbarItem ReferencedSlotItem
+        public override HotBarItem ReferencedSlotItem
         {
             get => referencedItem;
             protected set
