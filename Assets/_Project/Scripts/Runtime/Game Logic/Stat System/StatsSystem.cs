@@ -101,7 +101,7 @@ namespace WizardGame.Stats_System
         
         public void AddModifierTo(StatType statType, StatModifier statModifier)
         {
-            Debug.Log("Trying to add: " + statModifier + " to: " + statType);
+            // Debug.Log("Trying to add: " + statModifier + " to: " + statType);
             
             stats?[statType].AddModifier(statModifier);
         }

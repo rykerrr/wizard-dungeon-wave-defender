@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 7142642684841094795}
   - component: {fileID: 3597836602947042555}
   - component: {fileID: 5010046581294652549}
+  - component: {fileID: -1128487266656045074}
   m_Layer: 0
   m_Name: Placeholder_Spell_Energy_Blast
   m_TagString: Untagged
@@ -231,5 +232,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcb97da6bf1ca644695f9a50b3d915e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1128487266656045074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6630486979885709784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

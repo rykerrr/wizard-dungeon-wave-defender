@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Health_System;
+using WizardGame.ObjectRemovalHandling;
 using WizardGame.Utility.Timers;
 using Random = System.Random;
 
@@ -23,6 +24,7 @@ namespace WizardGame.Combat_System
         [SerializeField] private int maxHealTargets = 20;
         [SerializeField] private float delayBetweenHealWaves = default;
 
+        private ITimedRemovalProcessor timedRemovalProcessor;
         private DownTimer healWaveTimer = default;
         private Collider[] colliderHits = default;
         
@@ -32,6 +34,11 @@ namespace WizardGame.Combat_System
         
         private GetEntitiesInBox<IHealable> boxEntitiesGetter;
         private GetEntitiesWithoutCaster<IHealable> noCasterEntitiesExtractor;
+
+        private void Awake()
+        {
+            timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
+        }
 
         public void InitSpell(float healPerTickMult, int amnOfTicks, GameObject caster, Vector3? fieldCenter = null, Vector3? fieldSizeHalfExtents = null)
         {
@@ -71,7 +78,7 @@ namespace WizardGame.Combat_System
                 if (CurrentTickCount > amnOfTicks)
                 {
                     healWaveTimer.OnTimerEnd = null;
-                    Destroy(gameObject, 2f);
+                    timedRemovalProcessor.Remove(2f);
                 }
             };
             

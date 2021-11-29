@@ -30,7 +30,7 @@ namespace WizardGame.CollisionHandling
 		
 		private void ApplyBuff(params StatsSystemBehaviour[] targets)
 		{
-			Debug.Log("Applying buff...");
+			// Debug.Log("Applying buff...");
 			
 			for (var i = targets.Length - 1; i >= 0; i--)
 			{

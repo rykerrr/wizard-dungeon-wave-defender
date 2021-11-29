@@ -3,16 +3,16 @@ using UnityEngine;
 using WizardGame.CollisionHandling;
 using WizardGame.Combat_System;
 using WizardGame.Combat_System.Spell_Effects;
+using WizardGame.ObjectRemovalHandling;
 using WizardGame.Stats_System;
 using WizardGame.Utility.Timers;
 
 public class SpellEnergyPillar : SpellBase
 {
-    [Header("References")] [SerializeField]
-    private PillarShockwave pillarShockwaveEffect = default;
-
-    [Header("Properties, do not change in prefab variants")] [SerializeField]
-    private LayerMask entityLayers;
+    [Header("References")]
+    [SerializeField] private ShockwaveGenerator swGenerator;
+    
+    [Header("Properties, do not change in prefab variants")] 
     [SerializeField] private int amnOfShockwavesToCast = default;
     [SerializeField] private int maxShockwaveTargets = default;
     [SerializeField] private int avgShockwaveDmg = default;
@@ -20,16 +20,19 @@ public class SpellEnergyPillar : SpellBase
     private DownTimer swTimer = default;
     private OnTriggerEnterApplyBuffToOwner buffApplier;
     private OnTriggerExitRemoveBuffFromOwner buffRemover;
-
+    private ITimedRemovalProcessor timedRemovalProcessor;
+    
     private Collider[] swHitColliders;
 
     private int actualSwDamage = default;
     private float swDelay = default;
 
-    private Vector3 swCenter = default;
-    private Vector3 swExtents = default;
-
     public int ActualSwCount { get; private set; } = 0;
+
+    private void Awake()
+    {
+        timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
+    }
 
     public void InitSpell(float shockwaveDmgMult, float swDelay, int amnOfShockwavesToCast, StatType statKey,
         StatModifier statModifier, GameObject caster)
@@ -41,8 +44,7 @@ public class SpellEnergyPillar : SpellBase
         // this would work due to the collider having to be attached on the same object as this monobehaviour
         // the ontrigger calls would not work otherwise, but we want it to handle the buffing
         var thisCollider = GetComponent<BoxCollider>();
-        swCenter = thisCollider.center;
-        swExtents = thisCollider.size;
+        var swExtents = thisCollider.size;
 
         swHitColliders = new Collider[maxShockwaveTargets];
 
@@ -53,6 +55,7 @@ public class SpellEnergyPillar : SpellBase
         buffApplier.Init(statKey, statModifier, caster);
         buffRemover.Init(statKey, statModifier, caster);
 
+        swGenerator.Init(caster, spellElement, swExtents, actualSwDamage, swHitColliders);
         InitTimer();
     }
 
@@ -69,7 +72,7 @@ public class SpellEnergyPillar : SpellBase
             if (ActualSwCount > amnOfShockwavesToCast)
             {
                 swTimer.OnTimerEnd = null;
-                Destroy(gameObject, 2f);
+                timedRemovalProcessor.Remove(2f);
             }
         };
 
@@ -81,12 +84,8 @@ public class SpellEnergyPillar : SpellBase
         swTimer?.TryTick(Time.deltaTime);
     }
 
-    public void CreateShockwave()
+    private void CreateShockwave()
     {
-        var swClone = Instantiate(pillarShockwaveEffect, transform.position, Quaternion.identity);
-
-        swClone.transform.up = transform.up;
-
-        swClone.Init(actualSwDamage, swExtents, SpellElement, Caster, entityLayers, ref swHitColliders);
+        swGenerator.GenerateAndProcessShockwave(transform.position, transform.up);
     }
 }

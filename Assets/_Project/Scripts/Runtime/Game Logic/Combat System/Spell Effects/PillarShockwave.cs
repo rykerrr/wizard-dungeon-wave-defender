@@ -6,6 +6,7 @@ using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Health_System;
+using WizardGame.ObjectRemovalHandling;
 
 namespace WizardGame.Combat_System.Spell_Effects
 {
@@ -15,6 +16,7 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         private GetEntitiesInBox<IDamageable> boxEntitiesGetter = default;
         private GetEntitiesWithoutCaster<IDamageable> noCasterEntitiesExtractor = default;
+        private IRemovalProcessor removalProcessor;
         
         private GameObject caster = default;
         private Element spellElement;
@@ -24,6 +26,11 @@ namespace WizardGame.Combat_System.Spell_Effects
         private Vector3 swExtents;
 
         private int actualSwDamage = default;
+
+        private void Awake()
+        {
+            removalProcessor = GetComponent<IRemovalProcessor>();
+        }
 
         public void Init(int actualSwDamage, Vector3 swExtents, Element spellElement, GameObject caster,
             LayerMask entitiesLayerMask, ref Collider[] colliderHits)
@@ -83,7 +90,7 @@ namespace WizardGame.Combat_System.Spell_Effects
         // called by animation event
         public void DisableSelf()
         {
-            Destroy(gameObject, 1f);
+            removalProcessor.Remove();
         }
     }
 }

@@ -3,17 +3,14 @@ using UnityEngine;
 using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Combat_System.Spell_Effects;
 using WizardGame.Health_System;
+using WizardGame.ObjectRemovalHandling;
 
 namespace WizardGame.Combat_System
 {
     public class SpellEnergyBolt : SpellBase, IDamagingSpell
     {
-        [Header("References")]
-        [SerializeField] private Explosion onHitEffect = default;
-
         [Header("Properties, do not change in prefab variants")] 
         [SerializeField] private ExplosionGenerator explGenerator;
-        [SerializeField] private LayerMask entitiesLayerMask;
         [SerializeField] private float avgExplosionRadius = default;
 
         [SerializeField] private int maxExplosionTargets = default;
@@ -21,11 +18,17 @@ namespace WizardGame.Combat_System
         [SerializeField] private int avgExplosionDmg = default;
 
         private HealthSystemBehaviour objHit = default;
+        private ITimedRemovalProcessor timedRemovalProcessor;
         private Collider[] colliderHits;
         
         private Vector3 hitPos = default;
 
         private int actualImpactDmg = default;
+
+        private void Awake()
+        {
+            timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
+        }
 
         public void InitSpell(float explosionRadius, float impactRadius, float explosionDmgMult
             , float impactDmgMult, Vector3 hitPos, HealthSystemBehaviour objHit, GameObject caster)
@@ -51,7 +54,7 @@ namespace WizardGame.Combat_System
             
             DealDamageToImpactTarget();
 
-            Destroy(gameObject, 0.3f);
+            timedRemovalProcessor.Remove(0.5f);
         }
 
         private void DealDamageToImpactTarget()

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using WizardGame.Combat_System.Spell_Effects;
+using WizardGame.ObjectRemovalHandling;
 using WizardGame.Utility.Timers;
 
 namespace WizardGame.Combat_System
@@ -14,7 +15,8 @@ namespace WizardGame.Combat_System
         
         [SerializeField] private int maxExplosionTargets = default;
         [SerializeField] private int avgExplosionDmg = default;
-        
+
+        private ITimedRemovalProcessor timedRemovalProcessor;
         private DownTimer explDelayTimer = default;
         private Collider[] colliderHits;
         
@@ -23,7 +25,12 @@ namespace WizardGame.Combat_System
         private int explAmn = 1;
 
         private int ExplCount { get; set; } = 0;
-        
+
+        private void Awake()
+        {
+            timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
+        }
+
         public void InitSpell(float explosionRadMult, float explosionDmgMult, int explAmn
             , Vector3 explPos, GameObject caster)
         {
@@ -54,7 +61,7 @@ namespace WizardGame.Combat_System
                 if (ExplCount > explAmn)
                 {
                     explDelayTimer.OnTimerEnd = null;
-                    Destroy(gameObject, 0.1f);
+                    timedRemovalProcessor.Remove(0.1f);
                 }
             };
             

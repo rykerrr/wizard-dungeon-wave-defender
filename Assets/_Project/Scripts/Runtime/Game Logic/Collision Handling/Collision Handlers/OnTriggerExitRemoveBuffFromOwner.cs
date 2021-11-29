@@ -34,7 +34,7 @@ namespace WizardGame.CollisionHandling
 			{
 				var removeCount = targets[i].StatsSystem.RemoveModifiersFromSource(statKey, gameObject);
 				
-				Debug.Log($"Stat Modifiers removed from object {targets[i].gameObject.name}: {removeCount}");
+				// Debug.Log($"Stat Modifiers removed from object {targets[i].gameObject.name}: {removeCount}");
 			}
 		}
 		

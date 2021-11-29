@@ -6,6 +6,7 @@ using WizardGame.Combat_System.EntityGetters;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Combat_System.Element_System.Status_Effects;
 using WizardGame.Health_System;
+using WizardGame.ObjectRemovalHandling;
 
 namespace WizardGame.Combat_System.Spell_Effects
 {
@@ -18,10 +19,17 @@ namespace WizardGame.Combat_System.Spell_Effects
         
         private GameObject caster;
         private Element spellElement;
-
+        private IRemovalProcessor removalProcessor;
+        
         private Collider[] colliderHits;
         private float explosionRadius;
         private int explosionDamage;
+
+        private void Awake()
+        {
+            removalProcessor = GetComponent<IRemovalProcessor>();
+            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IDamageable>();
+        }
 
         // Object's lifetime is handled by it's animation currently
         public void Init(int explosionDamage, float explosionRadius, Element spellElement, GameObject caster
@@ -35,9 +43,8 @@ namespace WizardGame.Combat_System.Spell_Effects
             this.spellElement = spellElement;
             fader.CustomColor = spellElement.ElementColor;
             
-            noCasterEntitiesExtractor = new GetEntitiesWithoutCaster<IDamageable>();
             radiusEntitiesGetter = new GetEntitiesInRadius<IDamageable>(entitiesLayerMask, transform.position, this.explosionRadius);
-
+            
             ProcessExplosion();
         }
 
@@ -76,9 +83,9 @@ namespace WizardGame.Combat_System.Spell_Effects
         }
 
         // called by animation event
-        public void DisableSelf()
+        public void RemoveSelf()
         {
-            Destroy(gameObject, 1f);
+            removalProcessor.Remove();
         }
     }
 }

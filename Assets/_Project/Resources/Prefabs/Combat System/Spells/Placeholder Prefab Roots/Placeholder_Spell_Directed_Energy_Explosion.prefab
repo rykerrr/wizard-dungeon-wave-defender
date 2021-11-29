@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1141325337173039611}
   - component: {fileID: 1141325337173039610}
+  - component: {fileID: 9152076578042257497}
+  - component: {fileID: -5527598259157014280}
   m_Layer: 0
   m_Name: Placeholder_Spell_Directed_Energy_Explosion
   m_TagString: Untagged
@@ -53,3 +55,27 @@ MonoBehaviour:
   delayBetweenExplosions: 0.3
   maxExplosionTargets: 10
   avgExplosionDmg: 5
+--- !u!114 &9152076578042257497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141325337173039612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47f369f16c9bd240b8057573fde524c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5527598259157014280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141325337173039612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

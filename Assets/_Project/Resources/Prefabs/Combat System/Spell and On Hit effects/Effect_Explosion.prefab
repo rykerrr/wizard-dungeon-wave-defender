@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4695745886429010704}
   - component: {fileID: 4672617303962772228}
   - component: {fileID: 4395862944739116351}
+  - component: {fileID: 4826057913922645104}
   m_Layer: 0
   m_Name: Effect_Explosion
   m_TagString: Untagged
@@ -67,10 +68,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 4672617303962772228}
-  healthsGetter:
-    damageablesLayerMask:
-      serializedVersion: 2
-      m_Bits: 256
 --- !u!114 &4672617303962772228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +97,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 4672617303962772228}
   clip: {fileID: 7400000, guid: bb9bb7f9457173444979dab6b62918e2, type: 2}
+--- !u!114 &4826057913922645104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457051258190390155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8959627315592823830
 GameObject:
   m_ObjectHideFlags: 0

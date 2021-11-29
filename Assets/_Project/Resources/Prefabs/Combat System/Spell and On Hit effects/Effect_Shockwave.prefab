@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6310579541140641145}
   - component: {fileID: 6310579541140641150}
   - component: {fileID: 6310579541140641151}
+  - component: {fileID: -9132831362862121761}
   m_Layer: 0
   m_Name: Effect_Shockwave
   m_TagString: Untagged
@@ -177,7 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphics: {fileID: 6310579539960704892}
-  healthsGetter:
-    damageablesLayerMask:
-      serializedVersion: 2
-      m_Bits: 256
+--- !u!114 &-9132831362862121761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310579541140641144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
