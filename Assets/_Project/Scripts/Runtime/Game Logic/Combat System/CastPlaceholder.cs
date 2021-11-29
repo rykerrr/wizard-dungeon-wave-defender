@@ -26,7 +26,7 @@ namespace WizardGame.Combat_System
         {
             if (castBase.IsCasting) return;
             
-            Debug.Log("Self disabling spell circle..");
+            // Debug.Log("Self disabling spell circle..");
             gameObject.SetActive(false);
         }
     }

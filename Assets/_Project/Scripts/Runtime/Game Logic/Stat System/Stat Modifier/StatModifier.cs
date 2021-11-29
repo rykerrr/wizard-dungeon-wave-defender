@@ -12,7 +12,11 @@ namespace WizardGame.Stats_System
         
         public ModifierType Type => type;
         public float Value => value;
-        public object Source => source;
+        public object Source
+        {
+            get => source;
+            set => source = value;
+        }
 
         public StatModifier(ModifierType type, float value, object source)
         {

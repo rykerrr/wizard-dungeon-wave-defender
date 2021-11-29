@@ -124,7 +124,7 @@ namespace WizardGame.Stats_System
             return stats.ContainsKey(statType) && stats[statType].RemoveModifier(statModifier);
         }
 
-        public int RemoveModifierFromSource(StatType statType, object source)
+        public int RemoveModifiersFromSource(StatType statType, object source)
         {
             return stats.ContainsKey(statType) ? stats[statType].RemoveModifiersFromSource(source) : 0;
         }

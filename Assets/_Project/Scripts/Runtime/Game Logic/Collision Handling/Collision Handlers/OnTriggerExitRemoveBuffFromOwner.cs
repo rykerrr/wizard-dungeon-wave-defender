@@ -14,6 +14,8 @@ namespace WizardGame.CollisionHandling
 			this.statKey = statKey;
 			this.statModifier = statModifier;
 			this.owner = owner;
+			
+			statModifier.Source = gameObject;
 		}
 		
 		public void ProcessCollision(GameObject other, CollisionType type)
@@ -23,18 +25,16 @@ namespace WizardGame.CollisionHandling
 			var hasStats = other.TryGetComponent<StatsSystemBehaviour>(out var statsSys);
 			if (!hasStats) return;
 			
-			RemoveBuff(statsSys);
+			statsSys.StatsSystem.RemoveModifiersFromSource(statKey, statsSys);
 		}
 		
 		private void RemoveBuff(params StatsSystemBehaviour[] targets)
 		{
 			for (var i = targets.Length - 1; i >= 0; i--)
 			{
-				Debug.Log(targets.Length + " | " + i);
-				Debug.Log(targets[i]);
-				Debug.Log(owner);
-
-				targets[i].StatsSystem.RemoveModifierFrom(statKey, statModifier);
+				var removeCount = targets[i].StatsSystem.RemoveModifiersFromSource(statKey, gameObject);
+				
+				Debug.Log($"Stat Modifiers removed from object {targets[i].gameObject.name}: {removeCount}");
 			}
 		}
 		

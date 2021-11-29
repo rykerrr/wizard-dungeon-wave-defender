@@ -43,8 +43,8 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         protected virtual void ProcessExplosion()
         {
-            var damageables =
-                noCasterEntitiesExtractor.GetTsWithoutCaster(radiusEntitiesGetter, caster, ref colliderHits);
+            var damageables = noCasterEntitiesExtractor
+                .GetTsWithoutCaster(radiusEntitiesGetter, caster, ref colliderHits);
 
             foreach (var damageable in damageables)
             {

@@ -63,6 +63,7 @@ namespace WizardGame.Combat_System
 
             yield return castingTimeWait;
 
+            castCircleAnimator.SetBool(BeginCastHash, false);
             castCircleAnimator.SetBool(EndCastHash, true);
         }
 
@@ -100,7 +101,7 @@ namespace WizardGame.Combat_System
             {
                 case DirectedEnergyExplosionData.ExplosionLocationType.Self:
                 {
-                    spawnPos = transform.position;
+                    spawnPos = ownerTransf.position;
 
                     break;
                 }

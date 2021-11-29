@@ -20,38 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterApplyStatusEffectAndDealDamage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterApplyStatusEffectAndDealDamage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterGenerateExplosion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterGenerateExplosion.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotOwner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotOwner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionLogCollisionMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionLogCollisionMessage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/ICollisionHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/ICollisionHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Blast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Blast.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Pillar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Placeholder Prefab Roots/Placeholder_Spell_Energy_Pillar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Tests For Stuff To Integrate/Complete Systems Testing Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Art/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_End.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Art/Animations/Spell Circle/Spell_Directed_Explosion/Spell_DirectedExplosion_End.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInRadius.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInRadius.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesWithoutCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesWithoutCaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,16 +181,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Death/CharacterDeath.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Death/IDeathProcessor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Death/CharacterDeathProcessor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/HealthSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/HealthContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Health Regen/StatsBasedHealthRegen.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Level System/LevelSystemBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/StatsBasedHealthContainer.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/HealthSystemBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/ScriptableObjectAutoNameSet.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotbarItem.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/MaterialItem.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/InventoryItem.cs" />
@@ -243,12 +216,22 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuff.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromCaster.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToCaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyPillar.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotWoner.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotOwner.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesWithoutCaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellDirectedEnergyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInRadius.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerWhileInsideApplyBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -408,7 +391,7 @@
       <workItem from="1635233597391" duration="649000" />
       <workItem from="1635276158820" duration="1653000" />
       <workItem from="1637439209523" duration="738000" />
-      <workItem from="1638183048627" duration="13235000" />
+      <workItem from="1638183048627" duration="16065000" />
     </task>
     <servers />
   </component>

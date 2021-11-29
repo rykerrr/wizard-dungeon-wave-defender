@@ -9,19 +9,9 @@ namespace WizardGame.Combat_System.EntityGetters
         {
             var ts = getEntities.GetTs(ref colliderHits);
 
-            Debug.Log(ts.Count);
+            var objFound = ts.Find(x => (x as MonoBehaviour)?.gameObject == caster);
             
-            foreach (var obj in ts)
-            {
-                var mb = obj as MonoBehaviour;
-
-                if (mb?.gameObject == caster)
-                {
-                    ts.Remove(obj);
-                }
-            }
-
-            Debug.Log(ts.Count);
+            ts.Remove(objFound);
 
             return ts;
         }

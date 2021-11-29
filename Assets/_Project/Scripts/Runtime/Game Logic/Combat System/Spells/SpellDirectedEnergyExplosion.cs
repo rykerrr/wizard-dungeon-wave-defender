@@ -71,12 +71,6 @@ namespace WizardGame.Combat_System
             Debug.Log(explDelayTimer.Time + " | " + explDelayTimer.DefaultTime + " | " + explDelayTimer.OnTimerEnd.Method);
         }
 
-        private void Update()
-        {
-            Debug.Log(explDelayTimer);
-            Debug.Log(explDelayTimer.TryTick(Time.deltaTime));
-        }
-
         public void ProcessOnHitEffect()
         {
             var explClone = GenerateAndProcessExplosion(explPos);

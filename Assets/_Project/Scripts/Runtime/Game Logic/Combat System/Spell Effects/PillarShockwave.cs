@@ -48,7 +48,8 @@ namespace WizardGame.Combat_System.Spell_Effects
 
         private void ProcessShockwave()
         {
-            var damageables = noCasterEntitiesExtractor.GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
+            var damageables = noCasterEntitiesExtractor
+                .GetTsWithoutCaster(boxEntitiesGetter, caster, ref colliderHits);
 
             foreach (var damageable in damageables)
             {
