@@ -30,12 +30,19 @@ public class OnParticleCollissionCreateWaterPuddle : MonoBehaviour
     
     private void OnParticleCollision(GameObject other)
     {
+        TryCreateWaterPuddle(other);
+    }
+
+    private void TryCreateWaterPuddle(GameObject other)
+    {
         var nCollEvents = pSys.GetCollisionEvents(other, collEvents);
 
         var mask = puddlesCanSpawnOn.value;
         var layerInBitForm = 1 << other.layer;
         var maskAndLayer = mask & layerInBitForm;
 
+        Debug.Log($"{other} | {other.layer} | {nCollEvents} {maskAndLayer == layerInBitForm}");
+        
         if (maskAndLayer == layerInBitForm)
         {
             for (int i = 0; i < nCollEvents; i++)

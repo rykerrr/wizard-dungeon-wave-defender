@@ -14,10 +14,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pSys: {fileID: 6319391073321088634}
   waterPuddlePrefab: {fileID: 7533510952678227729, guid: c57cf78736f0f5949897a25839d29484, type: 3}
-  puddleSpawnChance: 5
+  puddleSpawnChance: 50
   puddlesCanSpawnOn:
     serializedVersion: 2
     m_Bits: 128
+--- !u!1 &6048447574611805984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753021043218074081}
+  - component: {fileID: 312107585840870879}
+  m_Layer: 0
+  m_Name: Collider 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753021043218074081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048447574611805984}
+  m_LocalRotation: {x: -0, y: -0.993694, z: -0.11212587, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 7893271649511393892}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &312107585840870879
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048447574611805984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5990416025265691791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,12 +97,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 2764195385740981154}
     m_Modifications:
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: CustomDataModule.mode0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: CustomDataModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: CollisionModule.collisionMessages
@@ -73,6 +141,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
       objectReference: {fileID: 0}
@@ -83,6 +155,14 @@ PrefabInstance:
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1010564458550860002, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: m_Name
