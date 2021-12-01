@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 7893271649511393892}
   lifetime: 6
+  parentingDelay: 0
 --- !u!135 &6126213404712567393
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -122,11 +123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: CollisionModule.m_Dampen.scalar
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: CollisionModule.collisionMessages
@@ -162,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 503352609851179817, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1010564458550860002, guid: b10950d9c69ec824abf86f2b2046e196, type: 3}
       propertyPath: m_Name

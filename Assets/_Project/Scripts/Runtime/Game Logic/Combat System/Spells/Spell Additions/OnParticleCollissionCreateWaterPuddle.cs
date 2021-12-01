@@ -35,17 +35,16 @@ public class OnParticleCollissionCreateWaterPuddle : MonoBehaviour
 
     private void TryCreateWaterPuddle(GameObject other)
     {
-        var nCollEvents = pSys.GetCollisionEvents(other, collEvents);
-
+        var collEventsLength = pSys.GetCollisionEvents(other, collEvents);
         var mask = puddlesCanSpawnOn.value;
         var layerInBitForm = 1 << other.layer;
         var maskAndLayer = mask & layerInBitForm;
-
-        Debug.Log($"{other} | {other.layer} | {nCollEvents} {maskAndLayer == layerInBitForm}");
+        
+        Debug.Log($"{other} | {other.layer} | {collEventsLength} {maskAndLayer == layerInBitForm}");
         
         if (maskAndLayer == layerInBitForm)
         {
-            for (int i = 0; i < nCollEvents; i++)
+            for (int i = 0; i < collEventsLength; i++)
             {
                 var num = rand.Next(0, 100);
 
