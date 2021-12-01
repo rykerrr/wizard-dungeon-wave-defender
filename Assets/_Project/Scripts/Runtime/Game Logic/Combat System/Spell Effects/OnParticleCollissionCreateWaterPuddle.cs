@@ -15,14 +15,7 @@ namespace WizardGame.Combat_System.Spell_Effects
         private List<ParticleCollisionEvent> collEvents = new List<ParticleCollisionEvent>();
 
         private Random rand = default;
-
-        // TODO: Rewrite entire chance thingy to actually work better for chances
-        // E.g: 10% chance to spawn a puddle
-
-        private void Awake()
-        {
-            rand = new Random((int) Time.realtimeSinceStartup);
-        }
+        private Random Rand => rand ??= new Random((int) Time.realtimeSinceStartup);
 
         private void OnParticleCollision(GameObject other)
         {
@@ -46,7 +39,7 @@ namespace WizardGame.Combat_System.Spell_Effects
                     var collisionTooStationary = collEvents[i].velocity.sqrMagnitude <= 1.2f;
                     if (collisionTooStationary) continue;
 
-                    var num = rand.Next(0, 100);
+                    var num = Rand.Next(0, 100);
 
                     if (num <= puddleSpawnChance)
                     {

@@ -2,18 +2,21 @@ using UnityEngine;
 using WizardGame.Combat_System;
 using WizardGame.Combat_System.Spell_Effects;
 
-public class InjectElementFromSpellBase : MonoBehaviour
+namespace WizardGame
 {
-	[SerializeField] private SpellBase spellBase;
-	[SerializeField] private OnParticleCollisionDamageWaterPuddle objToInjectInto;
-	
-	private void Awake()
-	{
-		Inject();
-	}
+    public class InjectElementFromSpellBase : MonoBehaviour
+    {
+        [SerializeField] private SpellBase spellBase;
+        [SerializeField] private OnParticleCollisionDamageWaterPuddle objToInjectInto;
 
-	private void Inject()
-	{
-		objToInjectInto.Init(spellBase.SpellElement);
-	}
+        private void Awake()
+        {
+            Inject();
+        }
+
+        private void Inject()
+        {
+            objToInjectInto.Init(spellBase.SpellElement);
+        }
+    }
 }

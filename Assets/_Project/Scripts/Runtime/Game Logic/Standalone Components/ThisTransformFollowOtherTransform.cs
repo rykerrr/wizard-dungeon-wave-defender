@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class ThisTransformFollowOtherTransform : MonoBehaviour
+namespace WizardGame
 {
-    [SerializeField] private Transform objToFollow = default;
-
-    private Vector3 offset = default;
-    private Transform thisTransf = default;
-    
-    private void Awake()
+    public class ThisTransformFollowOtherTransform : MonoBehaviour
     {
-        thisTransf = transform;
+        [SerializeField] private Transform objToFollow = default;
 
-        offset = thisTransf.position - objToFollow.position;
-    }
+        private Vector3 offset = default;
+        private Transform thisTransf = default;
 
-    private void LateUpdate()
-    {
-        thisTransf.position = objToFollow.position + offset;
+        private void Awake()
+        {
+            thisTransf = transform;
+
+            offset = thisTransf.position - objToFollow.position;
+        }
+
+        private void LateUpdate()
+        {
+            thisTransf.position = objToFollow.position + offset;
+        }
     }
 }

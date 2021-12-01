@@ -1,34 +1,37 @@
 using UnityEngine;
 using WizardGame.ObjectRemovalHandling;
 
-[RequireComponent(typeof(ITimedRemovalProcessor))]
-public class ParentObjToSceneOnDisable : MonoBehaviour
+namespace WizardGame
 {
-    [SerializeField] private float lifetime = 10;
-
-    private ITimedRemovalProcessor timedRemovalProcessor;
-    
-    private bool appQuitting = false;
-
-    private void Awake()
+    [RequireComponent(typeof(ITimedRemovalProcessor))]
+    public class ParentObjToSceneOnDisable : MonoBehaviour
     {
-        timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
-    }
+        [SerializeField] private float lifetime = 10;
 
-    private void OnDisable()
-    {
-        if (appQuitting) return;
-        
-        Debug.Log("Being disabled");
-        
-        transform.parent = null;
-        
-        Debug.Log(timedRemovalProcessor);
-        timedRemovalProcessor.Remove(lifetime);
-    }
+        private ITimedRemovalProcessor timedRemovalProcessor;
 
-    private void OnApplicationQuit()
-    {
-        appQuitting = true;
+        private bool appQuitting = false;
+
+        private void Awake()
+        {
+            timedRemovalProcessor = GetComponent<ITimedRemovalProcessor>();
+        }
+
+        private void OnDisable()
+        {
+            if (appQuitting) return;
+
+            Debug.Log("Being disabled");
+
+            transform.parent = null;
+
+            Debug.Log(timedRemovalProcessor);
+            timedRemovalProcessor.Remove(lifetime);
+        }
+
+        private void OnApplicationQuit()
+        {
+            appQuitting = true;
+        }
     }
 }

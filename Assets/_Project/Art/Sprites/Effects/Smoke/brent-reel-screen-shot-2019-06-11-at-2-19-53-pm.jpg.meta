@@ -1,0 +1,1551 @@
+fileFormatVersion: 2
+guid: 1a5ac07d02fb33c4ca1af2b9f49b380c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7197769341142703034
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_0
+  - first:
+      213: -8145746817133021826
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_16
+  - first:
+      213: 6989421004723380172
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_17
+  - first:
+      213: -1831017668485485887
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_18
+  - first:
+      213: 5948223598395114475
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_19
+  - first:
+      213: 3576648447320318898
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_20
+  - first:
+      213: -7720233481271516211
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_21
+  - first:
+      213: 1321266532567560409
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_22
+  - first:
+      213: -3870306270785831799
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_23
+  - first:
+      213: -8377497042497256528
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_24
+  - first:
+      213: -4748970054455498271
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_25
+  - first:
+      213: -7557302164796465161
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_26
+  - first:
+      213: -3254417483492132397
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_27
+  - first:
+      213: -4691676253225282810
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_28
+  - first:
+      213: 5166197527851296889
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_29
+  - first:
+      213: 6466206325056073125
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_30
+  - first:
+      213: -7945666437929889267
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_31
+  - first:
+      213: 1289413695165113883
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_32
+  - first:
+      213: -5504745252531852538
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_33
+  - first:
+      213: -4911920411933963448
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_34
+  - first:
+      213: -950822173993789257
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_35
+  - first:
+      213: -7831241647984522622
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_36
+  - first:
+      213: 4192586124229897165
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_37
+  - first:
+      213: 6035543645779060343
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_38
+  - first:
+      213: 3868242147251816159
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_39
+  - first:
+      213: -2302163274395333439
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_40
+  - first:
+      213: 4553107480409996722
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_41
+  - first:
+      213: 4232196009607354116
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_42
+  - first:
+      213: -84486288351168784
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_43
+  - first:
+      213: -7989678556065031007
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_44
+  - first:
+      213: -1341932954241618961
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_45
+  - first:
+      213: -6227009809577809887
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_46
+  - first:
+      213: 8910896821058527893
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_47
+  - first:
+      213: -7728397940292822167
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_48
+  - first:
+      213: -6005975389648549379
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_49
+  - first:
+      213: -7702920739712100222
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_50
+  - first:
+      213: -2961597018813649417
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_51
+  - first:
+      213: 8227024946305968712
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_52
+  - first:
+      213: 4910075132004693912
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_53
+  - first:
+      213: 104956471687650376
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_54
+  - first:
+      213: 470103922846054277
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_55
+  - first:
+      213: -1167322514800961104
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_56
+  - first:
+      213: 2251094768003482833
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_57
+  - first:
+      213: -4367378614553700401
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_58
+  - first:
+      213: -2347599037188158526
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_59
+  - first:
+      213: 2509919279943562094
+    second: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_60
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 2
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 183
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb1202941d93e360800000000000000
+      internalID: 7197769341142703034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 173
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fc6c0cfe3a24370800000000000000
+      internalID: 8305380912951381779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 0
+        width: 182
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee999121e7046870800000000000000
+      internalID: 8675067445735169761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_3
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 164
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d664989449f6b120800000000000000
+      internalID: 2429403122025916119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 145
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56aabd986921fcf50800000000000000
+      internalID: 6903757191549528677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_5
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 200
+        width: 157
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0627706b62309b280800000000000000
+      internalID: -9027180513289866656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_6
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 197
+        width: 166
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95065486bea24f10800000000000000
+      internalID: 2252554862566180255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_7
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 184
+        width: 171
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eed5da8208b360c0800000000000000
+      internalID: -4583617674674315549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_8
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 179
+        width: 163
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d3817c4c5b60f60800000000000000
+      internalID: 8000281644828736925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 196
+        width: 179
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8d412fc244b03e0800000000000000
+      internalID: -2086499042525390685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_10
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 203
+        width: 160
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2778d5a264394b110800000000000000
+      internalID: 1275806524020459378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 201
+        width: 164
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be7e7845d4a02b50800000000000000
+      internalID: 6566429492657422007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 185
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d3328c127f6c170800000000000000
+      internalID: 8198511896138300788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 373
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667fd78b4aeb8bdb0800000000000000
+      internalID: -4775857790147233946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_14
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 384
+        width: 172
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24693d42943b72820800000000000000
+      internalID: 2893478412340663874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 377
+        width: 160
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6be56f208ca04e0800000000000000
+      internalID: -2014577968245983517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_16
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 399
+        width: 177
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7574868d6e74fe80800000000000000
+      internalID: -8145746817133021826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_17
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 396
+        width: 136
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfd03c4f596ff060800000000000000
+      internalID: 6989421004723380172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_18
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 394
+        width: 158
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca6574b12be696e0800000000000000
+      internalID: -1831017668485485887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_19
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 394
+        width: 139
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3cfe209d55c8250800000000000000
+      internalID: 5948223598395114475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_20
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 390
+        width: 154
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3eafc10dec2a130800000000000000
+      internalID: 3576648447320318898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_21
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 577
+        width: 181
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3ebb56d883cd490800000000000000
+      internalID: -7720233481271516211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_22
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 586
+        width: 161
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d03d4739e4165210800000000000000
+      internalID: 1321266532567560409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_23
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 584
+        width: 170
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cf7d5d3f8e94ac0800000000000000
+      internalID: -3870306270785831799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_24
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 582
+        width: 162
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3c01363d62dbb80800000000000000
+      internalID: -8377497042497256528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_25
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 580
+        width: 175
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9663785e4481eb0800000000000000
+      internalID: -4748970054455498271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_26
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 575
+        width: 171
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff140fa8b11f1790800000000000000
+      internalID: -7557302164796465161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_27
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 567
+        width: 170
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d971a99a8cf5d2d0800000000000000
+      internalID: -3254417483492132397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_28
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 564
+        width: 167
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6031f552e41d3eeb0800000000000000
+      internalID: -4691676253225282810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_29
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 767
+        width: 180
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978e317a74502b740800000000000000
+      internalID: 5166197527851296889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_30
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 763
+        width: 153
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ade959a4649cb950800000000000000
+      internalID: 6466206325056073125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_31
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 766
+        width: 165
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02127ff8725bb190800000000000000
+      internalID: -7945666437929889267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_32
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 762
+        width: 173
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1627d49ceae4e110800000000000000
+      internalID: 1289413695165113883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_33
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 761
+        width: 143
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b22d3bb573b93b0800000000000000
+      internalID: -5504745252531852538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_34
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 764
+        width: 158
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b8fa9e86a55dbb0800000000000000
+      internalID: -4911920411933963448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_35
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 766
+        width: 137
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8198a35400ec2f0800000000000000
+      internalID: -950822173993789257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_36
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 756
+        width: 176
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a43ad7637d15390800000000000000
+      internalID: -7831241647984522622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_37
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 944
+        width: 163
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb64f0edde0f2a30800000000000000
+      internalID: 4192586124229897165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_38
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 933
+        width: 168
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776e609d7fe82c350800000000000000
+      internalID: 6035543645779060343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_39
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 952
+        width: 154
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd68324fcb1cea530800000000000000
+      internalID: 3868242147251816159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_40
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 956
+        width: 169
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc47b603b21d00e0800000000000000
+      internalID: -2302163274395333439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_41
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 953
+        width: 155
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdf20a4123ef2f30800000000000000
+      internalID: 4553107480409996722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_42
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 957
+        width: 175
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407d87cf8d7cbba30800000000000000
+      internalID: 4232196009607354116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_43
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 960
+        width: 174
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6ff6a1b28d3def0800000000000000
+      internalID: -84486288351168784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_44
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 955
+        width: 158
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac10343fa5fe1190800000000000000
+      internalID: -7989678556065031007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_45
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 1124
+        width: 156
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feba906861f706de0800000000000000
+      internalID: -1341932954241618961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_46
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1140
+        width: 158
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ed3ff1973599a0800000000000000
+      internalID: -6227009809577809887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_47
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1135
+        width: 149
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592e951627dd9ab70800000000000000
+      internalID: 8910896821058527893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_48
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1133
+        width: 160
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b5cf525073fb490800000000000000
+      internalID: -7728397940292822167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_49
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1148
+        width: 170
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df98242443d76aca0800000000000000
+      internalID: -6005975389648549379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_50
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1143
+        width: 164
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2889878266ab91590800000000000000
+      internalID: -7702920739712100222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_51
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1134
+        width: 171
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fda1cdd33b46e6d0800000000000000
+      internalID: -2961597018813649417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_52
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1137
+        width: 166
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a28da99934c2270800000000000000
+      internalID: 8227024946305968712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_53
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1341
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8977e9f5157142440800000000000000
+      internalID: 4910075132004693912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_54
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1329
+        width: 160
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c12dbda51e47100800000000000000
+      internalID: 104956471687650376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_55
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1326
+        width: 180
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587b1c0f605268600800000000000000
+      internalID: 470103922846054277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_56
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1320
+        width: 152
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b919f68b56dccfe0800000000000000
+      internalID: -1167322514800961104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_57
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1320
+        width: 166
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d48692c3ce7d3f10800000000000000
+      internalID: 2251094768003482833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_58
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 1324
+        width: 178
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc793e71a44f363c0800000000000000
+      internalID: -4367378614553700401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_59
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 1323
+        width: 156
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbc9512d17ab6fd0800000000000000
+      internalID: -2347599037188158526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brent-reel-screen-shot-2019-06-11-at-2-19-53-pm_60
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1330
+        width: 169
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63b0f7794605d220800000000000000
+      internalID: 2509919279943562094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c7b7e363f54333a46b23820e63d50879
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class RotateAroundSelf : MonoBehaviour
+namespace WizardGame
 {
-    [SerializeField] private Vector3 axis = Vector3.one;
-    [SerializeField] private float angle = 3f;
-    
-    private Transform thisTransform;
-
-    private void Awake()
+    public class RotateAroundSelf : MonoBehaviour
     {
-        thisTransform = transform;
-    }
+        [SerializeField] private Vector3 axis = Vector3.one;
+        [SerializeField] private float angle = 3f;
 
-    private void Update()
-    {
-        thisTransform.Rotate(axis, angle);
+        private Transform thisTransform;
+
+        private void Awake()
+        {
+            thisTransform = transform;
+        }
+
+        private void Update()
+        {
+            thisTransform.Rotate(axis, angle);
+        }
     }
 }

@@ -2,12 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using WizardGame.Combat_System.Element_System;
 using WizardGame.Health_System;
+using WizardGame.Managers;
 
 namespace WizardGame.Combat_System.Spell_Effects
 {
     [RequireComponent(typeof(ParticleSystem))]
     public class OnParticleCollisionDamageWaterPuddle : MonoBehaviour
     {
+        [SerializeField] private SmokeEmitter smokeEmitter;
         [SerializeField] private LayerMask whatIsPuddle;
         [SerializeField] private int damage = 2;
 
@@ -40,7 +42,7 @@ namespace WizardGame.Combat_System.Spell_Effects
                     // This attempts to make it work once-per-particle by checking the magnitude of that collision
                     // If it's lower than a specific value it's most likely stationary
                     var collisionTooStationary = collEvents[i].velocity.sqrMagnitude <= 1.2f;
-                    if (collisionTooStationary) continue;
+                    // if (collisionTooStationary) continue;
 
                     DamagePuddle(other);
                 }
@@ -52,12 +54,11 @@ namespace WizardGame.Combat_System.Spell_Effects
             var hasDamageable = other.TryGetComponent<IDamageable>(out var damageable);
             if (!hasDamageable)
             {
-                Debug.Log("has no damageable component");
                 return;
             }
 
-            Debug.Log("Damaging water puddle!!!!");
             damageable.TakeDamage(damage, element, gameObject);
+            smokeEmitter.Emit(other.transform.position);
         }
     }
 }

@@ -25,8 +25,6 @@ namespace WizardGame.Item_System.Item_Containers
         
         public ItemContainer(ItemContainer container) : this(container.itemSlots.Length)
         {
-            Debug.Log(itemSlots.Length);
-            
             foreach (var slot in container.itemSlots)
             {
                 if (slot.invItem == null) continue;
