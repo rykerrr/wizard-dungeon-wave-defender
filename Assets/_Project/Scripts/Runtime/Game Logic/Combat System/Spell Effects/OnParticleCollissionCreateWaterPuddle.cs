@@ -24,12 +24,6 @@ namespace WizardGame.Combat_System.Spell_Effects
             rand = new Random((int) Time.realtimeSinceStartup);
         }
 
-        private void CreatePuddle(Vector3 pos, Vector3 upDir)
-        {
-            var puddleClone = Instantiate(waterPuddlePrefab, pos, Quaternion.identity);
-            puddleClone.transform.up = upDir;
-        }
-
         private void OnParticleCollision(GameObject other)
         {
             TryCreateWaterPuddle(other);
@@ -41,8 +35,6 @@ namespace WizardGame.Combat_System.Spell_Effects
             var mask = puddlesCanSpawnOn.value;
             var layerInBitForm = 1 << other.layer;
             var maskAndLayer = mask & layerInBitForm;
-
-            Debug.Log($"{other} | {other.layer} | {collEventsLength} {maskAndLayer == layerInBitForm}");
 
             if (maskAndLayer == layerInBitForm)
             {
@@ -62,6 +54,12 @@ namespace WizardGame.Combat_System.Spell_Effects
                     }
                 }
             }
+        }
+        
+        private void CreatePuddle(Vector3 pos, Vector3 upDir)
+        {
+            var puddleClone = Instantiate(waterPuddlePrefab, pos, Quaternion.identity);
+            puddleClone.transform.up = upDir;
         }
     }
 }

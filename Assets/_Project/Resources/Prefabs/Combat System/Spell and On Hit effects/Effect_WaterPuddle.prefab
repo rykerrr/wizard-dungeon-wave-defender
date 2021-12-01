@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7533510952678227731}
   - component: {fileID: 7533510952678227730}
   - component: {fileID: 7533510952678227734}
-  - component: {fileID: 3405793571645966826}
-  - component: {fileID: 5305553550339281188}
   - component: {fileID: -8505054056877481385}
-  m_Layer: 0
+  - component: {fileID: 261279185507487816}
+  - component: {fileID: 826216624288675851}
+  m_Layer: 4
   m_Name: Effect_WaterPuddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,31 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementToApply: {fileID: 11400000, guid: 559c9289da32b634fa3d078bdad6fcdb, type: 2}
---- !u!114 &3405793571645966826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7533510952678227729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126921907070af44daef5d5319e8564e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 5
---- !u!114 &5305553550339281188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7533510952678227729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47f369f16c9bd240b8057573fde524c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-8505054056877481385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +124,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &261279185507487816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533510952678227729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3032fabc6a48ad4aa513a90ad993411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &826216624288675851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533510952678227729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7226f892456f0c4fa4e41f24859525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerTick: 2
+  delayBetweenDamage: 0.05

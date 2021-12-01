@@ -93,6 +93,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &4223561215501205117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764195385740981156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5314ff94432ada4ca75908320f597fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellBase: {fileID: 2764195385740981159}
+  objToInjectInto: {fileID: 9104180006528490023}
 --- !u!135 &3965621938352610627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -106,6 +120,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4910883064870605025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302945296746167484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6036106498790707054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47f369f16c9bd240b8057573fde524c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4910883064870605025
+--- !u!114 &9104180006528490023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +166,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3302945296746167484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6be4daa482ee4f74dba0b30a987e9e0c, type: 3}
+  m_Script: {fileID: 11500000, guid: 358eccb2a0624c942bb67b5bf7b000f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsPuddle:
+    serializedVersion: 2
+    m_Bits: 16
+  damage: 20
 --- !u!1001 &8815899391051025020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217,11 +247,27 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4860044094775354002, guid: fda720359f223f645a55340b27c1de5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fda720359f223f645a55340b27c1de5f, type: 3}
+--- !u!1 &2764195385740981156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6630486979885709784, guid: fda720359f223f645a55340b27c1de5f, type: 3}
+  m_PrefabInstance: {fileID: 8815899391051025020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2764195385740981154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6630486979885709790, guid: fda720359f223f645a55340b27c1de5f, type: 3}
   m_PrefabInstance: {fileID: 8815899391051025020}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2764195385740981159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6630486979885709787, guid: fda720359f223f645a55340b27c1de5f, type: 3}
+  m_PrefabInstance: {fileID: 8815899391051025020}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764195385740981156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29652bfebd114f328b8c4d52793857d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4119110939695655146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4860044094775354006, guid: fda720359f223f645a55340b27c1de5f, type: 3}
@@ -237,6 +283,14 @@ PrefabInstance:
     - target: {fileID: 5817610873653767646, guid: 87af5a0e748db844eb22869f0be6997a, type: 3}
       propertyPath: m_Name
       value: Fire_OverDistance_Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360830662352057877, guid: 87af5a0e748db844eb22869f0be6997a, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360830662352057877, guid: 87af5a0e748db844eb22869f0be6997a, type: 3}
+      propertyPath: CollisionModule.collidesWithDynamic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7097182376663583243, guid: 87af5a0e748db844eb22869f0be6997a, type: 3}
       propertyPath: m_RootOrder
