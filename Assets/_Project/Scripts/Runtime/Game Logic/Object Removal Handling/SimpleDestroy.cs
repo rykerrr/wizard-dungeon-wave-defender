@@ -8,7 +8,7 @@ namespace WizardGame.ObjectRemovalHandling
 	{
 		public void Remove()
 		{
-			gameObject.SetActive(false);
+			Destroy(gameObject);
 		}
 	}
 }

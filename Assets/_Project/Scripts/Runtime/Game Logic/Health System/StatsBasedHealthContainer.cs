@@ -46,7 +46,6 @@ namespace WizardGame.Health_System
         {
             currentHealth = Mathf.Clamp(currentHealth - dmg, 0, MaxHealth);
 
-            Debug.Log(deathProcessor);
             if (!deathProcessor.HasDied && currentHealth == 0)
             {
                 Death(damageSource);

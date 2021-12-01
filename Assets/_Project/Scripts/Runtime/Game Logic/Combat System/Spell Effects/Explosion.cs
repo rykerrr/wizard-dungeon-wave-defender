@@ -82,7 +82,6 @@ namespace WizardGame.Combat_System.Spell_Effects
             }
         }
 
-        // called by animation event
         public void RemoveSelf()
         {
             removalProcessor.Remove();
