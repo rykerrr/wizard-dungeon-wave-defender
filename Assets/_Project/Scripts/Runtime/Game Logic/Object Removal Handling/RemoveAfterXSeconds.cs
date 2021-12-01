@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
 using WizardGame.Utility.Timers;
 
 namespace WizardGame.ObjectRemovalHandling
 {
+	[RequireComponent(typeof(IRemovalProcessor))]
 	public class RemoveAfterXSeconds : MonoBehaviour, ITimedRemovalProcessor
 	{
 		private IRemovalProcessor removalProcessor;
