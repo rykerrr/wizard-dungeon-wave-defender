@@ -21,14 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fc6fb50b-ec17-4a50-ba5e-817d83be9ada" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Wizard Dungeon Wave Defender Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Resources/Prefabs/Combat System/Spells/Elemental/Water/Spell_Energy_Blast_Element.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/RemoveObjectAfterXSecondsAfterEnable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/RemoveObjectAfterXSecondsAfterEnable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,9 +90,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/Interactables/InteractablePhysicalItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/AssemblyNameProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/ThisTransformFollowOtherTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/c0/1413e112/Collider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/Interface/ISpriteEditorDataProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/OnParticleCollisionDamageWaterPuddle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Managers/ManagerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/da/6739f929/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/ShapeEditor/ShapeEditorRectSelection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Movement System/Rotation/Forward Modifiers/SetSelectedForwardModifier.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,6 +106,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/e7/f6c3acd8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Extensions/AnimationTrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/UI/InteractButtonUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/SmokeEmitter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10B6135E-6343-4FDB-A4FC-6C109928AB3B/62/2bef858a/EqualConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Extensions/TrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/ba/945f0bd6/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
@@ -122,6 +119,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.7/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Health Regen/ConstantHealthLoss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Runtime/Playables/ParticleControlPlayable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEditor.TestRunner/TestLaunchers/TestLauncherBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/ICollisionHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -151,8 +149,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1556530B-4512-44BD-BA40-01BF8226A428/26/dfb9c3de/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/MainMenuControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/8f/08e45346/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/BasicHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/SceneLoadController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterGenerateExplosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Scripts for Manual Testing/InheritanceChild1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Main Menu Systems/Save Load System/UI/SaveSlotUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Talent Tree/Runtime/Scripts/Talent Tree/TalentLevelUpActionInjector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
@@ -165,6 +165,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/World Interaction/TriggerInteractableCharacterCallbacks.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Runtime/Behaviours/CinemachineMixingCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Editor/AssetImporter/InputActionImporterEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/InjectElementFromSpellBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Versions/2020.3.7f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Utility/ReflectionMethodsCache.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/62/ce6420e2/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.7/Editor/Items/ItemsGroup.cs" root0="SKIP_HIGHLIGHTING" />
@@ -179,28 +180,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utilities/ScriptableObjectAutoNameSet.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotBarItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Rarity.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionLogCollisionMessage.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionDealDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionApllyStatusEffectAndDealDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionType.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/ICollisionHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/CollisionProcessor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionApplyStatusEffectAndDealDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionGenerateExplosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionRemoveObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterApplyStatusEffectAndDealDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuff.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuff.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromCaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToCaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotWoner.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/SpellCastDirectedEnergyExplosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesWithoutCaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInRadius.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/CastPlaceholder.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Casts/EntityGetters/GetEntitiesInBox.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/Stat Modifier/StatModifier.cs" />
@@ -208,13 +187,10 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/SpellEnergyBlast.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/GenerateExplosion.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterGenerateExplosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/ExplosionGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/IRemovalProcessor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/SimpleDestroy.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/SimpleDisable.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnCollisionEnterRemoveObjectIfNotOwner.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/PillarShockwave.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/ITimedRemovalProcessor.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/DestroyObjectOnTimerEnd.cs" />
@@ -226,10 +202,35 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Stat System/StatsSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerEnterApplyBuffToOwner.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Collision Handling/Collision Handlers/OnTriggerExitRemoveBuffFromOwner.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/RemoveAfterXSeconds.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/RemoveObjectAfterXSecondsAfterEnable.cs" />
-      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/StatsBasedHealthContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/SimpleDestroy.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Extensions and Standalone scripts/OnParticleCollisionDrawRayFromIntersectionTowardsVelocity.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Scripts for Manual Testing/InheritanceParent1.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Items/HotBarItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Debug/OnParticleCollisionDrawRayFromIntersectionTowardsVelocity.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ApplyElementStatusEffectOnCollisionStay.cs" />
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/OnParticleCollissionCreateWaterPuddle.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/ParentObjToSceneOnDisable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spells/Spell Additions/RemoveObjectAfterXSecondsAfterEnable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/Helpers/RemoveObjectAfterXSecondsAfterEnable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Object Removal Handling/RemoveAfterXSeconds.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/OnParticleCollisionDamageWaterPuddleAndReleaseSmoke.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/Health Regen/ConstantHealthLoss.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Health System/BasicHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/ThisTransformFollowOtherTransform.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/RotateAroundSelf.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/ParentObjToSceneOnDisable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/InjectElementFromSpellBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Managers/IManagerObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Managers/ParticleEffectsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Item System/Item Containers/ItemContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Managers/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/Managers/ManagerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/OnParticleCollissionCreateWaterPuddle.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Combat System/Spell Effects/OnParticleCollisionDamageWaterPuddle.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Runtime/Game Logic/Standalone Components/SmokeEmitter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qUDW7BPPK9fweXSE7lr0z1JNcw" />
@@ -390,7 +391,9 @@
       <workItem from="1635276158820" duration="1653000" />
       <workItem from="1637439209523" duration="738000" />
       <workItem from="1638183048627" duration="23628000" />
-      <workItem from="1638306665807" duration="324000" />
+      <workItem from="1638306665807" duration="1032000" />
+      <workItem from="1638345313798" duration="12650000" />
+      <workItem from="1638432056913" duration="633000" />
     </task>
     <servers />
   </component>

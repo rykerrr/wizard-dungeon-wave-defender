@@ -7,8 +7,6 @@ namespace WizardGame.Item_System.UI
 {
     public class InventoryDragHandler : ItemDragHandler
     {
-        [SerializeField] public ItemThrowEvent itemThrowEvent;
-
         private ItemThrower itemThrower = default;
 
         protected override void Awake()

@@ -78,18 +78,7 @@ namespace WizardGame.Item_System.World_Interaction
             var notPressedThisFrame = !Keyboard.current.eKey.wasPressedThisFrame;
             if (notPressedThisFrame) return false;
             
-            // Debug.Log("Pressed");
             return true;
-        }
-
-        // move this somewhere else
-        public void ThrowPhysicalItem(ItemThrowData data)
-        {
-            var physItem = data.PhysItem;
-            
-            var rb = physItem.GetComponent<ForceReceiverMovementBehaviour>();
-            
-            rb.AddForce(data.ThrowForce);
         }
     }
 }

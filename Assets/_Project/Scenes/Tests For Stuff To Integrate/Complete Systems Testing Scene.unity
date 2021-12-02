@@ -4691,7 +4691,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1951648956}
-  - component: {fileID: 1951648958}
   - component: {fileID: 1951648957}
   m_Layer: 0
   m_Name: Listeners
@@ -4733,35 +4732,6 @@ MonoBehaviour:
       - m_Target: {fileID: 659508423}
         m_TargetAssemblyTypeName: WizardGame.Combat_System.SpellCastHandler, Production.Runtime
         m_MethodName: TryEquipSpell
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1951648958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951648955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417f0e8f498280c48b579a68e2e3ccec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 938af53b04cb0034d8bcf132c9c74fed, type: 2}
-  eventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 584261647}
-        m_TargetAssemblyTypeName: WizardGame.Item_System.World_Interaction.PlayerInteractionBehavior,
-          Production.Runtime
-        m_MethodName: ThrowPhysicalItem
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

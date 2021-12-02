@@ -18,6 +18,8 @@ namespace WizardGame.Item_System.World_Interaction
         {
             if (ReferenceEquals(slotUi, null) ||
                 ReferenceEquals(slotUi.ReferencedSlotItem, null)) return;
+            
+            Debug.Log("try physically throw item from item thrower");
 
             // get throw force
             var owner = slotUi.Owner;
